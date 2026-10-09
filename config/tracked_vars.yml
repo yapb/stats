@@ -1,0 +1,21 @@
+# Server rules (A2S_RULES keys) counted as "addons", AMX Mod X stats style.
+# Add new ones via PR:
+#   name:  exact rule key as reported by servers (case-sensitive)
+#   title: display name for the dashboard
+#   url:   link shown next to the addon name
+vars:
+  - name: yb_version
+    title: YaPB
+    url: https://github.com/yapb/yapb
+  - name: amxmodx_version
+    title: AMX Mod X
+    url: https://www.amxmodx.org/
+  - name: metamod_version
+    title: Metamod
+    url: http://www.metamod.org/
+  - name: pb_version
+    title: POD-Bot
+    url: https://github.com/APGRoboCop/podbot_mm
+  - name: bot_quota
+    title: CZ Bot
+    url: https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/

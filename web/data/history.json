@@ -1,0 +1,13 @@
+[
+ {
+  "date": "2026-10-09",
+  "alive": 13600,
+  "with_rules": 1073,
+  "addon:yb_version": 1,
+  "addon:amxmodx_version": 46,
+  "addon:metamod_version": 28,
+  "versions": {
+   "4.4.957": 1
+  }
+ }
+]

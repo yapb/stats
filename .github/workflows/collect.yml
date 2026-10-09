@@ -1,0 +1,50 @@
+name: census
+
+on:
+  schedule:
+    - cron: '17 3 * * *'  # daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install collector deps
+        run: pip install -r collector/requirements.txt
+
+      - name: Run census
+        env:
+          STEAM_WEBAPI_KEY: ${{ secrets.STEAM_WEBAPI_KEY }}
+        run: python collector/collect.py --out web/data
+
+      - name: Commit fresh data
+        run: |
+          git config user.name 'yapb-stats-bot'
+          git config user.email 'yapb-stats-bot@users.noreply.github.com'
+          git add web/data/latest.json web/data/history.json
+          git diff --cached --quiet || { git commit -m "census $(date -u +%F)"; git push; }
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/
+
+      - uses: actions/deploy-pages@v5
+        id: deployment

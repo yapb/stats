@@ -1,0 +1,38 @@
+# Tracked game mods. Add new ones via PR:
+#   appid:   Valve app id used for the master-server filter (\appid\<id>)
+#   gamedir: mod directory reported by servers (informational, matched loosely)
+#   name:    display name for the dashboard
+#   url:     link shown next to the mod name
+mods:
+  - appid: 10
+    gamedir: cstrike
+    name: Counter-Strike
+    url: https://store.steampowered.com/app/10/CounterStrike/
+  - appid: 80
+    gamedir: czero
+    name: Condition Zero
+    url: https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/
+  - appid: 30
+    gamedir: dod
+    name: Day of Defeat
+    url: https://store.steampowered.com/app/30/Day_of_Defeat/
+  - appid: 20
+    gamedir: tfc
+    name: Team Fortress Classic
+    url: https://store.steampowered.com/app/20/Team_Fortress_Classic/
+  - appid: 50
+    gamedir: gearbox
+    name: Opposing Force
+    url: https://store.steampowered.com/app/50/HalfLife_Opposing_Force/
+  - appid: 40
+    gamedir: dmc
+    name: Deathmatch Classic
+    url: https://store.steampowered.com/app/40/Deathmatch_Classic/
+  - appid: 60
+    gamedir: ricochet
+    name: Ricochet
+    url: https://store.steampowered.com/app/60/Ricochet/
+  - appid: 70
+    gamedir: valve
+    name: Half-Life Deathmatch
+    url: https://store.steampowered.com/app/70/HalfLife/
