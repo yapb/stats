@@ -11,6 +11,7 @@ from __future__ import annotations
 import bz2
 import socket
 import struct
+import time
 import zlib
 
 A2S_RULES = 0x56
@@ -35,15 +36,7 @@ def fetch_rules(addr, timeout=1.5, goldsrc=True, attempts=3):
         if header == -1:
             return _parse(data, compressed=False)
         if header == -2:
-            raw = _collect_splits(sock, data, timeout)
-            last = RulesError("no split format matched")
-            for hint in (goldsrc, not goldsrc):
-                try:
-                    payload, compressed = _interpret(raw, hint)
-                    return _parse(payload, compressed=compressed)
-                except RulesError as e:
-                    last = e
-            raise last
+            return _collect_and_parse(sock, data, timeout, goldsrc)
         raise RulesError(f"bad header {header}")
     finally:
         sock.close()
@@ -79,31 +72,45 @@ def _challenge_flow(sock, server, attempts):
     raise RulesError("challenge loop exhausted")
 
 
-def _collect_splits(sock, first, timeout):
-    """Gather split datagrams; fragments arrive back to back, so a short
-    collection window after the first one is enough."""
+def _collect_and_parse(sock, first, timeout, goldsrc):
+    """Gather split datagrams until some format yields a complete coherent
+    set, then parse it. Slow-but-steady fragments still complete; only a
+    dead stop ends the wait."""
+    order = (goldsrc, not goldsrc)
     raw = [first]
-    sock.settimeout(min(0.5, timeout))
-    try:
-        for _ in range(40):
-            try:
-                data, _ = sock.recvfrom(8192)
-            except socket.timeout:
-                break
-            if struct.unpack("<i", data[:4])[0] == -2:
-                raw.append(data)
-    finally:
-        sock.settimeout(timeout)
-    return raw
+    sock.settimeout(0.4)
+    deadline = time.monotonic() + max(2.0, timeout)
+    while True:
+        for hint in order:
+            ready = _try_interpret(raw, hint)
+            if ready is not None:
+                payload, compressed = ready
+                try:
+                    return _parse(payload, compressed=compressed)
+                except RulesError:
+                    continue  # coherent under this hint but garbage: try next
+        if time.monotonic() >= deadline:
+            break
+        try:
+            data, _ = sock.recvfrom(8192)
+        except socket.timeout:
+            break
+        if len(data) >= 5 and struct.unpack("<i", data[:4])[0] == -2:
+            raw.append(data)
+        if len(raw) > 64:
+            break
+    raise RulesError("incomplete split set")
 
 
-def _interpret(raw, goldsrc):
+def _try_interpret(raw, goldsrc):
+    """Complete coherent set mapped to (payload, compressed), None when the
+    set is merely incomplete, raises RulesError when incoherent."""
     packets = {}
     total = None
     compressed = False
     for data in raw:
         number, count, payload, is_comp = _split_header(data, goldsrc)
-        if not 1 <= count <= 40 or not 0 <= number < count:
+        if not 1 <= count <= 64 or not 0 <= number < count:
             raise RulesError("split set incoherent")
         if total is None:
             total = count
@@ -112,7 +119,7 @@ def _interpret(raw, goldsrc):
             raise RulesError("split count changed mid reply")
         packets[number] = payload
     if total is None or len(packets) < total:
-        raise RulesError("incomplete split set")
+        return None
     return b"".join(packets[i] for i in range(total)), compressed
 
 
