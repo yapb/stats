@@ -73,6 +73,7 @@ def fetch_mod(key, mod, last_call):
         # Completeness still isn't provable (maps beyond the cap stay unseen),
         # hence the truncated flag stays set (see quality.truncated_appids).
         maps = sorted({s.get("map", "") for s in servers if s.get("map")})
+        maps = [m for m in maps if m.strip()]
         extra = {s["addr"]: s for s in servers}
         for i, m in enumerate(maps, 1):
             batch = master_call(key, f"\\appid\\{appid}\\map\\{m}", last_call)
@@ -117,7 +118,7 @@ def main():
     ap.add_argument("--out", required=True, help="output dir for latest.json/history.json")
     ap.add_argument("--config-dir", default=os.path.join(os.path.dirname(__file__), "..", "config"))
     ap.add_argument("--workers", type=int, default=100)
-    ap.add_argument("--timeout", type=float, default=1.5)
+    ap.add_argument("--timeout", type=float, default=2.5)
     ap.add_argument("--appid", type=int, action="append", default=None,
                     help="only scan these appids (repeatable; default: all from mods.yml)")
     ap.add_argument("--max-addrs", type=int, default=0,
@@ -235,6 +236,8 @@ def main():
 
     per_ip = Counter(a.rpartition(":")[0] for a in master)
     farms = sum(1 for _, n in per_ip.items() if n > 100)
+    info_errs = Counter(r["info_err"] for r in results if "info_err" in r)
+    rules_errs = Counter(r["rules_err"] for r in alive if "rules_err" in r)
     empty_mod = {"alive": 0, "players": 0, "bots": 0, "with_rules": 0, "max_players": 0}
     total_players = sum(row["players"] for row in by_mod.values())
     total_capacity = sum(row["max_players"] for row in by_mod.values())
@@ -271,6 +274,8 @@ def main():
                    for v in tracked],
         "quality": {
             "truncated_appids": truncated_mods,
+            "info_errors": dict(info_errs.most_common(10)),
+            "rules_errors": dict(rules_errs.most_common(10)),
             "note": ("Servers that ignore A2S_RULES are counted in rules_unknown, "
                      "not silently dropped."),
         },
