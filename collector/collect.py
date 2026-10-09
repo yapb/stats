@@ -126,6 +126,8 @@ def main():
                     help="save raw master lists to this JSON file for reuse")
     ap.add_argument("--master-cache", default=None,
                     help="skip the master phase, load lists from a --save-master file")
+    ap.add_argument("--skip-a2s", action="store_true",
+                    help="only fetch the master lists (used with --save-master)")
     args = ap.parse_args()
 
     key = os.environ.get("STEAM_WEBAPI_KEY", "")
@@ -179,6 +181,8 @@ def main():
     targets = [a for a in master if not _is_sdr(a.rpartition(":")[0])]
     if args.max_addrs:
         targets = targets[:args.max_addrs]
+    if args.skip_a2s:
+        targets = []
     print(f"A2S targets: {len(targets)} (+{sdr} SDR skipped,"
           f" {args.workers} workers)", flush=True)
 
