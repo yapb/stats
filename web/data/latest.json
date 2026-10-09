@@ -1,134 +1,348 @@
 {
- "generated_at": "2026-10-09T20:18:45+00:00",
+ "generated_at": "2026-10-09T22:51:11+00:00",
  "mods": [
   {
    "appid": 10,
    "name": "Counter-Strike",
    "url": "https://store.steampowered.com/app/10/CounterStrike/",
-   "master": 55215,
-   "alive": 13180,
-   "players": 600581,
-   "bots": 5619
+   "master": 55945,
+   "alive": 6588,
+   "players": 326796,
+   "bots": 1645,
+   "with_rules": 308,
+   "max_players": 373060
   },
   {
    "appid": 80,
    "name": "Condition Zero",
    "url": "https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/",
-   "master": 469,
-   "alive": 65,
-   "players": 254,
-   "bots": 146
+   "master": 384,
+   "alive": 40,
+   "players": 93,
+   "bots": 84,
+   "with_rules": 0,
+   "max_players": 1060
   },
   {
    "appid": 30,
    "name": "Day of Defeat",
    "url": "https://store.steampowered.com/app/30/Day_of_Defeat/",
-   "master": 149,
-   "alive": 25,
-   "players": 170,
-   "bots": 137
+   "master": 151,
+   "alive": 10,
+   "players": 83,
+   "bots": 79,
+   "with_rules": 0,
+   "max_players": 242
   },
   {
    "appid": 20,
    "name": "Team Fortress Classic",
    "url": "https://store.steampowered.com/app/20/Team_Fortress_Classic/",
    "master": 146,
-   "alive": 25,
-   "players": 129,
-   "bots": 110
+   "alive": 12,
+   "players": 55,
+   "bots": 51,
+   "with_rules": 2,
+   "max_players": 292
   },
   {
    "appid": 50,
    "name": "Opposing Force",
    "url": "https://store.steampowered.com/app/50/HalfLife_Opposing_Force/",
-   "master": 37,
-   "alive": 4,
-   "players": 17,
-   "bots": 16
+   "master": 36,
+   "alive": 1,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 24
   },
   {
    "appid": 40,
    "name": "Deathmatch Classic",
    "url": "https://store.steampowered.com/app/40/Deathmatch_Classic/",
-   "master": 22,
-   "alive": 5,
-   "players": 26,
-   "bots": 26
+   "master": 20,
+   "alive": 2,
+   "players": 7,
+   "bots": 6,
+   "with_rules": 0,
+   "max_players": 44
   },
   {
    "appid": 60,
    "name": "Ricochet",
    "url": "https://store.steampowered.com/app/60/Ricochet/",
    "master": 16,
-   "alive": 3,
-   "players": 0,
-   "bots": 0
+   "alive": 2,
+   "players": 4,
+   "bots": 4,
+   "with_rules": 0,
+   "max_players": 44
   },
   {
    "appid": 70,
    "name": "Half-Life Deathmatch",
    "url": "https://store.steampowered.com/app/70/HalfLife/",
-   "master": 1470,
-   "alive": 293,
-   "players": 7170,
-   "bots": 173
+   "master": 1448,
+   "alive": 158,
+   "players": 3401,
+   "bots": 121,
+   "with_rules": 6,
+   "max_players": 6128
   }
  ],
  "totals": {
-  "master": 57517,
-  "sdr_skipped": 232,
-  "probed": 57285,
-  "alive": 13600,
-  "with_rules": 1073,
-  "rules_unknown": 12527,
-  "distinct_ips": 4119,
-  "ips_over_100_servers": 241
+  "master": 58140,
+  "sdr_skipped": 159,
+  "probed": 57981,
+  "alive": 6813,
+  "players": 330439,
+  "max_players": 380894,
+  "with_rules": 316,
+  "rules_unknown": 6497,
+  "distinct_ips": 4003,
+  "ips_over_100_servers": 236
  },
  "addons": [
   {
    "name": "yb_version",
    "title": "YaPB",
    "url": "https://github.com/yapb/yapb",
-   "servers": 1,
-   "values": {
-    "4.4.957": 1
+   "servers": 0,
+   "players": 0,
+   "max_players": 0,
+   "bots": 0,
+   "values": {},
+   "by_mod": {
+    "10": {
+     "servers": 0,
+     "values": {}
+    },
+    "80": {
+     "servers": 0,
+     "values": {}
+    },
+    "30": {
+     "servers": 0,
+     "values": {}
+    },
+    "20": {
+     "servers": 0,
+     "values": {}
+    },
+    "50": {
+     "servers": 0,
+     "values": {}
+    },
+    "40": {
+     "servers": 0,
+     "values": {}
+    },
+    "60": {
+     "servers": 0,
+     "values": {}
+    },
+    "70": {
+     "servers": 0,
+     "values": {}
+    }
    }
   },
   {
    "name": "amxmodx_version",
    "title": "AMX Mod X",
    "url": "https://www.amxmodx.org/",
-   "servers": 46,
+   "servers": 8,
+   "players": 99,
+   "max_players": 196,
+   "bots": 8,
    "values": {
-    "1.10.0.5416": 15,
-    "1.9.0.5294": 8,
-    "1.8.2": 7,
-    "1.10.0.5467": 6,
-    "1.10.0.5478": 2,
-    "1.9.0-dev+5215": 2,
-    "1.9.0.5271": 1,
-    "1.10.0.5473": 1,
-    "1.10.0.5474": 1,
-    "1.60": 1,
-    "1.10.0.5412": 1,
-    "1.8.2-dev": 1
+    "1.9.0.5294": 4,
+    "1.10.0.5474": 2,
+    "1.10.0.5416": 2
+   },
+   "by_mod": {
+    "10": {
+     "servers": 3,
+     "values": {
+      "1.9.0.5294": 3
+     }
+    },
+    "80": {
+     "servers": 0,
+     "values": {}
+    },
+    "30": {
+     "servers": 0,
+     "values": {}
+    },
+    "20": {
+     "servers": 1,
+     "values": {
+      "1.10.0.5474": 1
+     }
+    },
+    "50": {
+     "servers": 0,
+     "values": {}
+    },
+    "40": {
+     "servers": 0,
+     "values": {}
+    },
+    "60": {
+     "servers": 0,
+     "values": {}
+    },
+    "70": {
+     "servers": 4,
+     "values": {
+      "1.10.0.5416": 2,
+      "1.10.0.5474": 1,
+      "1.9.0.5294": 1
+     }
+    }
    }
   },
   {
    "name": "metamod_version",
    "title": "Metamod",
    "url": "http://www.metamod.org/",
-   "servers": 28,
+   "servers": 5,
+   "players": 9,
+   "max_players": 70,
+   "bots": 6,
    "values": {
-    "1.3.0.149": 5,
-    "1.21.1-am": 5,
-    "1.21p38": 5,
-    "1.20": 4,
-    "1.21-am": 3,
-    "1.21p37": 3,
-    "1.21p109": 1,
-    "1.3.0.128": 1,
-    "1.21p39": 1
+    "1.3.0.149": 3,
+    "1.21.1-am": 2
+   },
+   "by_mod": {
+    "10": {
+     "servers": 2,
+     "values": {
+      "1.3.0.149": 2
+     }
+    },
+    "80": {
+     "servers": 0,
+     "values": {}
+    },
+    "30": {
+     "servers": 0,
+     "values": {}
+    },
+    "20": {
+     "servers": 1,
+     "values": {
+      "1.21.1-am": 1
+     }
+    },
+    "50": {
+     "servers": 0,
+     "values": {}
+    },
+    "40": {
+     "servers": 0,
+     "values": {}
+    },
+    "60": {
+     "servers": 0,
+     "values": {}
+    },
+    "70": {
+     "servers": 2,
+     "values": {
+      "1.21.1-am": 1,
+      "1.3.0.149": 1
+     }
+    }
+   }
+  },
+  {
+   "name": "pb_version",
+   "title": "POD-Bot",
+   "url": "https://github.com/APGRoboCop/podbot_mm",
+   "servers": 0,
+   "players": 0,
+   "max_players": 0,
+   "bots": 0,
+   "values": {},
+   "by_mod": {
+    "10": {
+     "servers": 0,
+     "values": {}
+    },
+    "80": {
+     "servers": 0,
+     "values": {}
+    },
+    "30": {
+     "servers": 0,
+     "values": {}
+    },
+    "20": {
+     "servers": 0,
+     "values": {}
+    },
+    "50": {
+     "servers": 0,
+     "values": {}
+    },
+    "40": {
+     "servers": 0,
+     "values": {}
+    },
+    "60": {
+     "servers": 0,
+     "values": {}
+    },
+    "70": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "bot_quota",
+   "title": "CZ Bot",
+   "url": "https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/",
+   "servers": 0,
+   "players": 0,
+   "max_players": 0,
+   "bots": 0,
+   "values": {},
+   "by_mod": {
+    "10": {
+     "servers": 0,
+     "values": {}
+    },
+    "80": {
+     "servers": 0,
+     "values": {}
+    },
+    "30": {
+     "servers": 0,
+     "values": {}
+    },
+    "20": {
+     "servers": 0,
+     "values": {}
+    },
+    "50": {
+     "servers": 0,
+     "values": {}
+    },
+    "40": {
+     "servers": 0,
+     "values": {}
+    },
+    "60": {
+     "servers": 0,
+     "values": {}
+    },
+    "70": {
+     "servers": 0,
+     "values": {}
+    }
    }
   }
  ],
