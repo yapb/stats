@@ -21,11 +21,11 @@ jobs:
     runs-on: [self-hosted, stats-pi]
     timeout-minutes: 360
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
@@ -43,7 +43,7 @@ jobs:
           echo "MASTER_CACHE=$HOME/census-cache/master-cache.json" >> "$GITHUB_ENV"
 
       - name: Restore master cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: ${{ env.MASTER_CACHE }}
           key: master-${{ steps.today.outputs.date }}
@@ -65,7 +65,7 @@ jobs:
 
       - name: Save master cache
         if: always()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: ${{ env.MASTER_CACHE }}
           key: master-${{ steps.today.outputs.date }}
@@ -85,9 +85,9 @@ jobs:
           [ -f web/data/notified.json ] && git add web/data/notified.json || true
           git diff --cached --quiet || { git commit -m "census $(date -u +%F)"; git pull --rebase origin master; git push; }
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: '20'
           cache: npm
@@ -101,7 +101,7 @@ jobs:
           npm run build --prefix web
           cp -r web/data web/dist/data
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v7
         with:
           path: web/dist
 
