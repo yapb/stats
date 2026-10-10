@@ -82,7 +82,7 @@ export function buildOverviewSeries(latest, histRows, ver) {
     {
       name: 'alive',
       type: 'line',
-      smooth: true,
+      smooth: true, showSymbol: true, symbolSize: 7,
       data: histRows.map(function (r) {
         return r.alive || 0;
       }),
@@ -90,7 +90,7 @@ export function buildOverviewSeries(latest, histRows, ver) {
     {
       name: 'with rules',
       type: 'line',
-      smooth: true,
+      smooth: true, showSymbol: true, symbolSize: 7,
       data: histRows.map(function (r) {
         return r.with_rules || 0;
       }),
@@ -100,7 +100,7 @@ export function buildOverviewSeries(latest, histRows, ver) {
     series.push({
       name: a.title,
       type: 'line',
-      smooth: true,
+      smooth: true, showSymbol: true, symbolSize: 7,
       yAxisIndex: 1,
       data: histRows.map(function (r) {
         return r['addon:' + a.name] || 0;
@@ -115,7 +115,7 @@ export function buildAddonSeries(addon, histRows, topN) {
     {
       name: 'total',
       type: 'line',
-      smooth: true,
+      smooth: true, showSymbol: true, symbolSize: 7,
       lineStyle: { width: 3 },
       data: histRows.map(function (r) {
         return r['addon:' + addon.name] || 0;
@@ -129,7 +129,7 @@ export function buildAddonSeries(addon, histRows, topN) {
     series.push({
       name: v,
       type: 'line',
-      smooth: true,
+      smooth: true, showSymbol: true, symbolSize: 7,
       data: histRows.map(function (r) {
         return (((r.addon_versions || {})[addon.name] || {})[v] || 0);
       }),
@@ -146,7 +146,7 @@ export function buildModSeries(histRows, appid) {
     {
       name: 'alive',
       type: 'line',
-      smooth: true,
+      smooth: true, showSymbol: true, symbolSize: 7,
       data: histRows.map(function (r) {
         return at(r, 'alive');
       }),
@@ -154,7 +154,7 @@ export function buildModSeries(histRows, appid) {
     {
       name: 'with rules',
       type: 'line',
-      smooth: true,
+      smooth: true, showSymbol: true, symbolSize: 7,
       data: histRows.map(function (r) {
         return at(r, 'rules');
       }),

@@ -35,12 +35,12 @@ function draw() {
   });
 }
 
-onMounted(draw);
-watch(
-  function () {
-    return [props.dates, props.series];
-  },
-  draw,
-  { deep: true }
-);
+  onMounted(draw);
+  watch(
+    function () {
+      return [props.dates, props.series];
+    },
+    draw,
+    { deep: true, flush: 'post' }
+  );
 </script>

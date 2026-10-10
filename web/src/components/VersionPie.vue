@@ -54,12 +54,12 @@ function draw() {
   });
 }
 
-onMounted(draw);
-watch(
-  function () {
-    return [props.title, props.values];
-  },
-  draw,
-  { deep: true }
-);
+  onMounted(draw);
+  watch(
+    function () {
+      return [props.title, props.values];
+    },
+    draw,
+    { deep: true, flush: 'post' }
+  );
 </script>
