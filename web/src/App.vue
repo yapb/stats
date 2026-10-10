@@ -136,6 +136,11 @@ const notes = computed(function () {  if (!latest.value) {
         fmt(t.fake_dropped || 0) +
         ' fake-count addrs, cut before scanning',
     },
+    {
+      label: 'SDR skipped',
+      value: fmt(t.sdr_skipped || 0),
+      text: 'link-local entries unreachable over plain UDP',
+    },
   ];
   if ((t.mystery_servers || 0) > 0) {
     out.push({
