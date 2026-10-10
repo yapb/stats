@@ -37,6 +37,7 @@ def build(results, master, mods, tracked, truncated_mods,
 
     empty_mod = {"alive": 0, "players": 0, "bots": 0, "with_rules": 0, "max_players": 0}
     by_mod = defaultdict(lambda: dict(empty_mod))
+    mod_maps = defaultdict(Counter)  # gamedir mapped to map counts
     for r in alive:
         app = _guess_mod(r, master.get(r["addr"], {}), mods)
         row = by_mod[app]
@@ -52,8 +53,7 @@ def build(results, master, mods, tracked, truncated_mods,
     addon_players = Counter()
     addon_capacity = Counter()
     addon_bots = Counter()
-    mod_addon = defaultdict(Counter)  # (appid, var) mapped to value counts
-    mod_maps = defaultdict(Counter)  # gamedir mapped to map counts
+    mod_addon = defaultdict(Counter)  # (gamedir, var) mapped to value counts
     for r in with_rules:
         app = _guess_mod(r, master.get(r["addr"], {}), mods)
         by_mod[app]["with_rules"] += 1
