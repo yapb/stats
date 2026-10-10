@@ -146,6 +146,10 @@ masters:
     port: 27010
     name: CSControl
     unfiltered: true
+  - host: master.won2.steamlessproject.nl
+    port: 27010
+    name: Steamless
+    gamedirs: [cstrike]
   - host: ms1.ds-servers.com
     port: 27010
     name: DSServers
