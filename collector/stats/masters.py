@@ -2,12 +2,35 @@
 
 import json
 import os
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from stats.legacy_master import query as legacy_query
 from stats.static_lists import fetch_list
 from stats.steam_master import fetch_mod
 
 CORE_GAMEDIRS = ("cstrike", "czero", "valve", "dod", "tfc", "gearbox", "dmc", "ricochet")
+EXTRA_WORKERS = 10
+
+
+def _legacy_job(entry, mod):
+    name = entry.get("name") or entry["host"]
+    gamedir = mod.get("gamedir", "")
+    try:
+        addrs = legacy_query(entry["host"], entry.get("port", 27010), gamedir)
+        return (name, mod, addrs, None)
+    except Exception as e:
+        return (name, mod, [], e)
+
+
+def _static_job(entry, mod, url):
+    name = entry.get("name") or entry["url"]
+    gamedir = mod.get("gamedir", "")
+    try:
+        addrs = fetch_list(dict(entry, url=url))
+        return (name, mod, addrs, None)
+    except Exception as e:
+        return (name, mod, [], e)
 
 
 def collect_all(key, mods, custom_masters, static_lists=None, master_cache=None, save_master=None):
@@ -50,49 +73,49 @@ def collect_all(key, mods, custom_masters, static_lists=None, master_cache=None,
 
     steam_total = sum(per_mod_master.values())
     source_new = {"steam": steam_total}
+    jobs = []
     for entry in custom_masters:
-        name = entry.get("name") or entry["host"]
         wanted = set(entry.get("gamedirs") or CORE_GAMEDIRS)
         query_mods = [m for m in mods if m.get("gamedir", "") in wanted]
         if entry.get("unfiltered") and query_mods:
-            query_mods = [m for m in query_mods if m.get("gamedir") == "cstrike"] or query_mods[:1]
-        new_here = 0
+            picked = [m for m in query_mods if m.get("gamedir") == "cstrike"]
+            query_mods = picked or query_mods[:1]
         for mod in query_mods:
-            gamedir = mod.get("gamedir", "")
-            try:
-                addrs = legacy_query(entry["host"], entry.get("port", 27010), gamedir)
-            except Exception as e:
-                print(f"custom master {name} gamedir={gamedir} failed ({e})", flush=True)
-                continue
-            for addr in addrs:
-                if addr not in master:
-                    master[addr] = {"addr": addr, "gamedir": gamedir, "appid": 0,
-                                    "source": name}
-                    per_mod_master[mod["appid"]] = per_mod_master.get(mod["appid"], 0) + 1
-                    new_here += 1
-        source_new[name] = new_here
-        print(f"custom master {name}: {new_here} new addrs", flush=True)
+            jobs.append(("legacy", entry, mod))
     for entry in static_lists or []:
-        name = entry.get("name") or entry["url"]
         wanted = set(entry.get("gamedirs", []))
-        new_here = 0
         for mod in mods:
             gamedir = mod.get("gamedir", "")
             if not gamedir or (wanted and gamedir not in wanted):
                 continue
-            url = entry["url"].replace("{gamedir}", gamedir)
-            try:
-                local = dict(entry, url=url)
-                addrs = fetch_list(local)
-            except Exception as e:
-                print(f"static list {name} gamedir={gamedir} failed ({e})", flush=True)
+            jobs.append(("static", entry, mod))
+    started = time.monotonic()
+    done = 0
+    with ThreadPoolExecutor(max_workers=EXTRA_WORKERS) as ex:
+        futs = {}
+        for kind, entry, mod in jobs:
+            if kind == "legacy":
+                fut = ex.submit(_legacy_job, entry, mod)
+            else:
+                url = entry["url"].replace("{gamedir}", mod.get("gamedir", ""))
+                fut = ex.submit(_static_job, entry, mod, url)
+            futs[fut] = (kind, entry, mod)
+        for fut in as_completed(futs):
+            kind, entry, mod = futs[fut]
+            name, _, addrs, err = fut.result()
+            gamedir = mod.get("gamedir", "")
+            if err is not None:
+                print(f"{kind} source {name} gamedir={gamedir} failed ({err})", flush=True)
                 continue
+            new_here = 0
             for addr in addrs:
                 if addr not in master:
                     master[addr] = {"addr": addr, "gamedir": gamedir, "appid": 0,
                                     "source": name}
                     per_mod_master[mod["appid"]] = per_mod_master.get(mod["appid"], 0) + 1
                     new_here += 1
-        source_new[name] = new_here
-        print(f"static list {name}: {new_here} new addrs", flush=True)
+            source_new[name] = source_new.get(name, 0) + new_here
+            done += 1
+            print(f"extra source {name} {gamedir}: {new_here} new "
+                  f"({done}/{len(futs)} in {time.monotonic() - started:.0f}s)", flush=True)
     return master, per_mod_master, truncated_mods, source_new
