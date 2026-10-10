@@ -345,7 +345,7 @@ function renderAddons() {
     var active = state.addon === a.name ? ' class="active link"' : ' class="link"';
     html += '<tr' + active + ' data-addon="' + a.name + '"><td><span class="flex items-center gap-2">' +
       avatar(a.title) + '<span><a href="#/addon/' + a.name + '">' + a.title +
-      '</a> <span class="text-slate-500 hidden sm:inline">(' + a.name + ')</span></span></span></td><td>' +
+      '</a><br><span class="text-slate-500 text-xs">' + a.name + '</span></span></span></td><td>' +
       fmt(s.servers) + '</td><td class="hidden sm:table-cell">' + top + '</td></tr>';
   });
   document.getElementById('addons').innerHTML = html + '</tbody>';
