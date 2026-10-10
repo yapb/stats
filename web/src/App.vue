@@ -87,11 +87,16 @@ const sourceLine = computed(function () {
     return '';
   }
   const s = latest.value.totals.sources || {};
-  return Object.keys(s)
-    .map(function (k) {
-      return k + ' ' + fmt(s[k]);
-    })
-    .join(' · ');
+  const ranked = Object.keys(s).sort(function (a, b) {
+    return s[b] - s[a];
+  });
+  const shown = ranked.slice(0, 8).map(function (k) {
+    return k + ' ' + fmt(s[k]);
+  });
+  if (ranked.length > 8) {
+    shown.push('+' + (ranked.length - 8) + ' more');
+  }
+  return shown.join(' · ');
 });
 
 const notes = computed(function () {  if (!latest.value) {

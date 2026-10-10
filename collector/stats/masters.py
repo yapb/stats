@@ -7,6 +7,8 @@ from stats.legacy_master import query as legacy_query
 from stats.static_lists import fetch_list
 from stats.steam_master import fetch_mod
 
+CORE_GAMEDIRS = ("cstrike", "czero", "valve", "dod", "tfc", "gearbox", "dmc", "ricochet")
+
 
 def collect_all(key, mods, custom_masters, static_lists=None, master_cache=None, save_master=None):
     """Returns (master, per_mod_master, truncated_mods, source_new).
@@ -50,14 +52,13 @@ def collect_all(key, mods, custom_masters, static_lists=None, master_cache=None,
     source_new = {"steam": steam_total}
     for entry in custom_masters:
         name = entry.get("name") or entry["host"]
-        wanted = entry.get("gamedirs")
+        wanted = set(entry.get("gamedirs") or CORE_GAMEDIRS)
+        query_mods = [m for m in mods if m.get("gamedir", "") in wanted]
+        if entry.get("unfiltered") and query_mods:
+            query_mods = [m for m in query_mods if m.get("gamedir") == "cstrike"] or query_mods[:1]
         new_here = 0
-        for mod in mods:
+        for mod in query_mods:
             gamedir = mod.get("gamedir", "")
-            if not gamedir:
-                continue
-            if wanted and gamedir not in wanted:
-                continue
             try:
                 addrs = legacy_query(entry["host"], entry.get("port", 27010), gamedir)
             except Exception as e:

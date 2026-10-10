@@ -1,10 +1,11 @@
 # Community master servers (legacy UDP protocol) merged with the Steam list.
 # Add new ones via PR:
-#   host:     master hostname
-#   port:     master query port (UDP)
-#   name:     short display name, used as the entry source tag
-#   url:      link shown on the dashboard
-#   gamedirs: optional mod directory filter (queried per mod otherwise)
+#   host:       master hostname
+#   port:       master query port (UDP)
+#   name:       short display name, used as the entry source tag
+#   url:        link shown on the dashboard
+#   gamedirs:   mod directories to query (default: the 8 core HL1 mods)
+#   unfiltered: master ignores the gamedir filter, one query covers everything
 masters:
   - host: ms.varq.net
     port: 27010
@@ -39,6 +40,122 @@ masters:
   - host: ms.worldcs.ro
     port: 27010
     name: WorldCS
+  - host: ms.taco.cab
+    port: 27010
+    name: Taco
+  - host: 95.163.78.25
+    port: 27010
+    name: 95.163.78.25
+  - host: 195.201.29.128
+    port: 27010
+    name: 195.201.29.128
+  - host: free-ms.pp.ua
+    port: 27010
+    name: FreeMS
+  - host: ms1.your-cs.com
+    port: 27010
+    name: YourCS
+  - host: ms.cs-navi.pro
+    port: 27010
+    name: Navi
+  - host: server-ms.ru
+    port: 27010
+    name: ServerMS
+  - host: cs.hlmasterserver.net
+    port: 27010
+    name: HLMasterNet
+    unfiltered: true
+  - host: m.gamecs.com.br
+    port: 27010
+    name: GameCS
+  - host: ms.topms.ru
+    port: 27010
+    name: TopMS
+  - host: cs.fenix.lt
+    port: 27010
+    name: Fenix
+  - host: 89.179.70.89
+    port: 27010
+    name: 89.179.70.89
+  - host: 143.0.0.127
+    port: 27010
+    name: 143.0.0.127
+  - host: 51.38.65.66
+    port: 27010
+    name: 51.38.65.66
+  - host: ms.fg-mirror.ru
+    port: 27010
+    name: FGMirror
+  - host: ms.go-cs16.ru
+    port: 27010
+    name: GoCS16
+  - host: vm-boost.ru
+    port: 27010
+    name: VMBoost
+  - host: ms.bcs16.ro
+    port: 27010
+    name: BCS16
+  - host: ms1.serversbr.net
+    port: 27010
+    name: ServersBR
+  - host: ms2.boost-master.org
+    port: 27010
+    name: BoostMaster2
+  - host: ms.ap-game.ru
+    port: 27010
+    name: ApGame
+  - host: ms.boostic.ru
+    port: 27010
+    name: Boostic
+    unfiltered: true
+  - host: ms1.gamemonitor.net
+    port: 27010
+    name: Gamemonitor
+    unfiltered: true
+  - host: ms.csadmin.org
+    port: 27010
+    name: CsAdmin
+    unfiltered: true
+  - host: ms.cs-clan.ru
+    port: 27010
+    name: CsClan
+    unfiltered: true
+  - host: 93.115.83.162
+    port: 27010
+    name: 93.115.83.162
+    unfiltered: true
+  - host: ms.cslonghorn.com
+    port: 27010
+    name: CSLonghorn
+    unfiltered: true
+  - host: ms1.cs16-player.ru
+    port: 27010
+    name: CS16Player
+    unfiltered: true
+  - host: ms.unikov.net
+    port: 27010
+    name: Unikov
+    unfiltered: true
+  - host: ms.ms-strike.ru
+    port: 27010
+    name: Strike
+    unfiltered: true
+  - host: ms.servera-cs.com
+    port: 27010
+    name: ServeraCS
+    unfiltered: true
+  - host: 5.252.194.41
+    port: 27010
+    name: 5.252.194.41
+    unfiltered: true
+  - host: ms2.cs-all-servers.ru
+    port: 27010
+    name: CSAllServers2
+    unfiltered: true
+  - host: ms.cscontrol.ru
+    port: 27010
+    name: CSControl
+    unfiltered: true
   - host: ms1.ds-servers.com
     port: 27010
     name: DSServers
