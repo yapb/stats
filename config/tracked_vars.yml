@@ -43,3 +43,6 @@ vars:
   - name: hlg_version
     title: HLGuard
     url: http://www.thezproject.org/
+  - name: amx_version
+    title: AMX Mod
+    url: http://www.amxmod.net/
