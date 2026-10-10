@@ -68,10 +68,10 @@ def fetch_mod(key, mod, last_call):
     servers = master_call(key, f"\\appid\\{appid}", last_call)
     truncated = len(servers) >= MASTER_LIMIT
     if truncated:
-        # Same idea as blaster.net tier-2 fan-out: split the capped answer
-        # into per-map queries so dense mods are still (mostly) enumerated.
-        # Completeness still isn't provable (maps beyond the cap stay unseen),
-        # hence the truncated flag stays set (see quality.truncated_appids).
+        # Split the capped answer into per-map queries so dense mods are
+        # still (mostly) enumerated. Completeness still isn't provable
+        # (maps beyond the cap stay unseen), hence the truncated flag stays
+        # set (see quality.truncated_appids).
         maps = sorted({s.get("map", "") for s in servers if s.get("map")})
         maps = [m for m in maps if m.strip()]
         extra = {s["addr"]: s for s in servers}
@@ -129,6 +129,8 @@ def main():
                     help="skip the master phase, load lists from a --save-master file")
     ap.add_argument("--skip-a2s", action="store_true",
                     help="only fetch the master lists (used with --save-master)")
+    ap.add_argument("--max-servers-per-host", type=int, default=100,
+                    help="hosts with more master entries are redirect farms, drop them (0 disables)")
     args = ap.parse_args()
 
     key = os.environ.get("STEAM_WEBAPI_KEY", "")
@@ -175,6 +177,32 @@ def main():
                     s for s in master.values()
                     if s.get("appid") == m["appid"]] for m in mods},
                     "truncated": truncated_mods}, f)
+
+    # --- farm filter --------------------------------------------------------
+    # Redirect farms stuff the master list with thousands of fake ports on a
+    # few IPs. Drop whole hosts over the per-IP cap, plus lone servers with
+    # impossible master-reported player counts, before spending A2S probes.
+    # A lone faker never condemns its host: only the port count marks spam.
+    per_ip = Counter(a.rpartition(":")[0] for a in master)
+    master_raw = len(master)
+    cap = args.max_servers_per_host
+    spam_hosts = {ip for ip, n in per_ip.items() if cap > 0 and n > cap}
+    farm_dropped = 0
+    fake_dropped = 0
+    if cap > 0:
+        kept = {}
+        for addr, entry in master.items():
+            host = addr.rpartition(":")[0]
+            if host in spam_hosts:
+                farm_dropped += 1
+                continue
+            if (entry.get("players", 0) or 0) > 130:
+                fake_dropped += 1
+                continue
+            kept[addr] = entry
+        master = kept
+        print(f"farm filter: {len(spam_hosts)} hosts, {farm_dropped} farm addrs, "
+              f"{fake_dropped} fake-count addrs dropped", flush=True)
 
     # --- A2S phase --------------------------------------------------------
     sdr = sum(1 for a in master
@@ -234,11 +262,7 @@ def main():
                 addon_capacity[name] += r["info"]["max_players"]
                 addon_bots[name] += r["info"]["bots"]
 
-    per_ip = Counter(a.rpartition(":")[0] for a in master)
-    farms = sum(1 for _, n in per_ip.items() if n > 100)
-    regular = lambda r: per_ip.get(r["addr"].rpartition(":")[0], 0) <= 100
-    regular_alive = sum(1 for r in alive if regular(r))
-    regular_rules = sum(1 for r in with_rules if regular(r))
+    farms = len(spam_hosts)
     info_errs = Counter(r["info_err"] for r in results if "info_err" in r)
     rules_errs = Counter(r["rules_err"] for r in alive if "rules_err" in r)
     empty_mod = {"alive": 0, "players": 0, "bots": 0, "with_rules": 0, "max_players": 0}
@@ -253,8 +277,10 @@ def main():
                   **by_mod.get(m["appid"], dict(empty_mod))}
                  for m in mods],
         "totals": {
-            "master": len(master),
+            "master": master_raw,
             "sdr_skipped": sdr,
+            "farm_dropped": farm_dropped,
+            "fake_dropped": fake_dropped,
             "probed": len(results),
             "alive": len(alive),
             "players": total_players,
@@ -263,8 +289,6 @@ def main():
             "rules_unknown": len(alive) - len(with_rules),
             "distinct_ips": len(per_ip),
             "ips_over_100_servers": farms,
-            "alive_regular": regular_alive,
-            "rules_regular": regular_rules,
         },
         "addons": [{"name": v["name"], "title": v["title"], "url": v["url"],
                     "servers": with_addon[v["name"]],

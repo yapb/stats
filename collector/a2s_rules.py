@@ -2,8 +2,8 @@
 
 python-a2s only understands Source style fragments, so GoldSrc servers with
 long rule lists (every server with plugins, exactly the ones worth counting)
-die there with BrokenMessageError. This ports the tricky part of the Blaster
-ServerQuery.cs: challenge flow, both split formats, bzip2 payloads.
+die there with BrokenMessageError. This implements the same flow by hand:
+challenge handling, both split formats, bzip2 payloads.
 """
 
 from __future__ import annotations

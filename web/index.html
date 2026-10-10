@@ -574,11 +574,9 @@ function renderQuality() {
     'Unknown is not absent: ' + fmt(t.rules_unknown) + ' alive servers ignore A2S_RULES (firewalled), ' +
     'so their versions stay unseen.' +
     (trunc ? ' Master list truncated at 10k for appids: ' + trunc + ' (partial census).' : '') +
-    ' ' + t.ips_over_100_servers + ' IPs host over 100 servers each (dense hosters / redirect farms).' +
-    ((t.alive_regular !== undefined)
-      ? ' Excluding those dense hosts (AMX stats style): ' + fmt(t.alive_regular) +
-        ' alive, ' + fmt(t.rules_regular) + ' with rules.'
-      : '');
+    ' ' + fmt(t.farm_dropped || 0) + ' farm addrs on ' + t.ips_over_100_servers +
+    ' dense hosts plus ' + fmt(t.fake_dropped || 0) +
+    ' fake player-count addrs excluded before scanning.';
 }
 
 function showView() {

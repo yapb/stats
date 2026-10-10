@@ -36,11 +36,14 @@ The key only travels via environment or repository secret, never in commits.
 ## How it works
 
 1. `IGameServersService/GetServerList` per tracked `appid` (`limit=10000`).
-   Capped answers get split further per map (same trick as the blaster.net
-   fan-out).
-2. Every address gets A2S `INFO` plus `RULES` (concurrent, short timeouts).
-   SDR (`169.254.x.x`) entries are unreachable over UDP, counted separately.
-3. Aggregates go to `web/data/latest.json`, a daily row is appended to
+   Capped answers get split further per map until the cap stops hitting.
+2. Redirect farms get cut before scanning: hosts with over 100 master
+   entries (`--max-servers-per-host`, 0 disables), plus lone entries with
+   impossible player counts. A lone faker never condemns its host.
+3. Every remaining address gets A2S `INFO` plus `RULES` (concurrent workers,
+   short timeouts). SDR (`169.254.x.x`) entries are unreachable over UDP,
+   counted separately.
+4. Aggregates go to `web/data/latest.json`, a daily row is appended to
    `web/data/history.json`. No per-server data lands in git.
-4. Servers that ignore A2S rules (firewalled majority) land in the `unknown`
+5. Servers that ignore A2S rules (firewalled majority) land in the `unknown`
    bucket: reported openly, not silently dropped.
