@@ -190,6 +190,31 @@ export function buildAddonSeries(addon, histRows, topN) {
   return series;
 }
 
+export function buildPlayersSeries(histRows) {
+  return [
+    {
+      name: 'players',
+      type: 'line',
+      smooth: true,
+      showSymbol: true,
+      symbolSize: 7,
+      data: histRows.map(function (r) {
+        return r.players || 0;
+      }),
+    },
+    {
+      name: 'max players',
+      type: 'line',
+      smooth: true,
+      showSymbol: true,
+      symbolSize: 7,
+      data: histRows.map(function (r) {
+        return r.max_players || 0;
+      }),
+    },
+  ];
+}
+
 export function buildModSeries(histRows, gamedir, appid) {
   const at = function (r, field) {
     const byGamedir = (r.mods || {})[String(gamedir || '').toLowerCase()];

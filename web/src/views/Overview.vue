@@ -98,7 +98,25 @@
   </div>
 
   <div class="card p-4 mb-6">
-    <h2 class="font-semibold text-white mb-2">History</h2>
+    <div class="flex items-center justify-between mb-2">
+      <h2 class="font-semibold text-white">History</h2>
+      <div class="flex gap-2">
+        <button
+          class="text-xs px-3 py-1 rounded-full border"
+          :class="histMode === 'servers' ? 'text-white border-sky-400 bg-sky-950' : 'text-slate-400'"
+          @click="histMode = 'servers'"
+        >
+          Servers
+        </button>
+        <button
+          class="text-xs px-3 py-1 rounded-full border"
+          :class="histMode === 'players' ? 'text-white border-sky-400 bg-sky-950' : 'text-slate-400'"
+          @click="histMode = 'players'"
+        >
+          Players
+        </button>
+      </div>
+    </div>
     <HistoryChart :dates="dates" :series="series" :dual-axis="true" />
   </div>
 </template>
@@ -116,6 +134,7 @@ import VersionPie from '../components/VersionPie.vue';
 import {
   addonByName,
   buildOverviewSeries,
+  buildPlayersSeries,
   fmt,
   histDate,
   stampToDate,
@@ -134,6 +153,22 @@ const names = computed(function () {
 
 const addonName = ref(names.value.includes('yb_version') ? 'yb_version' : names.value[0]);
 const ver = ref(null);
+const histMode = ref('servers');
+
+function delta(cur, old) {
+  if (old == null) {
+    return '';
+  }
+  const d = cur - old;
+  if (d === 0) {
+    return '';
+  }
+  return (d > 0 ? '+' : '') + fmt(d);
+}
+
+const prevRow = computed(function () {
+  return props.histRows.length >= 2 ? props.histRows[props.histRows.length - 2] : null;
+});
 
 const unlisted = computed(function () {
   return props.latest.unlisted_mods || [];
@@ -169,15 +204,32 @@ const cards = computed(function () {
   const count = ver.value ? vals[ver.value] || 0 : addon.value.servers || 0;
   const title = ver.value ? addon.value.title + ' ' + ver.value : addon.value.title + ' servers';
   const pct = t.with_rules ? ((100 * count) / t.with_rules).toFixed(1) + '% of readable' : '';
+  const p = prevRow.value;
+  const withDelta = function (text, cur, old) {
+    const d = old != null ? delta(cur, old) : '';
+    return text + (d ? ' · ' + d + ' vs prev' : '');
+  };
   return [
-    { title: 'Servers alive (A2S)', value: t.alive, sub: fmt(t.master) + ' in master list' },
+    {
+      title: 'Servers alive (A2S)',
+      value: t.alive,
+      sub: withDelta(fmt(t.master) + ' in master list', t.alive, p && p.alive),
+    },
     {
       title: 'Answering rules',
       value: t.with_rules,
-      sub: fmt(t.rules_unknown) + ' firewalled / unknown',
+      sub: withDelta(fmt(t.rules_unknown) + ' firewalled / unknown', t.with_rules, p && p.with_rules),
     },
-    { title, value: count, sub: pct },
-    { title: 'Players online', value: totalPlayers.value, sub: fmt(totalBots.value) + ' bots' },
+    {
+      title,
+      value: count,
+      sub: withDelta(pct, count, p && p['addon:' + addon.value.name]),
+    },
+    {
+      title: 'Players online',
+      value: totalPlayers.value,
+      sub: withDelta(fmt(totalBots.value) + ' bots', totalPlayers.value, p && p.players),
+    },
   ];
 });
 
@@ -186,6 +238,9 @@ const dates = computed(function () {
 });
 
 const series = computed(function () {
+  if (histMode.value === 'players') {
+    return buildPlayersSeries(props.histRows);
+  }
   const base = buildOverviewSeries(props.latest, props.histRows);
   if (ver.value) {
     base.push({
