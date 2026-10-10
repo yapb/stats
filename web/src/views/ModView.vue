@@ -84,6 +84,11 @@
   </div>
 
   <div class="card p-4 mb-4">
+    <h3 class="font-semibold text-white mb-2">Servers by country</h3>
+    <CountriesChart :countries="mod.countries || []" />
+  </div>
+
+  <div class="card p-4 mb-4">
     <h3 class="font-semibold text-white mb-2">Mod history</h3>
       <p v-if="histRows.length <= 1" class="text-slate-500 text-sm">
         Mod history appears after a few daily runs.
@@ -97,6 +102,7 @@
 import { computed } from 'vue';
 import Avatar from '../components/Avatar.vue';
 import CapsuleImg from '../components/CapsuleImg.vue';
+import CountriesChart from '../components/CountriesChart.vue';
 import HistoryChart from '../components/HistoryChart.vue';
 import SummaryBlock from '../components/SummaryBlock.vue';
 import {

@@ -88,6 +88,11 @@
   </div>
 
   <div class="card p-4 mb-4">
+    <h3 class="font-semibold text-white mb-2">Servers by country</h3>
+    <CountriesChart :countries="addon.countries || []" />
+  </div>
+
+  <div class="card p-4 mb-4">
     <h3 class="font-semibold text-white mb-2">Version history</h3>
     <p v-if="histRows.length <= 1" class="text-slate-500 text-sm">
       Version history appears after a few daily runs.
@@ -99,6 +104,7 @@
 <script setup>
 import { computed } from 'vue';
 import Avatar from '../components/Avatar.vue';
+import CountriesChart from '../components/CountriesChart.vue';
 import HistoryChart from '../components/HistoryChart.vue';
 import SummaryBlock from '../components/SummaryBlock.vue';
 import {

@@ -32,6 +32,9 @@ jobs:
       - name: Install collector deps
         run: pip install -r collector/requirements.txt
 
+      - name: Self test collector
+        run: python collector/tests/test_smoke.py
+
       - name: Today
         id: today
         run: |

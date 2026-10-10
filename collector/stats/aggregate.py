@@ -89,18 +89,35 @@ def build(results, master, mods, tracked, truncated_mods,
             mystery_servers += 1
             mystery_bots += r["info"]["bots"]
     countries = []
+    mod_countries = defaultdict(Counter)
+    addon_countries = defaultdict(Counter)
+    cc_names = {}
     if geo_reader is not None:
         per_ip_count = Counter(r["addr"].rpartition(":")[0] for r in alive)
         found = geo_mod.lookup_all(geo_reader, per_ip_count.keys())
+        for ip, (cc, name) in found.items():
+            cc_names[cc] = name
+        for r in alive:
+            cc = found.get(r["addr"].rpartition(":")[0], [None])[0]
+            if cc:
+                mod_countries[_guess_mod(r, master.get(r["addr"], {}), mods)][cc] += 1
+        for r in with_rules:
+            cc = found.get(r["addr"].rpartition(":")[0], [None])[0]
+            if not cc:
+                continue
+            for name in tracked_names:
+                if name in r["rules"]:
+                    addon_countries[name][cc] += 1
         by_cc = Counter()
-        names = {}
         for ip, n in per_ip_count.items():
             if ip in found:
-                cc, name = found[ip]
-                by_cc[cc] += n
-                names[cc] = name
-        countries = [{"cc": cc, "name": names[cc], "servers": n}
+                by_cc[found[ip][0]] += n
+        countries = [{"cc": cc, "name": cc_names[cc], "servers": n}
                      for cc, n in by_cc.most_common()]
+
+    def top_countries(counter):
+        return [{"cc": cc, "name": cc_names.get(cc, cc), "servers": n}
+                for cc, n in counter.most_common(8)]
     total_players = sum(row["players"] for row in by_mod.values())
     total_capacity = sum(row["max_players"] for row in by_mod.values())
 
@@ -112,7 +129,8 @@ def build(results, master, mods, tracked, truncated_mods,
                   **({"url": m["url"]} if m.get("url") else {}),
                   "master": mod_master.get((m.get("gamedir") or "").lower(), 0),
                   **by_mod.get((m.get("gamedir") or "").lower(), dict(empty_mod)),
-                  "maps": dict(mod_maps[(m.get("gamedir") or "").lower()].most_common(15))}
+                  "maps": dict(mod_maps[(m.get("gamedir") or "").lower()].most_common(15)),
+                  "countries": top_countries(mod_countries[(m.get("gamedir") or "").lower()])}
                  for m in mods],
         "totals": {
             "master": farm_info["master_raw"],
@@ -144,6 +162,7 @@ def build(results, master, mods, tracked, truncated_mods,
                     "max_players": addon_capacity[v["name"]],
                     "bots": addon_bots[v["name"]],
                     "values": dict(values[v["name"]].most_common(50)),
+                    "countries": top_countries(addon_countries[v["name"]]),
                     "by_mod": {m.get("gamedir", ""): {
                         "servers": sum(mod_addon[(m.get("gamedir", ""), v["name"])].values()),
                         "values": dict(mod_addon[(m.get("gamedir", ""), v["name"])].most_common(20))}
