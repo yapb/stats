@@ -2,7 +2,7 @@
   <div class="max-w-6xl mx-auto px-4 py-8">
     <header class="mb-6">
       <h1 class="text-3xl font-bold text-white">
-        <a :href="homePath()" style="color:#fff">GoldSrc Addon Stats</a>
+        <a :href="homePath()" style="color:#fff"><span style="color:#f5a623">λ</span> GoldSrc Addon Stats</a>
       </h1>
       <p class="text-slate-400 mt-1">
         Daily census of Half-Life 1 servers: which addons run where and on which version.
