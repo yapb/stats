@@ -1,11 +1,11 @@
 <template>
-  <div class="crumb mb-2"><a href="#/">Overview</a> / {{ addon.title }}</div>
+  <div class="crumb mb-2"><a :href="homePath()">Overview</a> / {{ addon.title }}</div>
 
   <div class="flex items-center gap-3 mb-4">
     <Avatar :title="addon.title" />
     <div>
       <h2 class="text-2xl font-bold text-white">Statistics for: {{ addon.title }}</h2>
-      <div v-if="addon.url" class="text-slate-400 text-sm">
+      <div v-if="addon.url" class="text-slate-400 text-sm break-all">
         <a :href="addon.url">{{ addon.url }}</a> ({{ addon.name }})
       </div>
       <div v-else class="text-slate-400 text-sm">({{ addon.name }})</div>
@@ -38,7 +38,7 @@
         <tr v-for="row in modRows" :key="row.id" class="link" @click="openMod(row.id)">
           <td>{{ addon.title }}</td>
           <td>
-            <a :href="'#/mod/' + row.id" @click.stop>{{ row.label }}</a>
+            <a :href="modPath(row.id)" @click.stop>{{ row.label }}</a>
           </td>
           <td>{{ fmt(row.servers) }}</td>
           <td>{{ row.pct }}</td>
@@ -95,8 +95,10 @@ import {
   buildAddonSeries,
   fmt,
   histDate,
+  homePath,
   modByGamedir,
   modById,
+  modPath,
   sortedValues,
   stampToDate,
 } from '../lib/data.js';
@@ -153,6 +155,6 @@ const series = computed(function () {
 });
 
 function openMod(id) {
-  location.hash = '#/mod/' + id;
+  location.href = modPath(id);
 }
 </script>

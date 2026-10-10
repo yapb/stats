@@ -1,16 +1,16 @@
 <template>
   <div v-if="!mod">
-    <div class="crumb mb-2"><a href="#/">Overview</a> / unknown mod</div>
-    <p class="text-slate-400">Mod not found. <a href="#/">Back to overview</a>.</p>
+    <div class="crumb mb-2"><a :href="homePath()">Overview</a> / unknown mod</div>
+    <p class="text-slate-400">Mod not found. <a :href="homePath()">Back to overview</a>.</p>
   </div>
   <div v-else>
-    <div class="crumb mb-2"><a href="#/">Overview</a> / {{ mod.name }}</div>
+    <div class="crumb mb-2"><a :href="homePath()">Overview</a> / {{ mod.name }}</div>
 
     <div class="flex items-center gap-3 mb-4">
       <CapsuleImg :appid="mod.appid" />
       <div>
         <h2 class="text-2xl font-bold text-white">Statistics for mod: {{ mod.name }}</h2>
-        <div v-if="mod.url" class="text-slate-400 text-sm">
+        <div v-if="mod.url" class="text-slate-400 text-sm break-all">
           <a :href="mod.url">{{ mod.url }}</a>
         </div>
       </div>
@@ -43,7 +43,7 @@
             <td>
               <span class="flex items-center gap-2">
                 <Avatar :title="row.title" />
-                <a :href="'#/addon/' + row.name" @click.stop>{{ row.title }}</a>
+                <a :href="addonPath(row.name)" @click.stop>{{ row.title }}</a>
               </span>
             </td>
             <td>{{ fmt(row.servers) }}</td>
@@ -92,9 +92,11 @@ import CapsuleImg from '../components/CapsuleImg.vue';
 import HistoryChart from '../components/HistoryChart.vue';
 import SummaryBlock from '../components/SummaryBlock.vue';
 import {
+  addonPath,
   buildModSeries,
   fmt,
   histDate,
+  homePath,
   modByGamedir,
   modById,
   sortedAddons,
@@ -164,6 +166,6 @@ const series = computed(function () {
 });
 
 function openAddon(name) {
-  location.hash = '#/addon/' + name;
+  location.href = addonPath(name);
 }
 </script>

@@ -83,6 +83,48 @@ export function stampToDate(stamp) {
   return (stamp || '?').replace('T', ' ').replace('+00:00', ' UTC');
 }
 
+function baseRoot() {
+  const b = (import.meta.env && import.meta.env.BASE_URL) || '/';
+  return b.endsWith('/') ? b : b + '/';
+}
+
+export function homePath() {
+  const root = baseRoot();
+  return root === '/' ? '/' : root.replace(/\/$/, '');
+}
+
+export function addonPath(name) {
+  return baseRoot() + 'addon/' + name;
+}
+
+export function modPath(key) {
+  return baseRoot() + 'mod/' + key;
+}
+
+export function dataUrl(name) {
+  return baseRoot() + 'data/' + name;
+}
+
+export function parseRoute() {
+  const parts = location.pathname.split('/').filter(function (s) {
+    return s;
+  });
+  if (parts.length >= 2 && parts[parts.length - 2] === 'addon') {
+    return { view: 'addon', param: decodeURIComponent(parts[parts.length - 1]) };
+  }
+  if (parts.length >= 2 && parts[parts.length - 2] === 'mod') {
+    return { view: 'mod', param: decodeURIComponent(parts[parts.length - 1]) };
+  }
+  const h = location.hash || '';
+  if (h.indexOf('#/addon/') === 0) {
+    return { view: 'addon', param: decodeURIComponent(h.slice(8)) };
+  }
+  if (h.indexOf('#/mod/') === 0) {
+    return { view: 'mod', param: decodeURIComponent(h.slice(6)) };
+  }
+  return { view: 'overview', param: null };
+}
+
 export function histDate(r) {
   return r.ts || r.date;
 }

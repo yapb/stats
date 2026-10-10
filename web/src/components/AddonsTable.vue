@@ -18,7 +18,7 @@
           <span class="flex items-center gap-2">
             <Avatar :title="a.title" />
             <span>
-              <a :href="'#/addon/' + a.name" @click.stop>{{ a.title }}</a>
+              <a :href="addonPath(a.name)" @click.stop>{{ a.title }}</a>
               <br>
               <span class="text-slate-500 text-xs">{{ a.name }}</span>
             </span>
@@ -34,7 +34,7 @@
 <script setup>
 import { computed } from 'vue';
 import Avatar from './Avatar.vue';
-import { fmt, sortedValues } from '../lib/data.js';
+import { addonPath, fmt, sortedValues } from '../lib/data.js';
 
 const props = defineProps({
   addons: { type: Array, required: true },

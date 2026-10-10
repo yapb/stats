@@ -31,6 +31,8 @@ jobs:
           cache-dependency-path: web/package-lock.json
 
       - name: Build site
+        env:
+          PAGES_BASE: /stats/
         run: |
           npm ci --prefix web
           npm run build --prefix web

@@ -2,7 +2,7 @@
   <div class="max-w-6xl mx-auto px-4 py-8">
     <header class="mb-6">
       <h1 class="text-3xl font-bold text-white">
-        <a href="#/" style="color:#fff">Addons Stats</a>
+        <a :href="homePath()" style="color:#fff">Addons Stats</a>
       </h1>
       <p class="text-slate-400 mt-1">
         Daily census of public Half-Life servers: which addons run where and on
@@ -58,49 +58,28 @@
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import AddonView from './views/AddonView.vue';
 import ModView from './views/ModView.vue';
 import Overview from './views/Overview.vue';
-import { fmt, loadJSON } from './lib/data.js';
+import { dataUrl, fmt, homePath, loadJSON, parseRoute } from './lib/data.js';
 
 const latest = ref(null);
 const histRows = ref([]);
 const failed = ref(false);
-const route = ref(parseHash());
-
-function parseHash() {
-  const h = location.hash || '#/';
-  if (h.indexOf('#/addon/') === 0) {
-    return { view: 'addon', param: decodeURIComponent(h.slice(8)) };
-  }
-  if (h.indexOf('#/mod/') === 0) {
-    return { view: 'mod', param: decodeURIComponent(h.slice(6)) };
-  }
-  return { view: 'overview', param: null };
-}
-
-function onHash() {
-  route.value = parseHash();
-  window.scrollTo(0, 0);
-}
+const route = ref(parseRoute());
 
 onMounted(async function () {
-  addEventListener('hashchange', onHash);
   try {
-    latest.value = await loadJSON('data/latest.json');
+    latest.value = await loadJSON(dataUrl('latest.json'));
     try {
-      histRows.value = await loadJSON('data/history.json');
+      histRows.value = await loadJSON(dataUrl('history.json'));
     } catch (e) {
       histRows.value = [];
     }
   } catch (e) {
     failed.value = true;
   }
-});
-
-onBeforeUnmount(function () {
-  removeEventListener('hashchange', onHash);
 });
 
 const sourceLine = computed(function () {

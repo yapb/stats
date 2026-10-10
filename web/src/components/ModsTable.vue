@@ -15,7 +15,7 @@
         <td>
           <span class="flex items-center gap-2 min-w-0">
             <span class="hidden sm:inline shrink-0"><CapsuleImg :appid="m.appid" /></span>
-            <a class="truncate max-w-[9rem] sm:max-w-none" :href="'#/mod/' + modKey(m)" @click.stop>{{ m.name }}</a>
+            <a class="truncate max-w-[9rem] sm:max-w-none" :href="modPath(modKey(m))" @click.stop>{{ m.name }}</a>
           </span>
         </td>
         <td>{{ fmt(m.alive) }}</td>
@@ -31,7 +31,7 @@
 <script setup>
 import { computed } from 'vue';
 import CapsuleImg from './CapsuleImg.vue';
-import { fmt } from '../lib/data.js';
+import { fmt, modPath } from '../lib/data.js';
 
 const props = defineProps({
   mods: { type: Array, required: true },
@@ -60,6 +60,6 @@ function modKey(m) {
 }
 
 function open(key) {
-  location.hash = '#/mod/' + key;
+  location.href = modPath(key);
 }
 </script>
