@@ -33,24 +33,26 @@ jobs:
 
       - name: Today
         id: today
-        run: echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+          mkdir -p "$HOME/census-cache"
+          echo "MASTER_CACHE=$HOME/census-cache/master-cache.json" >> "$GITHUB_ENV"
 
       - name: Restore master cache
         uses: actions/cache/restore@v4
         with:
-          path: ${{ env.HOME }}/census-cache/master-cache.json
+          path: ${{ env.MASTER_CACHE }}
           key: master-${{ steps.today.outputs.date }}
 
       - name: Run census
         env:
           STEAM_WEBAPI_KEY: ${{ secrets.STEAM_WEBAPI_KEY }}
         run: |
-          mkdir -p "$HOME/census-cache"
           ARGS="--out web/data"
-          if [ -f "$HOME/census-cache/master-cache.json" ]; then
-            ARGS="$ARGS --master-cache $HOME/census-cache/master-cache.json"
+          if [ -f "$MASTER_CACHE" ]; then
+            ARGS="$ARGS --master-cache $MASTER_CACHE"
           else
-            ARGS="$ARGS --save-master $HOME/census-cache/master-cache.json"
+            ARGS="$ARGS --save-master $MASTER_CACHE"
           fi
           python collector/collect.py $ARGS
 
@@ -58,7 +60,7 @@ jobs:
         if: always()
         uses: actions/cache/save@v4
         with:
-          path: ${{ env.HOME }}/census-cache/master-cache.json
+          path: ${{ env.MASTER_CACHE }}
           key: master-${{ steps.today.outputs.date }}
 
       - name: Commit fresh data
