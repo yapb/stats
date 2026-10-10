@@ -24,25 +24,53 @@
     </div>
   </div>
 
-  <div class="card p-4 mb-6">
-    <h2 class="font-semibold text-white mb-2">Unlisted mods (open a PR to track)</h2>
-    <table class="stats w-full text-sm num">
-      <thead>
-        <tr>
-          <th>Directory</th>
-          <th>Servers</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-if="!unlisted.length">
-          <td colspan="2" class="text-slate-500">None seen.</td>
-        </tr>
-        <tr v-for="row in unlisted" :key="row.gamedir">
-          <td>{{ row.gamedir }}</td>
-          <td>{{ fmt(row.servers) }}</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="grid md:grid-cols-2 gap-4 mb-6">
+    <div class="card p-4">
+      <h2 class="font-semibold text-white mb-2">Unlisted mods (open a PR to track)</h2>
+      <div class="scroll10 overflow-x-auto">
+        <table class="stats w-full text-sm num">
+          <thead>
+            <tr>
+              <th>Directory</th>
+              <th>Servers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-if="!unlisted.length">
+              <td colspan="2" class="text-slate-500">None seen.</td>
+            </tr>
+            <tr v-for="row in unlisted" :key="row.gamedir">
+              <td>{{ row.gamedir }}</td>
+              <td>{{ fmt(row.servers) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card p-4">
+      <h2 class="font-semibold text-white mb-2">Untracked version cvars (open a PR to track)</h2>
+      <div class="scroll10 overflow-x-auto">
+        <table class="stats w-full text-sm num">
+          <thead>
+            <tr>
+              <th>Cvar</th>
+              <th>Servers</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-if="!unlistedVars.length">
+              <td colspan="3" class="text-slate-500">None seen.</td>
+            </tr>
+            <tr v-for="row in unlistedVars" :key="row.var">
+              <td>{{ row.var }}</td>
+              <td>{{ fmt(row.servers) }}</td>
+              <td class="text-slate-400">{{ row.example }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
   <div class="grid md:grid-cols-2 gap-4 mb-6">
@@ -109,6 +137,10 @@ const ver = ref(null);
 
 const unlisted = computed(function () {
   return props.latest.unlisted_mods || [];
+});
+
+const unlistedVars = computed(function () {
+  return props.latest.unlisted_vars || [];
 });
 
 const addon = computed(function () {

@@ -40,6 +40,8 @@ def build(results, master, mods, tracked, truncated_mods,
     mod_maps = defaultdict(Counter)  # gamedir mapped to map counts
     tracked_dirs = {(m.get("gamedir") or "").lower() for m in mods}
     unlisted = Counter()
+    stray_vars = Counter()
+    stray_examples = {}
     for r in alive:
         app = _guess_mod(r, master.get(r["addr"], {}), mods)
         row = by_mod[app]
@@ -61,6 +63,13 @@ def build(results, master, mods, tracked, truncated_mods,
     for r in with_rules:
         app = _guess_mod(r, master.get(r["addr"], {}), mods)
         by_mod[app]["with_rules"] += 1
+        for key in r["rules"]:
+            low = key.lower()
+            if key not in tracked_names and (
+                    low.endswith("_version") or low.endswith("_ver") or low.endswith("version")):
+                stray_vars[key] += 1
+                if key not in stray_examples:
+                    stray_examples[key] = r["rules"][key][:60]
         for name in tracked_names:
             if name in r["rules"]:
                 with_addon[name] += 1
@@ -125,6 +134,8 @@ def build(results, master, mods, tracked, truncated_mods,
         },
         "countries": countries,
         "unlisted_mods": [{"gamedir": g, "servers": n} for g, n in unlisted.most_common(20)],
+        "unlisted_vars": [{"var": k, "servers": n, "example": stray_examples.get(k, "")}
+                          for k, n in stray_vars.most_common(30)],
         "addons": [{"name": v["name"], "title": v["title"], "url": v["url"],
                     "servers": with_addon[v["name"]],
                     "players": addon_players[v["name"]],
