@@ -38,19 +38,19 @@ jobs:
       - name: Restore master cache
         uses: actions/cache/restore@v4
         with:
-          path: ~/census-cache/master-cache.json
+          path: ${{ env.HOME }}/census-cache/master-cache.json
           key: master-${{ steps.today.outputs.date }}
 
       - name: Run census
         env:
           STEAM_WEBAPI_KEY: ${{ secrets.STEAM_WEBAPI_KEY }}
         run: |
-          mkdir -p ~/census-cache
+          mkdir -p "$HOME/census-cache"
           ARGS="--out web/data"
-          if [ -f ~/census-cache/master-cache.json ]; then
-            ARGS="$ARGS --master-cache ~/census-cache/master-cache.json"
+          if [ -f "$HOME/census-cache/master-cache.json" ]; then
+            ARGS="$ARGS --master-cache $HOME/census-cache/master-cache.json"
           else
-            ARGS="$ARGS --save-master ~/census-cache/master-cache.json"
+            ARGS="$ARGS --save-master $HOME/census-cache/master-cache.json"
           fi
           python collector/collect.py $ARGS
 
@@ -58,7 +58,7 @@ jobs:
         if: always()
         uses: actions/cache/save@v4
         with:
-          path: ~/census-cache/master-cache.json
+          path: ${{ env.HOME }}/census-cache/master-cache.json
           key: master-${{ steps.today.outputs.date }}
 
       - name: Commit fresh data

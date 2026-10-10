@@ -1,6 +1,7 @@
 """Master phase: Steam list plus community masters merged into one addr set."""
 
 import json
+import os
 
 from stats.legacy_master import query as legacy_query
 from stats.steam_master import fetch_mod
@@ -16,7 +17,7 @@ def collect_all(key, mods, custom_masters, master_cache=None, save_master=None):
     per_mod_master = {}
     truncated_mods = []
     if master_cache:
-        with open(master_cache, encoding="utf-8") as f:
+        with open(os.path.expanduser(master_cache), encoding="utf-8") as f:
             cache = json.load(f)
         for mod in mods:
             servers = cache["by_appid"].get(str(mod["appid"]), [])
@@ -38,7 +39,7 @@ def collect_all(key, mods, custom_masters, master_cache=None, save_master=None):
                   + (" (TRUNCATED)" if truncated else ""), flush=True)
         print(f"master unique addrs: {len(master)}", flush=True)
         if save_master:
-            with open(save_master, "w", encoding="utf-8") as f:
+            with open(os.path.expanduser(save_master), "w", encoding="utf-8") as f:
                 json.dump({"by_appid": {str(m["appid"]): [
                     s for s in master.values()
                     if s.get("appid") == m["appid"]] for m in mods},
