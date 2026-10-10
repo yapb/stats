@@ -89,16 +89,22 @@ def _collect_and_parse(sock, first, timeout, goldsrc):
     raw = [first]
     sock.settimeout(0.4)
     deadline = time.monotonic() + max(4.0, timeout + 2.0)
+    saw_incomplete = False
     while True:
         for hint in order:
-            ready = _try_interpret(raw, hint)
-            if ready is not None:
+            try:
+                ready = _try_interpret(raw, hint)
+            except RulesError:
+                continue
+            if ready is None:
+                saw_incomplete = True
+                continue
+            try:
                 payload, compressed = ready
-                try:
-                    return _parse(payload, compressed=compressed)
-                except RulesError:
-                    continue  # coherent under this hint but garbage: try next
-        if time.monotonic() >= deadline:
+                return _parse(payload, compressed=compressed)
+            except RulesError:
+                continue
+        if time.monotonic() >= deadline or len(raw) > 64:
             break
         try:
             data, _ = sock.recvfrom(8192)
@@ -106,9 +112,9 @@ def _collect_and_parse(sock, first, timeout, goldsrc):
             break
         if len(data) >= 5 and struct.unpack("<i", data[:4])[0] == -2:
             raw.append(data)
-        if len(raw) > 64:
-            break
-    raise RulesError("incomplete split set")
+    if saw_incomplete:
+        raise RulesError("incomplete split set")
+    raise RulesError("split set incoherent")
 
 
 def _try_interpret(raw, goldsrc):
@@ -133,9 +139,13 @@ def _try_interpret(raw, goldsrc):
 
 
 def _split_header(data, goldsrc):
+    if len(data) < 9:
+        raise RulesError("split too short")
     if goldsrc:
-        pkt = data[4]
-        return (pkt >> 4) & 0xF, pkt & 0xF, data[5:], False
+        # -2, then a 4 byte sequence id (ignored), then one byte holding
+        # the packet number (high nibble) and the total (low nibble).
+        pkt = data[8]
+        return (pkt >> 4) & 0xF, pkt & 0xF, data[9:], False
     seq = struct.unpack("<I", data[4:8])[0]
     total = data[8]
     number = data[9]
