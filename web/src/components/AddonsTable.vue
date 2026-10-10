@@ -9,7 +9,7 @@
     </thead>
     <tbody>
       <tr
-        v-for="a in sortedAddons(addons)"
+        v-for="a in byCount"
         :key="a.name"
         :class="a.name === active ? 'active link' : 'link'"
         @click="inspect(a, $event)"
@@ -32,8 +32,9 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import Avatar from './Avatar.vue';
-import { fmt, sortedAddons, sortedValues } from '../lib/data.js';
+import { fmt, sortedValues } from '../lib/data.js';
 
 const props = defineProps({
   addons: { type: Array, required: true },
@@ -41,6 +42,12 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['inspect']);
+
+const byCount = computed(function () {
+  return props.addons.slice().sort(function (a, b) {
+    return b.servers - a.servers || (a.title < b.title ? -1 : 1);
+  });
+});
 
 function topValues(a) {
   const top = sortedValues(a.values || {})
