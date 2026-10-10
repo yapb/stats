@@ -31,6 +31,8 @@ def main():
                     help="only fetch the master lists (used with --save-master)")
     ap.add_argument("--max-servers-per-host", type=int, default=100,
                     help="hosts with more master entries are redirect farms, drop them (0 disables)")
+    ap.add_argument("--geoip-mmdb", default=None,
+                    help="path to an mmdb for country stats (skipped when absent)")
     args = ap.parse_args()
 
     key = os.environ.get("STEAM_WEBAPI_KEY", "")
@@ -52,12 +54,18 @@ def main():
     print(f"A2S targets: {len(targets)} (+{sdr} SDR skipped,"
           f" {args.workers} workers)", flush=True)
     results = probe.run_a2s(targets, args.timeout, args.workers)
-    geo_cache = geo.load_cache(os.path.join(args.out, "geocache.json"))
+    geo_reader = None
+    if args.geoip_mmdb:
+        try:
+            geo_reader = geo.open_db(args.geoip_mmdb)
+        except Exception as e:
+            print(f"geo database unavailable ({e}), skipping countries", flush=True)
     latest, row = aggregate.build(
         results, master, mods, tracked, per_mod_master, truncated_mods,
-        source_new, farm_info, sdr, geo_cache)
+        source_new, farm_info, sdr, geo_reader)
     aggregate.write_output(args.out, latest, row)
-    geo.save_cache(os.path.join(args.out, "geocache.json"), geo_cache)
+    if geo_reader is not None:
+        geo_reader.close()
 
     yb = next((a["servers"] for a in latest["addons"] if a["name"] == "yb_version"), 0)
     print(f"alive={latest['totals']['alive']} with_rules={latest['totals']['with_rules']} "

@@ -44,11 +44,14 @@ jobs:
           path: ${{ env.MASTER_CACHE }}
           key: master-${{ steps.today.outputs.date }}
 
+      - name: Fetch geo database
+        run: curl -sL --max-time 180 -o "$HOME/census-cache/ip-to-country.mmdb" "https://media.githubusercontent.com/media/iplocate/ip-address-databases/main/ip-to-country/ip-to-country.mmdb"
+
       - name: Run census
         env:
           STEAM_WEBAPI_KEY: ${{ secrets.STEAM_WEBAPI_KEY }}
         run: |
-          ARGS="--out web/data"
+          ARGS="--out web/data --geoip-mmdb $HOME/census-cache/ip-to-country.mmdb"
           if [ -f "$MASTER_CACHE" ]; then
             ARGS="$ARGS --master-cache $MASTER_CACHE"
           else
@@ -67,7 +70,7 @@ jobs:
         run: |
           git config user.name 'yapb-stats-bot'
           git config user.email 'yapb-stats-bot@users.noreply.github.com'
-          git add web/data/latest.json web/data/history.json web/data/geocache.json
+          git add web/data/latest.json web/data/history.json
           git diff --cached --quiet || { git commit -m "census $(date -u +%F)"; git pull --rebase origin master; git push; }
 
       - uses: actions/configure-pages@v5

@@ -29,7 +29,7 @@ def _is_fake_count(info):
 
 
 def build(results, master, mods, tracked, per_mod_master, truncated_mods,
-          source_new, farm_info, sdr, geo_cache=None):
+          source_new, farm_info, sdr, geo_reader=None):
     """Fold results into (latest, history_row) dicts."""
     tracked_names = [v["name"] for v in tracked]
     answered = [r for r in results if "info" in r]
@@ -68,16 +68,16 @@ def build(results, master, mods, tracked, per_mod_master, truncated_mods,
     info_errs = Counter(r["info_err"] for r in results if "info_err" in r)
     rules_errs = Counter(r["rules_err"] for r in alive if "rules_err" in r)
     countries = []
-    if geo_cache is not None:
-        ips = [r["addr"].rpartition(":")[0] for r in alive]
-        geo_mod.resolve(ips, geo_cache)
+    if geo_reader is not None:
+        per_ip_count = Counter(r["addr"].rpartition(":")[0] for r in alive)
+        found = geo_mod.lookup_all(geo_reader, per_ip_count.keys())
         by_cc = Counter()
         names = {}
-        for ip in ips:
-            hit = geo_mod.country_of(geo_cache, ip)
-            if hit and hit["cc"]:
-                by_cc[hit["cc"]] += 1
-                names[hit["cc"]] = hit["name"]
+        for ip, n in per_ip_count.items():
+            if ip in found:
+                cc, name = found[ip]
+                by_cc[cc] += n
+                names[cc] = name
         countries = [{"cc": cc, "name": names[cc], "servers": n}
                      for cc, n in by_cc.most_common()]
     total_players = sum(row["players"] for row in by_mod.values())
