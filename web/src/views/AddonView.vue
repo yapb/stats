@@ -89,6 +89,7 @@ import {
   fmt,
   histDate,
   modByGamedir,
+  modById,
   sortedValues,
   stampToDate,
 } from '../lib/data.js';
@@ -108,7 +109,7 @@ const modRows = computed(function () {
   return Object.keys(byMod)
     .map(function (id) {
       const entry = byMod[id] || { servers: 0 };
-      const m = modByGamedir(props.latest.mods, id);
+      const m = modByGamedir(props.latest.mods, id) || modById(props.latest.mods, id);
       return {
         id,
         servers: entry.servers || 0,

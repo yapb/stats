@@ -75,6 +75,7 @@ import {
   fmt,
   histDate,
   modByGamedir,
+  modById,
   sortedAddons,
   sortedValues,
   stampToDate,
@@ -87,7 +88,7 @@ const props = defineProps({
 });
 
 const mod = computed(function () {
-  return modByGamedir(props.latest.mods, props.gamedir);
+  return modByGamedir(props.latest.mods, props.gamedir) || modById(props.latest.mods, props.gamedir);
 });
 
 const rows = computed(function () {
@@ -96,7 +97,8 @@ const rows = computed(function () {
   }
   const out = [];
   for (const a of sortedAddons(props.latest.addons)) {
-    const entry = ((a.by_mod || {})[mod.value.gamedir] || { servers: 0, values: {} });
+    const byMod = a.by_mod || {};
+    const entry = byMod[mod.value.gamedir] || byMod[String(mod.value.appid)] || { servers: 0, values: {} };
     if (!entry.servers) {
       continue;
     }
