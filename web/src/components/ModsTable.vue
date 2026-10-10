@@ -40,9 +40,13 @@ const props = defineProps({
 });
 
 const sorted = computed(function () {
-  return props.mods.slice().sort(function (a, b) {
-    return b.alive - a.alive;
-  });
+  return props.mods
+    .filter(function (m) {
+      return (m.alive || 0) > 0;
+    })
+    .sort(function (a, b) {
+      return b.alive - a.alive;
+    });
 });
 
 function verCount(m) {

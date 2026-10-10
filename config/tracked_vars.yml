@@ -46,3 +46,71 @@ vars:
   - name: amx_version
     title: AMX Mod
     url: http://www.amxmod.net/
+  - name: resemiclip_version
+    title: ReSemiclip
+  - name: whb_version
+    title: WHBlocker
+  - name: reauthcheck_version
+    title: ReAuthCheck
+  - name: SNAC_Version
+    title: SNAC
+  - name: revoice_version
+    title: Revoice
+  - name: reaimdetector_version
+    title: ReAimDetector
+    url: https://github.com/s1lentq/ReAimDetector
+  - name: VTC_Version
+    title: VTC
+  - name: aesp_version
+    title: Admin Spectator ESP
+    url: http://forums.alliedmods.net/showthread.php?t=23691
+  - name: mapm_version
+    title: Map Manager
+  - name: admanager_version
+    title: Ad Manager
+  - name: hackdetector_version
+    title: HackDetector Lite
+  - name: mode2x2_version
+    title: Mode 2x2
+  - name: resrdetector_version
+    title: ReSRDetector
+  - name: ChatAdditions_version
+    title: Chat Additions
+  - name: atb_advanced_version
+    title: Advanced Team Balancer
+  - name: admin_loader_version
+    title: Admin Loader
+  - name: aemu_version
+    title: AuthEmu
+  - name: dp_version
+    title: Dproto
+  - name: hlxce_plugin_version
+    title: HLstatsX
+    url: http://www.hlxcommunity.com/
+  - name: amx_ptb_version
+    title: PTB
+    url: http://forums.alliedmods.net/showthread.php?t=26598
+  - name: hlxce_version
+    title: HLstatsX Core
+    url: http://www.hlxcommunity.com/
+  - name: csdm_version
+    title: CSDM
+    url: http://www.bailopan.net/csdm/
+  - name: zp_version
+    title: Zombie Plague
+  - name: nademodes_version
+    title: Nade Modes
+  - name: Team_Semiclip_version
+    title: Team Semiclip
+  - name: afk_manager_version
+    title: AFK Manager
+  - name: ezhttp_version
+    title: EZ HTTP
+  - name: AWPLimiter_version
+    title: AWP Limiter
+  - name: afk_version
+    title: AFK Kicker
+  - name: jk_botti_version
+    title: JK_BOTTI
+  - name: rcbot_ver
+    title: RCBot

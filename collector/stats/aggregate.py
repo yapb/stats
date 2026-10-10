@@ -81,7 +81,7 @@ def build(results, master, mods, tracked, truncated_mods,
 
     info_errs = Counter(r["info_err"] for r in results if "info_err" in r)
     rules_errs = Counter(r["rules_err"] for r in alive if "rules_err" in r)
-    BOT_VARS = {"yb_version", "pb_version", "bot_quota"}
+    BOT_VARS = {"yb_version", "pb_version", "bot_quota", "jk_botti_version", "rcbot_ver"}
     mystery_servers = 0
     mystery_bots = 0
     for r in with_rules:

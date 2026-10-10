@@ -5,9 +5,10 @@
     <Avatar :title="addon.title" />
     <div>
       <h2 class="text-2xl font-bold text-white">Statistics for: {{ addon.title }}</h2>
-      <div class="text-slate-400 text-sm">
+      <div v-if="addon.url" class="text-slate-400 text-sm">
         <a :href="addon.url">{{ addon.url }}</a> ({{ addon.name }})
       </div>
+      <div v-else class="text-slate-400 text-sm">({{ addon.name }})</div>
     </div>
   </div>
 
