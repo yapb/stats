@@ -1,0 +1,20 @@
+# Static server lists (plain HTTP) merged with the master data.
+# Add new ones via PR:
+#   kind:     lines (one "gs ip:port" per line) or toml ([[server]] address)
+#   url:      {gamedir} expands per tracked mod directory
+#   gamedirs: mod directories to fetch (intersected with tracked mods)
+#   prefix:   line prefix to strip (lines kind only)
+#   name:     short display name, used as the entry source tag
+#   url_page: link shown on the dashboard
+lists:
+  - kind: lines
+    url: https://raw.githubusercontent.com/Elinsrc/goldsrc-list/master/docs/v1/servers/{gamedir}
+    gamedirs: [cstrike, czero, dmc, dod, gearbox, ricochet, tfc, valve]
+    prefix: "gs "
+    name: Elinsrc
+    url_page: https://github.com/Elinsrc/goldsrc-list
+  - kind: toml
+    url: https://raw.githubusercontent.com/FWGS/server-list/main/servers/{gamedir}.toml
+    gamedirs: [cstrike, czero, dmc, dod, gearbox, tfc, valve]
+    name: FWGS
+    url_page: https://github.com/FWGS/server-list

@@ -4,14 +4,15 @@ import json
 import os
 
 from stats.legacy_master import query as legacy_query
+from stats.static_lists import fetch_list
 from stats.steam_master import fetch_mod
 
 
-def collect_all(key, mods, custom_masters, master_cache=None, save_master=None):
+def collect_all(key, mods, custom_masters, static_lists=None, master_cache=None, save_master=None):
     """Returns (master, per_mod_master, truncated_mods, source_new).
 
     master maps addr to its entry. source_new counts addrs per source
-    (Steam first, so community counts are new beyond Steam).
+    (Steam first, so later counts are new beyond earlier sources).
     """
     master = {}  # addr mapped to master entry
     per_mod_master = {}
@@ -70,4 +71,27 @@ def collect_all(key, mods, custom_masters, master_cache=None, save_master=None):
                     new_here += 1
         source_new[name] = new_here
         print(f"custom master {name}: {new_here} new addrs", flush=True)
+    for entry in static_lists or []:
+        name = entry.get("name") or entry["url"]
+        wanted = set(entry.get("gamedirs", []))
+        new_here = 0
+        for mod in mods:
+            gamedir = mod.get("gamedir", "")
+            if not gamedir or (wanted and gamedir not in wanted):
+                continue
+            url = entry["url"].replace("{gamedir}", gamedir)
+            try:
+                local = dict(entry, url=url)
+                addrs = fetch_list(local)
+            except Exception as e:
+                print(f"static list {name} gamedir={gamedir} failed ({e})", flush=True)
+                continue
+            for addr in addrs:
+                if addr not in master:
+                    master[addr] = {"addr": addr, "gamedir": gamedir, "appid": 0,
+                                    "source": name}
+                    per_mod_master[mod["appid"]] = per_mod_master.get(mod["appid"], 0) + 1
+                    new_here += 1
+        source_new[name] = new_here
+        print(f"static list {name}: {new_here} new addrs", flush=True)
     return master, per_mod_master, truncated_mods, source_new

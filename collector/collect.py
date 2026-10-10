@@ -41,11 +41,12 @@ def main():
     mods = config.load_mods(args.config_dir)
     tracked = config.load_tracked_vars(args.config_dir)
     customs = config.load_custom_masters(args.config_dir)
+    statics = config.load_static_lists(args.config_dir)
     if args.appid:
         mods = [m for m in mods if m["appid"] in args.appid]
 
     master, per_mod_master, truncated_mods, source_new = masters.collect_all(
-        key, mods, customs, args.master_cache, args.save_master)
+        key, mods, customs, statics, args.master_cache, args.save_master)
     master, farm_info = farm.filter_farms(master, args.max_servers_per_host)
     targets, sdr = probe.select_targets(master, args.max_addrs, args.skip_a2s)
     print(f"A2S targets: {len(targets)} (+{sdr} SDR skipped,"

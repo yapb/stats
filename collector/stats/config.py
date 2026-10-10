@@ -20,3 +20,7 @@ def load_tracked_vars(config_dir):
 
 def load_custom_masters(config_dir):
     return _load(os.path.join(config_dir, "custom_masters.yml")).get("masters", [])
+
+
+def load_static_lists(config_dir):
+    return _load(os.path.join(config_dir, "static_lists.yml")).get("lists", [])
