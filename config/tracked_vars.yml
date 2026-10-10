@@ -114,3 +114,6 @@ vars:
     title: JK_BOTTI
   - name: rcbot_ver
     title: RCBot
+  - name: mp_bhopcap
+    title: Xash3D
+    url: https://github.com/FWGS/xash3d-fwgs
