@@ -7,6 +7,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   body { background: #0b0e14; }
+  * { scrollbar-width: thin; scrollbar-color: #2b3550 transparent; }
+  *::-webkit-scrollbar { width: 8px; height: 8px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb { background: #2b3550; border-radius: 999px; }
+  *::-webkit-scrollbar-thumb:hover { background: #7aa2f7; }
   .card { background: #131722; border: 1px solid #232a3b; border-radius: .8rem; }
   .num { font-variant-numeric: tabular-nums; }
   a { color: #7aa2f7; }
