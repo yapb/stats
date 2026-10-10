@@ -78,7 +78,7 @@
 
     <div class="card p-4 mb-6">
       <h2 class="font-semibold text-white mb-2">History</h2>
-      <div id="history" style="height:280px"></div>
+      <div id="histRows" style="height:280px"></div>
       <p class="text-xs text-slate-500 mt-1" id="histnote"></p>
     </div>
 
@@ -107,7 +107,7 @@
 
 <script>
 var state = { mod: 'all', addon: 'yb_version', ver: null };
-var latest = null, history = [];
+var latest = null, histRows = [];
 var charts = {};
 
 function fmt(n) { return (n || 0).toLocaleString('en-US'); }
@@ -367,21 +367,21 @@ function histMod(r, field) {
 }
 
 function renderHistory() {
-  var el = document.getElementById('history');
-  if (!history.length) {
+  var el = document.getElementById('histRows');
+  if (!histRows.length) {
     el.innerHTML = '<p class="text-slate-500 text-sm">History appears after a few daily runs.</p>';
     return;
   }
   var series = [
-    { name: 'alive', type: 'line', data: history.map(function (r) { return histMod(r, 'alive'); }), smooth: true },
-    { name: 'with rules', type: 'line', data: history.map(function (r) { return histMod(r, 'rules'); }), smooth: true }
+    { name: 'alive', type: 'line', data: histRows.map(function (r) { return histMod(r, 'alive'); }), smooth: true },
+    { name: 'with rules', type: 'line', data: histRows.map(function (r) { return histMod(r, 'rules'); }), smooth: true }
   ];
   var note = '';
   if (state.mod === 'all') {
     sortedAddons().forEach(function (a) {
       series.push({
         name: a.title, type: 'line', smooth: true, yAxisIndex: 1,
-        data: history.map(function (r) { return (r['addon:' + a.name] || 0); })
+        data: histRows.map(function (r) { return (r['addon:' + a.name] || 0); })
       });
     });
   } else {
@@ -392,18 +392,18 @@ function renderHistory() {
     series.push({
       name: va.title + ' ' + state.ver, type: 'line', smooth: true, yAxisIndex: 1,
       lineStyle: { width: 3 }, itemStyle: { color: '#9ece6a' },
-      data: history.map(function (r) {
+      data: histRows.map(function (r) {
         return (((r.addon_versions || {})[va.name]) || {})[state.ver] || 0;
       })
     });
   }
   document.getElementById('histnote').textContent = note;
-  chart('history').setOption({
+  chart('histRows').setOption({
     backgroundColor: 'transparent',
     tooltip: { trigger: 'axis' },
     textStyle: { color: '#cbd5e1' },
     legend: { textStyle: { color: '#94a3b8' } },
-    xAxis: { type: 'category', data: history.map(function (r) { return r.ts || r.date; }) },
+    xAxis: { type: 'category', data: histRows.map(function (r) { return r.ts || r.date; }) },
     yAxis: [{ type: 'value' }, { type: 'value', splitLine: { show: false } }],
     series: series,
     grid: { left: 8, right: 24, containLabel: true }
@@ -471,16 +471,16 @@ function renderAddonView(name) {
       location.hash = '#/mod/' + tr.getAttribute('data-mod');
     };
   });
-  if (history.length > 1) {
+  if (histRows.length > 1) {
     var topVers = sortedValues(a.values).slice(0, 5).map(function (kv) { return kv[0]; });
     var series = [{
       name: 'total', type: 'line', smooth: true, lineStyle: { width: 3 },
-      data: history.map(function (r) { return (r['addon:' + a.name] || 0); })
+      data: histRows.map(function (r) { return (r['addon:' + a.name] || 0); })
     }];
     topVers.forEach(function (v) {
       series.push({
         name: v, type: 'line', smooth: true,
-        data: history.map(function (r) {
+        data: histRows.map(function (r) {
           return (((r.addon_versions || {})[a.name]) || {})[v] || 0;
         })
       });
@@ -490,7 +490,7 @@ function renderAddonView(name) {
       tooltip: { trigger: 'axis' },
       textStyle: { color: '#cbd5e1' },
       legend: { textStyle: { color: '#94a3b8' } },
-      xAxis: { type: 'category', data: history.map(function (r) { return r.ts || r.date; }) },
+      xAxis: { type: 'category', data: histRows.map(function (r) { return r.ts || r.date; }) },
       yAxis: { type: 'value' },
       series: series,
       grid: { left: 8, right: 24, containLabel: true }
@@ -539,22 +539,22 @@ function renderModView(appid) {
       location.hash = '#/addon/' + tr.getAttribute('data-addon');
     };
   });
-  if (history.length > 1) {
+  if (histRows.length > 1) {
     chart('modhist').setOption({
       backgroundColor: 'transparent',
       tooltip: { trigger: 'axis' },
       textStyle: { color: '#cbd5e1' },
       legend: { textStyle: { color: '#94a3b8' } },
-      xAxis: { type: 'category', data: history.map(function (r) { return r.ts || r.date; }) },
+      xAxis: { type: 'category', data: histRows.map(function (r) { return r.ts || r.date; }) },
       yAxis: { type: 'value' },
       series: [
         {
           name: 'alive', type: 'line', smooth: true,
-          data: history.map(function (r) { return (((r.mods || {})[String(appid)]) || {}).alive || 0; })
+          data: histRows.map(function (r) { return (((r.mods || {})[String(appid)]) || {}).alive || 0; })
         },
         {
           name: 'with rules', type: 'line', smooth: true,
-          data: history.map(function (r) { return (((r.mods || {})[String(appid)]) || {}).rules || 0; })
+          data: histRows.map(function (r) { return (((r.mods || {})[String(appid)]) || {}).rules || 0; })
         }
       ],
       grid: { left: 8, right: 24, containLabel: true }
@@ -609,7 +609,7 @@ function showView() {
       '<div class="card p-6 text-slate-400">No data yet: the first scheduled census has not run. Check back soon.</div>';
     return;
   }
-  try { history = await load('data/history.json'); } catch (e) { history = []; }
+  try { histRows = await load('data/history.json'); } catch (e) { histRows = []; }
   if (!addonByName(state.addon)) { state.addon = latest.addons[0].name; }
   addEventListener('hashchange', showView);
   addEventListener('resize', function () {
