@@ -32,6 +32,10 @@ masters:
   - host: ms.cs-all-servers.ru
     port: 27010
     name: AllServers
+  - host: ms.sggms.ru
+    port: 27010
+    name: SGGMS
+    gamedirs: [cstrike]
   - host: ms1.ds-servers.com
     port: 27010
     name: DSServers
