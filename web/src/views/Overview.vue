@@ -24,6 +24,27 @@
     </div>
   </div>
 
+  <div class="card p-4 mb-6">
+    <h2 class="font-semibold text-white mb-2">Unlisted mods (open a PR to track)</h2>
+    <table class="stats w-full text-sm num">
+      <thead>
+        <tr>
+          <th>Directory</th>
+          <th>Servers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-if="!unlisted.length">
+          <td colspan="2" class="text-slate-500">None seen.</td>
+        </tr>
+        <tr v-for="row in unlisted" :key="row.gamedir">
+          <td>{{ row.gamedir }}</td>
+          <td>{{ fmt(row.servers) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="grid md:grid-cols-2 gap-4 mb-6">
     <div class="card p-4">
       <h2 class="font-semibold text-white mb-2">{{ addon.title }}: version share</h2>
@@ -85,6 +106,10 @@ const names = computed(function () {
 
 const addonName = ref(names.value.includes('yb_version') ? 'yb_version' : names.value[0]);
 const ver = ref(null);
+
+const unlisted = computed(function () {
+  return props.latest.unlisted_mods || [];
+});
 
 const addon = computed(function () {
   return addonByName(props.latest.addons, addonName.value);

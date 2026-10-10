@@ -38,6 +38,8 @@ def build(results, master, mods, tracked, truncated_mods,
     empty_mod = {"alive": 0, "players": 0, "bots": 0, "with_rules": 0, "max_players": 0}
     by_mod = defaultdict(lambda: dict(empty_mod))
     mod_maps = defaultdict(Counter)  # gamedir mapped to map counts
+    tracked_dirs = {(m.get("gamedir") or "").lower() for m in mods}
+    unlisted = Counter()
     for r in alive:
         app = _guess_mod(r, master.get(r["addr"], {}), mods)
         row = by_mod[app]
@@ -47,6 +49,8 @@ def build(results, master, mods, tracked, truncated_mods,
         row["max_players"] += r["info"]["max_players"]
         if r["info"]["map"]:
             mod_maps[app][r["info"]["map"]] += 1
+        if app not in tracked_dirs:
+            unlisted[app] += 1
 
     values = {name: Counter() for name in tracked_names}
     with_addon = {name: 0 for name in tracked_names}
@@ -120,6 +124,7 @@ def build(results, master, mods, tracked, truncated_mods,
             "mystery_bots": mystery_bots,
         },
         "countries": countries,
+        "unlisted_mods": [{"gamedir": g, "servers": n} for g, n in unlisted.most_common(20)],
         "addons": [{"name": v["name"], "title": v["title"], "url": v["url"],
                     "servers": with_addon[v["name"]],
                     "players": addon_players[v["name"]],
