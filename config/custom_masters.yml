@@ -12,16 +12,6 @@ masters:
     name: Varq
     url: https://varq.net/ru/master
     gamedirs: [cstrike]
-  - host: ms2.varq.net
-    port: 27010
-    name: Varq2
-    url: https://varq.net/ru/master
-    gamedirs: [cstrike]
-  - host: ms.tsarvar.com
-    port: 27010
-    name: Tsarvar
-    url: https://varq.net/ru/master
-    gamedirs: [cstrike]
   - host: ms2.csdownload.net
     port: 27011
     name: CSDownload

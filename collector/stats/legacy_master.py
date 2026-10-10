@@ -8,19 +8,27 @@ from __future__ import annotations
 
 import socket
 import struct
+import time
 
 REGION_ALL = 0xFF
 
 
-def query(host, port, gamedir, timeout=8.0, max_batches=500):
-    """All "ip:port" strings the master reports for one gamedir."""
+def query(host, port, gamedir, timeout=8.0, max_batches=500, budget=90.0):
+    """All "ip:port" strings the master reports for one gamedir.
+
+    budget caps the whole query: dripping masters that keep the loop
+    alive packet by packet get cut off instead of stalling the census.
+    """
     filt = f"\\gamedir\\{gamedir}".encode("ascii")
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.settimeout(timeout)
     found = []
     seed = b"0.0.0.0:0"
+    deadline = time.monotonic() + budget
     try:
         for _ in range(max_batches):
+            if time.monotonic() >= deadline:
+                break
             sock.sendto(b"\x31\xff" + seed + b"\x00" + filt + b"\x00", (host, port))
             try:
                 data, _ = sock.recvfrom(8192)
