@@ -21,6 +21,10 @@ masters:
     name: Tsarvar
     url: https://varq.net/ru/master
     gamedirs: [cstrike]
+  - host: ms2.csdownload.net
+    port: 27011
+    name: CSDownload
+    gamedirs: [cstrike]
   - host: ms1.ds-servers.com
     port: 27010
     name: DSServers
