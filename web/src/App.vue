@@ -26,6 +26,11 @@
       :hist-rows="histRows"
       :gamedir="route.param"
     />
+    <CountryView
+      v-else-if="latest && route.view === 'country'"
+      :latest="latest"
+      :cc="route.param"
+    />
 
     <footer v-if="latest" class="text-sm mt-6">
       <div class="card p-4 mb-4">
@@ -60,6 +65,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue';
 import AddonView from './views/AddonView.vue';
+import CountryView from './views/CountryView.vue';
 import ModView from './views/ModView.vue';
 import Overview from './views/Overview.vue';
 import { dataUrl, fmt, homePath, loadJSON, parseRoute } from './lib/data.js';

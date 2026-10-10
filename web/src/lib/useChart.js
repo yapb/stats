@@ -14,7 +14,7 @@ export function useChart() {
 
   function render(option) {
     if (!el.value) {
-      return;
+      return false;
     }
     if (!chart) {
       chart = echarts.init(el.value);
@@ -27,6 +27,15 @@ export function useChart() {
       requestAnimationFrame(onResize);
     }
     chart.setOption(option, true);
+    return true;
+  }
+
+  function onClick(fn) {
+    if (!chart) {
+      return;
+    }
+    chart.off('click');
+    chart.on('click', fn);
   }
 
   onBeforeUnmount(function () {
@@ -42,7 +51,7 @@ export function useChart() {
     }
   });
 
-  return { el, render };
+  return { el, render, onClick };
 }
 
 export function baseText() {

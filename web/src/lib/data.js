@@ -113,6 +113,10 @@ export function modPath(key) {
   return baseRoot() + 'mod/' + key;
 }
 
+export function countryPath(cc) {
+  return baseRoot() + 'country/' + cc;
+}
+
 export function dataUrl(name) {
   return baseRoot() + 'data/' + name;
 }
@@ -127,12 +131,18 @@ export function parseRoute() {
   if (parts.length >= 2 && parts[parts.length - 2] === 'mod') {
     return { view: 'mod', param: decodeURIComponent(parts[parts.length - 1]) };
   }
+  if (parts.length >= 2 && parts[parts.length - 2] === 'country') {
+    return { view: 'country', param: decodeURIComponent(parts[parts.length - 1]) };
+  }
   const h = location.hash || '';
   if (h.indexOf('#/addon/') === 0) {
     return { view: 'addon', param: decodeURIComponent(h.slice(8)) };
   }
   if (h.indexOf('#/mod/') === 0) {
     return { view: 'mod', param: decodeURIComponent(h.slice(6)) };
+  }
+  if (h.indexOf('#/country/') === 0) {
+    return { view: 'country', param: decodeURIComponent(h.slice(10)) };
   }
   return { view: 'overview', param: null };
 }

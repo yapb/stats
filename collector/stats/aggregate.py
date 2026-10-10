@@ -30,6 +30,9 @@ def build(results, master, mods, tracked, truncated_mods,
           source_new, farm_info, sdr, geo_reader=None):
     """Fold results into (latest, history_row) dicts."""
     tracked_names = [v["name"] for v in tracked]
+    covered_keys = set(tracked_names)
+    for v in tracked:
+        covered_keys.update(v.get("any_of") or [])
     answered = [r for r in results if "info" in r]
     fakes = [r for r in answered if _is_fake_count(r["info"])]
     alive = [r for r in answered if not _is_fake_count(r["info"])]
@@ -65,23 +68,29 @@ def build(results, master, mods, tracked, truncated_mods,
         by_mod[app]["with_rules"] += 1
         for key in r["rules"]:
             low = key.lower()
-            if key not in tracked_names and (
+            if key not in covered_keys and (
                     low.endswith("_version") or low.endswith("_ver") or low.endswith("version")):
                 stray_vars[key] += 1
                 if key not in stray_examples:
                     stray_examples[key] = r["rules"][key][:60]
-        for name in tracked_names:
-            if name in r["rules"]:
-                with_addon[name] += 1
-                values[name][r["rules"][name]] += 1
-                mod_addon[(app, name)][r["rules"][name]] += 1
-                addon_players[name] += r["info"]["players"]
-                addon_capacity[name] += r["info"]["max_players"]
-                addon_bots[name] += r["info"]["bots"]
+        for v in tracked:
+            name = v["name"]
+            keys = v.get("any_of") or [name]
+            hits = [k for k in keys if k in r["rules"]]
+            if not hits:
+                continue
+            with_addon[name] += 1
+            if len(keys) == 1 and not v.get("novalue"):
+                values[name][r["rules"][keys[0]]] += 1
+                mod_addon[(app, name)][r["rules"][keys[0]]] += 1
+            addon_players[name] += r["info"]["players"]
+            addon_capacity[name] += r["info"]["max_players"]
+            addon_bots[name] += r["info"]["bots"]
 
     info_errs = Counter(r["info_err"] for r in results if "info_err" in r)
     rules_errs = Counter(r["rules_err"] for r in alive if "rules_err" in r)
-    BOT_VARS = {"yb_version", "pb_version", "bot_quota", "jk_botti_version", "rcbot_ver"}
+    BOT_VARS = {"yb_version", "pb_version", "bot_quota", "jk_botti_version", "rcbot_ver",
+                "ebot_version"}
     mystery_servers = 0
     mystery_bots = 0
     for r in with_rules:
@@ -105,8 +114,10 @@ def build(results, master, mods, tracked, truncated_mods,
             cc = found.get(r["addr"].rpartition(":")[0], [None])[0]
             if not cc:
                 continue
-            for name in tracked_names:
-                if name in r["rules"]:
+            for v in tracked:
+                name = v["name"]
+                keys = v.get("any_of") or [name]
+                if any(k in r["rules"] for k in keys):
                     addon_countries[name][cc] += 1
         by_cc = Counter()
         for ip, n in per_ip_count.items():
@@ -118,6 +129,34 @@ def build(results, master, mods, tracked, truncated_mods,
     def top_countries(counter):
         return [{"cc": cc, "name": cc_names.get(cc, cc), "servers": n}
                 for cc, n in counter.most_common(8)]
+
+    by_country = {}
+    if geo_reader is not None:
+        detail = {}
+        for r in alive:
+            cc = found.get(r["addr"].rpartition(":")[0], [None])[0]
+            if not cc:
+                continue
+            e = detail.setdefault(cc, {"servers": 0, "players": 0, "bots": 0,
+                                       "max_players": 0, "mods": Counter(),
+                                       "addons": Counter()})
+            e["servers"] += 1
+            e["players"] += r["info"]["players"]
+            e["bots"] += r["info"]["bots"]
+            e["max_players"] += r["info"]["max_players"]
+            e["mods"][_guess_mod(r, master.get(r["addr"], {}), mods)] += 1
+            if "rules" in r:
+                for v in tracked:
+                    name = v["name"]
+                    keys = v.get("any_of") or [name]
+                    if any(k in r["rules"] for k in keys):
+                        e["addons"][name] += 1
+        by_country = {cc: {"name": cc_names.get(cc, cc), "servers": e["servers"],
+                           "players": e["players"], "bots": e["bots"],
+                           "max_players": e["max_players"],
+                           "mods": dict(e["mods"].most_common(15)),
+                           "addons": dict(e["addons"].most_common(30))}
+                      for cc, e in detail.items()}
     total_players = sum(row["players"] for row in by_mod.values())
     total_capacity = sum(row["max_players"] for row in by_mod.values())
 
@@ -151,6 +190,7 @@ def build(results, master, mods, tracked, truncated_mods,
             "mystery_bots": mystery_bots,
         },
         "countries": countries,
+        "by_country": by_country,
         "unlisted_mods": [{"gamedir": g, "servers": n} for g, n in unlisted.most_common(20)],
         "unlisted_vars": [{"var": k, "servers": n, "example": stray_examples.get(k, "")}
                           for k, n in stray_vars.most_common(30)],

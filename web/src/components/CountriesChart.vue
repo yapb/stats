@@ -14,7 +14,7 @@ const props = defineProps({
   countries: { type: Array, required: true },
 });
 
-const { el, render } = useChart();
+const { el, render, onClick } = useChart();
 
 const rows = computed(function () {
   return (props.countries || []).slice(0, 12);
@@ -24,26 +24,31 @@ const height = computed(function () {
   return Math.max(300, (rows.value.length + 1) * 30);
 });
 
+const emit = defineEmits(['pick']);
+
 function draw() {
   if (!rows.value.length) {
     return;
   }
+  const items = rows.value.map(function (c) {
+    return { cc: c.cc, name: c.name, servers: c.servers };
+  });
   const rest = (props.countries || [])
     .slice(12)
     .reduce(function (acc, c) {
       return acc + c.servers;
     }, 0);
-  const names = rows.value.map(function (c) {
+  if (rest > 0) {
+    items.push({ cc: null, name: 'other', servers: rest });
+  }
+  const names = items.map(function (c) {
     const mark = flag(c.cc);
     return (mark ? mark + ' ' : '') + c.name;
   });
-  const data = rows.value.map(function (c) {
-    return { value: c.servers, itemStyle: { color: 'hsl(' + hue(c.cc) + ',60%,55%)' } };
+  const data = items.map(function (c) {
+    const color = c.cc ? 'hsl(' + hue(c.cc) + ',60%,55%)' : '#475569';
+    return { value: c.servers, itemStyle: { color } };
   });
-  if (rest > 0) {
-    names.push('other');
-    data.push({ value: rest, itemStyle: { color: '#475569' } });
-  }
   render({
     backgroundColor: 'transparent',
     tooltip: { trigger: 'axis' },
@@ -58,6 +63,12 @@ function draw() {
       },
     ],
     grid: { left: 8, right: 48, containLabel: true },
+  });
+  onClick(function (params) {
+    const item = items[params.dataIndex];
+    if (item && item.cc) {
+      emit('pick', item.cc);
+    }
   });
 }
 

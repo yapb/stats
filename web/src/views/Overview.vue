@@ -44,8 +44,8 @@
   </div>
 
   <div class="card p-4 mb-6">
-    <h2 class="font-semibold text-white mb-2">Servers by country</h2>
-    <CountriesChart :countries="latest.countries" />
+    <h2 class="font-semibold text-white mb-2">Servers by country (click a bar for detail)</h2>
+    <CountriesChart :countries="latest.countries" @pick="openCountry" />
   </div>
 
   <div class="card p-4 mb-6">
@@ -143,6 +143,7 @@ import {
   addonByName,
   buildOverviewSeries,
   buildPlayersSeries,
+  countryPath,
   fmt,
   histDate,
   stampToDate,
@@ -305,5 +306,9 @@ function inspect(name) {
 
 function toggleVer(value) {
   ver.value = ver.value === value ? null : value;
+}
+
+function openCountry(cc) {
+  location.href = countryPath(cc);
 }
 </script>

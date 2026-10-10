@@ -1,8 +1,10 @@
 # Server rules (A2S_RULES keys) counted as "addons", AMX Mod X stats style.
 # Add new ones via PR:
-#   name:  exact rule key as reported by servers (case-sensitive)
-#   title: display name for the dashboard
-#   url:   link shown next to the addon name
+#   name:    exact rule key as reported by servers (case-sensitive)
+#   title:   display name for the dashboard
+#   url:     link shown next to the addon name
+#   novalue: values are settings, not versions (count presence only)
+#   any_of:  match if any of these keys is present (implies novalue)
 vars:
   - name: yb_version
     title: YaPB
@@ -47,44 +49,58 @@ vars:
   - name: amx_version
     title: AMX Mod
     url: http://www.amxmod.net/
+  # --- Метамод плагины и защита ---
   - name: resemiclip_version
     title: ReSemiclip
+    url: https://github.com/Next21Team/resemiclip-amxx
   - name: whb_version
     title: WHBlocker
+    url: https://github.com/UnrealKaraulov/UNREAL_ANTI_ESP
   - name: reauthcheck_version
     title: ReAuthCheck
+    url: https://forum.ws-gaming.eu
   - name: SNAC_Version
     title: SNAC
+    url: https://github.com/APGRoboCop/SafeNameAndChat
   - name: revoice_version
     title: Revoice
+    url: https://github.com/AdrianJagodznski/ReHLDS-PL
   - name: reaimdetector_version
     title: ReAimDetector
     url: https://github.com/s1lentq/ReAimDetector
   - name: VTC_Version
     title: VTC
-  - name: aesp_version
-    title: Admin Spectator ESP
-    url: http://forums.alliedmods.net/showthread.php?t=23691
+    url: https://github.com/AMX-Servers/VoiceTranscoder
   - name: mapm_version
     title: Map Manager
+    url: https://github.com/Mistrick/MapManagerModular
   - name: admanager_version
     title: Ad Manager
+    url: https://amxx.pl/topic/1351-reset-score/
   - name: hackdetector_version
     title: HackDetector Lite
+    url: https://apg-clan.org
   - name: mode2x2_version
     title: Mode 2x2
+    url: https://tsgame.ru
   - name: resrdetector_version
     title: ReSRDetector
+    url: https://hlds.run
   - name: ChatAdditions_version
     title: Chat Additions
+    url: https://github.com/ChatAdditions/ChatAdditions_AMXX
   - name: atb_advanced_version
     title: Advanced Team Balancer
+    url: https://github.com/mtkb01/amxx-team-balancer
   - name: admin_loader_version
     title: Admin Loader
+    url: https://onevalve.ru/amxx/admin-loader/
   - name: aemu_version
     title: AuthEmu
+    url: https://forum.ws-gaming.eu
   - name: dp_version
     title: Dproto
+    url: https://github.com/artkirienko/hlds-docker-dproto
   - name: hlxce_plugin_version
     title: HLstatsX
     url: http://www.hlxcommunity.com/
@@ -99,85 +115,188 @@ vars:
     url: http://www.bailopan.net/csdm/
   - name: zp_version
     title: Zombie Plague
+    url: https://github.com/Sh1ft0x0EF/Zombie-Plague-Mod
   - name: nademodes_version
     title: Nade Modes
+    url: https://forums.alliedmods.net/showthread.php?t=26598
   - name: Team_Semiclip_version
     title: Team Semiclip
+    url: https://stalkerstudio.ucoz.ru
   - name: afk_manager_version
     title: AFK Manager
+    url: https://github.com/EfeDursun125/AMXX-AFK-BOT
   - name: ezhttp_version
     title: EZ HTTP
+    url: https://github.com/Next21Team/AmxxEasyHttp
   - name: AWPLimiter_version
     title: AWP Limiter
+    url: https://topforo.ru
   - name: afk_version
     title: AFK Kicker
+    url: https://www.roystonvasey.org.uk
   - name: jk_botti_version
     title: JK_BOTTI
+    url: https://github.com/Bots-United/jk_botti
   - name: rcbot_ver
     title: RCBot
+    url: https://github.com/APGRoboCop/rcbot2
+  # --- Ядро и утилиты ---
   - name: plugins_core_version
     title: Plugins Core
+    url: https://onevalve.ru/amxx/plugins-core/
   - name: lt_version
     title: Lite
+    url: https://forums.alliedmods.net/showthread.php?t=49674
   - name: redirect_version
     title: xREDIRECT
+    url: https://www.amxmodx.org/plugin/xredirect
   - name: CustomSkies_version
     title: Custom Skies
+    url: https://github.com/Nord1cWarr1or/Custom-skies
   - name: pbk_version
     title: Play or Be Kicked
+    url: https://users.svn.alliedmods.net
   - name: hackdetector_amxx_version
     title: HackDetector Lite
+    url: https://apg-clan.org
   - name: amxbans_ssversion
     title: AMXBans SS
+    url: https://github.com/mistercalvin/amxbans
   - name: gg_version
     title: GunGame AMXX
     url: http://avalanche.gungame.org/
   - name: specinfo_version
     title: SpecInfo
+    url: https://forums.alliedmods.net/showthread.php?t=26598
   - name: statsx_shell_ver
     title: StatsX Shell
+    url: https://amx.ucoz.ru
   - name: fn_version
     title: Frost Nades
+    url: https://forums.alliedmods.net/showthread.php?t=49674
   - name: new_kick_menu_version
     title: New Kick Menu
+    url: https://dream-x.ru
   - name: grab_plus_version
     title: Grab Plus
+    url: https://forums.alliedmods.net/showthread.php?t=26598
   - name: mp_bhop_version
     title: Bhop
+    url: https://www.battlemetrics.com
   - name: csac_version
     title: CSAC
+    url: https://www.amxmodx.org/plugin/headshot-deluxe
   - name: plugin_core_version
     title: Plugin Core
+    url: https://onevalve.ru/amxx/plugins-core/
   - name: recoil_control_version
     title: Recoil Control
+    url: https://forums.alliedmods.net/showthread.php?t=26598
   - name: allchat_version
     title: All Chat
+    url: https://amxmod.net/plugins/all-chat-v1.2.20
   - name: bancfg_version
     title: BanCfg
+    url: https://c-s.net.ua
   - name: badcamper_version
     title: Bad Camper
     url: http://forums.alliedmods.net/showthread.php?p=156560
   - name: sbhopper_version
     title: Super Bunny Hopper
+    url: https://forums.alliedmods.net/showthread.php?t=26598
   - name: damager_advanced_version
     title: Damager Advanced
+    url: https://onevalve.ru/amxx/damager-advanced/
   - name: awt_version
     title: AWT
+    url: https://www.battlemetrics.com
   - name: gag_me_version
     title: Gag Me
+    url: https://onevalve.ru/amxx/gag-me/
   - name: dmb_version
     title: Deathmatch
+    url: https://github.com/FEDERICOMB96/amxx-re-deathmatch
   - name: lambda_version
     title: Lambda
+    url: https://hlds.run
   - name: color_flash_screen_version
     title: Color Flash Screen
+    url: https://goldsrc.ru
   - name: NBEX_Version
     title: NBEX
+    url: https://cs-important.at.ua
   - name: nclapi_version
     title: NextClientServerApi
+    url: https://github.com/CS-NextClient/NextClientServerApi
   - name: atac_version
     title: ATAC
-  - name: mp_bhopcap
+    url: https://www.amxmodx.org/plugin/atac
+  - name: ebot_version
+    title: E-BOT
+    url: https://github.com/EfeDursun125/CS-EBOT
+  - name: silentnades_version
+    title: Silent Nades
+  - name: hsd_version
+    title: Headshot DeluXe
+  - name: Colored Translit Version
+    title: Colored Translit
+  - name: round_version
+    title: Vox Round Say
+  - name: auw_version
+    title: AUW
+  - name: awp_restrictions_version
+    title: AWP Restrictions
+  - name: ers_version
+    title: Alternative End Round Sounds
+  - name: Floating_Damage_Version
+    title: Floating Damage
+    url: https://github.com/YoshiokaHaruki/AMXX-Floating-Damage
+  - name: autolang_version
+    title: AutoLang
+  - name: team_control_version
+    title: Team Control
+  - name: redm_version
+    title: ReDeathmatch
+    url: https://github.com/ReDeathmatch/ReDeathmatch_AMXX
+  - name: zp_vip_version
+    title: ZP VIP
+  - name: sprayid_version
+    title: Spray ID
+  - name: c4_control_version
+    title: C4 Control
+  - name: cso_kill_sounds_version
+    title: CSO Kill Sounds
+  - name: reset_score_version
+    title: Reset Score
+  - name: srf_version
+    title: SRF
+  - name: jctf_version
+    title: JCTF
+  - name: screen_version
+    title: Screen
+  - name: costumes_version
+    title: CSO Costumes
+  - name: rail_version
+    title: Rail Cannon
+  - name: level_system_version
+    title: Level System
+  - name: adds_version
+    title: Addons Classic
+  - name: fc_version
+    title: Fast Cup
+  - name: night_mode_version
+    title: Night Mode
+  - name: sv_ag_version
+    title: Adrenaline Gamer
+    url: https://github.com/rtxa/agmodx
+  - name: ultimatebans_version
+    title: Ultimate Bans
+  - name: PerfectCamera_version
+    title: Perfect Camera
+  - name: bunnyjump_version
+    title: BunnyJump
+  - name: xash
     title: Xash3D
     url: https://github.com/FWGS/xash3d-fwgs
     novalue: true
+    any_of: [pushablemode, mp_multibyte_only, allow_connectionless, corpsephysics, selfgauss, monsteryawspeedfix, mp_bhopcap, chargerfix, explosionfix, satchelfix]

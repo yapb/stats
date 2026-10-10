@@ -27,5 +27,10 @@ for (const m of data.mods || []) {
     emit(path.join('mod', m.gamedir));
   }
 }
+for (const c of data.countries || []) {
+  if (c.cc) {
+    emit(path.join('country', c.cc));
+  }
+}
 fs.copyFileSync(path.join(dist, 'index.html'), path.join(dist, '404.html'));
 console.log('prerendered ' + made + ' routes plus 404 fallback');

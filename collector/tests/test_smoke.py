@@ -27,7 +27,7 @@ def synthetic():
          "info": {"name": "hl pub", "map": "crossfire", "players": 3,
                   "max_players": 20, "bots": 1, "os": "w",
                   "gamedir": "valve", "vac": False},
-         "rules": {"amxmodx_version": "1.9.0"}},
+         "rules": {"amxmodx_version": "1.9.0", "pushablemode": "1"}},
         {"addr": "3.3.3.3:27015",
          "info": {"name": "fake", "map": "de_dust2", "players": 255,
                   "max_players": 255, "bots": 0, "os": "l",
@@ -49,6 +49,8 @@ def synthetic():
         {"name": "yb_version", "title": "YaPB", "url": "https://example.com/yb"},
         {"name": "bot_quota", "title": "CZ Bot", "novalue": True},
         {"name": "amxmodx_version", "title": "AMX Mod X"},
+        {"name": "xash", "title": "Xash3D", "novalue": True,
+         "any_of": ["pushablemode", "mp_bhopcap"]},
     ]
     return results, master, mods, tracked
 
@@ -66,10 +68,12 @@ class SmokeTest(unittest.TestCase):
         self.assertEqual(len(latest["mods"]), 2)
         self.assertIn("maps", latest["mods"][0])
         self.assertIn("countries", latest["mods"][0])
-        self.assertEqual(len(latest["addons"]), 3)
+        self.assertEqual(len(latest["addons"]), 4)
         by_name = {a["name"]: a for a in latest["addons"]}
         self.assertTrue(by_name["yb_version"]["values"])
         self.assertTrue(by_name["bot_quota"]["novalue"])
+        self.assertEqual(by_name["xash"]["servers"], 1)
+        self.assertFalse(by_name["xash"]["values"])
         self.assertNotIn("url", by_name["amxmodx_version"])
         self.assertEqual(by_name["amxmodx_version"]["servers"], 1)
         self.assertIn("unlisted_mods", latest)
