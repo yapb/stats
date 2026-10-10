@@ -1,150 +1,360 @@
 {
- "generated_at": "2026-10-10T13:49:15+00:00",
+ "generated_at": "2026-10-10T16:04:49+00:00",
  "mods": [
   {
    "appid": 10,
    "gamedir": "cstrike",
    "name": "Counter-Strike",
    "url": "https://store.steampowered.com/app/10/CounterStrike/",
-   "master": 17501,
-   "alive": 6112,
-   "players": 91843,
-   "bots": 5325,
-   "with_rules": 4145,
-   "max_players": 176199,
+   "master": 19121,
+   "alive": 6587,
+   "players": 97715,
+   "bots": 5879,
+   "with_rules": 4594,
+   "max_players": 188794,
    "maps": {
-    "de_dust2": 1080,
-    "de_dust2_2x2": 311,
-    "de_inferno": 164,
-    "$2000$": 90,
-    "de_dust": 83,
-    "de_aztec": 79,
-    "de_nuke": 73,
-    "de_train": 66,
-    "fy_snow": 61,
-    "cs_mansion": 56,
-    "cs_assault": 54,
-    "fy_pool_day": 51,
-    "cs_italy": 50,
-    "de_cbble": 44,
-    "aim_map": 43
-   }
+    "de_dust2": 1172,
+    "de_dust2_2x2": 336,
+    "de_inferno": 169,
+    "de_dust": 108,
+    "de_nuke": 103,
+    "de_train": 90,
+    "de_aztec": 78,
+    "$2000$": 78,
+    "fy_snow": 74,
+    "cs_assault": 71,
+    "cs_mansion": 59,
+    "cs_italy": 58,
+    "fy_pool_day": 54,
+    "de_mirage": 46,
+    "de_cbble": 42
+   },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 2418
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 669
+    },
+    {
+     "cc": "MX",
+     "name": "Mexico",
+     "servers": 501
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 465
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 329
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 254
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 222
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 199
+    }
+   ]
   },
   {
    "appid": 80,
    "gamedir": "czero",
    "name": "Condition Zero",
    "url": "https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/",
-   "master": 441,
-   "alive": 230,
-   "players": 795,
-   "bots": 486,
-   "with_rules": 220,
-   "max_players": 6335,
+   "master": 455,
+   "alive": 229,
+   "players": 799,
+   "bots": 488,
+   "with_rules": 219,
+   "max_players": 6294,
    "maps": {
-    "de_dust2_cz": 101,
+    "de_dust2_cz": 99,
+    "de_inferno_cz": 8,
     "de_dust_cz": 6,
-    "de_aztec_cz": 5,
-    "de_stadium_cz": 5,
-    "cs_italy_cz": 4,
-    "de_inferno_cz": 3,
-    "de_chateau_cz": 3,
-    "de_dust2": 3,
-    "cs_office_cz": 2,
-    "de_aztec": 2,
-    "de_piranesi_cz": 2,
-    "cs_havana_cz": 2,
-    "cs_downed_cz": 2,
-    "de_prodigy_cz": 2,
+    "cs_office_cz": 6,
+    "cs_downed_cz": 5,
+    "cs_italy_cz": 5,
+    "de_cbble_cz": 4,
+    "cs_militia_cz": 4,
+    "de_nuke": 3,
+    "de_prodigy_cz": 3,
+    "cs_assault": 2,
+    "de_airstrip_cz": 2,
+    "de_dust2": 2,
+    "aim_awp": 2,
     "de_dust2_2x2": 1
-   }
+   },
+   "countries": [
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 118
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 32
+    },
+    {
+     "cc": "CN",
+     "name": "China",
+     "servers": 16
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 15
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 10
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 9
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 8
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 4
+    }
+   ]
   },
   {
    "appid": 30,
    "gamedir": "dod",
    "name": "Day of Defeat",
    "url": "https://store.steampowered.com/app/30/Day_of_Defeat/",
-   "master": 153,
-   "alive": 100,
-   "players": 615,
-   "bots": 487,
-   "with_rules": 99,
-   "max_players": 2280,
+   "master": 1312,
+   "alive": 105,
+   "players": 691,
+   "bots": 492,
+   "with_rules": 104,
+   "max_players": 2402,
    "maps": {
-    "dod_anzio": 26,
-    "dod_flash": 8,
-    "dod_caen": 5,
-    "dod_avalanche": 5,
-    "dod_chemille": 4,
-    "dod_kraftstoff": 4,
+    "dod_anjou_a5": 23,
+    "dod_avalanche": 6,
+    "dod_kalt": 4,
+    "dod_caen": 4,
     "dod_donner": 3,
-    "dod_jagd": 3,
-    "dod_orange": 3,
-    "dod_saints": 2,
-    "dod_zalec": 2,
-    "dod_purple": 2,
-    "dod_merderet": 1,
-    "dod_orange_tunnels": 1,
-    "828_pk_13": 1
-   }
+    "dod_anzio": 3,
+    "dod_vicenza": 3,
+    "dod_flugplatz_r1": 3,
+    "bst_humistone": 3,
+    "dod_aztec": 2,
+    "dod_pandemic_aim": 2,
+    "dod_orange": 2,
+    "bam_oldwest": 2,
+    "dod_kraftstoff": 2,
+    "dod_forest": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 61
+    },
+    {
+     "cc": "CN",
+     "name": "China",
+     "servers": 11
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 8
+    },
+    {
+     "cc": "SE",
+     "name": "Sweden",
+     "servers": 2
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 2
+    },
+    {
+     "cc": "CA",
+     "name": "Canada",
+     "servers": 2
+    },
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 2
+    },
+    {
+     "cc": "ZA",
+     "name": "South Africa",
+     "servers": 2
+    }
+   ]
   },
   {
    "appid": 20,
    "gamedir": "tfc",
    "name": "Team Fortress Classic",
    "url": "https://store.steampowered.com/app/20/Team_Fortress_Classic/",
-   "master": 147,
-   "alive": 109,
-   "players": 465,
-   "bots": 423,
-   "with_rules": 106,
-   "max_players": 2610,
+   "master": 199,
+   "alive": 113,
+   "players": 536,
+   "bots": 482,
+   "with_rules": 109,
+   "max_players": 2696,
    "maps": {
-    "2fort": 19,
-    "crossover2": 8,
-    "well": 7,
-    "pushNN": 6,
+    "2fort": 17,
+    "avanti": 6,
+    "flagrun": 5,
+    "pushNN": 5,
+    "rock2": 4,
+    "crossover2": 4,
     "warpath": 3,
-    "casbah": 3,
+    "epicenter": 3,
+    "openfire_lowgrens": 3,
     "dustbowl": 3,
-    "avanti": 2,
-    "rock2": 2,
-    "badlands": 2,
-    "ravelin": 2,
     "sw_mapvote_b2c": 2,
-    "schtop": 2,
-    "sa_blockfort": 2,
-    "openfire_lowgrens": 2
-   }
+    "casbah": 2,
+    "well": 2,
+    "raiden9": 2,
+    "cz2": 2
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 64
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 10
+    },
+    {
+     "cc": "BE",
+     "name": "Belgium",
+     "servers": 7
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 7
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 5
+    },
+    {
+     "cc": "CA",
+     "name": "Canada",
+     "servers": 3
+    },
+    {
+     "cc": "FI",
+     "name": "Finland",
+     "servers": 2
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 2
+    }
+   ]
   },
   {
    "appid": 50,
    "gamedir": "gearbox",
    "name": "Opposing Force",
    "url": "https://store.steampowered.com/app/50/HalfLife_Opposing_Force/",
-   "master": 42,
+   "master": 67,
    "alive": 35,
-   "players": 98,
-   "bots": 83,
+   "players": 91,
+   "bots": 87,
    "with_rules": 34,
    "max_players": 711,
    "maps": {
-    "op4_datacore": 3,
-    "op4_disposal": 2,
+    "op4_repent": 2,
+    "op4_crossfire": 2,
     "op4_bootcamp": 2,
-    "op4cp_campgrounds": 1,
+    "op4_xendance": 1,
+    "op4ctf_2fort": 1,
     "op4ctf_wonderland": 1,
     "cross_box": 1,
-    "contamination": 1,
-    "op4_gasworks": 1,
-    "op4_demise": 1,
-    "op4_meanie": 1,
-    "kitkat_essence_ext": 1,
-    "op4_xendance": 1,
+    "rocket_frenzy": 1,
+    "op4_rats_bricolo": 1,
+    "op4_bounce": 1,
+    "op4_kndyone": 1,
     "op4_gasworks_top_v21": 1,
     "snipe_new_age_12a": 1,
-    "op4_camperstrike": 1
-   }
+    "op4_park": 1,
+    "op4ctf_2bases": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 13
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 5
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 5
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 2
+    },
+    {
+     "cc": "TW",
+     "name": "Taiwan",
+     "servers": 1
+    },
+    {
+     "cc": "SE",
+     "name": "Sweden",
+     "servers": 1
+    },
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 1
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 40,
@@ -153,76 +363,202 @@
    "url": "https://store.steampowered.com/app/40/Deathmatch_Classic/",
    "master": 23,
    "alive": 18,
-   "players": 63,
-   "bots": 55,
+   "players": 62,
+   "bots": 56,
    "with_rules": 17,
    "max_players": 466,
    "maps": {
-    "dmc_dm2": 3,
-    "p_se_3": 2,
-    "dmc_dm6": 1,
-    "dmc_revenant": 1,
-    "dmc_pkeg1": 1,
-    "dmc_antfarm": 1,
-    "dmc_e1m8": 1,
-    "dmc_dagon": 1,
-    "dmc_guildhall": 1,
-    "dcdm5": 1,
+    "dmc_dm4": 3,
+    "dmc_dm2": 2,
+    "dmc_dm66_beta2": 1,
+    "dmc_skull": 1,
+    "dmc_gmdm1": 1,
     "dmc_e1m2": 1,
-    "de_stadium_cz": 1,
-    "dmc_crdm2": 1,
-    "dmc_dapro1": 1,
-    "dmc_orkan": 1
-   }
+    "dmc_dapak6": 1,
+    "dmc_absolution_v2": 1,
+    "dmc_graytech": 1,
+    "dcdm5": 1,
+    "p_se_3": 1,
+    "de_aztec": 1,
+    "dmc_cel2": 1,
+    "dmc_orkan": 1,
+    "dmc_dapro1": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 7
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 4
+    },
+    {
+     "cc": "FI",
+     "name": "Finland",
+     "servers": 1
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 1
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 1
+    },
+    {
+     "cc": "TW",
+     "name": "Taiwan",
+     "servers": 1
+    },
+    {
+     "cc": "ZA",
+     "name": "South Africa",
+     "servers": 1
+    },
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 60,
    "gamedir": "ricochet",
    "name": "Ricochet",
    "url": "https://store.steampowered.com/app/60/Ricochet/",
-   "master": 15,
+   "master": 22,
    "alive": 13,
-   "players": 15,
+   "players": 17,
    "bots": 15,
    "with_rules": 13,
    "max_players": 272,
    "maps": {
-    "rc_arena": 5,
-    "rc_deathmatch2": 4,
-    "rc_deathmatch": 1,
-    "rc_hexatest": 1,
-    "rc_lightyear": 1,
-    "rc_devil": 1
-   }
+    "rc_arena": 6,
+    "rc_deathmatch": 3,
+    "rc_ratrace": 1,
+    "rc_ricosurf": 1,
+    "rc_tower_apg": 1,
+    "rc_deathmatch2": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 4
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 2
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 2
+    },
+    {
+     "cc": "FI",
+     "name": "Finland",
+     "servers": 1
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 1
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 1
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 1
+    },
+    {
+     "cc": "TW",
+     "name": "Taiwan",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
    "gamedir": "valve",
    "name": "Half-Life Deathmatch",
    "url": "https://store.steampowered.com/app/70/HalfLife/",
-   "master": 1263,
-   "alive": 448,
-   "players": 1161,
+   "master": 1382,
+   "alive": 446,
+   "players": 1270,
    "bots": 481,
-   "with_rules": 432,
-   "max_players": 10721,
+   "with_rules": 433,
+   "max_players": 10625,
    "maps": {
-    "crossfire": 197,
-    "stalkyard": 12,
-    "undertow": 8,
-    "bounce": 8,
-    "gasworks": 8,
-    "lambda_bunker": 8,
-    "doublecross": 6,
+    "crossfire": 156,
+    "endcamp": 27,
+    "subtransit": 10,
+    "datacore": 10,
+    "stalkyard": 10,
+    "gasworks": 9,
+    "boot_camp": 8,
+    "stalkx": 6,
     "snark_pit": 6,
-    "frenzy": 5,
-    "pool_party": 5,
-    "contamination": 5,
+    "undertow": 6,
+    "rustmill": 6,
+    "lambda_bunker": 5,
     "bootbox": 5,
-    "rocket_frenzy": 4,
-    "datacore": 4,
-    "2000_2_frozen": 3
-   }
+    "contamination": 4,
+    "disposal": 4
+   },
+   "countries": [
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 103
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 100
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 53
+    },
+    {
+     "cc": "TR",
+     "name": "Turkey",
+     "servers": 28
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 19
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 14
+    },
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 13
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 13
+    }
+   ]
   },
   {
    "appid": 70,
@@ -230,27 +566,69 @@
    "name": "Adrenaline Gamer",
    "master": 70,
    "alive": 57,
-   "players": 11,
+   "players": 23,
    "bots": 2,
    "with_rules": 37,
-   "max_players": 1454,
+   "max_players": 1450,
    "maps": {
-    "datacore": 8,
-    "no_remorse": 5,
-    "rapidcore": 3,
-    "bootbox": 3,
-    "awol": 2,
-    "stalkx": 2,
-    "crossfire": 2,
-    "frenzy": 2,
-    "outcry": 2,
+    "crossfire": 6,
+    "stalkyard": 5,
+    "rapidcore": 4,
+    "stalkx": 3,
+    "boot_camp": 3,
+    "datacore": 3,
+    "gasworks": 2,
     "lost_village2": 2,
-    "ag_inferno2": 2,
-    "stalkxtra": 1,
-    "hl1_bhop_am_beta6": 1,
-    "pyml_bhop_brickwall_final": 1,
-    "urethane": 1
-   }
+    "bootbox": 2,
+    "no_remorse": 2,
+    "ag_crossfire": 2,
+    "rustmill": 1,
+    "eternal": 1,
+    "fmc_torres": 1,
+    "kzru_pharaonrun": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 17
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 7
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 6
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 5
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 4
+    },
+    {
+     "cc": "FI",
+     "name": "Finland",
+     "servers": 2
+    },
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 2
+    },
+    {
+     "cc": "SE",
+     "name": "Sweden",
+     "servers": 2
+    }
+   ]
   },
   {
    "appid": 70,
@@ -263,20 +641,32 @@
    "with_rules": 13,
    "max_players": 161,
    "maps": {
-    "actcity": 1,
-    "ahl_temple": 1,
-    "ahl_mallwing": 1,
-    "ahl_plextrains": 1,
-    "ahl_tgx2": 1,
-    "wikkedmans": 1,
-    "lost_village2": 1,
-    "ahl_actcity": 1,
-    "ahl_nocredit": 1,
-    "fy_buzzkill": 1,
+    "ahl_bankdoom": 1,
+    "ahlg_actionrail_dc": 1,
+    "ahl_bananamans": 1,
+    "sw_coldstone": 1,
     "ts_mathar": 1,
+    "fragdock": 1,
+    "lost_village2": 1,
+    "ahl_rooftops": 1,
+    "ahl_calypso": 1,
+    "fy_snow2006": 1,
+    "ahl_cliff2_snow": 1,
     "hd_harlem": 1,
-    "ahl_bankdoom": 1
-   }
+    "ahl_napoli": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 12
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
@@ -289,12 +679,29 @@
    "with_rules": 5,
    "max_players": 116,
    "maps": {
+    "bb_uc1_chp4_cemeterytrouble": 1,
+    "bb_uc1_chp2_sincity": 1,
+    "bb_uc1_chp6_cemetary": 1,
     "bb_scifi_chp2_darksun": 1,
-    "bb_uc1_chp9_termoil": 1,
-    "bb_chp2_carnage": 1,
-    "bb_uc1_chp7_niteclub": 1,
-    "bb_uc1_chp4_cemeterytrouble": 1
-   }
+    "bb_chp4_slaywatch": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 3
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 1
+    },
+    {
+     "cc": "CH",
+     "name": "Switzerland",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
@@ -306,7 +713,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -318,31 +726,60 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
    "gamedir": "esf",
    "name": "Earth's Special Forces",
-   "master": 17,
-   "alive": 17,
-   "players": 10,
-   "bots": 9,
-   "with_rules": 17,
-   "max_players": 303,
+   "master": 15,
+   "alive": 15,
+   "players": 24,
+   "bots": 24,
+   "with_rules": 15,
+   "max_players": 263,
    "maps": {
-    "esf_cell_games_night": 6,
-    "esf_gero_night": 2,
-    "esf_cell_night": 1,
-    "esf_rosat": 1,
-    "ape_foreshadow": 1,
-    "esf_riverside": 1,
-    "esf_gokuhouse": 1,
-    "esf_nameks_revival": 1,
-    "esf_gero": 1,
+    "esf_cell_games_night": 7,
+    "esf_canyon": 3,
+    "esf_city": 1,
     "esf_battlearena": 1,
-    "pkwlz_9": 1
-   }
+    "s2k_greattournament": 1,
+    "esf_arrival": 1,
+    "esf_gero": 1
+   },
+   "countries": [
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 6
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 3
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 2
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 2
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 1
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
@@ -354,7 +791,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -366,7 +804,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -378,7 +817,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -390,7 +830,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -403,9 +844,16 @@
    "with_rules": 2,
    "max_players": 24,
    "maps": {
-    "rc_mistress": 1,
-    "gt_strife": 1
-   }
+    "rc_sunset": 1,
+    "rc_qrally01_hpe": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 2
+    }
+   ]
   },
   {
    "appid": 70,
@@ -417,7 +865,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -430,8 +879,15 @@
    "with_rules": 1,
    "max_players": 32,
    "maps": {
-    "fs_toradh": 1
-   }
+    "fs_treetown": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
@@ -445,7 +901,19 @@
    "max_players": 96,
    "maps": {
     "edana": 10
-   }
+   },
+   "countries": [
+    {
+     "cc": "NZ",
+     "name": "New Zealand",
+     "servers": 8
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 2
+    }
+   ]
   },
   {
    "appid": 70,
@@ -453,27 +921,62 @@
    "name": "Natural Selection",
    "master": 22,
    "alive": 18,
-   "players": 136,
-   "bots": 127,
+   "players": 140,
+   "bots": 138,
    "with_rules": 18,
    "max_players": 496,
    "maps": {
-    "ns_caged": 3,
-    "co_core": 2,
-    "co_ulysses": 1,
+    "co_faceoff": 3,
+    "ns_eon": 3,
+    "ns_metal": 2,
     "ns_eclipse": 1,
+    "ns_stargate-xt9": 1,
     "co_blackmesa_r5a": 1,
-    "ns_supersiege004a": 1,
+    "ns_caged": 1,
     "ns_bast": 1,
     "ns_tanith": 1,
-    "co_supermario": 1,
-    "ns_darkcanyon": 1,
+    "ns_delta": 1,
+    "ns_drill_b12": 1,
     "ze_marinebhop2_b02": 1,
-    "ns_metal": 1,
-    "ns_nothing": 1,
-    "ns_eon": 1,
-    "co_sava": 1
-   }
+    "ns_hera": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 4
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 3
+    },
+    {
+     "cc": "CA",
+     "name": "Canada",
+     "servers": 3
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 3
+    },
+    {
+     "cc": "HU",
+     "name": "Hungary",
+     "servers": 2
+    },
+    {
+     "cc": "AU",
+     "name": "Australia",
+     "servers": 2
+    },
+    {
+     "cc": "ES",
+     "name": "Spain",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
@@ -485,7 +988,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -497,7 +1001,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -509,7 +1014,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -517,15 +1023,28 @@
    "name": "Science and Industry",
    "master": 4,
    "alive": 4,
-   "players": 20,
-   "bots": 20,
+   "players": 16,
+   "bots": 16,
    "with_rules": 4,
-   "max_players": 65,
+   "max_players": 66,
    "maps": {
-    "si_early": 2,
-    "si_metropolis": 1,
-    "si_urban": 1
-   }
+    "si_overtime": 1,
+    "si_alley": 1,
+    "si_hirise": 1,
+    "si_early": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 3
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
@@ -537,35 +1056,30 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
    "gamedir": "svencoop",
    "name": "SvenCoop",
-   "master": 18,
-   "alive": 17,
-   "players": 18,
+   "master": 2,
+   "alive": 2,
+   "players": 2,
    "bots": 2,
-   "with_rules": 17,
-   "max_players": 349,
+   "with_rules": 2,
+   "max_players": 20,
    "maps": {
-    "bm_nightmare_a_final": 1,
-    "tox_silo": 1,
-    "bh1_l2": 1,
-    "def_hakase": 1,
-    "cracklife_c03": 1,
-    "shanghai": 1,
-    "sc_dead_zone": 1,
-    "nm_darkisland": 1,
-    "crystal": 1,
-    "rust_mini": 1,
-    "of2a4": 1,
-    "ba_security1": 1,
-    "stadium4": 1,
-    "deadsimpleneo2": 1,
-    "dmc_lobby": 1
-   }
+    "bm_nightmare_b_final": 1,
+    "tox_xen1-1": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 2
+    }
+   ]
   },
   {
    "appid": 70,
@@ -578,8 +1092,15 @@
    "with_rules": 1,
    "max_players": 32,
    "maps": {
-    "bg_rush": 1
-   }
+    "bg_ruin": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
@@ -592,22 +1113,49 @@
    "with_rules": 24,
    "max_players": 627,
    "maps": {
-    "ahl_museum": 2,
     "ts_hammertime": 2,
-    "ts_heresy": 1,
-    "de_dazzlingkr": 1,
+    "op_dm_hkalley_e1": 1,
     "ts_fall": 1,
-    "ahl_bananamans_d3": 1,
+    "ts_ztn_d2": 1,
+    "ts_japa_dm": 1,
+    "ts_awaken": 1,
     "db_duel": 1,
     "rats3": 1,
-    "ts_lobbyduel": 1,
+    "ts_panzibar": 1,
     "mecklenburgv5_a6": 1,
-    "ts_bikini": 1,
-    "ts_rundown": 1,
+    "ts_condemned": 1,
+    "ts_supertimor": 1,
+    "ts_lobby": 1,
     "iburgcity_b3v5": 1,
-    "ts_assault": 1,
-    "Mecklenburg_HLV_v1": 1
-   }
+    "ts_popdog": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 14
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 4
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 3
+    },
+    {
+     "cc": "CA",
+     "name": "Canada",
+     "servers": 2
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
@@ -619,7 +1167,8 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
@@ -631,26 +1180,38 @@
    "bots": 0,
    "with_rules": 0,
    "max_players": 0,
-   "maps": {}
+   "maps": {},
+   "countries": []
   },
   {
    "appid": 70,
    "gamedir": "vs",
    "name": "Vampire Slayer",
-   "master": 7,
-   "alive": 7,
+   "master": 6,
+   "alive": 6,
    "players": 24,
    "bots": 24,
-   "with_rules": 7,
-   "max_players": 144,
+   "with_rules": 6,
+   "max_players": 128,
    "maps": {
-    "vs_feint": 2,
-    "vs_quaint": 1,
-    "vs_blizzard": 1,
+    "vs_quaint": 2,
+    "vs_castle": 1,
     "vs_carpark": 1,
-    "dm_arctica": 1,
-    "vs_noir_ctc": 1
-   }
+    "dm_feint": 1,
+    "vs_sunrise": 1
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 5
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 1
+    }
+   ]
   },
   {
    "appid": 70,
@@ -664,53 +1225,95 @@
    "max_players": 32,
    "maps": {
     "zp_clubzombo": 1
-   }
+   },
+   "countries": [
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 1
+    }
+   ]
   }
  ],
  "totals": {
-  "master": 19814,
+  "master": 22791,
   "sources": {
    "steam": 12240,
-   "Varq": 3281,
-   "Varq2": 0,
-   "Tsarvar": 0,
-   "CSDownload": 14,
-   "CS16": 75,
-   "DSServers": 3056,
+   "CSDownload": 35,
+   "CS16": 223,
+   "AllServers": 1141,
+   "SGGMS": 188,
+   "WorldCS": 25,
+   "Taco": 1307,
+   "95.163.78.25": 4498,
+   "195.201.29.128": 140,
+   "FreeMS": 207,
+   "Varq": 684,
+   "YourCS": 13,
+   "Navi": 2,
+   "ServerMS": 0,
+   "HLMasterNet": 201,
+   "GameCS": 120,
+   "TopMS": 45,
+   "Fenix": 4,
+   "89.179.70.89": 1,
+   "143.0.0.127": 0,
+   "51.38.65.66": 154,
+   "FGMirror": 77,
+   "GoCS16": 2,
+   "VMBoost": 115,
+   "BCS16": 7,
+   "ServersBR": 0,
+   "BoostMaster2": 0,
+   "ApGame": 155,
+   "93.115.83.162": 10,
+   "CSLonghorn": 8,
+   "CSAllServers2": 0,
+   "Boostic": 3,
+   "DSServers": 0,
+   "Gamemonitor": 1,
    "DSServers2": 0,
-   "Elinsrc": 1112,
-   "FWGS": 36
+   "Elinsrc": 1111,
+   "FWGS": 35,
+   "CsAdmin": 11,
+   "CsClan": 1,
+   "CS16Player": 9,
+   "Strike": 0,
+   "Unikov": 15,
+   "5.252.194.41": 0,
+   "ServeraCS": 1,
+   "CSControl": 2
   },
   "sdr_skipped": 101,
-  "farm_dropped": 10935,
+  "farm_dropped": 12137,
   "fake_dropped": 0,
-  "probed": 8778,
-  "alive": 7270,
-  "fake_a2s_dropped": 436,
-  "players": 95386,
-  "max_players": 204317,
-  "with_rules": 5248,
-  "rules_unknown": 2022,
-  "distinct_ips": 3588,
-  "ips_over_100_servers": 54,
-  "mystery_servers": 482,
-  "mystery_bots": 2782
+  "probed": 10553,
+  "alive": 7751,
+  "fake_a2s_dropped": 434,
+  "players": 101553,
+  "max_players": 217009,
+  "with_rules": 5695,
+  "rules_unknown": 2056,
+  "distinct_ips": 4826,
+  "ips_over_100_servers": 56,
+  "mystery_servers": 523,
+  "mystery_bots": 3035
  },
  "countries": [
   {
    "cc": "RU",
    "name": "Russia",
-   "servers": 2341
+   "servers": 2510
   },
   {
    "cc": "US",
    "name": "United States",
-   "servers": 1026
+   "servers": 1036
   },
   {
    "cc": "DE",
    "name": "Germany",
-   "servers": 649
+   "servers": 715
   },
   {
    "cc": "MX",
@@ -720,67 +1323,72 @@
   {
    "cc": "AR",
    "name": "Argentina",
-   "servers": 344
+   "servers": 358
   },
   {
    "cc": "PL",
    "name": "Poland",
-   "servers": 240
+   "servers": 268
   },
   {
    "cc": "BR",
    "name": "Brazil",
-   "servers": 216
+   "servers": 244
   },
   {
    "cc": "RO",
    "name": "Romania",
-   "servers": 189
-  },
-  {
-   "cc": "FR",
-   "name": "France",
-   "servers": 183
+   "servers": 211
   },
   {
    "cc": "UA",
    "name": "Ukraine",
-   "servers": 166
+   "servers": 207
   },
   {
-   "cc": "CZ",
-   "name": "Czechia",
-   "servers": 149
+   "cc": "FR",
+   "name": "France",
+   "servers": 192
   },
   {
    "cc": "BG",
    "name": "Bulgaria",
-   "servers": 147
+   "servers": 169
+  },
+  {
+   "cc": "CZ",
+   "name": "Czechia",
+   "servers": 148
   },
   {
    "cc": "TR",
    "name": "Turkey",
-   "servers": 103
-  },
-  {
-   "cc": "LT",
-   "name": "Lithuania",
-   "servers": 80
+   "servers": 105
   },
   {
    "cc": "NL",
    "name": "The Netherlands",
-   "servers": 79
+   "servers": 85
   },
   {
-   "cc": "GB",
-   "name": "United Kingdom",
-   "servers": 71
+   "cc": "LT",
+   "name": "Lithuania",
+   "servers": 84
   },
   {
    "cc": "CN",
    "name": "China",
-   "servers": 69
+   "servers": 78
+  },
+  {
+   "cc": "GB",
+   "name": "United Kingdom",
+   "servers": 77
+  },
+  {
+   "cc": "UZ",
+   "name": "Uzbekistan",
+   "servers": 60
   },
   {
    "cc": "LU",
@@ -788,44 +1396,39 @@
    "servers": 53
   },
   {
-   "cc": "UZ",
-   "name": "Uzbekistan",
-   "servers": 51
-  },
-  {
    "cc": "KZ",
    "name": "Kazakhstan",
-   "servers": 43
+   "servers": 50
   },
   {
    "cc": "HU",
    "name": "Hungary",
-   "servers": 42
+   "servers": 45
   },
   {
    "cc": "IR",
    "name": "Iran",
-   "servers": 37
+   "servers": 41
   },
   {
    "cc": "RS",
    "name": "Serbia",
-   "servers": 35
+   "servers": 36
   },
   {
    "cc": "CL",
    "name": "Chile",
+   "servers": 33
+  },
+  {
+   "cc": "FI",
+   "name": "Finland",
    "servers": 32
   },
   {
    "cc": "IL",
    "name": "Israel",
    "servers": 31
-  },
-  {
-   "cc": "FI",
-   "name": "Finland",
-   "servers": 30
   },
   {
    "cc": "SE",
@@ -840,17 +1443,32 @@
   {
    "cc": "KG",
    "name": "Kyrgyzstan",
-   "servers": 24
+   "servers": 22
   },
   {
    "cc": "AU",
    "name": "Australia",
-   "servers": 19
+   "servers": 18
   },
   {
    "cc": "SG",
    "name": "Singapore",
-   "servers": 18
+   "servers": 17
+  },
+  {
+   "cc": "IT",
+   "name": "Italy",
+   "servers": 17
+  },
+  {
+   "cc": "MD",
+   "name": "Moldova",
+   "servers": 17
+  },
+  {
+   "cc": "AE",
+   "name": "United Arab Emirates",
+   "servers": 16
   },
   {
    "cc": "KR",
@@ -863,23 +1481,8 @@
    "servers": 15
   },
   {
-   "cc": "IT",
-   "name": "Italy",
-   "servers": 15
-  },
-  {
-   "cc": "MD",
-   "name": "Moldova",
-   "servers": 15
-  },
-  {
    "cc": "ES",
    "name": "Spain",
-   "servers": 14
-  },
-  {
-   "cc": "AE",
-   "name": "United Arab Emirates",
    "servers": 14
   },
   {
@@ -893,24 +1496,44 @@
    "servers": 11
   },
   {
-   "cc": "LV",
-   "name": "Latvia",
-   "servers": 10
-  },
-  {
    "cc": "NZ",
    "name": "New Zealand",
    "servers": 10
   },
   {
-   "cc": "TJ",
-   "name": "Tajikistan",
+   "cc": "ID",
+   "name": "Indonesia",
+   "servers": 10
+  },
+  {
+   "cc": "LV",
+   "name": "Latvia",
    "servers": 9
   },
   {
    "cc": "CH",
    "name": "Switzerland",
-   "servers": 8
+   "servers": 9
+  },
+  {
+   "cc": "DK",
+   "name": "Denmark",
+   "servers": 9
+  },
+  {
+   "cc": "MY",
+   "name": "Malaysia",
+   "servers": 9
+  },
+  {
+   "cc": "UY",
+   "name": "Uruguay",
+   "servers": 9
+  },
+  {
+   "cc": "TJ",
+   "name": "Tajikistan",
+   "servers": 9
   },
   {
    "cc": "ZA",
@@ -923,23 +1546,8 @@
    "servers": 8
   },
   {
-   "cc": "DK",
-   "name": "Denmark",
-   "servers": 8
-  },
-  {
-   "cc": "MY",
-   "name": "Malaysia",
-   "servers": 8
-  },
-  {
    "cc": "MN",
    "name": "Mongolia",
-   "servers": 8
-  },
-  {
-   "cc": "ID",
-   "name": "Indonesia",
    "servers": 8
   },
   {
@@ -948,14 +1556,14 @@
    "servers": 7
   },
   {
-   "cc": "PE",
-   "name": "Peru",
+   "cc": "IN",
+   "name": "India",
    "servers": 7
   },
   {
-   "cc": "IN",
-   "name": "India",
-   "servers": 5
+   "cc": "PE",
+   "name": "Peru",
+   "servers": 7
   },
   {
    "cc": "TH",
@@ -963,13 +1571,13 @@
    "servers": 5
   },
   {
-   "cc": "UY",
-   "name": "Uruguay",
-   "servers": 4
-  },
-  {
    "cc": "HR",
    "name": "Croatia",
+   "servers": 5
+  },
+  {
+   "cc": "JP",
+   "name": "Japan",
    "servers": 4
   },
   {
@@ -978,9 +1586,9 @@
    "servers": 4
   },
   {
-   "cc": "JP",
-   "name": "Japan",
-   "servers": 3
+   "cc": "PK",
+   "name": "Pakistan",
+   "servers": 4
   },
   {
    "cc": "BY",
@@ -1013,13 +1621,13 @@
    "servers": 1
   },
   {
-   "cc": "VE",
-   "name": "Venezuela",
+   "cc": "MK",
+   "name": "North Macedonia",
    "servers": 1
   },
   {
-   "cc": "MK",
-   "name": "North Macedonia",
+   "cc": "VE",
+   "name": "Venezuela",
    "servers": 1
   },
   {
@@ -1031,7 +1639,7 @@
  "unlisted_mods": [
   {
    "gamedir": "csgo",
-   "servers": 3
+   "servers": 17
   },
   {
    "gamedir": "firearms",
@@ -1050,15 +1658,23 @@
    "servers": 2
   },
   {
+   "gamedir": "garrysmod",
+   "servers": 2
+  },
+  {
+   "gamedir": "left4dead2",
+   "servers": 2
+  },
+  {
    "gamedir": "firearms25",
    "servers": 1
   },
   {
-   "gamedir": "tt",
+   "gamedir": "bumpercars",
    "servers": 1
   },
   {
-   "gamedir": "bumpercars",
+   "gamedir": "tt",
    "servers": 1
   },
   {
@@ -1100,132 +1716,148 @@
   {
    "gamedir": "turbo",
    "servers": 1
-  },
-  {
-   "gamedir": "buzzybots",
-   "servers": 1
   }
  ],
  "unlisted_vars": [
   {
-   "var": "plugins_core_version",
-   "servers": 126,
-   "example": "1.8.20 (09/30/2026 18:59:40)"
-  },
-  {
    "var": "lt_version",
-   "servers": 125,
+   "servers": 140,
    "example": "2.8"
   },
   {
-   "var": "redirect_version",
-   "servers": 125,
-   "example": "1.0.3.2"
-  },
-  {
    "var": "CustomSkies_version",
-   "servers": 120,
+   "servers": 140,
    "example": "0.0.1"
   },
   {
-   "var": "pbk_version",
-   "servers": 115,
-   "example": "1.5.243"
-  },
-  {
-   "var": "hackdetector_amxx_version",
-   "servers": 114,
-   "example": "0.15.lite"
+   "var": "plugins_core_version",
+   "servers": 134,
+   "example": "1.8.20 (09/30/2026 18:59:40)"
   },
   {
    "var": "amxbans_ssversion",
-   "servers": 113,
+   "servers": 129,
    "example": "Gm 1.6"
   },
   {
-   "var": "gg_version",
-   "servers": 105,
-   "example": "2.13c-edit"
+   "var": "hackdetector_amxx_version",
+   "servers": 127,
+   "example": "0.15.lite"
   },
   {
-   "var": "specinfo_version",
-   "servers": 97,
-   "example": "1.3.1"
+   "var": "redirect_version",
+   "servers": 127,
+   "example": "1.0.3.2"
   },
   {
    "var": "statsx_shell_ver",
-   "servers": 95,
+   "servers": 120,
    "example": "2.0.0 (BETA)"
   },
   {
+   "var": "pbk_version",
+   "servers": 112,
+   "example": "1.5.243"
+  },
+  {
+   "var": "gg_version",
+   "servers": 110,
+   "example": "2.13c-edit"
+  },
+  {
+   "var": "recoil_control_version",
+   "servers": 108,
+   "example": "1.5"
+  },
+  {
+   "var": "plugin_core_version",
+   "servers": 107,
+   "example": "1.5.3 (03/28/2023 16:38:05)"
+  },
+  {
+   "var": "specinfo_version",
+   "servers": 103,
+   "example": "1.3.1"
+  },
+  {
    "var": "fn_version",
-   "servers": 94,
+   "servers": 102,
    "example": "2.14"
   },
   {
    "var": "new_kick_menu_version",
-   "servers": 93,
+   "servers": 99,
    "example": "1.9.1 (10/08/2026 00:07:37)"
   },
   {
-   "var": "grab_plus_version",
-   "servers": 92,
-   "example": "1.2.3"
-  },
-  {
    "var": "mp_bhop_version",
-   "servers": 91,
+   "servers": 97,
    "example": "1.1.0"
   },
   {
-   "var": "csac_version",
-   "servers": 91,
-   "example": "2.0.3"
-  },
-  {
-   "var": "plugin_core_version",
-   "servers": 90,
-   "example": "1.5.3 (03/28/2023 16:38:05)"
-  },
-  {
-   "var": "recoil_control_version",
-   "servers": 89,
-   "example": "1.5"
-  },
-  {
    "var": "allchat_version",
-   "servers": 87,
+   "servers": 95,
    "example": "1.1"
   },
   {
-   "var": "bancfg_version",
-   "servers": 86,
-   "example": "0.95"
+   "var": "grab_plus_version",
+   "servers": 93,
+   "example": "1.2.3"
   },
   {
    "var": "badcamper_version",
-   "servers": 82,
+   "servers": 89,
    "example": "1.4 beta"
   },
   {
-   "var": "sbhopper_version",
-   "servers": 76,
-   "example": "1.2"
+   "var": "csac_version",
+   "servers": 88,
+   "example": "2.0.3"
+  },
+  {
+   "var": "bancfg_version",
+   "servers": 87,
+   "example": "0.95"
   },
   {
    "var": "damager_advanced_version",
-   "servers": 74,
+   "servers": 85,
    "example": "1.6.4 (04/30/2026 14:33:58)"
   },
   {
+   "var": "gag_me_version",
+   "servers": 81,
+   "example": "2.7.23 (10/08/2026 00:58:05)"
+  },
+  {
+   "var": "sbhopper_version",
+   "servers": 81,
+   "example": "1.2"
+  },
+  {
    "var": "awt_version",
-   "servers": 72,
+   "servers": 76,
    "example": "1.3.0"
   },
   {
-   "var": "gag_me_version",
-   "servers": 71,
-   "example": "2.7.23 (10/08/2026 00:58:05)"
+   "var": "color_flash_screen_version",
+   "servers": 72,
+   "example": "1.9.7 (06/17/2026 23:01:57)"
+  },
+  {
+   "var": "NBEX_Version",
+   "servers": 68,
+   "example": "1.0"
+  },
+  {
+   "var": "nclapi_version",
+   "servers": 66,
+   "example": "1.6.0"
+  },
+  {
+   "var": "ebot_version",
+   "servers": 65,
+   "example": "1.16k"
   },
   {
    "var": "dmb_version",
@@ -1234,28 +1866,8 @@
   },
   {
    "var": "lambda_version",
-   "servers": 64,
+   "servers": 63,
    "example": "0.6"
-  },
-  {
-   "var": "color_flash_screen_version",
-   "servers": 62,
-   "example": "1.9.7 (06/17/2026 23:01:57)"
-  },
-  {
-   "var": "NBEX_Version",
-   "servers": 60,
-   "example": "1.0"
-  },
-  {
-   "var": "nclapi_version",
-   "servers": 56,
-   "example": "1.6.0"
-  },
-  {
-   "var": "atac_version",
-   "servers": 54,
-   "example": "3.0.1"
   }
  ],
  "addons": [
@@ -1263,86 +1875,129 @@
    "name": "yb_version",
    "title": "YaPB",
    "url": "https://github.com/yapb/yapb",
-   "servers": 591,
-   "players": 7028,
-   "max_players": 16956,
-   "bots": 1685,
+   "novalue": false,
+   "servers": 680,
+   "players": 8250,
+   "max_players": 19443,
+   "bots": 1928,
    "values": {
-    "4.4.957": 305,
-    "4.3.734": 52,
+    "4.4.957": 356,
+    "4.3.734": 63,
     "4.5.1224": 48,
-    "4.2.671": 33,
-    "4.2.623": 25,
+    "4.2.671": 40,
+    "4.2.623": 31,
+    "4.2.598": 14,
     "4.5.1040": 13,
-    "4.5.1113": 10,
-    "4.2.598": 10,
+    "4.5.1113": 11,
+    "4.4.": 9,
     "4.3.729": 7,
-    "4.4.": 7,
     "4.5.1199": 6,
-    "4.5.1128": 5,
-    "4.4.949": 5,
+    "4.4.949": 6,
     "4.5.1117": 5,
+    "4.5.1128": 5,
+    "4.5.1211": 4,
     "4.5.1174": 4,
     "4.5.1200": 3,
-    "4.5.1211": 3,
-    "4.8.1247": 3,
-    "4.5.1204": 3,
-    "4.0.532": 3,
+    "4.5.1": 3,
     "4.5.1156": 3,
+    "4.5.1204": 3,
+    "4.8.1247": 3,
+    "4.0.532": 3,
+    "4.4.1": 3,
     "4.4.916": 2,
     "4.5.1171": 2,
-    "4.8.1286": 2,
     "2.9.5395": 2,
-    "4.5.1": 2,
     "4.5.1198": 2,
     "4.5.1213": 1,
     "4.8.1251": 1,
     "4.2.637": 1,
     "4.5.1153": 1,
-    "4.5.1039": 1,
-    "4.5.1120": 1,
-    "4.4.957-chelsyn": 1,
-    "2.10.5618": 1,
-    "4.5.1087": 1,
-    "4.8.1293": 1,
-    "4.4.1": 1,
-    "4.8.1266": 1,
-    "4.5.1225": 1,
-    "4.5.1173": 1,
     "4.4.957-csc65": 1,
+    "4.5.30": 1,
+    "2.10.5618": 1,
+    "4.5.1120": 1,
+    "4.5.1039": 1,
     "4.5.": 1,
-    "4.5.0": 1,
-    "4.5.1206": 1,
-    "4.4.957-mode2-radio2-defuse1-fair1-nade1.0": 1,
-    "4.5.1095": 1,
-    "4.0.501": 1,
+    "4.5.1173": 1,
+    "4.5.1225": 1,
     "4.5.1169": 1,
-    "4.8.1254": 1
+    "4.5.1223": 1,
+    "4.8.1286": 1,
+    "4.8.1254": 1,
+    "4.5.1206": 1,
+    "4.4.957-chelsyn": 1,
+    "4.8.1266": 1,
+    "4.5.1095": 1,
+    "4.5.1147": 1,
+    "4.0.501": 1,
+    "4.5.980": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 179
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 80
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 59
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 57
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 54
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 41
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 25
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 23
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 583,
+     "servers": 672,
      "values": {
-      "4.4.957": 301,
-      "4.3.734": 52,
+      "4.4.957": 352,
+      "4.3.734": 63,
       "4.5.1224": 48,
-      "4.2.671": 33,
-      "4.2.623": 23,
+      "4.2.671": 40,
+      "4.2.623": 29,
+      "4.2.598": 14,
       "4.5.1040": 13,
-      "4.5.1113": 10,
-      "4.2.598": 10,
-      "4.4.": 7,
+      "4.5.1113": 11,
+      "4.4.": 9,
       "4.5.1199": 6,
+      "4.4.949": 6,
       "4.3.729": 6,
-      "4.5.1128": 5,
-      "4.4.949": 5,
       "4.5.1117": 5,
+      "4.5.1128": 5,
+      "4.5.1211": 4,
       "4.5.1174": 4,
       "4.5.1200": 3,
-      "4.5.1211": 3,
-      "4.8.1247": 3,
-      "4.5.1204": 3,
-      "4.0.532": 3
+      "4.5.1": 3,
+      "4.5.1156": 3,
+      "4.5.1204": 3
      }
     },
     "czero": {
@@ -1492,93 +2147,136 @@
    "name": "amxmodx_version",
    "title": "AMX Mod X",
    "url": "https://www.amxmodx.org/",
-   "servers": 4239,
-   "players": 28231,
-   "max_players": 114471,
-   "bots": 6929,
+   "novalue": false,
+   "servers": 4651,
+   "players": 33541,
+   "max_players": 125269,
+   "bots": 7442,
    "values": {
-    "1.9.0.5294": 1208,
-    "1.10.0.5467": 620,
-    "1.8.2": 452,
-    "1.9.0.5271": 166,
-    "1.10.0.5416": 149,
-    "1.10.0.5474": 130,
-    "1.9.0.5263": 115,
-    "1.10.0.5461": 91,
-    "1.9.0.5303": 88,
-    "1.10.0.5476": 87,
-    "1.10.0.5479": 83,
-    "1.10.0.5486": 82,
-    "1.9.0-dev+5210": 76,
-    "1.10.0.5481": 69,
-    "1.9.0.5249": 51,
-    "1.10.0.5468": 49,
-    "1.10.0.5465": 44,
+    "1.9.0.5294": 1357,
+    "1.10.0.5467": 682,
+    "1.8.2": 458,
+    "1.9.0.5271": 182,
+    "1.10.0.5416": 160,
+    "1.10.0.5474": 145,
+    "1.9.0.5263": 117,
+    "1.10.0.5461": 111,
+    "1.9.0.5303": 106,
+    "1.9.0-dev+5210": 97,
+    "1.10.0.5486": 92,
+    "1.10.0.5479": 91,
+    "1.10.0.5476": 90,
+    "1.10.0.5481": 73,
+    "1.9.0.5249": 56,
+    "1.10.0.5468": 55,
+    "1.10.0.5465": 50,
+    "1.10.0.5475": 45,
+    "1.8.1.3746": 40,
     "1.9.0.5241": 39,
-    "1.10.0.5478": 36,
-    "1.10.0.5475": 35,
-    "1.8.3-dev+5201": 34,
-    "1.8.1.3746": 33,
-    "1.10.0.5473": 27,
-    "1.9.0.5302": 25,
+    "1.10.0.5478": 37,
+    "1.8.3-dev+5201": 36,
+    "1.10.0.5473": 30,
+    "1.8.2-dev": 30,
+    "1.9.0.5302": 29,
     "2.7.33.5934": 24,
-    "1.8.2-dev": 21,
-    "1.8.3-dev+5134": 19,
+    "1.9.0.5262": 19,
     "1.8.3-Re": 18,
     "1.8.3-dev+5151": 18,
-    "1.9.0.5262": 17,
-    "1.10.0.5406": 14,
+    "1.8.3-dev+5134": 16,
+    "1.10.0.5406": 15,
     "1.10.0.5412": 14,
-    "1.8.3-dev": 12,
-    "1.10.0.5435": 12,
+    "1.10.0.5435": 14,
+    "1.8.3-dev": 13,
     "1.10.0.5217": 11,
     "1.9.0.5247": 11,
+    "1.10.0.5402": 10,
     "1.10.5-APG": 10,
+    "1.9.0.5281": 10,
     "1.8.3-dev+5090": 10,
     "1.9.0.5234": 9,
-    "1.10.0.5402": 9,
     "1.10.0.5484": 9,
     "1.10.0.5471": 9,
-    "1.9.0.5281": 9,
+    "1.9.0.5293": 9,
     "1.10.0-manual": 9,
-    "1.9.0.5293": 8,
     "1.8.3-dev+5074": 8,
+    "1.8.3-dev+5154": 7,
     "1.9.0.5291": 7,
-    "1.10.0.5472": 7,
-    "1.8.3-dev+5154": 6,
-    "1.10.0.5462": 6
+    "1.9.0-dev+5202": 7,
+    "1.10.0.5472": 7
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 1326
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 598
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 425
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 220
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 216
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 201
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 191
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 182
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 3378,
+     "servers": 3795,
      "values": {
-      "1.9.0.5294": 1075,
-      "1.10.0.5467": 531,
-      "1.8.2": 296,
-      "1.9.0.5271": 145,
-      "1.10.0.5474": 91,
-      "1.9.0.5263": 89,
-      "1.10.0.5461": 87,
-      "1.9.0-dev+5210": 76,
-      "1.10.0.5476": 73,
-      "1.9.0.5303": 73,
-      "1.10.0.5486": 65,
-      "1.10.0.5481": 64,
-      "1.10.0.5479": 55,
-      "1.9.0.5249": 48,
-      "1.10.0.5468": 44,
-      "1.10.0.5465": 42,
-      "1.10.0.5416": 36,
+      "1.9.0.5294": 1226,
+      "1.10.0.5467": 596,
+      "1.8.2": 301,
+      "1.9.0.5271": 160,
+      "1.10.0.5461": 107,
+      "1.10.0.5474": 106,
+      "1.9.0-dev+5210": 97,
+      "1.9.0.5263": 94,
+      "1.9.0.5303": 90,
+      "1.10.0.5476": 76,
+      "1.10.0.5486": 75,
+      "1.10.0.5481": 68,
+      "1.10.0.5479": 60,
+      "1.9.0.5249": 53,
+      "1.10.0.5468": 50,
+      "1.10.0.5416": 49,
+      "1.10.0.5465": 48,
+      "1.10.0.5475": 42,
       "1.9.0.5241": 32,
-      "1.10.0.5475": 32,
-      "1.10.0.5473": 25
+      "1.10.0.5473": 28
      }
     },
     "czero": {
-     "servers": 191,
+     "servers": 190,
      "values": {
       "1.10.0.5416": 80,
-      "1.9.0.5294": 35,
+      "1.9.0.5294": 34,
       "1.10.0.5467": 13,
       "1.8.2": 12,
       "1.9.0.5271": 7,
@@ -1600,35 +2298,35 @@
      }
     },
     "dod": {
-     "servers": 88,
+     "servers": 93,
      "values": {
       "2.7.33.5934": 24,
       "1.8.2": 14,
-      "1.9.0.5294": 13,
+      "1.9.0.5294": 14,
       "1.8.3-dev+5134": 7,
+      "1.10.0.5479": 6,
       "1.10.0.5486": 4,
       "1.8.1.3746": 4,
-      "1.10.0.5479": 3,
       "1.8.3-dev+5201": 3,
       "1.10.0.5474": 3,
       "1.9.0.5271": 2,
+      "1.9.0.5303": 2,
       "1.8.3-dev+19c8b00": 2,
       "1.10.0.5478": 1,
-      "1.9.0.5303": 1,
       "1.10.5-APG": 1,
-      "1.10.0.5476": 1,
       "1.10.0.5467": 1,
       "1.9.0.5293": 1,
+      "1.10.0.5476": 1,
       "1.9.0.5281": 1,
       "1.10.0.5466": 1,
       "1.8.2-dev": 1
      }
     },
     "tfc": {
-     "servers": 80,
+     "servers": 82,
      "values": {
-      "1.9.0.5294": 23,
-      "1.8.2": 12,
+      "1.9.0.5294": 22,
+      "1.8.2": 15,
       "1.10.0.5467": 7,
       "1.10.0.5478": 7,
       "1.10.0.5474": 7,
@@ -1689,37 +2387,37 @@
      }
     },
     "valve": {
-     "servers": 331,
+     "servers": 330,
      "values": {
-      "1.8.2": 64,
-      "1.10.0.5467": 52,
-      "1.9.0.5294": 51,
-      "1.10.0.5416": 33,
+      "1.8.2": 66,
+      "1.9.0.5294": 50,
+      "1.10.0.5467": 50,
+      "1.10.0.5416": 31,
       "1.10.0.5479": 17,
       "1.10.0.5412": 10,
       "1.9.0.5303": 9,
+      "1.9.0.5271": 8,
       "1.10.0.5474": 8,
       "1.10.0.5476": 7,
-      "1.9.0.5271": 7,
       "1.8.3-dev+5201": 6,
       "1.10.0.5478": 6,
-      "1.9.0.5263": 5,
+      "1.8.1.3746": 5,
       "1.10.0.5486": 5,
       "1.10.0.5472": 5,
       "1.9.0-dev+5215": 5,
+      "1.9.0.5263": 4,
       "1.8.3-Re": 4,
       "1.9.0.5293": 4,
-      "1.8.3-dev+19c8b00": 4,
-      "1.8.1.3746": 3
+      "1.8.3-dev+19c8b00": 4
      }
     },
     "ag": {
-     "servers": 27,
+     "servers": 26,
      "values": {
       "1.9.0.5263": 11,
       "1.9.0.5294": 6,
-      "1.10.0.5467": 4,
       "1.8.2": 3,
+      "1.10.0.5467": 3,
       "1.10.0.5468": 3
      }
     },
@@ -1747,7 +2445,7 @@
      "values": {}
     },
     "esf": {
-     "servers": 16,
+     "servers": 14,
      "values": {
       "1.10.0.5467": 5,
       "1.10.0.5461": 2,
@@ -1756,9 +2454,7 @@
       "1.76d": 1,
       "1.10.0.105": 1,
       "1.9.0.5249": 1,
-      "1.10.0.5465": 1,
-      "1.8.2": 1,
-      "1.00": 1
+      "1.10.0.5465": 1
      }
     },
     "fa": {
@@ -1829,11 +2525,9 @@
      "values": {}
     },
     "svencoop": {
-     "servers": 8,
+     "servers": 2,
      "values": {
-      "1.8.2": 3,
-      "1.8.3-dev+5134": 2,
-      "1.9.0.5263": 2,
+      "1.8.2": 1,
       "1.8.3-dev+5201": 1
      }
     },
@@ -1863,12 +2557,11 @@
      "values": {}
     },
     "vs": {
-     "servers": 6,
+     "servers": 5,
      "values": {
       "1.60": 3,
       "1.10.0.5479": 1,
-      "1.76d": 1,
-      "1.8.2": 1
+      "1.76d": 1
      }
     },
     "zp": {
@@ -1881,91 +2574,138 @@
    "name": "metamod_version",
    "title": "Metamod",
    "url": "http://www.metamod.org/",
-   "servers": 3924,
-   "players": 25204,
-   "max_players": 103163,
-   "bots": 6635,
+   "novalue": false,
+   "servers": 4318,
+   "players": 29827,
+   "max_players": 113324,
+   "bots": 7097,
    "values": {
-    "1.3.0.149": 1597,
-    "1.21p37": 642,
-    "1.3.0.128": 382,
-    "1.21.1-am": 322,
-    "1.3.0.131": 266,
-    "1.21p38": 159,
+    "1.3.0.149": 1777,
+    "1.21p37": 691,
+    "1.3.0.128": 430,
+    "1.21.1-am": 339,
+    "1.3.0.131": 325,
+    "1.21p38": 155,
     "1.20": 110,
-    "1.21-am": 96,
-    "1.3.0.138": 96,
-    "1.21p109": 50,
+    "1.3.0.138": 107,
+    "1.21-am": 103,
+    "1.21p109": 53,
+    "1.19": 32,
     "1.21p39": 31,
-    "1.19": 25,
+    "1.3.0.0": 25,
     "1.19p32": 22,
-    "1.3.0.0": 20,
     "1.3.0.116": 11,
+    "1.3.0.173": 10,
     "1.3.0.126": 9,
-    "1.3.0.127": 8,
-    "1.3.0.173": 8,
-    "1.3.0.171": 7,
-    "1.3.0.149+m": 6,
+    "1.3.0.150": 8,
+    "1.3.0.127": 7,
+    "1.3.0.149+m": 7,
     "1.21p40": 5,
-    "1.21p43": 5,
-    "1.3.0.150": 5,
+    "1.3.0.104": 5,
+    "1.21p43": 4,
+    "1.3.0.86": 4,
+    "1.3.0.171": 4,
     "1.21p42": 3,
     "1.3.0.174": 3,
     "1.3.0.172+m": 3,
-    "1.3.0.86": 3,
-    "1.3.0.104": 3,
+    "1.11.0-dev+1148V": 3,
+    "1.3.0.182": 3,
     "1.3.0.1": 3,
     "1.3.0.166": 2,
     "1.21p44": 2,
     "1.20-am": 2,
-    "1.20p36": 2,
-    "1.3.0.182": 2,
-    "**Secure**": 2,
+    "1.11.0-dev+1155V": 2,
     "1.3.0.125": 2,
+    "1.20p36": 2,
+    "**Secure**": 2,
     "1.19p31": 1,
-    "1.6.3p64": 1,
-    "1.3.0.178+m": 1,
-    "1.3.0.158": 1,
-    "1.3.0.122": 1,
     "1.3.0.192": 1,
-    "1.3.0.164": 1,
-    "1.17.4": 1,
+    "1.6.3p64": 1,
+    "1.3.0.158": 1,
+    "1.12.0-dev+1227V": 1,
+    "1.3.0.1+m": 1,
+    "1.3.0.178+m": 1,
+    "1.3.0.122": 1,
+    "2.0.0-dev+1331V": 1,
+    "1.12.0-dev+1225V": 1,
     "1.0.0.214": 1,
     "1.0.0.223": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 1246
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 445
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 418
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 211
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 208
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 188
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 177
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 176
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 3150,
+     "servers": 3541,
      "values": {
-      "1.3.0.149": 1427,
-      "1.21p37": 553,
-      "1.3.0.128": 341,
-      "1.3.0.131": 254,
-      "1.21.1-am": 194,
-      "1.3.0.138": 91,
-      "1.20": 74,
-      "1.21-am": 49,
-      "1.21p38": 37,
-      "1.3.0.0": 17,
-      "1.19": 14,
+      "1.3.0.149": 1604,
+      "1.21p37": 604,
+      "1.3.0.128": 390,
+      "1.3.0.131": 313,
+      "1.21.1-am": 208,
+      "1.3.0.138": 102,
+      "1.20": 73,
+      "1.21-am": 57,
+      "1.21p38": 40,
+      "1.3.0.0": 23,
+      "1.19": 18,
       "1.3.0.116": 11,
+      "1.21p109": 10,
+      "1.3.0.173": 10,
       "1.19p32": 10,
       "1.3.0.126": 9,
-      "1.21p109": 8,
-      "1.3.0.127": 8,
-      "1.3.0.173": 8,
-      "1.3.0.171": 7,
-      "1.3.0.149+m": 6,
-      "1.3.0.150": 5
+      "1.3.0.150": 8,
+      "1.3.0.127": 7,
+      "1.3.0.149+m": 7,
+      "1.3.0.104": 5
      }
     },
     "czero": {
-     "servers": 118,
+     "servers": 117,
      "values": {
       "1.3.0.149": 35,
       "1.21.1-am": 29,
       "1.21p37": 19,
-      "1.3.0.128": 16,
+      "1.3.0.128": 15,
       "1.21p38": 11,
       "1.21-am": 4,
       "1.3.0.131": 2,
@@ -1974,12 +2714,12 @@
      }
     },
     "dod": {
-     "servers": 65,
+     "servers": 70,
      "values": {
+      "1.3.0.149": 14,
       "1.21.1-am": 12,
       "1.21p38": 12,
       "1.21-am": 12,
-      "1.3.0.149": 9,
       "1.21p37": 7,
       "1.19p32": 5,
       "1.21p109": 4,
@@ -1989,18 +2729,18 @@
      }
     },
     "tfc": {
-     "servers": 85,
+     "servers": 87,
      "values": {
-      "1.21.1-am": 24,
+      "1.21.1-am": 26,
       "1.21p38": 15,
-      "1.21-am": 8,
       "1.3.0.149": 7,
+      "1.21-am": 7,
       "1.21p39": 7,
       "1.21p37": 6,
       "1.21p109": 4,
-      "1.21p43": 4,
-      "1.20": 3,
-      "1.19": 3,
+      "1.20": 4,
+      "1.19": 4,
+      "1.21p43": 3,
       "1.21p40": 2,
       "1.3.0.128": 1,
       "1.3.0.131": 1
@@ -2041,19 +2781,19 @@
      }
     },
     "valve": {
-     "servers": 325,
+     "servers": 327,
      "values": {
-      "1.3.0.149": 94,
+      "1.3.0.149": 92,
       "1.21p37": 43,
       "1.21p38": 36,
-      "1.21.1-am": 31,
+      "1.21.1-am": 32,
       "1.21p39": 22,
       "1.3.0.128": 20,
+      "1.21p109": 18,
       "1.21-am": 17,
-      "1.21p109": 17,
       "1.20": 17,
       "1.3.0.131": 9,
-      "1.19": 5,
+      "1.19": 7,
       "1.3.0.138": 4,
       "1.19p32": 3,
       "1.3.0.172+m": 2,
@@ -2065,14 +2805,14 @@
      }
     },
     "ag": {
-     "servers": 28,
+     "servers": 27,
      "values": {
       "1.3.0.149": 12,
       "1.3.0.174": 3,
       "1.20": 3,
-      "1.3.0.0": 3,
       "1.21.1-am": 3,
       "1.21p39": 2,
+      "1.3.0.0": 2,
       "1.21-am": 1,
       "1.21p37": 1
      }
@@ -2101,14 +2841,13 @@
      "values": {}
     },
     "esf": {
-     "servers": 16,
+     "servers": 14,
      "values": {
-      "1.21p38": 9,
+      "1.21p38": 8,
       "1.21.1-am": 2,
       "1.3.0.128": 2,
       "1.19p31": 1,
-      "1.21p37": 1,
-      "1.17.4": 1
+      "1.21p37": 1
      }
     },
     "fa": {
@@ -2183,12 +2922,10 @@
      "values": {}
     },
     "svencoop": {
-     "servers": 9,
+     "servers": 2,
      "values": {
-      "1.21p38": 6,
       "1.21.1-am": 1,
-      "1.21p109": 1,
-      "1.21p37": 1
+      "1.21p109": 1
      }
     },
     "bg": {
@@ -2218,12 +2955,11 @@
      "values": {}
     },
     "vs": {
-     "servers": 6,
+     "servers": 5,
      "values": {
       "1.21p109": 3,
       "1.21.1-am": 1,
-      "1.20": 1,
-      "1.21p37": 1
+      "1.20": 1
      }
     },
     "zp": {
@@ -2236,35 +2972,78 @@
    "name": "pb_version",
    "title": "POD-Bot",
    "url": "https://github.com/APGRoboCop/podbot_mm",
-   "servers": 190,
-   "players": 1212,
-   "max_players": 4750,
-   "bots": 927,
+   "novalue": false,
+   "servers": 195,
+   "players": 1243,
+   "max_players": 4908,
+   "bots": 882,
    "values": {
-    "V3B22": 63,
-    "V3B23": 45,
-    "V3B21": 22,
+    "V3B22": 65,
+    "V3B23": 43,
+    "V3B21": 27,
     "V3B24": 17,
     "3.0B20a": 13,
-    "V3B21j": 8,
-    "V3B23a": 7,
+    "V3B21j": 9,
     "V3B22c": 6,
+    "V3B23a": 6,
     "3.0B18c": 4,
     "3.0B19d": 2,
     "3.0B20b": 2,
     "V3B22b": 1
    },
+   "countries": [
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 61
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 31
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 19
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 16
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 14
+    },
+    {
+     "cc": "SK",
+     "name": "Slovakia",
+     "servers": 8
+    },
+    {
+     "cc": "TR",
+     "name": "Turkey",
+     "servers": 8
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 7
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 188,
+     "servers": 193,
      "values": {
-      "V3B22": 63,
-      "V3B23": 45,
-      "V3B21": 22,
+      "V3B22": 65,
+      "V3B23": 43,
+      "V3B21": 27,
       "V3B24": 17,
       "3.0B20a": 12,
-      "V3B21j": 8,
-      "V3B23a": 7,
+      "V3B21j": 9,
+      "V3B23a": 6,
       "V3B22c": 5,
       "3.0B18c": 4,
       "3.0B19d": 2,
@@ -2417,87 +3196,129 @@
    "name": "bot_quota",
    "title": "CZ Bot",
    "url": "https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/",
-   "servers": 474,
-   "players": 3464,
-   "max_players": 13232,
-   "bots": 1580,
+   "novalue": true,
+   "servers": 500,
+   "players": 3834,
+   "max_players": 13964,
+   "bots": 1704,
    "values": {
-    "0": 290,
+    "0": 309,
     "10": 27,
     "20": 16,
-    "8": 13,
-    "12": 13,
+    "8": 15,
+    "12": 15,
+    "32": 14,
     "16": 12,
-    "32": 12,
     "14": 9,
-    "18": 8,
-    "15": 7,
-    "4": 7,
+    "4": 8,
+    "2": 7,
     "5": 7,
-    "2": 5,
-    "26": 5,
-    "9": 5,
-    "3": 5,
-    "11": 4,
+    "18": 7,
+    "15": 6,
+    "3": 6,
     "6": 4,
     "1": 4,
+    "26": 4,
+    "30": 4,
+    "9": 4,
+    "11": 3,
     "24": 3,
-    "27": 3,
-    "30": 3,
+    "21": 3,
     "22": 2,
-    "7": 2,
     "31": 2,
     "23": 2,
-    "13": 2,
-    "21": 1,
-    "33": 1
+    "27": 2,
+    "13": 1,
+    "17": 1,
+    "19": 1,
+    "7": 1,
+    "28": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 136
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 125
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 37
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 33
+    },
+    {
+     "cc": "CN",
+     "name": "China",
+     "servers": 24
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 22
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 22
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 18
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 261,
+     "servers": 288,
      "values": {
-      "0": 124,
+      "0": 142,
       "10": 16,
       "20": 15,
       "16": 11,
-      "8": 9,
-      "15": 7,
-      "14": 7,
+      "8": 10,
+      "32": 8,
       "18": 7,
-      "32": 6,
+      "12": 7,
+      "14": 7,
+      "4": 6,
       "5": 6,
-      "12": 6,
-      "4": 5,
-      "3": 5,
-      "2": 4,
+      "2": 6,
+      "3": 6,
+      "15": 5,
       "1": 4,
       "26": 4,
+      "30": 4,
+      "9": 4,
       "24": 3,
-      "9": 3,
-      "27": 3,
-      "30": 3
+      "21": 3
      }
     },
     "czero": {
-     "servers": 213,
+     "servers": 212,
      "values": {
-      "0": 166,
+      "0": 167,
       "10": 11,
-      "12": 7,
+      "12": 8,
       "32": 6,
-      "8": 4,
+      "8": 5,
       "11": 3,
       "14": 2,
       "6": 2,
       "4": 2,
-      "9": 2,
       "16": 1,
-      "7": 1,
       "20": 1,
       "2": 1,
-      "18": 1,
       "22": 1,
-      "26": 1,
+      "15": 1,
       "5": 1
      }
     },
@@ -2639,86 +3460,129 @@
    "name": "sv_version",
    "title": "ReHLDS",
    "url": "https://github.com/dreamstalker/rehlds",
-   "servers": 2580,
-   "players": 15417,
-   "max_players": 67658,
-   "bots": 3361,
+   "novalue": false,
+   "servers": 2890,
+   "players": 18532,
+   "max_players": 75452,
+   "bots": 3779,
    "values": {
-    "1.1.2.7/Stdio,48,4419": 570,
-    "1.1.2.7/Stdio,48,4002": 428,
-    "1.1.2.7/Stdio,48,3378": 353,
-    "1.1.2.2/Stdio,48,4002": 97,
-    "1.1.2.2/Stdio,48,4419": 76,
-    "1.1.2.7/Stdio,48,4426": 70,
-    "1.1.2.7/Stdio,48,3911": 61,
+    "1.1.2.7/Stdio,48,4419": 666,
+    "1.1.2.7/Stdio,48,4002": 502,
+    "1.1.2.7/Stdio,48,3378": 398,
+    "1.1.2.2/Stdio,48,4002": 96,
+    "1.1.2.7/Stdio,48,4426": 85,
+    "1.1.2.2/Stdio,48,4419": 77,
+    "1.1.2.7/Stdio,48,3911": 63,
+    "1.1.2.7/Stdio,48,3082": 58,
     "1.1.2.7,48,3066": 54,
-    "1.1.2.7/Stdio,48,3082": 48,
-    "1.1.2.2/Stdio,48,3378": 37,
-    "1.1.2.7/Stdio,48,4042": 29,
-    "1.1.2.7/Stdio,48,2753": 28,
-    "1.1.2.7/Stdio,48,4560": 25,
+    "1.1.2.2/Stdio,48,3378": 38,
+    "1.1.2.7/Stdio,48,2753": 33,
+    "1.1.2.7/Stdio,48,4560": 30,
+    "1.1.2.7/Stdio,48,4042": 30,
     "1.1.2.6/Stdio,48,4553": 24,
-    "1.1.2.7/Stdio,48,4306": 20,
+    "1.1.2.7/Stdio,48,4306": 22,
+    "1.1.2.7/Stdio,48,2735": 21,
     "1.1.2.7/Stdio,48,2661": 17,
-    "1.1.2.7/Stdio,48,4328": 14,
+    "1.1.2.7/Stdio,48,4328": 15,
+    "1.1.2.7/Stdio,48,3761": 13,
+    "1.1.2.7/Stdio,48,3819": 13,
     "1.0.0.3/Stdio,48,4419": 13,
+    "1.1.2.6/Stdio,48,4419": 13,
+    "1.1.2.7/Stdio,48,4003": 13,
+    "1.1.2.7/Stdio,48,3056": 13,
     "1.1.2.7/Stdio,48,4540": 13,
+    "1.1.2.7/Stdio,48,4544": 13,
     "1.1.2.7/Stdio,48,4462": 13,
-    "1.1.2.7/Stdio,48,3761": 12,
-    "1.1.2.7/Stdio,48,3819": 12,
     "1.1.2.7/Stdio,48,4374": 12,
     "1.1.2.7/Stdio,48,3390": 11,
-    "1.1.2.7/Stdio,48,4003": 11,
-    "1.1.2.7/Stdio,48,2735": 11,
     "1.1.2.7/Stdio,48,1501": 11,
+    "1.1.2.7/Stdio,48,3937": 10,
+    "1.1.2.7/Stdio,48,4265": 10,
     "1.1.2.2/Stdio,48,2117": 10,
     "1.1.2.7/Stdio,48,2402": 10,
-    "1.1.2.7/Stdio,48,3056": 10,
-    "1.1.2.7/Stdio,48,3937": 9,
-    "1.1.2.7/Stdio,48,4265": 9,
+    "1.1.2.7/Stdio,48,3000": 10,
     "1.1.2.7/Stdio,48,3948": 9,
-    "1.1.2.7/Stdio,48,3428": 9,
     "1.1.2.7/Stdio,48,3466": 8,
-    "1.1.2.6/Stdio,48,4419": 8,
-    "1.1.2.7/Stdio,48,4544": 8,
-    "1.1.2.7/Stdio,48,3000": 8,
+    "1.1.2.7/Stdio,48,2930": 8,
+    "1.1.2.7/Stdio,48,3428": 8,
     "1.1.2.7/Stdio,48,3764": 7,
+    "1.1.2.7/Stdio,48,4329": 7,
+    "1.1.2.7/Stdio,48,4296": 7,
     "1.1.2.7/Stdio,48,3874": 7,
     "1.1.2.7/Stdio,48,4031": 7,
-    "1.1.2.7/Stdio,48,4296": 7,
-    "1.1.2.7/Stdio,48,2930": 7,
-    "1.1.2.7/Stdio,48,4329": 7,
     "1.1.2.7/Stdio,48,2492": 7,
     "1.1.2.7/Stdio,48,1988": 6,
+    "1.1.2.7/Stdio,48,4525": 6,
     "1.1.2.6/Stdio,48,3378": 6,
     "1.1.2.2/Stdio,48,3082": 6,
-    "1.1.2.2/Stdio,48,4487": 6,
-    "1.1.2.7/Stdio,48,4520": 6
+    "1.6.3.7/Stdio,48,4419": 6
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 814
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 281
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 201
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 192
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 164
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 137
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 136
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 103
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 2177,
+     "servers": 2482,
      "values": {
-      "1.1.2.7/Stdio,48,4419": 566,
-      "1.1.2.7/Stdio,48,4002": 428,
-      "1.1.2.7/Stdio,48,3378": 353,
-      "1.1.2.7/Stdio,48,4426": 70,
-      "1.1.2.7/Stdio,48,3911": 61,
+      "1.1.2.7/Stdio,48,4419": 662,
+      "1.1.2.7/Stdio,48,4002": 502,
+      "1.1.2.7/Stdio,48,3378": 398,
+      "1.1.2.7/Stdio,48,4426": 85,
+      "1.1.2.7/Stdio,48,3911": 63,
+      "1.1.2.7/Stdio,48,3082": 58,
       "1.1.2.7,48,3066": 54,
-      "1.1.2.7/Stdio,48,3082": 48,
-      "1.1.2.7/Stdio,48,4042": 29,
-      "1.1.2.7/Stdio,48,2753": 28,
-      "1.1.2.7/Stdio,48,4560": 25,
-      "1.1.2.7/Stdio,48,4306": 20,
+      "1.1.2.7/Stdio,48,2753": 33,
+      "1.1.2.7/Stdio,48,4560": 30,
+      "1.1.2.7/Stdio,48,4042": 30,
+      "1.1.2.7/Stdio,48,4306": 22,
+      "1.1.2.7/Stdio,48,2735": 21,
       "1.1.2.7/Stdio,48,2661": 17,
-      "1.1.2.7/Stdio,48,4328": 14,
+      "1.1.2.7/Stdio,48,4328": 15,
+      "1.1.2.7/Stdio,48,3761": 13,
+      "1.1.2.7/Stdio,48,3819": 13,
+      "1.1.2.7/Stdio,48,4003": 13,
+      "1.1.2.7/Stdio,48,3056": 13,
       "1.1.2.7/Stdio,48,4540": 13,
-      "1.1.2.7/Stdio,48,4462": 13,
-      "1.1.2.7/Stdio,48,3761": 12,
-      "1.1.2.7/Stdio,48,3819": 12,
-      "1.1.2.7/Stdio,48,4374": 12,
-      "1.1.2.7/Stdio,48,3390": 11,
-      "1.1.2.7/Stdio,48,4003": 11
+      "1.1.2.7/Stdio,48,4544": 13
      }
     },
     "czero": {
@@ -2735,10 +3599,10 @@
      }
     },
     "dod": {
-     "servers": 43,
+     "servers": 48,
      "values": {
       "1.1.2.6/Stdio,48,4553": 24,
-      "1.1.2.6/Stdio,48,4419": 8,
+      "1.1.2.6/Stdio,48,4419": 13,
       "1.1.2.6/Stdio,48,3378": 6,
       "1.1.2.6/Stdio,48,4002": 3,
       "1.1.2.6/Stdio,48,2402": 1,
@@ -2746,9 +3610,9 @@
      }
     },
     "tfc": {
-     "servers": 35,
+     "servers": 36,
      "values": {
-      "1.1.2.2/Stdio,48,4419": 9,
+      "1.1.2.2/Stdio,48,4419": 10,
       "1.1.2.2/Stdio,48,3378": 9,
       "1.1.2.2/Stdio,48,4002": 8,
       "1.1.2.2/Stdio,48,3511": 2,
@@ -2784,17 +3648,17 @@
      "servers": 5,
      "values": {
       "1.1.2.1/Stdio,48,4419": 2,
+      "1.1.2.1/Stdio,48,3378": 1,
       "1.1.2.1/Stdio,48,4236": 1,
-      "1.1.2.1/Stdio,48,4002": 1,
-      "1.1.2.1/Stdio,48,3378": 1
+      "1.1.2.1/Stdio,48,4002": 1
      }
     },
     "valve": {
-     "servers": 207,
+     "servers": 206,
      "values": {
-      "1.1.2.2/Stdio,48,4002": 75,
+      "1.1.2.2/Stdio,48,4002": 73,
       "1.1.2.2/Stdio,48,4419": 52,
-      "1.1.2.2/Stdio,48,3378": 18,
+      "1.1.2.2/Stdio,48,3378": 19,
       "1.1.2.2/Stdio,48,3082": 5,
       "1.1.2.2/Stdio,48,909": 5,
       "1.1.2.2/Stdio,48,2186": 4,
@@ -2818,10 +3682,10 @@
      "servers": 28,
      "values": {
       "1.1.2.2/Stdio,48,2117": 10,
-      "1.1.2.2/Stdio,48,4002": 4,
-      "1.1.2.2/Stdio,48,4487": 3,
+      "1.1.2.2/Stdio,48,4002": 5,
       "1.1.2.2/Stdio,48,4562": 2,
       "1.1.2.2/Stdio,48,3378": 2,
+      "1.1.2.2/Stdio,48,4487": 2,
       "1.1.2.2/Stdio,48,4518": 1,
       "1.1.2.2/Stdio,48,4387": 1,
       "1.1.2.2/Stdio,48,4563": 1,
@@ -2963,98 +3827,140 @@
    "name": "game_version",
    "title": "ReGameDLL",
    "url": "https://github.com/s1lentq/ReGameDLL_CS",
-   "servers": 2811,
-   "players": 22906,
-   "max_players": 77044,
-   "bots": 3971,
+   "novalue": false,
+   "servers": 3186,
+   "players": 27719,
+   "max_players": 86864,
+   "bots": 4410,
    "values": {
-    "5.28.0.756-dev": 815,
-    "5.30.0.814-dev": 804,
-    "5.26.0.668-dev": 527,
-    "5.21.0.556-dev": 86,
-    "5.22.0.593-dev": 55,
-    "5.21.0.546-dev": 41,
-    "5.21.0.576-dev": 37,
-    "5.20.0.492-dev": 31,
-    "5.21.0.540-dev": 31,
-    "5.28.0.0-dev": 27,
-    "5.21.0.534-dev": 20,
-    "5.30.0.0-dev": 18,
-    "5.30.0.830-dev": 17,
-    "5.22.0.604-dev": 17,
+    "5.28.0.756-dev": 947,
+    "5.30.0.814-dev": 934,
+    "5.26.0.668-dev": 576,
+    "5.21.0.556-dev": 102,
+    "5.22.0.593-dev": 57,
+    "5.21.0.546-dev": 47,
+    "5.21.0.576-dev": 43,
+    "5.21.0.540-dev": 43,
+    "5.20.0.492-dev": 32,
+    "5.28.0.0-dev": 29,
+    "5.30.0.0-dev": 23,
+    "5.21.0.534-dev": 21,
+    "5.30.0.830-dev": 20,
+    "5.22.0.604-dev": 18,
+    "5.18.0.474-dev": 14,
     "5.30.0.831-dev": 14,
-    "5.30.0.807-dev": 12,
     "5.21.0.575-dev": 12,
-    "5.7.0.295-dev": 11,
-    "5.18.0.474-dev": 10,
+    "5.7.0.295-dev": 12,
+    "5.30.0.807-dev": 11,
+    "5.20.0.516-dev": 9,
     "5.25.0.627-dev": 8,
-    "5.20.0.525-dev": 8,
-    "5.20.0.516-dev": 8,
+    "5.20.0.525-dev": 7,
     "5.30.0.809-dev": 7,
-    "5.28.0.770-dev": 7,
-    "5.19.0.490-dev": 6,
-    "5.30.0.805-dev": 6,
     "5.12.0.425-dev": 6,
+    "5.30.0.805-dev": 6,
+    "5.19.0.490-dev": 5,
     "5.14.0.456-dev": 5,
     "5.26.0.670 CS-DREAM.SU EDIT": 5,
+    "5.18.0.475-dev": 5,
     "5.30.0.823-dev": 5,
     "5.28.0.777-dev": 5,
+    "5.28.0.755": 5,
+    "5.21.0.0-dev": 5,
+    "5.30.0.833-dev": 5,
+    "5.30.0.782-dev": 4,
     "5.22.0.610-dev": 4,
-    "5.30.0.806-dev": 4,
-    "5.28.0.737-dev": 4,
     "5.20.0.505-dev": 4,
-    "5.21.0.0-dev": 4,
+    "5.30.0.806-dev": 4,
     "5.7.0.330-dev": 4,
-    "5.28.0.755": 4,
+    "5.28.0.737-dev": 4,
+    "5.28.0.770-dev": 4,
     "5.26.0.689-dev": 3,
-    "5.30.0.782-dev": 3,
-    "5.27.0.0-dev": 3,
-    "5.18.0.475-dev": 3,
-    "5.15.0.458-dev": 3,
-    "5.9.0.387-dev": 3,
-    "5.30.0.833-dev": 3,
-    "5.13.0.447-dev+m": 3,
-    "5.17.0.466-dev": 3,
     "5.30.0.837-dev": 3,
-    "5.16.0.460-dev": 3,
-    "5.26.0.668-dev+m": 3
+    "5.9.0.387-dev": 3,
+    "5.3.0.275-dev": 3,
+    "5.30.0.20-dev": 3,
+    "5.15.0.458-dev": 3,
+    "5.27.0.0-dev": 3,
+    "5.17.0.466-dev": 3,
+    "5.18.0.480-dev": 3
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 1107
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 315
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 206
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 189
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 175
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 158
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 151
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 108
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 2767,
+     "servers": 3144,
      "values": {
-      "5.28.0.756-dev": 806,
-      "5.30.0.814-dev": 792,
-      "5.26.0.668-dev": 518,
-      "5.21.0.556-dev": 86,
-      "5.22.0.593-dev": 55,
-      "5.21.0.546-dev": 41,
-      "5.21.0.576-dev": 37,
-      "5.20.0.492-dev": 30,
-      "5.21.0.540-dev": 30,
-      "5.28.0.0-dev": 27,
-      "5.21.0.534-dev": 19,
-      "5.30.0.0-dev": 18,
-      "5.30.0.830-dev": 17,
-      "5.22.0.604-dev": 17,
+      "5.28.0.756-dev": 939,
+      "5.30.0.814-dev": 922,
+      "5.26.0.668-dev": 567,
+      "5.21.0.556-dev": 102,
+      "5.22.0.593-dev": 57,
+      "5.21.0.546-dev": 47,
+      "5.21.0.576-dev": 43,
+      "5.21.0.540-dev": 42,
+      "5.20.0.492-dev": 31,
+      "5.28.0.0-dev": 29,
+      "5.30.0.0-dev": 23,
+      "5.21.0.534-dev": 20,
+      "5.30.0.830-dev": 20,
+      "5.22.0.604-dev": 18,
+      "5.18.0.474-dev": 14,
       "5.30.0.831-dev": 14,
-      "5.30.0.807-dev": 12,
       "5.21.0.575-dev": 12,
-      "5.7.0.295-dev": 11,
-      "5.18.0.474-dev": 10,
-      "5.25.0.627-dev": 8
+      "5.7.0.295-dev": 12,
+      "5.30.0.807-dev": 11,
+      "5.20.0.516-dev": 9
      }
     },
     "czero": {
-     "servers": 44,
+     "servers": 42,
      "values": {
       "5.30.0.814-dev": 12,
-      "5.28.0.756-dev": 9,
       "5.26.0.668-dev": 9,
+      "5.28.0.756-dev": 8,
       "5.22.0.610-dev": 4,
       "5.20.0.492-dev": 1,
       "5.21.0.540-dev": 1,
-      "5.30.0.808-dev+m": 1,
       "5.22.0.1204-dev": 1,
       "5.22.0.1197-dev": 1,
       "5.30.0.782-dev": 1,
@@ -3202,84 +4108,126 @@
    "name": "reu_version",
    "title": "ReUnion",
    "url": "https://github.com/s1lentq/reunion",
-   "servers": 2608,
-   "players": 18051,
-   "max_players": 70637,
-   "bots": 3290,
+   "novalue": false,
+   "servers": 2943,
+   "players": 21798,
+   "max_players": 79154,
+   "bots": 3777,
    "values": {
-    "0.2.0.25": 605,
-    "0.1.0.95c": 469,
-    "0.2.0.34": 340,
-    "0.2.0.27": 310,
-    "0.1.0.137": 257,
-    "0.2.0.13": 138,
-    "0.1.0.92": 125,
-    "0.1.0.92c": 109,
-    "0.1.0.135": 88,
-    "0.1.75": 79,
-    "0.1.0.133": 31,
+    "0.2.0.25": 675,
+    "0.1.0.95c": 538,
+    "0.2.0.34": 376,
+    "0.2.0.27": 341,
+    "0.1.0.137": 335,
+    "0.2.0.13": 146,
+    "0.1.0.92": 131,
+    "0.1.0.92c": 124,
+    "0.1.0.135": 102,
+    "0.1.75": 84,
+    "0.1.0.133": 32,
     "0.1.0.89": 11,
     "0.1.0.112": 9,
-    "0.2.0.36": 7,
+    "0.2.0.36": 6,
     "0.1.67": 5,
     "0.2.0.0": 5,
+    "0.2.0.6": 5,
+    "0.2.0.35": 5,
     "0.2.0.22": 4,
-    "0.2.0.6": 4,
-    "0.2.0.35": 3,
     "0.2.0.34-bz1": 2,
     "0.1.65": 1,
     "0.2.0.34-nullguard1": 1,
+    "0.2.0.1": 1,
     "0.2.0.27-fix36": 1,
     "0.1.0.130": 1,
     "**Secure**": 1,
-    "0.2.0.1": 1,
     "0.1.0.113": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 958
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 281
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 188
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 180
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 151
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 129
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 125
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 106
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 2371,
+     "servers": 2703,
      "values": {
-      "0.2.0.25": 506,
-      "0.1.0.95c": 434,
-      "0.2.0.34": 320,
-      "0.2.0.27": 302,
-      "0.1.0.137": 247,
-      "0.2.0.13": 124,
-      "0.1.0.92": 122,
-      "0.1.0.92c": 98,
-      "0.1.0.135": 76,
-      "0.1.75": 67,
-      "0.1.0.133": 31,
+      "0.2.0.25": 576,
+      "0.1.0.95c": 503,
+      "0.2.0.34": 353,
+      "0.2.0.27": 333,
+      "0.1.0.137": 325,
+      "0.2.0.13": 132,
+      "0.1.0.92": 128,
+      "0.1.0.92c": 113,
+      "0.1.0.135": 90,
+      "0.1.75": 72,
+      "0.1.0.133": 32,
       "0.1.0.89": 11,
-      "0.2.0.36": 6,
+      "0.2.0.36": 5,
       "0.2.0.0": 5,
+      "0.2.0.6": 5,
       "0.1.0.112": 5,
-      "0.2.0.6": 4,
-      "0.2.0.35": 3,
+      "0.2.0.35": 5,
       "0.2.0.22": 3,
       "0.2.0.34-bz1": 2,
-      "0.2.0.27-fix36": 1
+      "0.2.0.1": 1
      }
     },
     "czero": {
      "servers": 32,
      "values": {
+      "0.2.0.25": 10,
       "0.1.0.95c": 10,
-      "0.2.0.25": 9,
       "0.1.0.137": 5,
       "0.2.0.34": 3,
       "0.1.75": 1,
       "0.1.0.92c": 1,
       "0.2.0.22": 1,
-      "0.2.0.13": 1,
       "0.1.0.135": 1
      }
     },
     "dod": {
-     "servers": 6,
+     "servers": 11,
      "values": {
-      "0.2.0.34": 3,
-      "0.2.0.25": 2,
+      "0.2.0.34": 7,
+      "0.2.0.25": 3,
       "0.1.0.92c": 1
      }
     },
@@ -3308,15 +4256,15 @@
      "values": {}
     },
     "valve": {
-     "servers": 172,
+     "servers": 170,
      "values": {
-      "0.2.0.25": 82,
+      "0.2.0.25": 80,
       "0.1.0.95c": 19,
-      "0.2.0.34": 14,
+      "0.2.0.34": 13,
       "0.1.75": 11,
       "0.1.0.135": 11,
       "0.2.0.27": 8,
-      "0.2.0.13": 5,
+      "0.2.0.13": 6,
       "0.1.0.92c": 5,
       "0.1.0.137": 5,
       "0.1.67": 5,
@@ -3449,59 +4397,102 @@
    "name": "gal_version",
    "title": "Galileo",
    "url": "http://forums.alliedmods.net/showthread.php?t=77391",
-   "servers": 369,
-   "players": 2278,
-   "max_players": 10060,
-   "bots": 925,
+   "novalue": false,
+   "servers": 388,
+   "players": 2600,
+   "max_players": 10605,
+   "bots": 971,
    "values": {
-    "v5.9.1-926": 173,
-    "1.1.290": 129,
+    "v5.9.1-926": 187,
+    "1.1.290": 131,
     "1.2.": 15,
-    "1.1.290_HL": 12,
-    "v5.9.1-932": 10,
+    "v5.9.1-932": 12,
+    "1.1.290_HL": 11,
     "1.1.290-v0.5.0": 4,
+    "0515-fix4": 3,
     "3.1.1": 2,
     "1.2.2.": 2,
     "1.2.4.": 2,
-    "v5.4.0-803": 2,
-    "v5.9.1-926 PDK": 2,
-    "v5.7.2-885": 2,
     "1.0.255": 2,
+    "v5.7.2-885": 2,
+    "v5.9.1-926 PDK": 2,
+    "v5.4.0-803": 2,
     "3.2.0": 1,
     "v3.2.6-275": 1,
     "v5.9.1-931": 1,
     "2.0.1.": 1,
-    "v5.9.1-926-webvote21av-file-state-hud-nextmap-vote5-classic-respawn-strip": 1,
     "v5.9.2-000": 1,
+    "2.0.3.": 1,
+    "v5.7.2-890": 1,
+    "v5.9.1-926-webvote21av-file-state-hud-nextmap-vote5-classic-respawn-strip": 1,
     "3.0.0": 1,
     "ZM-AMXX MapManager 1.0": 1,
-    "0515-fix4": 1,
-    "v3.2.3-261": 1,
-    "v5.7.2-890": 1,
-    "2.0.3.": 1
+    "v3.2.3-261": 1
    },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 86
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 46
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 34
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 28
+    },
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 25
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 21
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 18
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 17
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 265,
+     "servers": 285,
      "values": {
-      "v5.9.1-926": 114,
-      "1.1.290": 113,
+      "v5.9.1-926": 128,
+      "1.1.290": 115,
       "1.2.": 15,
-      "v5.9.1-932": 6,
-      "v5.4.0-803": 2,
-      "v5.9.1-926 PDK": 2,
+      "v5.9.1-932": 8,
+      "0515-fix4": 3,
       "v5.7.2-885": 2,
+      "v5.9.1-926 PDK": 2,
+      "v5.4.0-803": 2,
       "2.0.1.": 1,
-      "v5.9.1-926-webvote21av-file-state-hud-nextmap-vote5-classic-respawn-strip": 1,
       "v5.9.2-000": 1,
+      "1.0.255": 1,
+      "2.0.3.": 1,
+      "v5.7.2-890": 1,
+      "v5.9.1-926-webvote21av-file-state-hud-nextmap-vote5-classic-respawn-strip": 1,
       "3.0.0": 1,
       "ZM-AMXX MapManager 1.0": 1,
       "1.1.290-v0.5.0": 1,
-      "1.0.255": 1,
-      "0515-fix4": 1,
-      "v3.2.3-261": 1,
-      "v5.7.2-890": 1,
-      "2.0.3.": 1
+      "v3.2.3-261": 1
      }
     },
     "czero": {
@@ -3523,9 +4514,9 @@
      }
     },
     "tfc": {
-     "servers": 13,
+     "servers": 14,
      "values": {
-      "v5.9.1-926": 7,
+      "v5.9.1-926": 8,
       "1.2.2.": 2,
       "1.2.4.": 2,
       "1.1.290": 1,
@@ -3586,9 +4577,9 @@
      "values": {}
     },
     "esf": {
-     "servers": 2,
+     "servers": 1,
      "values": {
-      "v5.9.1-926": 2
+      "v5.9.1-926": 1
      }
     },
     "fa": {
@@ -3673,10 +4664,8 @@
      "values": {}
     },
     "vs": {
-     "servers": 1,
-     "values": {
-      "1.1.290_HL": 1
-     }
+     "servers": 0,
+     "values": {}
     },
     "zp": {
      "servers": 0,
@@ -3688,55 +4677,98 @@
    "name": "amxbans_version",
    "title": "AMXBans",
    "url": "http://amxbans.net/",
-   "servers": 473,
-   "players": 2481,
-   "max_players": 11797,
-   "bots": 858,
+   "novalue": false,
+   "servers": 506,
+   "players": 2761,
+   "max_players": 12742,
+   "bots": 855,
    "values": {
-    "6.13": 189,
-    "5.0": 95,
-    "Gm 1.6": 46,
+    "6.13": 209,
+    "5.0": 92,
+    "Gm 1.5.1": 50,
+    "Gm 1.6": 49,
     "6.0.3": 45,
-    "Gm 1.5.1": 44,
-    "MA: 1.6.14": 17,
-    "1.4": 6,
-    "6.0.0": 5,
-    "MA 1.6.9": 5,
+    "MA: 1.6.14": 25,
+    "MA 1.6.9": 6,
+    "1.4": 5,
+    "6.0.0": 4,
     "MA: 1.6.12": 3,
     "Gm 1.5": 3,
     "5.1rc": 2,
-    "6.13.1": 2,
     "MA 1.6.7": 2,
-    "6.dev": 2,
     "6.0.2": 2,
+    "6.13.1": 2,
+    "6.dev": 2,
     "6.14.5": 1,
     "MA 1.6.1": 1,
     "6.14": 1,
-    "6.15.0": 1,
-    "6.13-lk5": 1
+    "6.13-lk5": 1,
+    "6.15.0": 1
    },
+   "countries": [
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 100
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 89
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 55
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 55
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 47
+    },
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 38
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 19
+    },
+    {
+     "cc": "SK",
+     "name": "Slovakia",
+     "servers": 15
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 387,
+     "servers": 421,
      "values": {
-      "6.13": 135,
-      "5.0": 91,
-      "Gm 1.5.1": 42,
-      "Gm 1.6": 38,
+      "6.13": 155,
+      "5.0": 88,
+      "Gm 1.5.1": 48,
+      "Gm 1.6": 41,
       "6.0.3": 36,
-      "MA: 1.6.14": 17,
-      "6.0.0": 5,
-      "MA 1.6.9": 5,
+      "MA: 1.6.14": 25,
+      "MA 1.6.9": 6,
+      "6.0.0": 4,
       "MA: 1.6.12": 3,
       "Gm 1.5": 3,
-      "6.13.1": 2,
       "MA 1.6.7": 2,
-      "6.dev": 2,
+      "6.13.1": 2,
       "1.4": 2,
+      "6.dev": 2,
       "6.14.5": 1,
+      "6.13-lk5": 1,
       "6.15.0": 1,
-      "5.1rc": 1,
-      "6.13-lk5": 1
+      "5.1rc": 1
      }
     },
     "czero": {
@@ -3759,8 +4791,10 @@
      }
     },
     "tfc": {
-     "servers": 0,
-     "values": {}
+     "servers": 1,
+     "values": {
+      "6.13": 1
+     }
     },
     "gearbox": {
      "servers": 2,
@@ -3876,11 +4910,8 @@
      "values": {}
     },
     "svencoop": {
-     "servers": 2,
-     "values": {
-      "1.4": 1,
-      "6.13": 1
-     }
+     "servers": 0,
+     "values": {}
     },
     "bg": {
      "servers": 0,
@@ -3912,10 +4943,11 @@
    "name": "sanksounds_version",
    "title": "Ultimate Sounds",
    "url": "http://forums.alliedmods.net/showthread.php?t=66006",
-   "servers": 76,
-   "players": 483,
-   "max_players": 1823,
-   "bots": 354,
+   "novalue": false,
+   "servers": 79,
+   "players": 540,
+   "max_players": 1901,
+   "bots": 372,
    "values": {
     "1.9.2": 26,
     "1.8.4": 15,
@@ -3923,32 +4955,75 @@
     "1.8.9": 6,
     "1.6.3": 4,
     "1.9.0": 3,
+    "1.9.1": 3,
     "1.6.6d": 2,
-    "1.9.1": 2,
     "1.8.6": 2,
+    "1.6.0": 2,
     "1.5.5": 2,
     "1.4.5": 1,
-    "1.6.6d-sql": 1,
     "1.6.6": 1,
-    "1.6.0": 1,
+    "1.6.6d-sql": 1,
+    "1.5.3": 1,
     "1.8.7": 1
    },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 36
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 14
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 5
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 5
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 4
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 3
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 3
+    },
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 3
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 32,
+     "servers": 35,
      "values": {
+      "1.9.2": 9,
       "1.8.4": 9,
-      "1.9.2": 8,
-      "1.9.1": 2,
+      "1.9.1": 3,
       "1.8.9": 2,
-      "1.5.5": 2,
+      "1.6.0": 2,
       "1.9.0": 2,
+      "1.5.5": 2,
       "1.8.6": 1,
-      "1.6.6d-sql": 1,
-      "1.6.6d": 1,
       "1.6.6": 1,
-      "1.6.0": 1,
+      "1.6.6d-sql": 1,
       "1.6.3": 1,
+      "1.6.6d": 1,
       "1.8.7": 1
      }
     },
@@ -3969,10 +5044,11 @@
     "tfc": {
      "servers": 12,
      "values": {
-      "1.9.2": 7,
+      "1.9.2": 6,
       "1.8.9": 3,
       "1.6.6d": 1,
-      "1.8.4": 1
+      "1.8.4": 1,
+      "1.5.3": 1
      }
     },
     "gearbox": {
@@ -4120,21 +5196,64 @@
    "name": "restnames_version",
    "title": "Restrict Names",
    "url": "http://forums.alliedmods.net/showthread.php?p=147257",
-   "servers": 41,
-   "players": 168,
-   "max_players": 1085,
-   "bots": 116,
+   "novalue": false,
+   "servers": 42,
+   "players": 171,
+   "max_players": 1131,
+   "bots": 106,
    "values": {
-    "1.2a": 33,
+    "1.2a": 34,
     "1.0.0": 4,
     "1.4": 2,
     "1.2c": 2
    },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 13
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 6
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 4
+    },
+    {
+     "cc": "CL",
+     "name": "Chile",
+     "servers": 4
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 4
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 2
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 2
+    },
+    {
+     "cc": "IT",
+     "name": "Italy",
+     "servers": 2
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 25,
+     "servers": 27,
      "values": {
-      "1.2a": 23,
+      "1.2a": 25,
       "1.2c": 2
      }
     },
@@ -4169,9 +5288,9 @@
      "values": {}
     },
     "valve": {
-     "servers": 11,
+     "servers": 10,
      "values": {
-      "1.2a": 5,
+      "1.2a": 4,
       "1.0.0": 4,
       "1.4": 2
      }
@@ -4290,8 +5409,9 @@
    "name": "hlg_version",
    "title": "HLGuard",
    "url": "http://www.thezproject.org/",
+   "novalue": false,
    "servers": 33,
-   "players": 129,
+   "players": 128,
    "max_players": 952,
    "bots": 69,
    "values": {
@@ -4299,6 +5419,48 @@
     "1.9.n10": 14,
     "1.9.t20": 4
    },
+   "countries": [
+    {
+     "cc": "TR",
+     "name": "Turkey",
+     "servers": 9
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 6
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 5
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 4
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 4
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 1
+    },
+    {
+     "cc": "AU",
+     "name": "Australia",
+     "servers": 1
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 1
+    }
+   ],
    "by_mod": {
     "cstrike": {
      "servers": 20,
@@ -4460,10 +5622,11 @@
    "name": "amx_version",
    "title": "AMX Mod",
    "url": "http://www.amxmod.net/",
+   "novalue": false,
    "servers": 21,
-   "players": 135,
+   "players": 160,
    "max_players": 547,
-   "bots": 90,
+   "bots": 99,
    "values": {
     "2010.1-fix4": 9,
     "2010.1-fix3": 5,
@@ -4473,6 +5636,28 @@
     "2010.1-fix5": 1,
     "2010-evo1": 1
    },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 10
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 7
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 3
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 1
+    }
+   ],
    "by_mod": {
     "cstrike": {
      "servers": 6,
@@ -4633,56 +5818,100 @@
   {
    "name": "resemiclip_version",
    "title": "ReSemiclip",
-   "servers": 1396,
-   "players": 13697,
-   "max_players": 40871,
-   "bots": 1859,
+   "novalue": false,
+   "servers": 1573,
+   "players": 16447,
+   "max_players": 45882,
+   "bots": 2253,
    "values": {
-    "2.3.9": 661,
-    "2.4.3": 639,
-    "2.3.9+MA": 41,
+    "2.4.3": 741,
+    "2.3.9": 726,
+    "2.3.9+MA": 45,
     "2.3.8": 25,
+    "2.4.3+m": 6,
     "2.3.9-amxx": 4,
-    "2.4.3+m": 4,
+    "2.4.20": 4,
     "2.4.0": 3,
     "2.4.5": 3,
-    "2.4.16": 2,
+    "2.4.19+m": 3,
     "2.4.19": 2,
-    "2.4.19+m": 2,
-    "2.4.20": 2,
-    "2.4.4": 1,
-    "2.4.3-fix22": 1,
+    "2.4.16": 2,
     "2.6.27": 1,
+    "2.4.3-fix22": 1,
     "2.4.43": 1,
+    "2.4.4": 1,
     "2.5.19+m": 1,
+    "2.4.23": 1,
     "**Secure**": 1,
-    "2.6.29": 1,
-    "2.4.23": 1
+    "2.6.0": 1,
+    "2.6.29": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 682
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 129
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 104
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 80
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 75
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 62
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 53
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 46
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 1380,
+     "servers": 1557,
      "values": {
-      "2.3.9": 652,
-      "2.4.3": 633,
-      "2.3.9+MA": 40,
+      "2.4.3": 735,
+      "2.3.9": 717,
+      "2.3.9+MA": 44,
       "2.3.8": 25,
+      "2.4.3+m": 6,
       "2.3.9-amxx": 4,
-      "2.4.3+m": 4,
+      "2.4.20": 4,
       "2.4.0": 3,
       "2.4.5": 3,
-      "2.4.16": 2,
+      "2.4.19+m": 3,
       "2.4.19": 2,
-      "2.4.19+m": 2,
-      "2.4.20": 2,
-      "2.4.4": 1,
-      "2.4.3-fix22": 1,
+      "2.4.16": 2,
       "2.6.27": 1,
+      "2.4.3-fix22": 1,
       "2.4.43": 1,
+      "2.4.4": 1,
       "2.5.19+m": 1,
+      "2.4.23": 1,
       "**Secure**": 1,
-      "2.6.29": 1,
-      "2.4.23": 1
+      "2.6.0": 1
      }
     },
     "czero": {
@@ -4830,36 +6059,79 @@
   {
    "name": "whb_version",
    "title": "WHBlocker",
-   "servers": 1076,
-   "players": 6280,
-   "max_players": 28850,
-   "bots": 788,
+   "novalue": false,
+   "servers": 1207,
+   "players": 7971,
+   "max_players": 32257,
+   "bots": 984,
    "values": {
-    "1.5.697": 881,
-    "1.5.696": 78,
-    "1.5.692": 57,
-    "1.5.695": 32,
-    "1.5.672": 14,
+    "1.5.697": 1006,
+    "1.5.696": 81,
+    "1.5.692": 58,
+    "1.5.695": 33,
+    "1.5.672": 15,
     "1.5.570": 5,
     "1.5.626": 3,
-    "**Secure**": 2,
     "1.5.370": 2,
-    "1.5.620": 1,
-    "1.5.256": 1
+    "**Secure**": 2,
+    "1.5.256": 1,
+    "1.5.620": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 345
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 185
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 99
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 90
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 72
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 57
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 47
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 33
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 939,
+     "servers": 1070,
      "values": {
-      "1.5.697": 765,
-      "1.5.696": 75,
-      "1.5.692": 45,
-      "1.5.695": 28,
-      "1.5.672": 14,
+      "1.5.697": 890,
+      "1.5.696": 78,
+      "1.5.692": 46,
+      "1.5.695": 29,
+      "1.5.672": 15,
       "1.5.570": 5,
       "1.5.626": 2,
-      "**Secure**": 2,
       "1.5.370": 2,
+      "**Secure**": 2,
       "1.5.620": 1
      }
     },
@@ -5021,21 +6293,64 @@
   {
    "name": "reauthcheck_version",
    "title": "ReAuthCheck",
-   "servers": 1028,
-   "players": 7591,
-   "max_players": 28398,
-   "bots": 1080,
+   "novalue": false,
+   "servers": 1140,
+   "players": 9036,
+   "max_players": 31116,
+   "bots": 1287,
    "values": {
-    "0.1.6": 996,
-    "0.1.5": 31,
+    "0.1.6": 1107,
+    "0.1.5": 32,
     "**Secure**": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 429
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 88
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 80
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 67
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 67
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 63
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 46
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 42
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 986,
+     "servers": 1098,
      "values": {
-      "0.1.6": 954,
-      "0.1.5": 31,
+      "0.1.6": 1065,
+      "0.1.5": 32,
       "**Secure**": 1
      }
     },
@@ -5192,25 +6507,68 @@
   {
    "name": "SNAC_Version",
    "title": "SNAC",
-   "servers": 1013,
-   "players": 7468,
-   "max_players": 27842,
-   "bots": 1066,
+   "novalue": false,
+   "servers": 1105,
+   "players": 8934,
+   "max_players": 30122,
+   "bots": 1192,
    "values": {
-    "1.1": 537,
-    "1.2 Beta 3": 456,
-    "1.0": 17,
+    "1.1": 583,
+    "1.2 Beta 3": 501,
+    "1.0": 18,
     "1.1-fix5": 1,
     "1.2 Beta 2": 1,
     "1.2 Beta": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 494
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 151
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 71
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 63
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 51
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 37
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 32
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 26
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 964,
+     "servers": 1056,
      "values": {
-      "1.1": 515,
-      "1.2 Beta 3": 429,
-      "1.0": 17,
+      "1.1": 561,
+      "1.2 Beta 3": 474,
+      "1.0": 18,
       "1.1-fix5": 1,
       "1.2 Beta 2": 1,
       "1.2 Beta": 1
@@ -5367,58 +6725,101 @@
   {
    "name": "revoice_version",
    "title": "Revoice",
-   "servers": 999,
-   "players": 6797,
-   "max_players": 26924,
-   "bots": 1269,
+   "novalue": false,
+   "servers": 1127,
+   "players": 8179,
+   "max_players": 30367,
+   "bots": 1510,
    "values": {
-    "0.1.0.34": 743,
-    "2.1.0": 92,
-    "0.1.0.32": 34,
+    "0.1.0.34": 847,
+    "2.1.0": 105,
+    "0.1.0.32": 36,
     "0.1.0.33": 25,
-    "2.0.5": 20,
-    "0.1.0.36": 19,
+    "2.0.5": 22,
+    "0.1.0.36": 20,
     "0.0.99": 16,
     "1.0.7": 14,
+    "1.0.733": 7,
     "1.0.2": 6,
-    "1.0.733": 5,
-    "1.0.6": 5,
-    "0.1.0.31": 4,
+    "1.0.6": 6,
+    "0.1.0.31": 5,
+    "0.1.0.30": 4,
     "0.1.26": 3,
-    "0.1.0.30": 3,
+    "1.0.3": 3,
     "1.0.6+m": 2,
-    "1.0.3": 2,
     "0.0.1": 1,
-    "0.1.0.34-planb.3": 1,
-    "0.1.0.34-fix33": 1,
-    "2.1.0.6": 1,
     "1.2": 1,
-    "1.0.776": 1
+    "0.1.0.34-fix33": 1,
+    "1.0.776": 1,
+    "2.1.0.6": 1,
+    "0.1.0.34-planb.3": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 377
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 156
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 94
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 63
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 63
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 60
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 49
+    },
+    {
+     "cc": "CN",
+     "name": "China",
+     "servers": 34
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 902,
+     "servers": 1025,
      "values": {
-      "0.1.0.34": 665,
-      "2.1.0": 88,
-      "0.1.0.32": 33,
+      "0.1.0.34": 764,
+      "2.1.0": 101,
+      "0.1.0.32": 35,
       "0.1.0.33": 22,
-      "2.0.5": 20,
+      "2.0.5": 22,
       "0.0.99": 16,
       "1.0.7": 14,
-      "0.1.0.36": 11,
+      "0.1.0.36": 12,
+      "1.0.733": 7,
       "1.0.2": 6,
-      "1.0.733": 5,
-      "1.0.6": 5,
-      "0.1.0.30": 3,
+      "1.0.6": 6,
+      "0.1.0.30": 4,
+      "1.0.3": 3,
+      "0.1.0.31": 3,
       "1.0.6+m": 2,
-      "0.1.0.31": 2,
       "0.1.26": 2,
-      "1.0.3": 2,
       "0.0.1": 1,
-      "0.1.0.34-planb.3": 1,
+      "1.2": 1,
       "0.1.0.34-fix33": 1,
-      "2.1.0.6": 1
+      "1.0.776": 1
      }
     },
     "czero": {
@@ -5429,9 +6830,9 @@
      }
     },
     "dod": {
-     "servers": 5,
+     "servers": 10,
      "values": {
-      "0.1.0.34": 5
+      "0.1.0.34": 10
      }
     },
     "tfc": {
@@ -5581,34 +6982,77 @@
    "name": "reaimdetector_version",
    "title": "ReAimDetector",
    "url": "https://github.com/s1lentq/ReAimDetector",
-   "servers": 983,
-   "players": 8803,
-   "max_players": 27708,
-   "bots": 1150,
+   "novalue": false,
+   "servers": 1109,
+   "players": 10561,
+   "max_players": 31136,
+   "bots": 1364,
    "values": {
-    "0.2.2": 969,
-    "0.2.0": 9,
-    "0.2.1": 2,
+    "0.2.2": 1093,
+    "0.2.0": 8,
+    "0.2.1": 5,
+    "0.1.7": 1,
     "**Secure**": 1,
-    "0.1.6": 1,
-    "0.1.7": 1
+    "0.1.6": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 468
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 101
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 77
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 73
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 58
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 54
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 43
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 34
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 964,
+     "servers": 1091,
      "values": {
-      "0.2.2": 950,
-      "0.2.0": 9,
-      "0.2.1": 2,
+      "0.2.2": 1075,
+      "0.2.0": 8,
+      "0.2.1": 5,
+      "0.1.7": 1,
       "**Secure**": 1,
-      "0.1.6": 1,
-      "0.1.7": 1
+      "0.1.6": 1
      }
     },
     "czero": {
-     "servers": 19,
+     "servers": 18,
      "values": {
-      "0.2.2": 19
+      "0.2.2": 18
      }
     },
     "dod": {
@@ -5748,16 +7192,17 @@
   {
    "name": "VTC_Version",
    "title": "VTC",
-   "servers": 855,
-   "players": 5047,
-   "max_players": 21730,
-   "bots": 889,
+   "novalue": false,
+   "servers": 981,
+   "players": 6229,
+   "max_players": 24883,
+   "bots": 984,
    "values": {
-    "2017RC5": 661,
-    "2017RC4": 82,
-    "2017RC3": 44,
-    "2020MA2": 34,
-    "2020RC2": 24,
+    "2017RC5": 779,
+    "2017RC4": 81,
+    "2017RC3": 47,
+    "2020MA2": 38,
+    "2020RC2": 26,
     "2017 RC2": 3,
     "2020MA1": 2,
     "**Secure**": 2,
@@ -5765,15 +7210,57 @@
     "2.0RC1 Reloaded": 1,
     "2017RC5-CSAI6": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 334
+    },
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 74
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 72
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 70
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 62
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 61
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 42
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 41
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 816,
+     "servers": 943,
      "values": {
-      "2017RC5": 639,
+      "2017RC5": 757,
       "2017RC4": 76,
-      "2017RC3": 35,
-      "2020MA2": 32,
-      "2020RC2": 24,
+      "2017RC3": 38,
+      "2020MA2": 36,
+      "2020RC2": 26,
       "2017 RC2": 3,
       "2020MA1": 2,
       "**Secure**": 2,
@@ -5817,11 +7304,11 @@
      "values": {}
     },
     "valve": {
-     "servers": 26,
+     "servers": 25,
      "values": {
       "2017RC5": 14,
-      "2017RC4": 5,
       "2017RC3": 5,
+      "2017RC4": 4,
       "2020MA2": 2
      }
     },
@@ -5943,57 +7430,100 @@
    "name": "aesp_version",
    "title": "Admin Spectator ESP",
    "url": "http://forums.alliedmods.net/showthread.php?t=23691",
-   "servers": 734,
-   "players": 6127,
-   "max_players": 22122,
-   "bots": 1126,
+   "novalue": false,
+   "servers": 821,
+   "players": 7561,
+   "max_players": 24556,
+   "bots": 1231,
    "values": {
-    "1.3": 572,
-    "1.5b_mini": 59,
-    "1.4_beta": 37,
+    "1.3": 648,
+    "1.5b_mini": 66,
+    "1.4_beta": 40,
     "1.5": 13,
     "fm_1.5_beta": 12,
-    "2.0": 10,
+    "2.0": 9,
+    "1.4": 5,
     "1.0": 5,
     "1.4_remake": 4,
     "1.5b": 3,
     "1.1": 3,
-    "1.4": 3,
     "1.3.1": 2,
-    "1.10.0.5461": 2,
     "2.9.2-ReHLDS ULTIMATE": 2,
-    "1.3.0": 1,
+    "1.10.0.5461": 2,
+    "1.5d_mini": 1,
+    "1.3.2": 1,
     "1.3.3": 1,
     "1.5b_m": 1,
-    "**Secure**": 1,
     "1.7.0": 1,
-    "1.5d_mini": 1,
-    "1.3.2": 1
+    "**Secure**": 1,
+    "1.3.0": 1
    },
+   "countries": [
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 119
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 106
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 82
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 75
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 69
+    },
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 63
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 45
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 43
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 724,
+     "servers": 811,
      "values": {
-      "1.3": 564,
-      "1.5b_mini": 59,
-      "1.4_beta": 36,
+      "1.3": 640,
+      "1.5b_mini": 66,
+      "1.4_beta": 39,
       "1.5": 13,
       "fm_1.5_beta": 12,
-      "2.0": 10,
+      "2.0": 9,
+      "1.4": 5,
       "1.0": 5,
       "1.4_remake": 4,
       "1.5b": 3,
       "1.1": 3,
-      "1.4": 3,
-      "1.10.0.5461": 2,
       "2.9.2-ReHLDS ULTIMATE": 2,
-      "1.3.0": 1,
+      "1.10.0.5461": 2,
+      "1.5d_mini": 1,
+      "1.3.2": 1,
+      "1.3.1": 1,
       "1.3.3": 1,
       "1.5b_m": 1,
-      "**Secure**": 1,
       "1.7.0": 1,
-      "1.5d_mini": 1,
-      "1.3.2": 1
+      "**Secure**": 1
      }
     },
     "czero": {
@@ -6141,85 +7671,129 @@
   {
    "name": "mapm_version",
    "title": "Map Manager",
-   "servers": 718,
-   "players": 6798,
-   "max_players": 21023,
-   "bots": 887,
+   "novalue": false,
+   "servers": 804,
+   "players": 8122,
+   "max_players": 23365,
+   "bots": 968,
    "values": {
-    "3.2.1": 220,
-    "2.5.61": 116,
-    "3.1.5": 88,
-    "3.3.1": 82,
-    "3.2.0": 63,
-    "2.5.60": 23,
+    "3.2.1": 247,
+    "2.5.61": 130,
+    "3.1.5": 95,
+    "3.3.1": 92,
+    "3.2.0": 72,
+    "2.5.60": 26,
     "3.1.0": 21,
-    "3.0.7": 13,
-    "3.0.4": 11,
+    "3.0.7": 17,
+    "3.0.4": 10,
+    "1.0": 9,
     "3.2.5": 8,
-    "1.0": 7,
-    "3.0.10": 5,
+    "3.0.10": 6,
+    "2.5.54": 5,
     "3.1.4": 4,
-    "3.1.1": 4,
+    "3.3.17": 4,
     "3.0.0": 4,
+    "3.1.1": 4,
+    "3.0.9": 4,
     "3.2.2": 3,
+    "2.1": 3,
     "3.0.8": 3,
-    "3.0.9": 3,
-    "2.1": 2,
-    "2.5.67": 2,
-    "0.2": 2,
     "2.5.79": 2,
     "3.0.5": 2,
-    "3.3.17": 2,
-    "2.5.60-fix": 2,
-    "5.0-2024": 2,
+    "0.2": 2,
+    "2.5.67": 2,
+    "3.1.11": 2,
     "2.5.50": 2,
-    "2.5.54": 1,
+    "5.0-2024": 2,
+    "2.5.60-fix": 2,
     "2.5.62 Custom": 1,
-    "3.2.0-planb12": 1,
-    "3.2.0-ds1": 1,
-    "3.1.11": 1,
-    "3.1.6": 1,
-    "2.5.57": 1,
-    "3.0": 1,
-    "2.5.61-trestore": 1,
-    "3.2.0-ds2": 1,
-    "3.3.5": 1,
-    "3.1.2": 1,
-    "2.5.133": 1,
-    "2.3": 1,
+    "2.5.6": 1,
+    "MapMAnager": 1,
     "3.3.0": 1,
+    "3.2.0-ds1": 1,
+    "2.5.57": 1,
+    "2.5.61-trestore": 1,
+    "3.0": 1,
+    "3.2.0-ds2": 1,
+    "2.5.133": 1,
+    "3.3.5": 1,
     "3.3.1.1 16.08.2025": 1,
+    "3.1.2": 1,
+    "3.1.6": 1,
+    "3.2.0-planb12": 1,
+    "2.3": 1,
     "2.6": 1,
     "2.5.61-adam-1.0.1": 1,
     "3.2.0-lp1": 1,
-    "MapMAnager": 1,
     "Final": 1,
-    "2.5.6": 1
+    "3.2.1-fixed": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 456
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 51
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 50
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 48
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 26
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 18
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 17
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 16
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 706,
+     "servers": 792,
      "values": {
-      "3.2.1": 219,
-      "2.5.61": 114,
-      "3.1.5": 87,
-      "3.3.1": 80,
-      "3.2.0": 60,
-      "2.5.60": 23,
+      "3.2.1": 246,
+      "2.5.61": 128,
+      "3.1.5": 94,
+      "3.3.1": 90,
+      "3.2.0": 69,
+      "2.5.60": 26,
       "3.1.0": 21,
-      "3.0.7": 12,
-      "3.0.4": 10,
+      "3.0.7": 16,
+      "1.0": 9,
+      "3.0.4": 9,
       "3.2.5": 8,
-      "1.0": 7,
-      "3.0.10": 5,
+      "3.0.10": 6,
+      "2.5.54": 5,
       "3.1.4": 4,
-      "3.1.1": 4,
+      "3.3.17": 4,
       "3.0.0": 4,
+      "3.1.1": 4,
+      "3.0.9": 4,
       "3.2.2": 3,
-      "3.0.8": 3,
-      "3.0.9": 3,
-      "2.1": 2,
-      "2.5.67": 2
+      "2.1": 3
      }
     },
     "czero": {
@@ -6374,43 +7948,88 @@
   {
    "name": "admanager_version",
    "title": "Ad Manager",
-   "servers": 702,
-   "players": 5407,
-   "max_players": 19648,
-   "bots": 1117,
+   "novalue": false,
+   "servers": 769,
+   "players": 6401,
+   "max_players": 21556,
+   "bots": 1195,
    "values": {
-    "0.5": 653,
-    "1.0": 19,
-    "1.3": 7,
+    "0.5": 715,
+    "1.0": 20,
+    "1.3": 8,
     "0.5-ml": 5,
     "0.5-v0.3.0": 4,
     "0.6": 4,
+    "1.6": 4,
     "1.10.0.5461": 2,
-    "1.6": 2,
     "0.5.1-linux": 1,
-    "1.5": 1,
     "0.5.1": 1,
-    "0.7": 1,
+    "0.6_clean": 1,
     "marikbabuka": 1,
-    "0.6_clean": 1
+    "0.7": 1,
+    "1.5": 1,
+    "0.6-RL": 1
    },
+   "countries": [
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 138
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 115
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 91
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 72
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 60
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 43
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 28
+    },
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 27
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 647,
+     "servers": 715,
      "values": {
-      "0.5": 602,
-      "1.0": 19,
-      "1.3": 7,
+      "0.5": 665,
+      "1.0": 20,
+      "1.3": 8,
       "0.5-ml": 5,
       "0.6": 4,
+      "1.6": 4,
       "1.10.0.5461": 2,
-      "1.6": 2,
-      "1.5": 1,
       "0.5.1": 1,
-      "0.5-v0.3.0": 1,
-      "0.7": 1,
+      "0.6_clean": 1,
       "marikbabuka": 1,
-      "0.6_clean": 1
+      "0.7": 1,
+      "1.5": 1,
+      "0.5-v0.3.0": 1,
+      "0.6-RL": 1
      }
     },
     "czero": {
@@ -6483,10 +8102,8 @@
      "values": {}
     },
     "esf": {
-     "servers": 1,
-     "values": {
-      "0.5": 1
-     }
+     "servers": 0,
+     "values": {}
     },
     "fa": {
      "servers": 0,
@@ -6579,25 +8196,68 @@
   {
    "name": "hackdetector_version",
    "title": "HackDetector Lite",
-   "servers": 601,
-   "players": 4308,
-   "max_players": 17044,
-   "bots": 458,
+   "novalue": false,
+   "servers": 658,
+   "players": 5146,
+   "max_players": 18504,
+   "bots": 531,
    "values": {
-    "0.15.328.lite": 585,
-    "0.15.309.lite": 6,
+    "0.15.328.lite": 641,
+    "0.15.309.lite": 7,
     "0.15.222.lite": 4,
     "0.19.417m.lite": 2,
     "0.13.192.lite": 2,
     "0.13.202.lite": 1,
     "0.17.318m": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 318
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 123
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 38
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 34
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 25
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 21
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 14
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 14
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 493,
+     "servers": 551,
      "values": {
-      "0.15.328.lite": 481,
-      "0.15.309.lite": 6,
+      "0.15.328.lite": 538,
+      "0.15.309.lite": 7,
       "0.15.222.lite": 4,
       "0.13.192.lite": 2
      }
@@ -6632,9 +8292,9 @@
      "values": {}
     },
     "valve": {
-     "servers": 16,
+     "servers": 15,
      "values": {
-      "0.15.328.lite": 13,
+      "0.15.328.lite": 12,
       "0.19.417m.lite": 2,
       "0.17.318m": 1
      }
@@ -6754,44 +8414,93 @@
   {
    "name": "mode2x2_version",
    "title": "Mode 2x2",
-   "servers": 480,
-   "players": 4618,
-   "max_players": 14752,
-   "bots": 243,
+   "novalue": false,
+   "servers": 544,
+   "players": 5980,
+   "max_players": 16611,
+   "bots": 330,
    "values": {
-    "2.5re": 440,
+    "2.5re": 500,
     "2.5_reapi": 13,
     "2.5a": 12,
     "2.2": 3,
-    "2.7ua": 2,
     "2.6re": 2,
+    "2.7ua": 2,
+    "2.5re-plava": 2,
     "2.5re-optimized": 1,
+    "2.5re-fix3": 1,
+    "2.5_reapi+A/B_by_AG": 1,
     "2.6.2": 1,
     "2.5.1re": 1,
     "2.5re.1": 1,
-    "2.5re-yto4ki": 1,
-    "2.5re-fix3": 1,
-    "2.5_reapi+A/B_by_AG": 1,
-    "2.6.0": 1
+    "2.6.0": 1,
+    "2.5re-7HELL3": 1,
+    "2.9": 1,
+    "2.5re-yto4ki": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 330
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 52
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 33
+    },
+    {
+     "cc": "KZ",
+     "name": "Kazakhstan",
+     "servers": 20
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 17
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 16
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 14
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 11
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 478,
+     "servers": 542,
      "values": {
-      "2.5re": 438,
+      "2.5re": 498,
       "2.5_reapi": 13,
       "2.5a": 12,
       "2.2": 3,
-      "2.7ua": 2,
       "2.6re": 2,
+      "2.7ua": 2,
+      "2.5re-plava": 2,
       "2.5re-optimized": 1,
+      "2.5re-fix3": 1,
+      "2.5_reapi+A/B_by_AG": 1,
       "2.6.2": 1,
       "2.5.1re": 1,
       "2.5re.1": 1,
-      "2.5re-yto4ki": 1,
-      "2.5re-fix3": 1,
-      "2.5_reapi+A/B_by_AG": 1,
-      "2.6.0": 1
+      "2.6.0": 1,
+      "2.5re-7HELL3": 1,
+      "2.9": 1,
+      "2.5re-yto4ki": 1
      }
     },
     "czero": {
@@ -6937,19 +8646,62 @@
   {
    "name": "resrdetector_version",
    "title": "ReSRDetector",
-   "servers": 462,
-   "players": 3805,
-   "max_players": 12940,
-   "bots": 415,
+   "novalue": false,
+   "servers": 526,
+   "players": 4660,
+   "max_players": 14501,
+   "bots": 549,
    "values": {
-    "0.1.0": 461,
+    "0.1.0": 525,
     "**Secure**": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 207
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 48
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 48
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 32
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 30
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 22
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 17
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 15
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 455,
+     "servers": 519,
      "values": {
-      "0.1.0": 454,
+      "0.1.0": 518,
       "**Secure**": 1
      }
     },
@@ -7096,46 +8848,89 @@
   {
    "name": "ChatAdditions_version",
    "title": "Chat Additions",
-   "servers": 292,
-   "players": 3246,
-   "max_players": 8683,
-   "bots": 233,
+   "novalue": false,
+   "servers": 326,
+   "players": 3894,
+   "max_players": 9662,
+   "bots": 266,
    "values": {
-    "v1.9.4": 215,
-    "%CA_VERSION%": 36,
-    "v1.9.2": 12,
+    "v1.9.4": 243,
+    "%CA_VERSION%": 40,
+    "v1.9.2": 14,
     "v1.9.1": 11,
     "e4e483f": 4,
     "v1.9.3": 3,
-    "v1.8.1": 2,
     "v1.9.5": 2,
+    "v1.8.1": 2,
     "local-2026-08-25": 1,
-    "bacf1ee": 1,
     "v1.8.2": 1,
+    "bacf1ee": 1,
+    "v1.5.0": 1,
     "1.9.4-181-BH-FIX3": 1,
     "4e53cdb": 1,
-    "v1.4.1": 1,
-    "v1.5.0": 1
+    "v1.4.1": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 213
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 33
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 26
+    },
+    {
+     "cc": "KZ",
+     "name": "Kazakhstan",
+     "servers": 13
+    },
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 10
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 7
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 7
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 4
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 290,
+     "servers": 324,
      "values": {
-      "v1.9.4": 214,
-      "%CA_VERSION%": 35,
-      "v1.9.2": 12,
+      "v1.9.4": 242,
+      "%CA_VERSION%": 39,
+      "v1.9.2": 14,
       "v1.9.1": 11,
       "e4e483f": 4,
       "v1.9.3": 3,
-      "v1.8.1": 2,
       "v1.9.5": 2,
+      "v1.8.1": 2,
       "local-2026-08-25": 1,
-      "bacf1ee": 1,
       "v1.8.2": 1,
+      "bacf1ee": 1,
+      "v1.5.0": 1,
       "1.9.4-181-BH-FIX3": 1,
       "4e53cdb": 1,
-      "v1.4.1": 1,
-      "v1.5.0": 1
+      "v1.4.1": 1
      }
     },
     "czero": {
@@ -7282,18 +9077,61 @@
   {
    "name": "atb_advanced_version",
    "title": "Advanced Team Balancer",
-   "servers": 243,
-   "players": 2494,
-   "max_players": 7483,
-   "bots": 140,
+   "novalue": false,
+   "servers": 269,
+   "players": 3161,
+   "max_players": 8242,
+   "bots": 151,
    "values": {
-    "1.5.1": 243
+    "1.5.1": 269
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 192
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 21
+    },
+    {
+     "cc": "KZ",
+     "name": "Kazakhstan",
+     "servers": 18
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 10
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 6
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 6
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 4
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 4
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 243,
+     "servers": 269,
      "values": {
-      "1.5.1": 243
+      "1.5.1": 269
      }
     },
     "czero": {
@@ -7437,14 +9275,15 @@
   {
    "name": "admin_loader_version",
    "title": "Admin Loader",
-   "servers": 215,
-   "players": 2225,
-   "max_players": 5621,
-   "bots": 468,
+   "novalue": false,
+   "servers": 266,
+   "players": 2647,
+   "max_players": 6629,
+   "bots": 547,
    "values": {
-    "3.5": 151,
-    "2.9": 24,
-    "3.4.6 (06/02/2022 20:23:55)": 5,
+    "3.5": 192,
+    "2.9": 31,
+    "3.4.6 (06/02/2022 20:23:55)": 7,
     "3.5.9 (09/30/2024 23:34:32)": 5,
     "3.5.12 (02/21/2026 11:06:47)": 4,
     "4.0": 4,
@@ -7452,27 +9291,69 @@
     "3.5.11 (09/20/2025 12:34:41)": 2,
     "3.5.3 (10/08/2023 00:26:15)": 2,
     "[ReAMX] 3.5": 2,
+    "3.5-cyrfix": 2,
     "3.5.1": 1,
-    "7.0": 1,
-    "5.0.1": 1,
-    "3.5.8 (07/13/2024 15:46:50)": 1,
-    "3.5(users.ini)": 1,
-    "3.3.2": 1,
-    "3.3.1": 1,
     "3.2": 1,
-    "3.5.3 (11/28/2023 20:04:59)": 1,
-    "3.6": 1,
-    "3.5-cyrfix": 1,
+    "3.5(users.ini)": 1,
     "3.3.6": 1,
-    "1.0": 1
+    "3.5.8 (07/13/2024 15:46:50)": 1,
+    "3.3.2": 1,
+    "3.5.3 (11/28/2023 20:04:59)": 1,
+    "3.3.1": 1,
+    "1.0": 1,
+    "3.6": 1,
+    "7.0": 1,
+    "5.0.1": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 208
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 32
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 8
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 6
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 3
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 2
+    },
+    {
+     "cc": "MD",
+     "name": "Moldova",
+     "servers": 2
+    },
+    {
+     "cc": "KZ",
+     "name": "Kazakhstan",
+     "servers": 2
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 215,
+     "servers": 266,
      "values": {
-      "3.5": 151,
-      "2.9": 24,
-      "3.4.6 (06/02/2022 20:23:55)": 5,
+      "3.5": 192,
+      "2.9": 31,
+      "3.4.6 (06/02/2022 20:23:55)": 7,
       "3.5.9 (09/30/2024 23:34:32)": 5,
       "3.5.12 (02/21/2026 11:06:47)": 4,
       "4.0": 4,
@@ -7480,16 +9361,16 @@
       "3.5.11 (09/20/2025 12:34:41)": 2,
       "3.5.3 (10/08/2023 00:26:15)": 2,
       "[ReAMX] 3.5": 2,
+      "3.5-cyrfix": 2,
       "3.5.1": 1,
-      "7.0": 1,
-      "5.0.1": 1,
-      "3.5.8 (07/13/2024 15:46:50)": 1,
-      "3.5(users.ini)": 1,
-      "3.3.2": 1,
-      "3.3.1": 1,
       "3.2": 1,
+      "3.5(users.ini)": 1,
+      "3.3.6": 1,
+      "3.5.8 (07/13/2024 15:46:50)": 1,
+      "3.3.2": 1,
       "3.5.3 (11/28/2023 20:04:59)": 1,
-      "3.6": 1
+      "3.3.1": 1,
+      "1.0": 1
      }
     },
     "czero": {
@@ -7633,24 +9514,67 @@
   {
    "name": "aemu_version",
    "title": "AuthEmu",
-   "servers": 201,
-   "players": 1995,
-   "max_players": 7626,
-   "bots": 209,
+   "novalue": false,
+   "servers": 216,
+   "players": 2340,
+   "max_players": 7998,
+   "bots": 280,
    "values": {
-    "5.2.12.431": 119,
-    "5.2.12.525": 72,
-    "4.2.12.311": 6,
+    "5.2.12.431": 125,
+    "5.2.12.525": 79,
+    "4.2.12.311": 8,
     "5.2.12.425": 3,
     "5.2.12.429": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 84
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 23
+    },
+    {
+     "cc": "IL",
+     "name": "Israel",
+     "servers": 20
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 15
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 15
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 14
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 13
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 9
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 201,
+     "servers": 216,
      "values": {
-      "5.2.12.431": 119,
-      "5.2.12.525": 72,
-      "4.2.12.311": 6,
+      "5.2.12.431": 125,
+      "5.2.12.525": 79,
+      "4.2.12.311": 8,
       "5.2.12.425": 3,
       "5.2.12.429": 1
      }
@@ -7796,46 +9720,89 @@
   {
    "name": "dp_version",
    "title": "Dproto",
-   "servers": 185,
-   "players": 521,
-   "max_players": 4302,
-   "bots": 311,
+   "novalue": false,
+   "servers": 204,
+   "players": 574,
+   "max_players": 4821,
+   "bots": 329,
    "values": {
-    "0.9.582": 76,
-    "0.9.391": 30,
+    "0.9.582": 83,
+    "0.9.391": 38,
     "0.9.548": 25,
+    "0.9.356": 18,
     "0.9.87": 18,
-    "0.9.356": 13,
     "0.9.534": 6,
-    "0.9.531": 4,
+    "0.9.531": 3,
     "0.9.581": 3,
     "0.9.330": 2,
-    "0.4.8": 2,
     "0.9.543": 2,
-    "0.9.547": 1,
+    "0.4.8": 2,
     "0.9.497": 1,
-    "0.9.122": 1,
-    "0.9.390": 1
+    "0.9.390": 1,
+    "0.9.547": 1,
+    "0.9.122": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 97
+    },
+    {
+     "cc": "SK",
+     "name": "Slovakia",
+     "servers": 21
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 16
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 11
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 9
+    },
+    {
+     "cc": "TR",
+     "name": "Turkey",
+     "servers": 8
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 7
+    },
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 5
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 143,
+     "servers": 160,
      "values": {
-      "0.9.582": 55,
-      "0.9.391": 22,
+      "0.9.582": 62,
+      "0.9.391": 30,
       "0.9.548": 18,
       "0.9.87": 18,
-      "0.9.356": 10,
+      "0.9.356": 12,
       "0.9.534": 6,
       "0.9.581": 3,
-      "0.4.8": 2,
       "0.9.543": 2,
       "0.9.531": 2,
-      "0.9.547": 1,
+      "0.4.8": 2,
       "0.9.330": 1,
       "0.9.497": 1,
-      "0.9.122": 1,
-      "0.9.390": 1
+      "0.9.390": 1,
+      "0.9.547": 1,
+      "0.9.122": 1
      }
     },
     "czero": {
@@ -7877,13 +9844,13 @@
      }
     },
     "valve": {
-     "servers": 28,
+     "servers": 32,
      "values": {
       "0.9.582": 16,
       "0.9.548": 7,
-      "0.9.391": 2,
+      "0.9.356": 4,
+      "0.9.391": 3,
       "0.9.330": 1,
-      "0.9.356": 1,
       "0.9.531": 1
      }
     },
@@ -7968,10 +9935,8 @@
      "values": {}
     },
     "svencoop": {
-     "servers": 1,
-     "values": {
-      "0.9.391": 1
-     }
+     "servers": 0,
+     "values": {}
     },
     "bg": {
      "servers": 0,
@@ -7990,10 +9955,8 @@
      "values": {}
     },
     "vs": {
-     "servers": 1,
-     "values": {
-      "0.9.531": 1
-     }
+     "servers": 0,
+     "values": {}
     },
     "zp": {
      "servers": 0,
@@ -8005,13 +9968,14 @@
    "name": "hlxce_plugin_version",
    "title": "HLstatsX",
    "url": "http://www.hlxcommunity.com/",
-   "servers": 185,
-   "players": 1023,
-   "max_players": 4609,
-   "bots": 534,
+   "novalue": false,
+   "servers": 192,
+   "players": 1085,
+   "max_players": 4798,
+   "bots": 521,
    "values": {
-    "1.6.19 (HL1)": 110,
-    "1.6.7 (HL1)": 45,
+    "1.6.19 (HL1)": 120,
+    "1.6.7 (HL1)": 42,
     "1.6.19.1 (HL1)": 5,
     "1.6.18 (HL1)": 4,
     "1.6.13 (HL1)": 4,
@@ -8020,25 +9984,67 @@
     "1.6.19 (HL1)-v1.9.13": 2,
     "1.6.19 (HL1)-v0.0.9": 2,
     "1.6.17 (HL1)": 2,
-    "1.8.1 (HL1)": 1,
-    "1.6.19 (HL1) v2 New": 1,
     "1.6.20 (HL1) - Chat Stats": 1,
-    "1.6-pre9c (HL1)": 1
+    "1.6-pre9c (HL1)": 1,
+    "1.6.19 (HL1) v2 New": 1,
+    "1.8.1 (HL1)": 1
    },
+   "countries": [
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 55
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 24
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 21
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 19
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 13
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 11
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 10
+    },
+    {
+     "cc": "SK",
+     "name": "Slovakia",
+     "servers": 10
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 148,
+     "servers": 155,
      "values": {
-      "1.6.19 (HL1)": 85,
-      "1.6.7 (HL1)": 45,
+      "1.6.19 (HL1)": 95,
+      "1.6.7 (HL1)": 42,
       "1.6.19.1 (HL1)": 5,
       "1.7.0 (HL1)": 4,
       "1.6.13 (HL1)": 2,
       "1.6.17 (HL1)": 2,
+      "1.6.20 (HL1) - Chat Stats": 1,
+      "1.6.19 (HL1) v2 New": 1,
       "1.6.19 (HL1)-v1.9.13": 1,
       "1.8.1 (HL1)": 1,
-      "1.6.19 (HL1) v2 New": 1,
-      "1.6.20 (HL1) - Chat Stats": 1,
       "1.6.18 (HL1)": 1
      }
     },
@@ -8211,42 +10217,89 @@
    "name": "amx_ptb_version",
    "title": "PTB",
    "url": "http://forums.alliedmods.net/showthread.php?t=26598",
-   "servers": 189,
-   "players": 2084,
-   "max_players": 5403,
-   "bots": 275,
+   "novalue": false,
+   "servers": 210,
+   "players": 2492,
+   "max_players": 6002,
+   "bots": 220,
    "values": {
-    "1.8b3": 143,
-    "1.8b2": 30,
+    "1.8b3": 151,
+    "1.8b2": 41,
     "1.9": 3,
     "2.2": 2,
-    "2.0": 2,
     "1.1": 2,
+    "2.0": 2,
     "1.8b3-ReAPI-HITBOX-v1.1": 1,
-    "1.8b3-pb2": 1,
     "2.6": 1,
     "2.0.1": 1,
+    "1.8b4": 1,
     "1.7b8": 1,
-    "1.7b6": 1,
-    "1.8b4": 1
+    "1.8b2-opt": 1,
+    "1.23": 1,
+    "1.8b3-pb2": 1,
+    "1.7b6": 1
    },
+   "countries": [
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 52
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 42
+    },
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 35
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 31
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 11
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 10
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 6
+    },
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 4
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 185,
+     "servers": 206,
      "values": {
-      "1.8b3": 140,
-      "1.8b2": 29,
+      "1.8b3": 148,
+      "1.8b2": 40,
       "1.9": 3,
       "2.2": 2,
-      "2.0": 2,
       "1.1": 2,
+      "2.0": 2,
       "1.8b3-ReAPI-HITBOX-v1.1": 1,
-      "1.8b3-pb2": 1,
       "2.6": 1,
       "2.0.1": 1,
+      "1.8b4": 1,
       "1.7b8": 1,
-      "1.7b6": 1,
-      "1.8b4": 1
+      "1.8b2-opt": 1,
+      "1.23": 1,
+      "1.8b3-pb2": 1,
+      "1.7b6": 1
      }
     },
     "czero": {
@@ -8394,38 +10447,81 @@
    "name": "hlxce_version",
    "title": "HLstatsX Core",
    "url": "http://www.hlxcommunity.com/",
-   "servers": 183,
-   "players": 988,
-   "max_players": 4545,
-   "bots": 534,
+   "novalue": false,
+   "servers": 191,
+   "players": 1062,
+   "max_players": 4766,
+   "bots": 521,
    "values": {
     "": 82,
     "1.6.19": 31,
     "1.6.16": 22,
+    "2.5.12": 15,
     "1.7.0": 12,
     "1.12.4": 8,
-    "2.5.12": 7,
     "2.5.9": 5,
-    "1.11.3": 4,
     "1.6.19-25": 4,
+    "1.11.3": 4,
+    "1.6.17": 2,
     "1.11.6": 2,
     "1.12.6": 2,
-    "1.6.17": 2,
     "1.6.19-24": 1,
     "1.6 Update": 1
    },
+   "countries": [
+    {
+     "cc": "CZ",
+     "name": "Czechia",
+     "servers": 55
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 24
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 21
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 20
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 13
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 11
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 10
+    },
+    {
+     "cc": "SK",
+     "name": "Slovakia",
+     "servers": 10
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 146,
+     "servers": 154,
      "values": {
       "": 65,
       "1.6.19": 28,
       "1.6.16": 22,
+      "2.5.12": 12,
       "1.7.0": 8,
       "2.5.9": 5,
-      "2.5.12": 4,
-      "1.11.3": 4,
       "1.6.19-25": 4,
+      "1.11.3": 4,
       "1.11.6": 2,
       "1.12.6": 2,
       "1.6.19-24": 1,
@@ -8602,14 +10698,15 @@
    "name": "csdm_version",
    "title": "CSDM",
    "url": "http://www.bailopan.net/csdm/",
-   "servers": 175,
-   "players": 1921,
-   "max_players": 4965,
-   "bots": 738,
+   "novalue": false,
+   "servers": 189,
+   "players": 2119,
+   "max_players": 5308,
+   "bots": 872,
    "values": {
-    "2.1.3c-KWo": 85,
-    "3.6": 61,
-    "2.1.2": 12,
+    "2.1.3c-KWo": 93,
+    "3.6": 68,
+    "2.1.2": 11,
     "2.1.3k-unofficial": 4,
     "1.80 build 410 (AMX Mod)": 3,
     "2.00": 2,
@@ -8617,24 +10714,66 @@
     "2.1.3b-KWo": 2,
     "1.80 build 400 (AMX Mod)": 1,
     "DeathMatch v0.0.12 by FEDERICOMB": 1,
-    "2.1.2k": 1,
-    "DeathMatch CS v0.0.12 by FEDERICOMB": 1
+    "DeathMatch CS v0.0.12 by FEDERICOMB": 1,
+    "2.1.2k": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 47
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 25
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 14
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 14
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 10
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 9
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 9
+    },
+    {
+     "cc": "TR",
+     "name": "Turkey",
+     "servers": 9
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 167,
+     "servers": 181,
      "values": {
-      "2.1.3c-KWo": 81,
-      "3.6": 60,
-      "2.1.2": 12,
+      "2.1.3c-KWo": 89,
+      "3.6": 67,
+      "2.1.2": 11,
       "2.1.3k-unofficial": 4,
       "v1.0.3": 2,
-      "1.80 build 410 (AMX Mod)": 2,
       "2.1.3b-KWo": 2,
-      "DeathMatch v0.0.12 by FEDERICOMB": 1,
-      "2.1.2k": 1,
+      "1.80 build 410 (AMX Mod)": 2,
       "2.00": 1,
-      "DeathMatch CS v0.0.12 by FEDERICOMB": 1
+      "DeathMatch v0.0.12 by FEDERICOMB": 1,
+      "DeathMatch CS v0.0.12 by FEDERICOMB": 1,
+      "2.1.2k": 1
      }
     },
     "czero": {
@@ -8784,79 +10923,127 @@
   {
    "name": "zp_version",
    "title": "Zombie Plague",
-   "servers": 161,
-   "players": 1777,
-   "max_players": 4840,
-   "bots": 506,
+   "novalue": false,
+   "servers": 189,
+   "players": 2155,
+   "max_players": 5575,
+   "bots": 533,
    "values": {
-    "4.3": 47,
-    "5.0.8": 25,
-    "4.3 Fix5a": 11,
+    "4.3": 58,
+    "5.0.8": 28,
+    "4.3 Fix5a": 14,
+    "1.0": 10,
     "6.3": 10,
     "Ultimate": 9,
-    "1.0": 7,
     "4.3 Fix6a": 5,
+    "5.0": 4,
     "": 3,
-    "5.0": 3,
     "8.387": 3,
     "4.3 Fix5 mod 250106": 2,
+    "4.3 Fixe Version 3": 2,
+    "Optimized": 2,
+    "5.0.5": 2,
     "re-4.3 CSOMOD.COM": 2,
     "ZM LEAGUECS": 2,
-    "5.0.5": 2,
-    "4.3 Fixe Version 3": 2,
+    "4.3 Ultimate": 2,
     "plugin 4.3 Assembly 3.2": 1,
     "Nightmare 2.9.3": 1,
     "4.1": 1,
     "4.3 Fix4 by BuB9neC": 1,
-    "7.2": 1,
-    "4.2.2": 1,
-    "4.5.7/ZPX": 1,
-    "Finality": 1,
-    "4.3 (3.5.2)": 1,
-    "Left4Dead + GunXP": 1,
-    "CSO": 1,
-    "V1.0": 1,
-    "Jetpack+Bazooka": 1,
-    "v1.7": 1,
-    "[RUSZM.RU]": 1,
-    "1.0.4": 1,
-    "Soski vs Zombies": 1,
-    "4.3 Ultimate": 1,
-    "2.1": 1,
-    "4.3 ReAPI": 1,
-    "5.1": 1,
-    "Optimized": 1,
-    "Beta V3.3": 1,
     "5.0.9": 1,
+    "1.0.4": 1,
+    "4.5.7/ZPX": 1,
+    "4.3 (3.5.2)": 1,
+    "Test 1.1": 1,
+    "Finality": 1,
+    "[RUSZM.RU]": 1,
+    "7.2": 1,
+    "Soski vs Zombies": 1,
+    "4.3 ReAPI": 1,
     "1.1": 1,
-    "4.3 O'zbek": 1,
+    "5.1": 1,
+    "2.1": 1,
     "4.01-Beta": 1,
-    "4.3n2_beta": 1
+    "Left4Dead + GunXP": 1,
+    "Beta V3.3": 1,
+    "V1.0": 1,
+    "4.3n2_beta": 1,
+    "CSO": 1,
+    "PrivateServ.NET": 1,
+    "4.2.2": 1,
+    "v1.7": 1,
+    "[CSO]": 1,
+    "Zombie Project": 1,
+    "4.3 CL 2.0.34": 1,
+    "Jetpack+Bazooka": 1,
+    "4.4 Fix5a": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 90
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 20
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 12
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 7
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 7
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 6
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 6
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 5
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 161,
+     "servers": 189,
      "values": {
-      "4.3": 47,
-      "5.0.8": 25,
-      "4.3 Fix5a": 11,
+      "4.3": 58,
+      "5.0.8": 28,
+      "4.3 Fix5a": 14,
+      "1.0": 10,
       "6.3": 10,
       "Ultimate": 9,
-      "1.0": 7,
       "4.3 Fix6a": 5,
+      "5.0": 4,
       "": 3,
-      "5.0": 3,
       "8.387": 3,
       "4.3 Fix5 mod 250106": 2,
+      "4.3 Fixe Version 3": 2,
+      "Optimized": 2,
+      "5.0.5": 2,
       "re-4.3 CSOMOD.COM": 2,
       "ZM LEAGUECS": 2,
-      "5.0.5": 2,
-      "4.3 Fixe Version 3": 2,
+      "4.3 Ultimate": 2,
       "plugin 4.3 Assembly 3.2": 1,
       "Nightmare 2.9.3": 1,
-      "4.1": 1,
-      "4.3 Fix4 by BuB9neC": 1,
-      "7.2": 1
+      "4.1": 1
      }
     },
     "czero": {
@@ -9000,32 +11187,75 @@
   {
    "name": "nademodes_version",
    "title": "Nade Modes",
-   "servers": 158,
-   "players": 1471,
-   "max_players": 4729,
-   "bots": 358,
+   "novalue": false,
+   "servers": 183,
+   "players": 1784,
+   "max_players": 5439,
+   "bots": 366,
    "values": {
-    "11.2": 138,
+    "11.2": 162,
     "10": 6,
+    "1.0": 5,
     "11.3": 4,
-    "1.0": 4,
     "9.61": 3,
-    "11.4-zp5-light": 1,
     "11.4-cyan-single-hud": 1,
-    "1.2": 1
+    "1.2": 1,
+    "11.4-zp5-light": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 52
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 38
+    },
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 16
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 9
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 8
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 7
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 6
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 6
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 157,
+     "servers": 182,
      "values": {
-      "11.2": 137,
+      "11.2": 161,
       "10": 6,
+      "1.0": 5,
       "11.3": 4,
-      "1.0": 4,
       "9.61": 3,
-      "11.4-zp5-light": 1,
       "11.4-cyan-single-hud": 1,
-      "1.2": 1
+      "1.2": 1,
+      "11.4-zp5-light": 1
      }
     },
     "czero": {
@@ -9171,44 +11401,87 @@
   {
    "name": "Team_Semiclip_version",
    "title": "Team Semiclip",
-   "servers": 158,
-   "players": 1127,
-   "max_players": 4669,
-   "bots": 340,
+   "novalue": false,
+   "servers": 177,
+   "players": 1284,
+   "max_players": 5185,
+   "bots": 287,
    "values": {
-    "3.3.1": 64,
-    "2.0.0": 60,
-    "3.1.1": 18,
+    "3.3.1": 72,
+    "2.0.0": 70,
+    "3.1.1": 17,
     "3.3.2": 4,
     "2.1.0 (zp43)": 3,
-    "1.0": 1,
+    "1.0": 2,
+    "1.8.1": 2,
     "4.0": 1,
-    "1.8.1": 1,
-    "3.3.1-Fixed": 1,
     "2.0.1": 1,
     "3.1.0": 1,
     "1.8.2": 1,
+    "1.8.3": 1,
     "2.1.0 (zp50)": 1,
-    "1.8.3": 1
+    "3.3.1-Fixed": 1
    },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 26
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 21
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 21
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 15
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 13
+    },
+    {
+     "cc": "TR",
+     "name": "Turkey",
+     "servers": 11
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 9
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 9
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 153,
+     "servers": 169,
      "values": {
-      "3.3.1": 62,
-      "2.0.0": 57,
-      "3.1.1": 18,
+      "3.3.1": 70,
+      "2.0.0": 64,
+      "3.1.1": 17,
       "3.3.2": 4,
       "2.1.0 (zp43)": 3,
-      "1.0": 1,
+      "1.0": 2,
+      "1.8.1": 2,
       "4.0": 1,
-      "1.8.1": 1,
-      "3.3.1-Fixed": 1,
       "2.0.1": 1,
       "3.1.0": 1,
       "1.8.2": 1,
+      "1.8.3": 1,
       "2.1.0 (zp50)": 1,
-      "1.8.3": 1
+      "3.3.1-Fixed": 1
      }
     },
     "czero": {
@@ -9219,9 +11492,9 @@
      }
     },
     "dod": {
-     "servers": 2,
+     "servers": 5,
      "values": {
-      "2.0.0": 2
+      "2.0.0": 5
      }
     },
     "tfc": {
@@ -9357,24 +11630,69 @@
   {
    "name": "afk_manager_version",
    "title": "AFK Manager",
-   "servers": 162,
-   "players": 1358,
-   "max_players": 4858,
-   "bots": 105,
+   "novalue": false,
+   "servers": 176,
+   "players": 1627,
+   "max_players": 5282,
+   "bots": 130,
    "values": {
-    "1.0.6 (amx 1.8.3)": 137,
+    "1.0.6 (amx 1.8.3)": 148,
     "1.0.6 (amx 1.8.2)": 20,
+    "1.0.6 (amx 1.9.0)": 3,
     "1.0.5 (amx 1.8.3)": 2,
     "1.0": 1,
     "1.0.5 (amx 1.8.2)": 1,
     "1.1": 1
    },
+   "countries": [
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 57
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 26
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 19
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 10
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 9
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 7
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 7
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 5
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 160,
+     "servers": 174,
      "values": {
-      "1.0.6 (amx 1.8.3)": 136,
+      "1.0.6 (amx 1.8.3)": 147,
       "1.0.6 (amx 1.8.2)": 19,
+      "1.0.6 (amx 1.9.0)": 3,
       "1.0.5 (amx 1.8.3)": 2,
       "1.0": 1,
       "1.0.5 (amx 1.8.2)": 1,
@@ -9525,24 +11843,67 @@
   {
    "name": "ezhttp_version",
    "title": "EZ HTTP",
-   "servers": 145,
-   "players": 1632,
-   "max_players": 4147,
-   "bots": 137,
+   "novalue": false,
+   "servers": 167,
+   "players": 1942,
+   "max_players": 4791,
+   "bots": 145,
    "values": {
-    "1.5.0": 94,
-    "2.4.1": 46,
+    "1.5.0": 113,
+    "2.4.1": 49,
     "1.4.1": 2,
     "1.4.0": 1,
     "1.5.0-exitguard1": 1,
     "2.1.0": 1
    },
+   "countries": [
+    {
+     "cc": "BR",
+     "name": "Brazil",
+     "servers": 51
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 37
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 17
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 9
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 9
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 8
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 6
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 6
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 139,
+     "servers": 161,
      "values": {
-      "1.5.0": 92,
-      "2.4.1": 44,
+      "1.5.0": 111,
+      "2.4.1": 47,
       "1.4.1": 2,
       "2.1.0": 1
      }
@@ -9695,30 +12056,75 @@
   {
    "name": "AWPLimiter_version",
    "title": "AWP Limiter",
-   "servers": 137,
-   "players": 1318,
-   "max_players": 4265,
-   "bots": 130,
+   "novalue": false,
+   "servers": 152,
+   "players": 1663,
+   "max_players": 4733,
+   "bots": 155,
    "values": {
-    "1.4.0": 67,
-    "1.3.0 Beta-fix": 33,
-    "1.3.0 Beta": 30,
+    "1.4.0": 77,
+    "1.3.0 Beta-fix": 35,
+    "1.3.0 Beta": 32,
     "1.0.0 Beta": 3,
     "2.2.8": 2,
     "1.8.2": 1,
-    "1.1.1 Beta": 1
+    "1.1.1 Beta": 1,
+    "1.4.0-7HELL5.2 WARMUP ROUND SYNC": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 113
+    },
+    {
+     "cc": "UA",
+     "name": "Ukraine",
+     "servers": 12
+    },
+    {
+     "cc": "NL",
+     "name": "The Netherlands",
+     "servers": 5
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 5
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 4
+    },
+    {
+     "cc": "UZ",
+     "name": "Uzbekistan",
+     "servers": 3
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 2
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 2
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 137,
+     "servers": 152,
      "values": {
-      "1.4.0": 67,
-      "1.3.0 Beta-fix": 33,
-      "1.3.0 Beta": 30,
+      "1.4.0": 77,
+      "1.3.0 Beta-fix": 35,
+      "1.3.0 Beta": 32,
       "1.0.0 Beta": 3,
       "2.2.8": 2,
       "1.8.2": 1,
-      "1.1.1 Beta": 1
+      "1.1.1 Beta": 1,
+      "1.4.0-7HELL5.2 WARMUP ROUND SYNC": 1
      }
     },
     "czero": {
@@ -9862,31 +12268,74 @@
   {
    "name": "afk_version",
    "title": "AFK Kicker",
-   "servers": 134,
-   "players": 734,
-   "max_players": 3495,
-   "bots": 204,
+   "novalue": false,
+   "servers": 138,
+   "players": 709,
+   "max_players": 3544,
+   "bots": 201,
    "values": {
-    "1.0b": 86,
+    "1.0b": 88,
     "1.1": 28,
     "1.0a": 6,
-    "1.0": 4,
+    "1.0": 5,
     "1.2": 3,
     "1.0b-v0.1.2": 2,
     "1.4-fixed": 2,
+    "0.0": 2,
     "2.1": 1,
-    "0.0": 1,
     "1.0d": 1
    },
+   "countries": [
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 20
+    },
+    {
+     "cc": "AR",
+     "name": "Argentina",
+     "servers": 20
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 13
+    },
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 12
+    },
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 9
+    },
+    {
+     "cc": "RO",
+     "name": "Romania",
+     "servers": 9
+    },
+    {
+     "cc": "SK",
+     "name": "Slovakia",
+     "servers": 5
+    },
+    {
+     "cc": "BG",
+     "name": "Bulgaria",
+     "servers": 5
+    }
+   ],
    "by_mod": {
     "cstrike": {
-     "servers": 96,
+     "servers": 99,
      "values": {
-      "1.0b": 79,
+      "1.0b": 81,
       "1.1": 7,
       "1.0a": 6,
       "1.4-fixed": 2,
-      "0.0": 1,
+      "0.0": 2,
       "1.0d": 1
      }
     },
@@ -10052,15 +12501,16 @@
   {
    "name": "jk_botti_version",
    "title": "JK_BOTTI",
-   "servers": 129,
-   "players": 615,
-   "max_players": 3175,
-   "bots": 394,
+   "novalue": false,
+   "servers": 133,
+   "players": 668,
+   "max_players": 3261,
+   "bots": 401,
    "values": {
-    "1.43": 41,
+    "1.43": 42,
     "1.44beta1": 32,
-    "1.62_avx2fma": 21,
-    "1.42": 8,
+    "1.62_avx2fma": 22,
+    "1.42": 11,
     "1.60_avx2fma": 5,
     "1.62_sse3": 3,
     "0.00gitunknown_sse3": 3,
@@ -10073,9 +12523,50 @@
     "1.62_x87": 1,
     "1.44scripted": 1,
     "1.50": 1,
-    "0.00gita4db689_sse3": 1,
     "1.44-sbotnas+0797e9c6": 1
    },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 27
+    },
+    {
+     "cc": "RU",
+     "name": "Russia",
+     "servers": 18
+    },
+    {
+     "cc": "DE",
+     "name": "Germany",
+     "servers": 17
+    },
+    {
+     "cc": "TR",
+     "name": "Turkey",
+     "servers": 14
+    },
+    {
+     "cc": "CL",
+     "name": "Chile",
+     "servers": 9
+    },
+    {
+     "cc": "LT",
+     "name": "Lithuania",
+     "servers": 6
+    },
+    {
+     "cc": "MY",
+     "name": "Malaysia",
+     "servers": 5
+    },
+    {
+     "cc": "GB",
+     "name": "United Kingdom",
+     "servers": 4
+    }
+   ],
    "by_mod": {
     "cstrike": {
      "servers": 0,
@@ -10111,12 +12602,12 @@
      "values": {}
     },
     "valve": {
-     "servers": 114,
+     "servers": 119,
      "values": {
-      "1.43": 36,
+      "1.43": 37,
       "1.44beta1": 27,
-      "1.62_avx2fma": 21,
-      "1.42": 8,
+      "1.62_avx2fma": 22,
+      "1.42": 11,
       "1.60_avx2fma": 5,
       "1.62_sse3": 3,
       "0.00gitunknown_sse3": 3,
@@ -10132,10 +12623,9 @@
      }
     },
     "ag": {
-     "servers": 5,
+     "servers": 4,
      "values": {
       "1.44beta1": 2,
-      "0.00gita4db689_sse3": 1,
       "1.60_x87": 1,
       "1.43": 1
      }
@@ -10249,10 +12739,11 @@
   {
    "name": "rcbot_ver",
    "title": "RCBot",
+   "novalue": false,
    "servers": 23,
-   "players": 151,
-   "max_players": 545,
-   "bots": 149,
+   "players": 146,
+   "max_players": 546,
+   "bots": 146,
    "values": {
     "1.51b13_mm": 8,
     "1.51b14_mm": 4,
@@ -10265,6 +12756,33 @@
     "1.443_mm": 1,
     "1.441_BETA_mm_release_linux": 1
    },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 13
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 4
+    },
+    {
+     "cc": "TW",
+     "name": "Taiwan",
+     "servers": 3
+    },
+    {
+     "cc": "ZA",
+     "name": "South Africa",
+     "servers": 2
+    },
+    {
+     "cc": "PL",
+     "name": "Poland",
+     "servers": 1
+    }
+   ],
    "by_mod": {
     "cstrike": {
      "servers": 0,
@@ -10432,343 +12950,245 @@
      "values": {}
     }
    }
+  },
+  {
+   "name": "mp_bhopcap",
+   "title": "Xash3D",
+   "url": "https://github.com/FWGS/xash3d-fwgs",
+   "novalue": true,
+   "servers": 7,
+   "players": 11,
+   "max_players": 176,
+   "bots": 7,
+   "values": {
+    "1": 5,
+    "0": 2
+   },
+   "countries": [
+    {
+     "cc": "US",
+     "name": "United States",
+     "servers": 4
+    },
+    {
+     "cc": "SE",
+     "name": "Sweden",
+     "servers": 2
+    },
+    {
+     "cc": "FR",
+     "name": "France",
+     "servers": 1
+    }
+   ],
+   "by_mod": {
+    "cstrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "czero": {
+     "servers": 0,
+     "values": {}
+    },
+    "dod": {
+     "servers": 0,
+     "values": {}
+    },
+    "tfc": {
+     "servers": 0,
+     "values": {}
+    },
+    "gearbox": {
+     "servers": 0,
+     "values": {}
+    },
+    "dmc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ricochet": {
+     "servers": 0,
+     "values": {}
+    },
+    "valve": {
+     "servers": 6,
+     "values": {
+      "1": 4,
+      "0": 2
+     }
+    },
+    "ag": {
+     "servers": 0,
+     "values": {}
+    },
+    "action": {
+     "servers": 0,
+     "values": {}
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 0,
+     "values": {}
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
   }
  ],
  "quality": {
   "truncated_appids": [],
   "info_errors": {
-   "TimeoutError": 1004,
-   "BufferExhaustedError": 67,
-   "BrokenMessageError": 1
+   "TimeoutError": 2292,
+   "BufferExhaustedError": 68,
+   "BrokenMessageError": 8
   },
   "rules_errors": {
-   "TimeoutError": 2004,
-   "RulesError": 18
+   "TimeoutError": 2028,
+   "RulesError": 28
   },
   "note": "Servers that ignore A2S_RULES are counted in rules_unknown, not silently dropped."
  },
  "fresh": {
-  "sanksounds_version": [
-   "1.5.5"
+  "amxmodx_version": [
+   "1.9.0-dev+5210"
+  ],
+  "gal_version": [
+   "0515-fix4"
   ],
   "resemiclip_version": [
-   "2.3.9",
-   "2.4.3",
-   "2.3.9+MA",
-   "2.3.8",
-   "2.3.9-amxx",
-   "2.4.3+m",
-   "2.4.0",
-   "2.4.5",
-   "2.4.16",
-   "2.4.19"
+   "2.4.20",
+   "2.4.19+m"
   ],
   "whb_version": [
-   "1.5.697",
-   "1.5.696",
-   "1.5.692",
-   "1.5.695",
-   "1.5.672",
-   "1.5.570",
-   "1.5.626",
-   "**Secure**",
-   "1.5.370",
-   "1.5.620"
-  ],
-  "reauthcheck_version": [
-   "0.1.6",
-   "0.1.5",
-   "**Secure**"
-  ],
-  "SNAC_Version": [
-   "1.1",
-   "1.2 Beta 3",
-   "1.0",
-   "1.1-fix5",
-   "1.2 Beta 2",
-   "1.2 Beta"
-  ],
-  "revoice_version": [
-   "0.1.0.34",
-   "2.1.0",
-   "0.1.0.32",
-   "0.1.0.33",
-   "2.0.5",
-   "0.1.0.36",
-   "0.0.99",
-   "1.0.7",
-   "1.0.2",
-   "1.0.733"
-  ],
-  "reaimdetector_version": [
-   "0.2.2",
-   "0.2.0",
-   "0.2.1",
-   "**Secure**",
-   "0.1.6",
-   "0.1.7"
-  ],
-  "VTC_Version": [
-   "2017RC5",
-   "2017RC4",
-   "2017RC3",
-   "2020MA2",
-   "2020RC2",
-   "2017 RC2",
-   "2020MA1",
-   "**Secure**",
-   "2017RC5-CSAI5",
-   "2.0RC1 Reloaded"
+   "1.5.256"
   ],
   "aesp_version": [
-   "1.3",
-   "1.5b_mini",
-   "1.4_beta",
-   "1.5",
-   "fm_1.5_beta",
-   "2.0",
-   "1.0",
-   "1.4_remake",
-   "1.5b",
-   "1.1"
+   "1.4"
   ],
   "mapm_version": [
-   "3.2.1",
-   "2.5.61",
-   "3.1.5",
-   "3.3.1",
-   "3.2.0",
-   "2.5.60",
-   "3.1.0",
-   "3.0.7",
-   "3.0.4",
-   "3.2.5"
+   "1.0"
   ],
   "admanager_version": [
-   "0.5",
-   "1.0",
-   "1.3",
-   "0.5-ml",
-   "0.5-v0.3.0",
-   "0.6",
-   "1.10.0.5461",
-   "1.6",
-   "0.5.1-linux",
-   "1.5"
-  ],
-  "hackdetector_version": [
-   "0.15.328.lite",
-   "0.15.309.lite",
-   "0.15.222.lite",
-   "0.19.417m.lite",
-   "0.13.192.lite",
-   "0.13.202.lite",
-   "0.17.318m"
+   "0.5.1"
   ],
   "mode2x2_version": [
-   "2.5re",
-   "2.5_reapi",
-   "2.5a",
-   "2.2",
-   "2.7ua",
-   "2.6re",
-   "2.5re-optimized",
-   "2.6.2",
-   "2.5.1re",
-   "2.5re.1"
-  ],
-  "resrdetector_version": [
-   "0.1.0",
-   "**Secure**"
+   "2.5re-plava",
+   "2.5re-fix3",
+   "2.5_reapi+A/B_by_AG"
   ],
   "ChatAdditions_version": [
-   "v1.9.4",
-   "%CA_VERSION%",
-   "v1.9.2",
-   "v1.9.1",
-   "e4e483f",
-   "v1.9.3",
-   "v1.8.1",
-   "v1.9.5",
-   "local-2026-08-25",
-   "bacf1ee"
-  ],
-  "atb_advanced_version": [
-   "1.5.1"
-  ],
-  "admin_loader_version": [
-   "3.5",
-   "2.9",
-   "3.4.6 (06/02/2022 20:23:55)",
-   "3.5.9 (09/30/2024 23:34:32)",
-   "3.5.12 (02/21/2026 11:06:47)",
-   "4.0",
-   "3.4.2 (12/18/2021 23:05:40)",
-   "3.5.11 (09/20/2025 12:34:41)",
-   "3.5.3 (10/08/2023 00:26:15)",
-   "[ReAMX] 3.5"
-  ],
-  "aemu_version": [
-   "5.2.12.431",
-   "5.2.12.525",
-   "4.2.12.311",
-   "5.2.12.425",
-   "5.2.12.429"
+   "v1.8.2"
   ],
   "dp_version": [
-   "0.9.582",
-   "0.9.391",
-   "0.9.548",
-   "0.9.87",
-   "0.9.356",
-   "0.9.534",
-   "0.9.531",
-   "0.9.581",
-   "0.9.330",
-   "0.4.8"
-  ],
-  "hlxce_plugin_version": [
-   "1.6.19 (HL1)",
-   "1.6.7 (HL1)",
-   "1.6.19.1 (HL1)",
-   "1.6.18 (HL1)",
-   "1.6.13 (HL1)",
-   "1.7.0 (HL1)",
-   "1.6.15 (HL1)",
-   "1.6.19 (HL1)-v1.9.13",
-   "1.6.19 (HL1)-v0.0.9",
-   "1.6.17 (HL1)"
+   "0.9.543"
   ],
   "amx_ptb_version": [
-   "1.8b3",
-   "1.8b2",
-   "1.9",
-   "2.2",
-   "2.0",
-   "1.1",
-   "1.8b3-ReAPI-HITBOX-v1.1",
-   "1.8b3-pb2",
-   "2.6",
-   "2.0.1"
+   "1.8b4"
   ],
   "hlxce_version": [
-   "",
-   "1.6.19",
-   "1.6.16",
-   "1.7.0",
-   "1.12.4",
-   "2.5.12",
-   "2.5.9",
-   "1.11.3",
-   "1.6.19-25",
-   "1.11.6"
-  ],
-  "csdm_version": [
-   "2.1.3c-KWo",
-   "3.6",
-   "2.1.2",
-   "2.1.3k-unofficial",
-   "1.80 build 410 (AMX Mod)",
-   "2.00",
-   "v1.0.3",
-   "2.1.3b-KWo",
-   "1.80 build 400 (AMX Mod)",
-   "DeathMatch v0.0.12 by FEDERICOMB"
-  ],
-  "zp_version": [
-   "4.3",
-   "5.0.8",
-   "4.3 Fix5a",
-   "6.3",
-   "Ultimate",
-   "1.0",
-   "4.3 Fix6a",
-   "",
-   "5.0",
-   "8.387"
-  ],
-  "nademodes_version": [
-   "11.2",
-   "10",
-   "11.3",
-   "1.0",
-   "9.61",
-   "11.4-zp5-light",
-   "11.4-cyan-single-hud",
-   "1.2"
+   "1.6.17"
   ],
   "Team_Semiclip_version": [
-   "3.3.1",
-   "2.0.0",
-   "3.1.1",
-   "3.3.2",
-   "2.1.0 (zp43)",
-   "1.0",
-   "4.0",
-   "1.8.1",
-   "3.3.1-Fixed",
-   "2.0.1"
+   "3.1.0"
   ],
   "afk_manager_version": [
-   "1.0.6 (amx 1.8.3)",
-   "1.0.6 (amx 1.8.2)",
-   "1.0.5 (amx 1.8.3)",
-   "1.0",
-   "1.0.5 (amx 1.8.2)",
-   "1.1"
-  ],
-  "ezhttp_version": [
-   "1.5.0",
-   "2.4.1",
-   "1.4.1",
-   "1.4.0",
-   "1.5.0-exitguard1",
-   "2.1.0"
+   "1.0.6 (amx 1.9.0)"
   ],
   "AWPLimiter_version": [
-   "1.4.0",
-   "1.3.0 Beta-fix",
-   "1.3.0 Beta",
-   "1.0.0 Beta",
-   "2.2.8",
-   "1.8.2",
-   "1.1.1 Beta"
-  ],
-  "afk_version": [
-   "1.0b",
-   "1.1",
-   "1.0a",
-   "1.0",
-   "1.2",
-   "1.0b-v0.1.2",
-   "1.4-fixed",
-   "2.1",
-   "0.0",
-   "1.0d"
-  ],
-  "jk_botti_version": [
-   "1.43",
-   "1.44beta1",
-   "1.62_avx2fma",
-   "1.42",
-   "1.60_avx2fma",
-   "1.62_sse3",
-   "0.00gitunknown_sse3",
-   "1.45",
-   "1.44-APG",
-   "1.62soundfix1_x87"
-  ],
-  "rcbot_ver": [
-   "1.51b13_mm",
-   "1.51b14_mm",
-   "1.51b8_mm",
-   "1.441_BETA_mm_debug_win32",
-   "1.51b12_mm",
-   "1.51b5_mm",
-   "1.441_BETA_mm_release_win32",
-   "1.51b6_mm",
-   "1.443_mm",
-   "1.441_BETA_mm_release_linux"
+   "1.4.0-7HELL5.2 WARMUP ROUND SYNC"
   ]
  }
 }
