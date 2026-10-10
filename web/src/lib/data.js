@@ -75,6 +75,18 @@ export function hue(name) {
   return h;
 }
 
+export function flag(cc) {
+  const code = String(cc || '').toUpperCase();
+  if (!/^[A-Z]{2}$/.test(code)) {
+    return '';
+  }
+  const base = 127397;
+  return String.fromCodePoint(
+    base + code.charCodeAt(0),
+    base + code.charCodeAt(1)
+  );
+}
+
 export function capsuleUrl(appid) {
   return 'https://cdn.cloudflare.steamstatic.com/steam/apps/' + appid + '/capsule_184x69.jpg';
 }

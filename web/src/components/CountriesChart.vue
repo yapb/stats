@@ -8,6 +8,7 @@
 <script setup>
 import { computed, onMounted, watch } from 'vue';
 import { baseText, useChart } from '../lib/useChart.js';
+import { flag, hue } from '../lib/data.js';
 
 const props = defineProps({
   countries: { type: Array, required: true },
@@ -33,10 +34,11 @@ function draw() {
       return acc + c.servers;
     }, 0);
   const names = rows.value.map(function (c) {
-    return c.name + ' (' + c.cc + ')';
+    const mark = flag(c.cc);
+    return (mark ? mark + ' ' : '') + c.name;
   });
   const data = rows.value.map(function (c) {
-    return { value: c.servers, itemStyle: { color: '#38bdf8' } };
+    return { value: c.servers, itemStyle: { color: 'hsl(' + hue(c.cc) + ',60%,55%)' } };
   });
   if (rest > 0) {
     names.push('other');
