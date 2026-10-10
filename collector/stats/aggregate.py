@@ -18,10 +18,12 @@ def _guess_mod(result, entry, mods):
 
 
 def _is_fake_count(info):
-    """Impossible headcounts no real HL1 server reports."""
+    """Impossible headcounts no real HL1 server reports. Tolerances stay
+    wide on purpose: a couple of extra bodies can be HLTV or quirks, while
+    hundreds cannot."""
     players = info["players"]
     capacity = info["max_players"]
-    return players > capacity or capacity > 64 or players > 64
+    return players - capacity > 2 or capacity > 64 or players > 130
 
 
 def build(results, master, mods, tracked, per_mod_master, truncated_mods,

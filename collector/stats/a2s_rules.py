@@ -25,21 +25,30 @@ class RulesError(Exception):
     pass
 
 
-def fetch_rules(addr, timeout=1.5, goldsrc=True, attempts=3):
+def fetch_rules(addr, timeout=3.0, goldsrc=True, attempts=3, retries=2):
     """Return rules dict for one "host:port" addr. Raises on failure."""
-    host, _, port = addr.rpartition(":")
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.settimeout(timeout)
-    try:
-        data = _challenge_flow(sock, (host, int(port)), attempts)
-        header = struct.unpack("<i", data[:4])[0]
-        if header == -1:
-            return _parse(data, compressed=False)
-        if header == -2:
-            return _collect_and_parse(sock, data, timeout, goldsrc)
-        raise RulesError(f"bad header {header}")
-    finally:
-        sock.close()
+    last_exc = RulesError("no attempt made")
+    for _ in range(max(1, retries)):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.settimeout(timeout)
+        try:
+            host, _, port = addr.rpartition(":")
+            return _fetch_once(sock, (host, int(port)), timeout, goldsrc, attempts)
+        except Exception as e:
+            last_exc = e
+        finally:
+            sock.close()
+    raise last_exc
+
+
+def _fetch_once(sock, server, timeout, goldsrc, attempts):
+    data = _challenge_flow(sock, server, attempts)
+    header = struct.unpack("<i", data[:4])[0]
+    if header == -1:
+        return _parse(data, compressed=False)
+    if header == -2:
+        return _collect_and_parse(sock, data, timeout, goldsrc)
+    raise RulesError(f"bad header {header}")
 
 
 def _request(sock, server, challenge):
@@ -79,7 +88,7 @@ def _collect_and_parse(sock, first, timeout, goldsrc):
     order = (goldsrc, not goldsrc)
     raw = [first]
     sock.settimeout(0.4)
-    deadline = time.monotonic() + max(2.0, timeout)
+    deadline = time.monotonic() + max(4.0, timeout + 2.0)
     while True:
         for hint in order:
             ready = _try_interpret(raw, hint)
