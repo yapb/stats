@@ -10,7 +10,7 @@ import argparse
 import os
 import sys
 
-from stats import aggregate, config, farm, masters, probe
+from stats import aggregate, config, farm, geo, masters, probe
 
 
 def main():
@@ -52,10 +52,12 @@ def main():
     print(f"A2S targets: {len(targets)} (+{sdr} SDR skipped,"
           f" {args.workers} workers)", flush=True)
     results = probe.run_a2s(targets, args.timeout, args.workers)
+    geo_cache = geo.load_cache(os.path.join(args.out, "geocache.json"))
     latest, row = aggregate.build(
         results, master, mods, tracked, per_mod_master, truncated_mods,
-        source_new, farm_info, sdr)
+        source_new, farm_info, sdr, geo_cache)
     aggregate.write_output(args.out, latest, row)
+    geo.save_cache(os.path.join(args.out, "geocache.json"), geo_cache)
 
     yb = next((a["servers"] for a in latest["addons"] if a["name"] == "yb_version"), 0)
     print(f"alive={latest['totals']['alive']} with_rules={latest['totals']['with_rules']} "

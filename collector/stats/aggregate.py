@@ -5,6 +5,8 @@ import json
 import os
 from collections import Counter, defaultdict
 
+from stats import geo as geo_mod
+
 
 def _guess_mod(result, entry, mods):
     appid = entry.get("appid")
@@ -27,7 +29,7 @@ def _is_fake_count(info):
 
 
 def build(results, master, mods, tracked, per_mod_master, truncated_mods,
-          source_new, farm_info, sdr):
+          source_new, farm_info, sdr, geo_cache=None):
     """Fold results into (latest, history_row) dicts."""
     tracked_names = [v["name"] for v in tracked]
     answered = [r for r in results if "info" in r]
@@ -65,6 +67,19 @@ def build(results, master, mods, tracked, per_mod_master, truncated_mods,
 
     info_errs = Counter(r["info_err"] for r in results if "info_err" in r)
     rules_errs = Counter(r["rules_err"] for r in alive if "rules_err" in r)
+    countries = []
+    if geo_cache is not None:
+        ips = [r["addr"].rpartition(":")[0] for r in alive]
+        geo_mod.resolve(ips, geo_cache)
+        by_cc = Counter()
+        names = {}
+        for ip in ips:
+            hit = geo_mod.country_of(geo_cache, ip)
+            if hit and hit["cc"]:
+                by_cc[hit["cc"]] += 1
+                names[hit["cc"]] = hit["name"]
+        countries = [{"cc": cc, "name": names[cc], "servers": n}
+                     for cc, n in by_cc.most_common()]
     total_players = sum(row["players"] for row in by_mod.values())
     total_capacity = sum(row["max_players"] for row in by_mod.values())
 
@@ -91,6 +106,7 @@ def build(results, master, mods, tracked, per_mod_master, truncated_mods,
             "distinct_ips": len(farm_info["per_ip"]),
             "ips_over_100_servers": len(farm_info["spam_hosts"]),
         },
+        "countries": countries,
         "addons": [{"name": v["name"], "title": v["title"], "url": v["url"],
                     "servers": with_addon[v["name"]],
                     "players": addon_players[v["name"]],

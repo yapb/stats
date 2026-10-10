@@ -65,6 +65,11 @@
       </div>
     </div>
 
+    <div class="card p-4 mb-6">
+      <h2 class="font-semibold text-white mb-2">Servers by country</h2>
+      <div id="countries" style="height:340px"></div>
+    </div>
+
     <div class="grid md:grid-cols-2 gap-4 mb-6">
       <div class="card p-4">
         <h2 class="font-semibold text-white mb-2" id="pietitle">Version share</h2>
@@ -410,10 +415,40 @@ function renderHistory() {
   }, true);
 }
 
+function renderCountries() {
+  var el = document.getElementById('countries');
+  var list = (latest.countries || []).slice(0, 15);
+  if (!list.length) {
+    el.innerHTML = '<p class="text-slate-500 text-sm">Country data appears with the next census.</p>';
+    return;
+  }
+  var rest = (latest.countries || []).slice(15).reduce(function (acc, c) {
+    return acc + c.servers;
+  }, 0);
+  var names = list.map(function (c) { return c.name + ' (' + c.cc + ')'; });
+  var data = list.map(function (c) { return c.servers; });
+  if (rest > 0) { names.push('other'); data.push(rest); }
+  chart('countries').setOption({
+    backgroundColor: 'transparent',
+    tooltip: { trigger: 'axis' },
+    textStyle: { color: '#cbd5e1' },
+    xAxis: { type: 'value' },
+    yAxis: { type: 'category', data: names.reverse(), inverse: false },
+    series: [{
+      type: 'bar',
+      data: data.reverse(),
+      label: { show: true, position: 'right', color: '#94a3b8' },
+      itemStyle: { color: '#38bdf8' }
+    }],
+    grid: { left: 8, right: 48, containLabel: true }
+  }, true);
+}
+
 function renderOverview() {
   state.mod = 'all';
   renderSummaryGlobal();
   renderCards();
+  renderCountries();
   renderPie();
   renderValues();
   renderMods();
