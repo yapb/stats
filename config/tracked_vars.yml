@@ -115,6 +115,68 @@ vars:
     title: JK_BOTTI
   - name: rcbot_ver
     title: RCBot
+  - name: plugins_core_version
+    title: Plugins Core
+  - name: lt_version
+    title: Lite
+  - name: redirect_version
+    title: xREDIRECT
+  - name: CustomSkies_version
+    title: Custom Skies
+  - name: pbk_version
+    title: Play or Be Kicked
+  - name: hackdetector_amxx_version
+    title: HackDetector Lite
+  - name: amxbans_ssversion
+    title: AMXBans SS
+  - name: gg_version
+    title: GunGame AMXX
+    url: http://avalanche.gungame.org/
+  - name: specinfo_version
+    title: SpecInfo
+  - name: statsx_shell_ver
+    title: StatsX Shell
+  - name: fn_version
+    title: Frost Nades
+  - name: new_kick_menu_version
+    title: New Kick Menu
+  - name: grab_plus_version
+    title: Grab Plus
+  - name: mp_bhop_version
+    title: Bhop
+  - name: csac_version
+    title: CSAC
+  - name: plugin_core_version
+    title: Plugin Core
+  - name: recoil_control_version
+    title: Recoil Control
+  - name: allchat_version
+    title: All Chat
+  - name: bancfg_version
+    title: BanCfg
+  - name: badcamper_version
+    title: Bad Camper
+    url: http://forums.alliedmods.net/showthread.php?p=156560
+  - name: sbhopper_version
+    title: Super Bunny Hopper
+  - name: damager_advanced_version
+    title: Damager Advanced
+  - name: awt_version
+    title: AWT
+  - name: gag_me_version
+    title: Gag Me
+  - name: dmb_version
+    title: Deathmatch
+  - name: lambda_version
+    title: Lambda
+  - name: color_flash_screen_version
+    title: Color Flash Screen
+  - name: NBEX_Version
+    title: NBEX
+  - name: nclapi_version
+    title: NextClientServerApi
+  - name: atac_version
+    title: ATAC
   - name: mp_bhopcap
     title: Xash3D
     url: https://github.com/FWGS/xash3d-fwgs
