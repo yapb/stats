@@ -4,6 +4,7 @@ import * as echarts from 'echarts';
 export function useChart() {
   const el = shallowRef(null);
   let chart = null;
+  let observer = null;
 
   function onResize() {
     if (chart && el.value && el.value.offsetParent !== null) {
@@ -17,13 +18,24 @@ export function useChart() {
     }
     if (!chart) {
       chart = echarts.init(el.value);
-      addEventListener('resize', onResize);
+      if (typeof ResizeObserver !== 'undefined') {
+        observer = new ResizeObserver(onResize);
+        observer.observe(el.value);
+      } else {
+        addEventListener('resize', onResize);
+      }
+      requestAnimationFrame(onResize);
     }
     chart.setOption(option, true);
   }
 
   onBeforeUnmount(function () {
-    removeEventListener('resize', onResize);
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    } else {
+      removeEventListener('resize', onResize);
+    }
     if (chart) {
       chart.dispose();
       chart = null;
