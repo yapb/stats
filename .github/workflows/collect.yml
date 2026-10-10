@@ -67,10 +67,12 @@ jobs:
           path: ${{ env.MASTER_CACHE }}
           key: master-${{ steps.today.outputs.date }}
 
-      - name: Notify new versions
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python collector/notify.py
+      # Disabled for now (enable with the release watch): opens one issue
+      # per freshly seen addon version, deduped via web/data/notified.json.
+      # - name: Notify new versions
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: python collector/notify.py
 
       - name: Commit fresh data
         run: |
