@@ -50,6 +50,9 @@ const byCount = computed(function () {
 });
 
 function topValues(a) {
+  if (a.novalue) {
+    return 'presence only';
+  }
   const top = sortedValues(a.values || {})
     .slice(0, 4)
     .map(function (kv) {

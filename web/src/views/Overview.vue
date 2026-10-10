@@ -73,7 +73,14 @@
     </div>
   </div>
 
-  <div class="grid md:grid-cols-2 gap-4 mb-6">
+  <div v-if="addon.novalue" class="card p-4 mb-6">
+    <h2 class="font-semibold text-white mb-2">{{ addon.title }}: presence</h2>
+    <p class="text-slate-400 text-sm">
+      Present on {{ fmt(addon.servers || 0) }} servers. Values of
+      <span class="num">{{ addon.name }}</span> are settings, not versions.
+    </p>
+  </div>
+  <div v-else class="grid md:grid-cols-2 gap-4 mb-6">
     <div class="card p-4">
       <h2 class="font-semibold text-white mb-2">{{ addon.title }}: version share</h2>
       <VersionPie :title="addon.title" :values="addon.values" />

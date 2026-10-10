@@ -19,6 +19,7 @@ vars:
   - name: bot_quota
     title: CZ Bot
     url: https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/
+    novalue: true
   - name: sv_version
     title: ReHLDS
     url: https://github.com/dreamstalker/rehlds
@@ -117,3 +118,4 @@ vars:
   - name: mp_bhopcap
     title: Xash3D
     url: https://github.com/FWGS/xash3d-fwgs
+    novalue: true

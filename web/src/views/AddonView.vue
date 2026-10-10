@@ -49,7 +49,10 @@
 
   <div class="card p-4 mb-4 overflow-x-auto">
     <h3 class="font-semibold text-white mb-2">Tracked values</h3>
-    <table class="stats w-full text-sm num">
+    <p v-if="addon.novalue" class="text-slate-400 text-sm">
+      Presence-only tracking: values of {{ addon.name }} are settings, not versions.
+    </p>
+    <table v-else class="stats w-full text-sm num">
       <thead>
         <tr>
           <th class="hidden sm:table-cell">Variable</th>

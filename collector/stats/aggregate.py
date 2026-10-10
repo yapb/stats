@@ -138,6 +138,7 @@ def build(results, master, mods, tracked, truncated_mods,
                           for k, n in stray_vars.most_common(30)],
         "addons": [{"name": v["name"], "title": v["title"],
                     **({"url": v["url"]} if v.get("url") else {}),
+                    "novalue": bool(v.get("novalue")),
                     "servers": with_addon[v["name"]],
                     "players": addon_players[v["name"]],
                     "max_players": addon_capacity[v["name"]],
@@ -193,7 +194,10 @@ def write_output(out_dir, latest, row):
                     known.add((name, v))
     fresh = {}
     if baseline >= 1:
+        novalue = {v["name"] for v in tracked if v.get("novalue")}
         for name, vals in row.get("addon_versions", {}).items():
+            if name in novalue:
+                continue
             new = [v for v in vals if (name, v) not in known]
             if new:
                 fresh[name] = new
