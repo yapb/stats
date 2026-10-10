@@ -41,6 +41,9 @@ mods:
     gamedir: ag
     name: Adrenaline Gamer
   - appid: 70
+    gamedir: action
+    name: Action Half-Life
+  - appid: 70
     gamedir: brainbread
     name: BrainBread
   - appid: 70
