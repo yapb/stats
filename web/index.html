@@ -363,7 +363,7 @@ function renderHistory() {
   if (state.mod === 'all') {
     latest.addons.forEach(function (a) {
       series.push({
-        name: a.title, type: 'line', smooth: true,
+        name: a.title, type: 'line', smooth: true, yAxisIndex: 1,
         data: history.map(function (r) { return (r['addon:' + a.name] || 0); })
       });
     });
@@ -373,7 +373,7 @@ function renderHistory() {
   if (state.ver) {
     var va = addonByName(state.addon);
     series.push({
-      name: va.title + ' ' + state.ver, type: 'line', smooth: true,
+      name: va.title + ' ' + state.ver, type: 'line', smooth: true, yAxisIndex: 1,
       lineStyle: { width: 3 }, itemStyle: { color: '#9ece6a' },
       data: history.map(function (r) {
         return (((r.addon_versions || {})[va.name]) || {})[state.ver] || 0;
@@ -386,8 +386,8 @@ function renderHistory() {
     tooltip: { trigger: 'axis' },
     textStyle: { color: '#cbd5e1' },
     legend: { textStyle: { color: '#94a3b8' } },
-    xAxis: { type: 'category', data: history.map(function (r) { return r.date; }) },
-    yAxis: { type: 'value' },
+    xAxis: { type: 'category', data: history.map(function (r) { return r.ts || r.date; }) },
+    yAxis: [{ type: 'value' }, { type: 'value', splitLine: { show: false } }],
     series: series,
     grid: { left: 8, right: 24, containLabel: true }
   }, true);
@@ -473,7 +473,7 @@ function renderAddonView(name) {
       tooltip: { trigger: 'axis' },
       textStyle: { color: '#cbd5e1' },
       legend: { textStyle: { color: '#94a3b8' } },
-      xAxis: { type: 'category', data: history.map(function (r) { return r.date; }) },
+      xAxis: { type: 'category', data: history.map(function (r) { return r.ts || r.date; }) },
       yAxis: { type: 'value' },
       series: series,
       grid: { left: 8, right: 24, containLabel: true }
@@ -528,7 +528,7 @@ function renderModView(appid) {
       tooltip: { trigger: 'axis' },
       textStyle: { color: '#cbd5e1' },
       legend: { textStyle: { color: '#94a3b8' } },
-      xAxis: { type: 'category', data: history.map(function (r) { return r.date; }) },
+      xAxis: { type: 'category', data: history.map(function (r) { return r.ts || r.date; }) },
       yAxis: { type: 'value' },
       series: [
         {

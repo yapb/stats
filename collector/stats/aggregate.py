@@ -110,7 +110,8 @@ def build(results, master, mods, tracked, per_mod_master, truncated_mods,
                      "not silently dropped."),
         },
     }
-    row = {"date": stamp.strftime("%Y-%m-%d"),
+    row = {"ts": stamp.strftime("%Y-%m-%d %H:%M"),
+           "date": stamp.strftime("%Y-%m-%d"),
            "alive": len(alive), "with_rules": len(with_rules),
            "players": total_players, "max_players": total_capacity,
            **{f"addon:{n}": with_addon[n] for n in tracked_names},
@@ -132,6 +133,7 @@ def write_output(out_dir, latest, row):
     if os.path.exists(hist_path):
         with open(hist_path, encoding="utf-8") as f:
             history = json.load(f)
-    history = [h for h in history if h.get("date") != row["date"]] + [row]
+    history = [h for h in history if h.get("ts") != row["ts"]] + [row]
+    history = history[-120:]
     with open(hist_path, "w", encoding="utf-8") as f:
         json.dump(history, f, ensure_ascii=False, indent=1)
