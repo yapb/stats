@@ -2,11 +2,10 @@
   <div class="max-w-6xl mx-auto px-4 py-8">
     <header class="mb-6">
       <h1 class="text-3xl font-bold text-white">
-        <a :href="homePath()" style="color:#fff">Addons Stats</a>
+        <a :href="homePath()" style="color:#fff">GoldSrc Addon Stats</a>
       </h1>
       <p class="text-slate-400 mt-1">
-        Daily census of public Half-Life servers: which addons run where and on
-        which version. Scanned via Steam master list plus A2S queries.
+        Daily census of Half-Life 1 servers: which addons run where and on which version.
       </p>
     </header>
 
@@ -32,10 +31,10 @@
       :cc="route.param"
     />
 
-    <footer v-if="latest" class="text-sm mt-6">
-      <div class="card p-4 mb-4">
-        <h2 class="font-semibold text-white mb-3">Census notes</h2>
-        <dl class="grid sm:grid-cols-2 gap-x-6 gap-y-3">
+    <footer v-if="latest" class="mt-6">
+      <details class="card p-4 mb-4">
+        <summary class="font-semibold text-white cursor-pointer">Census notes</summary>
+        <dl class="grid sm:grid-cols-2 gap-x-6 gap-y-3 mt-3">
           <div v-for="note in notes" :key="note.label" class="flex gap-3">
             <div class="num text-xl font-bold text-white whitespace-nowrap min-w-[4.5rem] text-right">
               {{ note.value }}
@@ -46,7 +45,7 @@
             </div>
           </div>
         </dl>
-      </div>
+      </details>
       <p class="text-slate-600 text-xs mt-3">Sources: {{ sourceLine }}. Frontend: Vue + ECharts.</p>
       <p class="text-slate-500">
         Raw data:
