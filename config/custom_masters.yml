@@ -25,6 +25,10 @@ masters:
     port: 27011
     name: CSDownload
     gamedirs: [cstrike]
+  - host: ms.cs16.net
+    port: 27010
+    name: CS16
+    gamedirs: [cstrike]
   - host: ms1.ds-servers.com
     port: 27010
     name: DSServers
