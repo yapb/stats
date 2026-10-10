@@ -32,7 +32,9 @@
         <h2 class="font-semibold text-white mb-3">Census notes</h2>
         <dl class="grid sm:grid-cols-2 gap-x-6 gap-y-3">
           <div v-for="note in notes" :key="note.label" class="flex gap-3">
-            <div class="num text-xl font-bold text-white whitespace-nowrap">{{ note.value }}</div>
+            <div class="num text-xl font-bold text-white whitespace-nowrap min-w-[4.5rem] text-right">
+              {{ note.value }}
+            </div>
             <div>
               <dt class="text-slate-200 text-sm font-medium">{{ note.label }}</dt>
               <dd class="text-slate-500 text-xs">{{ note.text }}</dd>
@@ -40,6 +42,7 @@
           </div>
         </dl>
       </div>
+      <p class="text-slate-600 text-xs mt-3">Sources: {{ sourceLine }}. Frontend: Vue + ECharts.</p>
       <p class="text-slate-500">
         Raw data:
         <a href="data/latest.json">latest.json</a>,
@@ -100,8 +103,19 @@ onBeforeUnmount(function () {
   removeEventListener('hashchange', onHash);
 });
 
-const notes = computed(function () {
+const sourceLine = computed(function () {
   if (!latest.value) {
+    return '';
+  }
+  const s = latest.value.totals.sources || {};
+  return Object.keys(s)
+    .map(function (k) {
+      return k + ' ' + fmt(s[k]);
+    })
+    .join(' · ');
+});
+
+const notes = computed(function () {  if (!latest.value) {
     return [];
   }
   const t = latest.value.totals;
