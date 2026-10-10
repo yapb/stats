@@ -26,6 +26,53 @@
 
   <div class="grid md:grid-cols-2 gap-4 mb-6">
     <div class="card p-4">
+      <h2 class="font-semibold text-white mb-2">{{ addon.title }}: version share</h2>
+      <VersionPie :title="addon.title" :values="addon.values" />
+    </div>
+    <div class="card p-4">
+      <h2 class="font-semibold text-white mb-2">
+        {{ addon.title }}: top values ({{ addon.name }}, click to filter)
+      </h2>
+      <ValuesBars
+        :values="addon.values"
+        :readable="latest.totals.with_rules"
+        :selected="ver"
+        :fresh="(latest.fresh || {})[addon.name] || []"
+        @select="toggleVer"
+      />
+    </div>
+  </div>
+
+  <div class="card p-4 mb-6">
+    <h2 class="font-semibold text-white mb-2">Servers by country</h2>
+    <CountriesChart :countries="latest.countries" />
+  </div>
+
+  <div class="card p-4 mb-6">
+    <div class="flex items-center justify-between mb-2">
+      <h2 class="font-semibold text-white">History</h2>
+      <div class="flex gap-2">
+        <button
+          class="text-xs px-3 py-1 rounded-full border"
+          :class="histMode === 'servers' ? 'text-white border-sky-400 bg-sky-950' : 'text-slate-400'"
+          @click="histMode = 'servers'"
+        >
+          Servers
+        </button>
+        <button
+          class="text-xs px-3 py-1 rounded-full border"
+          :class="histMode === 'players' ? 'text-white border-sky-400 bg-sky-950' : 'text-slate-400'"
+          @click="histMode = 'players'"
+        >
+          Players
+        </button>
+      </div>
+    </div>
+    <HistoryChart :dates="dates" :series="series" :dual-axis="true" />
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4 mb-6">
+    <div class="card p-4">
       <h2 class="font-semibold text-white mb-2">Unlisted mods (open a PR to track)</h2>
       <div class="scroll10 overflow-x-auto">
         <table class="stats w-full text-sm num">
@@ -71,60 +118,6 @@
         </table>
       </div>
     </div>
-  </div>
-
-  <div v-if="addon.novalue" class="card p-4 mb-6">
-    <h2 class="font-semibold text-white mb-2">{{ addon.title }}: presence</h2>
-    <p class="text-slate-400 text-sm">
-      Present on {{ fmt(addon.servers || 0) }} servers. Values of
-      <span class="num">{{ addon.name }}</span> are settings, not versions.
-    </p>
-  </div>
-  <div v-else class="grid md:grid-cols-2 gap-4 mb-6">
-    <div class="card p-4">
-      <h2 class="font-semibold text-white mb-2">{{ addon.title }}: version share</h2>
-      <VersionPie :title="addon.title" :values="addon.values" />
-    </div>
-    <div class="card p-4">
-      <h2 class="font-semibold text-white mb-2">
-        {{ addon.title }}: top values ({{ addon.name }}, click to filter)
-      </h2>
-      <ValuesBars
-        :values="addon.values"
-        :readable="latest.totals.with_rules"
-        :selected="ver"
-        :fresh="(latest.fresh || {})[addon.name] || []"
-        @select="toggleVer"
-      />
-    </div>
-  </div>
-
-  <div class="card p-4 mb-6">
-    <h2 class="font-semibold text-white mb-2">Servers by country</h2>
-    <CountriesChart :countries="latest.countries" />
-  </div>
-
-  <div class="card p-4 mb-6">
-    <div class="flex items-center justify-between mb-2">
-      <h2 class="font-semibold text-white">History</h2>
-      <div class="flex gap-2">
-        <button
-          class="text-xs px-3 py-1 rounded-full border"
-          :class="histMode === 'servers' ? 'text-white border-sky-400 bg-sky-950' : 'text-slate-400'"
-          @click="histMode = 'servers'"
-        >
-          Servers
-        </button>
-        <button
-          class="text-xs px-3 py-1 rounded-full border"
-          :class="histMode === 'players' ? 'text-white border-sky-400 bg-sky-950' : 'text-slate-400'"
-          @click="histMode = 'players'"
-        >
-          Players
-        </button>
-      </div>
-    </div>
-    <HistoryChart :dates="dates" :series="series" :dual-axis="true" />
   </div>
 </template>
 
