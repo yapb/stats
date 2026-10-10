@@ -160,7 +160,13 @@ export function buildOverviewSeries(latest, histRows, ver) {
       }),
     },
   ];
-  for (const a of latest.addons) {
+  const ranked = latest.addons
+    .slice()
+    .sort(function (a, b) {
+      return (b.servers || 0) - (a.servers || 0);
+    })
+    .slice(0, 20);
+  for (const a of ranked) {
     series.push({
       name: a.title,
       type: 'line',
