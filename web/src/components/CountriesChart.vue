@@ -2,7 +2,7 @@
   <div v-if="!rows.length">
     <p class="text-slate-500 text-sm">Country data appears with the next census.</p>
   </div>
-  <div v-else ref="el" style="height:340px"></div>
+  <div v-else ref="el" :style="{ height: height + 'px' }"></div>
 </template>
 
 <script setup>
@@ -16,7 +16,11 @@ const props = defineProps({
 const { el, render } = useChart();
 
 const rows = computed(function () {
-  return (props.countries || []).slice(0, 15);
+  return (props.countries || []).slice(0, 12);
+});
+
+const height = computed(function () {
+  return Math.max(300, (rows.value.length + 1) * 30);
 });
 
 function draw() {
@@ -24,7 +28,7 @@ function draw() {
     return;
   }
   const rest = (props.countries || [])
-    .slice(15)
+    .slice(12)
     .reduce(function (acc, c) {
       return acc + c.servers;
     }, 0);
@@ -32,11 +36,11 @@ function draw() {
     return c.name + ' (' + c.cc + ')';
   });
   const data = rows.value.map(function (c) {
-    return c.servers;
+    return { value: c.servers, itemStyle: { color: '#38bdf8' } };
   });
   if (rest > 0) {
     names.push('other');
-    data.push(rest);
+    data.push({ value: rest, itemStyle: { color: '#475569' } });
   }
   render({
     backgroundColor: 'transparent',
@@ -49,7 +53,6 @@ function draw() {
         type: 'bar',
         data: data.reverse(),
         label: { show: true, position: 'right', color: '#94a3b8' },
-        itemStyle: { color: '#38bdf8' },
       },
     ],
     grid: { left: 8, right: 48, containLabel: true },
