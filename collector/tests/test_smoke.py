@@ -4,6 +4,7 @@ Catches KeyError-class bugs before a full run burns an hour.
 Run: python collector/tests/test_smoke.py (exit nonzero on failure).
 """
 
+import json
 import os
 import sys
 import tempfile
@@ -76,8 +77,13 @@ class SmokeTest(unittest.TestCase):
         self.assertEqual(row["alive"], 2)
         self.assertIn("addon:yb_version", row)
         with tempfile.TemporaryDirectory() as out:
-            fresh = aggregate.write_output(out, latest, row)
+            with open(os.path.join(out, "history.json"), "w", encoding="utf-8") as f:
+                json.dump([{"ts": "2026-10-09 00:00", "date": "2026-10-09",
+                            "addon_versions": {"yb_version": ["4.8.0"]}}], f)
+            fresh = aggregate.write_output(out, latest, row, tracked)
             self.assertIn("fresh", latest)
+            self.assertIn("yb_version", fresh)
+            self.assertNotIn("bot_quota", fresh)
             self.assertTrue(os.path.exists(os.path.join(out, "latest.json")))
             self.assertTrue(os.path.exists(os.path.join(out, "history.json")))
             self.assertIsInstance(fresh, dict)

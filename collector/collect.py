@@ -63,7 +63,7 @@ def main():
     latest, row = aggregate.build(
         results, master, mods, tracked, truncated_mods,
         source_new, farm_info, sdr, geo_reader)
-    fresh = aggregate.write_output(args.out, latest, row)
+    fresh = aggregate.write_output(args.out, latest, row, tracked)
     if geo_reader is not None:
         geo_reader.close()
 

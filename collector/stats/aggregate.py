@@ -189,7 +189,7 @@ def build(results, master, mods, tracked, truncated_mods,
     return latest, row
 
 
-def write_output(out_dir, latest, row):
+def write_output(out_dir, latest, row, tracked):
     """Write latest.json, appending the row to history.json by timestamp.
 
     Returns {addon: [values]} first seen in this run (dashboard NEW badges
