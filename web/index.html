@@ -13,10 +13,6 @@
   a { color: #7aa2f7; }
   a:hover { text-decoration: underline; }
   select { background: #0b0e14; border: 1px solid #2b3550; border-radius: .6rem; padding: .35rem .6rem; }
-  .pill { border: 1px solid #2b3550; border-radius: 999px; padding: .3rem .8rem; font-size: .8rem;
-    color: #94a3b8; cursor: pointer; white-space: nowrap; }
-  .pill:hover { color: #fff; border-color: #7aa2f7; }
-  .pill.active { background: #1c2942; color: #fff; border-color: #7aa2f7; }
   table.stats { border-collapse: collapse; }
   table.stats td, table.stats th { padding: .45rem .75rem; border-bottom: 1px solid #1c2333; }
   table.stats thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em;
@@ -24,6 +20,7 @@
   table.stats tbody tr.link { cursor: pointer; }
   table.stats tbody tr.link:hover { background: rgba(122,162,247,.08); }
   table.stats tbody tr.active { background: rgba(122,162,247,.14); }
+  .scroll10 { max-height: 32rem; overflow-y: auto; }
   .vrow { display: flex; align-items: center; gap: .6rem; padding: .3rem .4rem;
     border-radius: .5rem; cursor: pointer; }
   .vrow:hover { background: rgba(122,162,247,.08); }
@@ -44,22 +41,27 @@
   <header class="mb-6">
     <h1 class="text-3xl font-bold text-white"><a href="#/" style="color:#fff">Addons Stats</a></h1>
     <p class="text-slate-400 mt-1">Daily census of public Half-Life servers:
-      which addons (<span id="addonlinks">…</span>) run where and on
-      which version. Scanned via Steam master list plus A2S queries.</p>
+      which addons run where and on which version.
+      Scanned via Steam master list plus A2S queries.</p>
   </header>
 
   <section id="view-overview">
     <div class="card p-4 mb-6" id="summary-global"></div>
 
     <div class="card p-4 mb-6 flex flex-wrap items-center gap-2">
-      <span class="text-slate-400 text-sm mr-1">Mod:</span>
-      <span id="modpills" class="flex flex-wrap gap-2"></span>
-      <span class="text-slate-400 text-sm ml-3 mr-1">Addon:</span>
+      <span class="text-slate-400 text-sm mr-1">Addon:</span>
       <select id="addonpick" class="text-sm text-slate-200"></select>
       <span id="generated" class="text-xs text-slate-500 ml-auto"></span>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6" id="cards"></div>
+
+    <div class="card p-4 mb-6">
+      <h2 class="font-semibold text-white mb-2">Game mods</h2>
+      <div class="scroll10 overflow-x-auto">
+        <table class="stats w-full text-sm num" id="mods"></table>
+      </div>
+    </div>
 
     <div class="grid md:grid-cols-2 gap-4 mb-6">
       <div class="card p-4">
@@ -78,15 +80,9 @@
       <p class="text-xs text-slate-500 mt-1" id="histnote"></p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-4 mb-6">
-      <div class="card p-4 overflow-x-auto">
-        <h2 class="font-semibold text-white mb-2">Mods</h2>
-        <table class="stats w-full text-sm num" id="mods"></table>
-      </div>
-      <div class="card p-4 overflow-x-auto">
-        <h2 class="font-semibold text-white mb-2">Addons</h2>
-        <table class="stats w-full text-sm num" id="addons"></table>
-      </div>
+    <div class="card p-4 mb-6 overflow-x-auto">
+      <h2 class="font-semibold text-white mb-2">Addons</h2>
+      <table class="stats w-full text-sm num" id="addons"></table>
     </div>
   </section>
 
@@ -303,24 +299,20 @@ function renderMods() {
     (verCol ? '<th>' + state.ver + '</th>' : '') +
     '<th>Players</th><th>Bots</th></tr></thead><tbody>';
   rows.forEach(function (m) {
-    var active = String(state.mod) === String(m.appid) ? ' class="active link"' : ' class="link"';
     var verCell = '';
     if (verCol) {
       var mv = ((a.by_mod || {})[String(m.appid)] || { values: {} }).values || {};
       verCell = '<td>' + fmt(mv[state.ver] || 0) + '</td>';
     }
-    html += '<tr' + active + ' data-mod="' + m.appid + '"><td><span class="flex items-center gap-2">' +
+    html += '<tr class="link" data-mod="' + m.appid + '"><td><span class="flex items-center gap-2">' +
       capsule(m.appid) + '<a href="#/mod/' + m.appid + '">' + m.name + '</a></span></td><td>' +
       fmt(m.alive) + '</td><td>' + fmt(m.with_rules) + '</td>' + verCell +
       '<td>' + fmt(m.players) + '</td><td>' + fmt(m.bots) + '</td></tr>';
   });
   document.getElementById('mods').innerHTML = html + '</tbody>';
   document.getElementById('mods').querySelectorAll('tr[data-mod]').forEach(function (tr) {
-    tr.onclick = function (ev) {
-      if (ev.target.tagName === 'A') { return; }
-      var id = tr.getAttribute('data-mod');
-      state.mod = (String(state.mod) === id) ? 'all' : id;
-      renderOverview();
+    tr.onclick = function () {
+      location.hash = '#/mod/' + tr.getAttribute('data-mod');
     };
   });
 }
@@ -404,20 +396,7 @@ function renderHistory() {
   }, true);
 }
 
-function renderPills() {
-  var html = '<button class="pill' + (state.mod === 'all' ? ' active' : '') +
-    '" data-mod="all">All mods</button>';
-  latest.mods.forEach(function (m) {
-    html += '<button class="pill' + (String(state.mod) === String(m.appid) ? ' active' : '') +
-      '" data-mod="' + m.appid + '">' + m.name + '</button>';
-  });
-  document.getElementById('modpills').innerHTML = html;
-  document.getElementById('modpills').querySelectorAll('.pill').forEach(function (p) {
-    p.onclick = function () {
-      state.mod = p.getAttribute('data-mod');
-      renderOverview();
-    };
-  });
+function renderAddonPick() {
   var pick = document.getElementById('addonpick');
   pick.innerHTML = latest.addons.map(function (a) {
     return '<option value="' + a.name + '">' + a.title + '</option>';
@@ -431,7 +410,8 @@ function renderPills() {
 }
 
 function renderOverview() {
-  renderPills();
+  state.mod = 'all';
+  renderAddonPick();
   renderSummaryGlobal();
   renderCards();
   renderPie();
@@ -526,7 +506,6 @@ function renderAddonView(name) {
 function renderModView(appid) {
   var m = modById(appid);
   if (!m) { location.hash = '#/'; return; }
-  state.mod = String(appid);
   document.getElementById('mod-crumb').textContent = m.name;
   var date = (latest.generated_at || '?').replace('T', ' ').replace('+00:00', ' UTC');
   var rows = '';
@@ -634,9 +613,6 @@ function showView() {
   }
   try { history = await load('data/history.json'); } catch (e) { history = []; }
   if (!addonByName(state.addon)) { state.addon = latest.addons[0].name; }
-  document.getElementById('addonlinks').innerHTML = latest.addons.map(function (a) {
-    return '<a href="#/addon/' + a.name + '">' + a.title + '</a>';
-  }).join(', ');
   addEventListener('hashchange', showView);
   addEventListener('resize', function () {
     Object.keys(charts).forEach(function (id) {
