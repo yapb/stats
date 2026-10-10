@@ -118,3 +118,39 @@ mods:
   - appid: 70
     gamedir: zp
     name: Zombie Panic
+  - appid: 70
+    gamedir: firearms
+    name: Firearms
+  - appid: 70
+    gamedir: firearms25
+    name: Firearms 2.5
+  - appid: 70
+    gamedir: rewolf
+    name: Gunman Chronicles
+  - appid: 70
+    gamedir: dpbredux
+    name: Digital Paintball Redux
+  - appid: 70
+    gamedir: pvk
+    name: Pirates, Vikings and Knights
+  - appid: 70
+    gamedir: wantedsp
+    name: Wanted
+  - appid: 70
+    gamedir: gangwars
+    name: Gangwars
+  - appid: 70
+    gamedir: 3wave
+    name: Threewave
+  - appid: 70
+    gamedir: bumpercars
+    name: Bumper Cars
+  - appid: 70
+    gamedir: dragonmodz
+    name: DragonMod Z
+  - appid: 70
+    gamedir: turbo
+    name: Turbo
+  - appid: 70
+    gamedir: buzzybots
+    name: BuzzyBots
