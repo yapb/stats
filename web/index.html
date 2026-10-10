@@ -124,6 +124,13 @@ function chart(id) {
   return charts[id];
 }
 
+function sortedAddons() {
+  return latest.addons.slice().sort(function (a, b) {
+    var x = a.title.toLowerCase(), y = b.title.toLowerCase();
+    return x < y ? -1 : (x > y ? 1 : 0);
+  });
+}
+
 function addonByName(name) {
   for (var i = 0; i < latest.addons.length; i++) {
     if (latest.addons[i].name === name) { return latest.addons[i]; }
@@ -303,19 +310,19 @@ function renderMods() {
   var rows = latest.mods.slice().sort(function (a, b) { return b.alive - a.alive; });
   var a = addonByName(state.addon);
   var verCol = !!state.ver;
-  var html = '<thead><tr><th>Mod</th><th>Alive</th><th>Rules</th>' +
-    (verCol ? '<th>' + state.ver + '</th>' : '') +
-    '<th>Players</th><th>Bots</th></tr></thead><tbody>';
+  var html = '<thead><tr><th>Mod</th><th>Alive</th><th class="hidden sm:table-cell">Rules</th>' +
+    (verCol ? '<th class="hidden sm:table-cell">' + state.ver + '</th>' : '') +
+    '<th>Players</th><th class="hidden md:table-cell">Bots</th></tr></thead><tbody>';
   rows.forEach(function (m) {
     var verCell = '';
     if (verCol) {
       var mv = ((a.by_mod || {})[String(m.appid)] || { values: {} }).values || {};
-      verCell = '<td>' + fmt(mv[state.ver] || 0) + '</td>';
+      verCell = '<td class="hidden sm:table-cell">' + fmt(mv[state.ver] || 0) + '</td>';
     }
     html += '<tr class="link" data-mod="' + m.appid + '"><td><span class="flex items-center gap-2">' +
       capsule(m.appid) + '<a href="#/mod/' + m.appid + '">' + m.name + '</a></span></td><td>' +
-      fmt(m.alive) + '</td><td>' + fmt(m.with_rules) + '</td>' + verCell +
-      '<td>' + fmt(m.players) + '</td><td>' + fmt(m.bots) + '</td></tr>';
+      fmt(m.alive) + '</td><td class="hidden sm:table-cell">' + fmt(m.with_rules) + '</td>' + verCell +
+      '<td>' + fmt(m.players) + '</td><td class="hidden md:table-cell">' + fmt(m.bots) + '</td></tr>';
   });
   document.getElementById('mods').innerHTML = html + '</tbody>';
   document.getElementById('mods').querySelectorAll('tr[data-mod]').forEach(function (tr) {
@@ -327,8 +334,8 @@ function renderMods() {
 
 function renderAddons() {
   var html = '<thead><tr><th>Addon</th><th>Servers</th>' +
-    '<th>Top values (in scope)</th></tr></thead><tbody>';
-  latest.addons.forEach(function (a) {
+    '<th class="hidden sm:table-cell">Top values (in scope)</th></tr></thead><tbody>';
+  sortedAddons().forEach(function (a) {
     var s = (state.mod === 'all')
       ? { servers: a.servers || 0, values: a.values || {} }
       : ((a.by_mod || {})[String(state.mod)] || { servers: 0, values: {} });
@@ -338,8 +345,8 @@ function renderAddons() {
     var active = state.addon === a.name ? ' class="active link"' : ' class="link"';
     html += '<tr' + active + ' data-addon="' + a.name + '"><td><span class="flex items-center gap-2">' +
       avatar(a.title) + '<span><a href="#/addon/' + a.name + '">' + a.title +
-      '</a> <span class="text-slate-500">(' + a.name + ')</span></span></span></td><td>' +
-      fmt(s.servers) + '</td><td>' + top + '</td></tr>';
+      '</a> <span class="text-slate-500 hidden sm:inline">(' + a.name + ')</span></span></span></td><td>' +
+      fmt(s.servers) + '</td><td class="hidden sm:table-cell">' + top + '</td></tr>';
   });
   document.getElementById('addons').innerHTML = html + '</tbody>';
   document.getElementById('addons').querySelectorAll('tr[data-addon]').forEach(function (tr) {
@@ -371,7 +378,7 @@ function renderHistory() {
   ];
   var note = '';
   if (state.mod === 'all') {
-    latest.addons.forEach(function (a) {
+    sortedAddons().forEach(function (a) {
       series.push({
         name: a.title, type: 'line', smooth: true, yAxisIndex: 1,
         data: history.map(function (r) { return (r['addon:' + a.name] || 0); })
@@ -438,7 +445,7 @@ function renderAddonView(name) {
   });
   var valRows = '';
   sortedValues(a.values).slice(0, 30).forEach(function (kv) {
-    valRows += '<tr><td>' + a.name + '</td><td>' + kv[0] + '</td><td>' + fmt(kv[1]) + '</td></tr>';
+    valRows += '<tr><td class="hidden sm:table-cell">' + a.name + '</td><td>' + kv[0] + '</td><td>' + fmt(kv[1]) + '</td></tr>';
   });
   var html = '<div class="flex items-center gap-3 mb-4">' + avatar(a.title) +
     '<div><h2 class="text-2xl font-bold text-white">Statistics for: ' + a.title + '</h2>' +
@@ -451,7 +458,7 @@ function renderAddonView(name) {
     (modRows || '<tr><td colspan="4" class="text-slate-500">Nothing seen yet.</td></tr>') +
     '</tbody></table></div>';
   html += '<div class="card p-4 mb-4 overflow-x-auto"><h3 class="font-semibold text-white mb-2">Tracked values</h3>' +
-    '<table class="stats w-full text-sm num"><thead><tr><th>Variable</th><th>Value</th>' +
+    '<table class="stats w-full text-sm num"><thead><tr><th class="hidden sm:table-cell">Variable</th><th>Value</th>' +
     '<th>Servers</th></tr></thead><tbody>' +
     (valRows || '<tr><td colspan="3" class="text-slate-500">Nothing seen yet.</td></tr>') +
     '</tbody></table></div>';
@@ -502,7 +509,7 @@ function renderModView(appid) {
   document.getElementById('mod-crumb').textContent = m.name;
   var date = (latest.generated_at || '?').replace('T', ' ').replace('+00:00', ' UTC');
   var rows = '';
-  latest.addons.forEach(function (a) {
+  sortedAddons().forEach(function (a) {
     var entry = ((a.by_mod || {})[String(appid)] || { servers: 0, values: {} });
     if (!entry.servers) { return; }
     var top = sortedValues(entry.values || {}).slice(0, 3).map(function (kv) {
@@ -511,7 +518,7 @@ function renderModView(appid) {
     var pct = m.alive ? (100 * entry.servers / m.alive).toFixed(2) + '%' : 'n/a';
     rows += '<tr class="link" data-addon="' + a.name + '"><td><span class="flex items-center gap-2">' +
       avatar(a.title) + '<a href="#/addon/' + a.name + '">' + a.title + '</a></span></td><td>' +
-      fmt(entry.servers) + '</td><td>' + pct + '</td><td>' + top + '</td></tr>';
+      fmt(entry.servers) + '</td><td>' + pct + '</td><td class="hidden sm:table-cell">' + top + '</td></tr>';
   });
   var html = '<div class="flex items-center gap-3 mb-4">' + capsule(m.appid) +
     '<div><h2 class="text-2xl font-bold text-white">Statistics for mod: ' + m.name + '</h2>' +
@@ -520,7 +527,7 @@ function renderModView(appid) {
     date, m.alive || 0, m.max_players || 0, m.players || 0, m.bots || 0) + '</div>';
   html += '<div class="card p-4 mb-4 overflow-x-auto"><h3 class="font-semibold text-white mb-2">Addons on this mod</h3>' +
     '<table class="stats w-full text-sm num"><thead><tr><th>Addon</th><th>Servers</th>' +
-    '<th>% of mod</th><th>Top values</th></tr></thead><tbody>' +
+    '<th>% of mod</th><th class="hidden sm:table-cell">Top values</th></tr></thead><tbody>' +
     (rows || '<tr><td colspan="4" class="text-slate-500">Nothing seen yet.</td></tr>') +
     '</tbody></table></div>';
   html += '<div class="card p-4 mb-4"><h3 class="font-semibold text-white mb-2">Mod history</h3>' +
