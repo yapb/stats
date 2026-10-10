@@ -80,6 +80,9 @@ mods:
     gamedir: ns
     name: Natural Selection
   - appid: 70
+    gamedir: nsp
+    name: Natural Selection 3.x
+  - appid: 70
     gamedir: opera
     name: Opera
   - appid: 70

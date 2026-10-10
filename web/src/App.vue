@@ -106,7 +106,12 @@ const quality = computed(function () {
     t.ips_over_100_servers +
     ' dense hosts plus ' +
     fmt(t.fake_dropped || 0) +
-    ' fake player-count addrs excluded before scanning.'
+    ' fake player-count addrs excluded before scanning.' +
+    ' ' +
+    fmt(t.mystery_servers || 0) +
+    ' servers run bots with no recognized bot addon (' +
+    fmt(t.mystery_bots || 0) +
+    ' bots).'
   );
 });
 </script>

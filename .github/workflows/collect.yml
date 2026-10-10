@@ -10,6 +10,7 @@ permissions:
   pages: write
   id-token: write
   actions: write
+  issues: write
 
 concurrency:
   group: pages
@@ -17,7 +18,7 @@ concurrency:
 
 jobs:
   collect:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, stats-pi]
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
@@ -66,11 +67,16 @@ jobs:
           path: ${{ env.MASTER_CACHE }}
           key: master-${{ steps.today.outputs.date }}
 
+      - name: Notify new versions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python collector/notify.py
+
       - name: Commit fresh data
         run: |
           git config user.name 'yapb-stats-bot'
           git config user.email 'yapb-stats-bot@users.noreply.github.com'
-          git add web/data/latest.json web/data/history.json
+          git add web/data/latest.json web/data/history.json web/data/notified.json
           git diff --cached --quiet || { git commit -m "census $(date -u +%F)"; git pull --rebase origin master; git push; }
 
       - uses: actions/configure-pages@v5

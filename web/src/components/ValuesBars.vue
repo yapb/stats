@@ -10,7 +10,13 @@
       :class="{ active: row.value === selected }"
       @click="$emit('select', row.value)"
     >
-      <div class="vname num" style="width:38%">{{ row.value }}</div>
+      <div class="vname num" style="width:38%">
+        {{ row.value }}
+        <span
+          v-if="fresh.includes(row.value)"
+          class="ml-1 text-[10px] font-bold text-black bg-lime-300 rounded px-1"
+        >NEW</span>
+      </div>
       <div style="flex:1">
         <div class="vbar" :style="{ width: Math.max(2, (100 * row.count) / max) + '%' }"></div>
       </div>
@@ -28,6 +34,7 @@ const props = defineProps({
   values: { type: Object, required: true },
   readable: { type: Number, required: true },
   selected: { type: [String, null], default: null },
+  fresh: { type: Array, default: function () { return []; } },
 });
 
 defineEmits(['select']);

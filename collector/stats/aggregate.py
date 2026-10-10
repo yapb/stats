@@ -44,6 +44,8 @@ def build(results, master, mods, tracked, truncated_mods,
         row["players"] += r["info"]["players"]
         row["bots"] += r["info"]["bots"]
         row["max_players"] += r["info"]["max_players"]
+        if r["info"]["map"]:
+            mod_maps[app][r["info"]["map"]] += 1
 
     values = {name: Counter() for name in tracked_names}
     with_addon = {name: 0 for name in tracked_names}
@@ -51,6 +53,7 @@ def build(results, master, mods, tracked, truncated_mods,
     addon_capacity = Counter()
     addon_bots = Counter()
     mod_addon = defaultdict(Counter)  # (appid, var) mapped to value counts
+    mod_maps = defaultdict(Counter)  # gamedir mapped to map counts
     for r in with_rules:
         app = _guess_mod(r, master.get(r["addr"], {}), mods)
         by_mod[app]["with_rules"] += 1
@@ -65,6 +68,13 @@ def build(results, master, mods, tracked, truncated_mods,
 
     info_errs = Counter(r["info_err"] for r in results if "info_err" in r)
     rules_errs = Counter(r["rules_err"] for r in alive if "rules_err" in r)
+    BOT_VARS = {"yb_version", "pb_version", "bot_quota"}
+    mystery_servers = 0
+    mystery_bots = 0
+    for r in with_rules:
+        if r["info"]["bots"] > 0 and not any(v in r["rules"] for v in BOT_VARS):
+            mystery_servers += 1
+            mystery_bots += r["info"]["bots"]
     countries = []
     if geo_reader is not None:
         per_ip_count = Counter(r["addr"].rpartition(":")[0] for r in alive)
@@ -88,7 +98,8 @@ def build(results, master, mods, tracked, truncated_mods,
         "mods": [{"appid": m["appid"], "gamedir": m.get("gamedir", ""), "name": m["name"],
                   **({"url": m["url"]} if m.get("url") else {}),
                   "master": mod_master.get((m.get("gamedir") or "").lower(), 0),
-                  **by_mod.get((m.get("gamedir") or "").lower(), dict(empty_mod))}
+                  **by_mod.get((m.get("gamedir") or "").lower(), dict(empty_mod)),
+                  "maps": dict(mod_maps[(m.get("gamedir") or "").lower()].most_common(15))}
                  for m in mods],
         "totals": {
             "master": farm_info["master_raw"],
@@ -105,6 +116,8 @@ def build(results, master, mods, tracked, truncated_mods,
             "rules_unknown": len(alive) - len(with_rules),
             "distinct_ips": len(farm_info["per_ip"]),
             "ips_over_100_servers": len(farm_info["spam_hosts"]),
+            "mystery_servers": mystery_servers,
+            "mystery_bots": mystery_bots,
         },
         "countries": countries,
         "addons": [{"name": v["name"], "title": v["title"], "url": v["url"],
@@ -140,16 +153,38 @@ def build(results, master, mods, tracked, truncated_mods,
 
 
 def write_output(out_dir, latest, row):
-    """Write latest.json, appending the row to history.json by date."""
+    """Write latest.json, appending the row to history.json by timestamp.
+
+    Returns {addon: [values]} first seen in this run (dashboard NEW badges
+    and release notifications). Needs at least one prior row carrying
+    addon_versions, otherwise everything looks new.
+    """
     os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, "latest.json"), "w", encoding="utf-8") as f:
-        json.dump(latest, f, ensure_ascii=False, indent=1)
     hist_path = os.path.join(out_dir, "history.json")
     history = []
     if os.path.exists(hist_path):
         with open(hist_path, encoding="utf-8") as f:
             history = json.load(f)
+    known = set()
+    baseline = 0
+    for h in history:
+        av = h.get("addon_versions")
+        if av:
+            baseline += 1
+            for name, vals in av.items():
+                for v in vals:
+                    known.add((name, v))
+    fresh = {}
+    if baseline >= 1:
+        for name, vals in row.get("addon_versions", {}).items():
+            new = [v for v in vals if (name, v) not in known]
+            if new:
+                fresh[name] = new
+    latest["fresh"] = fresh
+    with open(os.path.join(out_dir, "latest.json"), "w", encoding="utf-8") as f:
+        json.dump(latest, f, ensure_ascii=False, indent=1)
     history = [h for h in history if h.get("ts") != row["ts"]] + [row]
     history = history[-120:]
     with open(hist_path, "w", encoding="utf-8") as f:
         json.dump(history, f, ensure_ascii=False, indent=1)
+    return fresh

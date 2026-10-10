@@ -62,7 +62,13 @@
         </tr>
         <tr v-for="row in valRows" :key="row.value">
           <td class="hidden sm:table-cell">{{ addon.name }}</td>
-          <td>{{ row.value }}</td>
+          <td>
+            {{ row.value }}
+            <span
+              v-if="fresh.includes(row.value)"
+              class="ml-1 text-[10px] font-bold text-black bg-lime-300 rounded px-1"
+            >NEW</span>
+          </td>
           <td>{{ fmt(row.count) }}</td>
         </tr>
       </tbody>
@@ -125,13 +131,17 @@ const modRows = computed(function () {
     });
 });
 
-const valRows = computed(function () {
-  return sortedValues(addon.value.values)
-    .slice(0, 30)
-    .map(function (kv) {
-      return { value: kv[0], count: kv[1] };
-    });
-});
+  const valRows = computed(function () {
+    return sortedValues(addon.value.values)
+      .slice(0, 30)
+      .map(function (kv) {
+        return { value: kv[0], count: kv[1] };
+      });
+  });
+
+  const fresh = computed(function () {
+    return ((props.latest.fresh || {})[addon.value.name] || []);
+  });
 
 const dates = computed(function () {
   return props.histRows.map(histDate);

@@ -54,8 +54,29 @@
       </table>
     </div>
 
-    <div class="card p-4 mb-4">
-      <h3 class="font-semibold text-white mb-2">Mod history</h3>
+  <div class="card p-4 mb-4 overflow-x-auto">
+    <h3 class="font-semibold text-white mb-2">Top maps</h3>
+    <table class="stats w-full text-sm num">
+      <thead>
+        <tr>
+          <th>Map</th>
+          <th>Servers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-if="!mapRows.length">
+          <td colspan="2" class="text-slate-500">Nothing seen yet.</td>
+        </tr>
+        <tr v-for="row in mapRows" :key="row.map">
+          <td>{{ row.map }}</td>
+          <td>{{ fmt(row.count) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card p-4 mb-4">
+    <h3 class="font-semibold text-white mb-2">Mod history</h3>
       <p v-if="histRows.length <= 1" class="text-slate-500 text-sm">
         Mod history appears after a few daily runs.
       </p>
@@ -89,6 +110,21 @@ const props = defineProps({
 
 const mod = computed(function () {
   return modByGamedir(props.latest.mods, props.gamedir) || modById(props.latest.mods, props.gamedir);
+});
+
+const mapRows = computed(function () {
+  if (!mod.value) {
+    return [];
+  }
+  const maps = mod.value.maps || {};
+  return Object.keys(maps)
+    .map(function (k) {
+      return { map: k, count: maps[k] };
+    })
+    .sort(function (a, b) {
+      return b.count - a.count;
+    })
+    .slice(0, 15);
 });
 
 const rows = computed(function () {

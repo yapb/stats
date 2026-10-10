@@ -63,13 +63,13 @@ def main():
     latest, row = aggregate.build(
         results, master, mods, tracked, truncated_mods,
         source_new, farm_info, sdr, geo_reader)
-    aggregate.write_output(args.out, latest, row)
+    fresh = aggregate.write_output(args.out, latest, row)
     if geo_reader is not None:
         geo_reader.close()
 
     yb = next((a["servers"] for a in latest["addons"] if a["name"] == "yb_version"), 0)
     print(f"alive={latest['totals']['alive']} with_rules={latest['totals']['with_rules']} "
-          f"yb={yb}", flush=True)
+          f"yb={yb} fresh={fresh}", flush=True)
     return 0
 
 

@@ -37,6 +37,7 @@
         :values="addon.values"
         :readable="latest.totals.with_rules"
         :selected="ver"
+        :fresh="(latest.fresh || {})[addon.name] || []"
         @select="toggleVer"
       />
     </div>
