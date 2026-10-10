@@ -29,6 +29,9 @@ masters:
     port: 27010
     name: CS16
     gamedirs: [cstrike]
+  - host: ms.cs-all-servers.ru
+    port: 27010
+    name: AllServers
   - host: ms1.ds-servers.com
     port: 27010
     name: DSServers
