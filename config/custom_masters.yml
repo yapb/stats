@@ -36,6 +36,9 @@ masters:
     port: 27010
     name: SGGMS
     gamedirs: [cstrike]
+  - host: ms.worldcs.ro
+    port: 27010
+    name: WorldCS
   - host: ms1.ds-servers.com
     port: 27010
     name: DSServers
