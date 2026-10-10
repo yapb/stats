@@ -1,11 +1,18 @@
 # Community master servers (legacy UDP protocol) merged with the Steam list.
 # Add new ones via PR:
-#   host: master hostname
-#   port: master query port (UDP)
-#   name: short display name, used as the entry source tag
-#   url:  link shown on the dashboard
+#   host:     master hostname
+#   port:     master query port (UDP)
+#   name:     short display name, used as the entry source tag
+#   url:      link shown on the dashboard
+#   gamedirs: optional mod directory filter (queried per mod otherwise)
 masters:
-  - host: ms.playmon.ru
-    port: 27013
-    name: PlayMon
-    url: https://playmon.ru/
+  - host: ms.varq.net
+    port: 27010
+    name: Varq
+    url: https://varq.net/ru/master
+    gamedirs: [cstrike]
+  - host: ms2.varq.net
+    port: 27010
+    name: Varq2
+    url: https://varq.net/ru/master
+    gamedirs: [cstrike]

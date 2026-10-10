@@ -188,10 +188,13 @@ def main():
     custom_cfg = load_yaml(os.path.join(args.config_dir, "custom_masters.yml")).get("masters", [])
     for entry in custom_cfg:
         name = entry.get("name") or entry["host"]
+        wanted = entry.get("gamedirs")
         new_here = 0
         for mod in mods:
             gamedir = mod.get("gamedir", "")
             if not gamedir:
+                continue
+            if wanted and gamedir not in wanted:
                 continue
             try:
                 addrs = legacy_query(entry["host"], entry.get("port", 27010), gamedir)
