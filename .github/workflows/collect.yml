@@ -9,6 +9,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write
 
 concurrency:
   group: pages
@@ -28,10 +29,34 @@ jobs:
       - name: Install collector deps
         run: pip install -r collector/requirements.txt
 
+      - name: Today
+        id: today
+        run: echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore master cache
+        uses: actions/cache/restore@v4
+        with:
+          path: /tmp/master-cache.json
+          key: master-${{ steps.today.outputs.date }}
+
       - name: Run census
         env:
           STEAM_WEBAPI_KEY: ${{ secrets.STEAM_WEBAPI_KEY }}
-        run: python collector/collect.py --out web/data
+        run: |
+          ARGS="--out web/data"
+          if [ -f /tmp/master-cache.json ]; then
+            ARGS="$ARGS --master-cache /tmp/master-cache.json"
+          else
+            ARGS="$ARGS --save-master /tmp/master-cache.json"
+          fi
+          python collector/collect.py $ARGS
+
+      - name: Save master cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: /tmp/master-cache.json
+          key: master-${{ steps.today.outputs.date }}
 
       - name: Commit fresh data
         run: |

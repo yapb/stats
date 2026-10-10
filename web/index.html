@@ -48,12 +48,6 @@
   <section id="view-overview">
     <div class="card p-4 mb-6" id="summary-global"></div>
 
-    <div class="card p-4 mb-6 flex flex-wrap items-center gap-2">
-      <span class="text-slate-400 text-sm mr-1">Addon:</span>
-      <select id="addonpick" class="text-sm text-slate-200"></select>
-      <span id="generated" class="text-xs text-slate-500 ml-auto"></span>
-    </div>
-
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6" id="cards"></div>
 
     <div class="grid md:grid-cols-2 gap-4 mb-6">
@@ -64,7 +58,7 @@
         </div>
       </div>
       <div class="card p-4">
-        <h2 class="font-semibold text-white mb-2">Addons</h2>
+        <h2 class="font-semibold text-white mb-2">Addons (click a row to inspect)</h2>
         <div class="scroll10 overflow-x-auto">
           <table class="stats w-full text-sm num" id="addons"></table>
         </div>
@@ -171,13 +165,14 @@ function ratio(players, servers) {
 
 function summaryHTML(date, servers, max, players, bots) {
   return '<dl class="summary grid grid-cols-2 md:grid-cols-4 gap-4">' +
-    '<div><dt>Date</dt><dd class="num">' + date + '</dd></div>' +
-    '<div><dt>Total servers</dt><dd class="num">' + fmt(servers) +
-    ' <span class="text-slate-400 font-normal">having ' + fmt(max) + ' max players</span></dd></div>' +
-    '<div><dt>Total players</dt><dd class="num">' + fmt(players) +
-    ' <span class="text-slate-400 font-normal">at ' + capacity(players, max) +
-    ' capacity (' + fmt(bots) + ' bots not included)</span></dd></div>' +
-    '<div><dt>Player/server ratio</dt><dd class="num">' + ratio(players, servers) + '</dd></div>' +
+    '<div><dt>Date</dt><dd class="num text-xl">' + date + '</dd></div>' +
+    '<div><dt>Total servers</dt><dd class="num text-xl">' + fmt(servers) + '</dd>' +
+    '<div class="text-slate-400 text-xs font-normal">having ' + fmt(max) + ' max players</div></div>' +
+    '<div><dt>Total players</dt><dd class="num text-xl">' + fmt(players) + '</dd>' +
+    '<div class="text-slate-400 text-xs font-normal">at ' + capacity(players, max) +
+    ' capacity, ' + fmt(bots) + ' bots excluded</div></div>' +
+    '<div><dt>Player/server ratio</dt><dd class="num text-xl">' + ratio(players, servers) + '</dd>' +
+    '<div class="text-slate-400 text-xs font-normal">players per server</div></div>' +
     '</dl>';
 }
 
@@ -215,7 +210,6 @@ function renderSummaryGlobal() {
   var date = (latest.generated_at || '?').replace('T', ' ').replace('+00:00', ' UTC');
   document.getElementById('summary-global').innerHTML = summaryHTML(
     date, t.alive, t.max_players, t.players, totalBots());
-  document.getElementById('generated').textContent = 'generated ' + date;
 }
 
 function totalBots() {
@@ -343,7 +337,6 @@ function renderAddons() {
       if (ev.target.tagName === 'A') { return; }
       state.addon = tr.getAttribute('data-addon');
       state.ver = null;
-      document.getElementById('addonpick').value = state.addon;
       renderOverview();
     };
   });
@@ -400,22 +393,8 @@ function renderHistory() {
   }, true);
 }
 
-function renderAddonPick() {
-  var pick = document.getElementById('addonpick');
-  pick.innerHTML = latest.addons.map(function (a) {
-    return '<option value="' + a.name + '">' + a.title + '</option>';
-  }).join('');
-  pick.value = state.addon;
-  pick.onchange = function () {
-    state.addon = pick.value;
-    state.ver = null;
-    renderOverview();
-  };
-}
-
 function renderOverview() {
   state.mod = 'all';
-  renderAddonPick();
   renderSummaryGlobal();
   renderCards();
   renderPie();

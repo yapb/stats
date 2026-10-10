@@ -37,6 +37,8 @@ The key only travels via environment or repository secret, never in commits.
 
 1. `IGameServersService/GetServerList` per tracked `appid` (`limit=10000`).
    Capped answers get split further per map until the cap stops hitting.
+   The daily workflow caches the master lists for the rest of the day, so
+   repeat runs barely touch the Steam API.
 2. Redirect farms get cut before scanning: hosts with over 100 master
    entries (`--max-servers-per-host`, 0 disables), plus lone entries with
    impossible player counts. A lone faker never condemns its host.
