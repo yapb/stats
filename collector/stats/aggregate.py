@@ -17,11 +17,20 @@ def _guess_mod(result, entry, mods):
     return 0
 
 
+def _is_fake_count(info):
+    """Impossible headcounts no real HL1 server reports."""
+    players = info["players"]
+    capacity = info["max_players"]
+    return players > capacity or capacity > 64 or players > 64
+
+
 def build(results, master, mods, tracked, per_mod_master, truncated_mods,
           source_new, farm_info, sdr):
     """Fold results into (latest, history_row) dicts."""
     tracked_names = [v["name"] for v in tracked]
-    alive = [r for r in results if "info" in r]
+    answered = [r for r in results if "info" in r]
+    fakes = [r for r in answered if _is_fake_count(r["info"])]
+    alive = [r for r in answered if not _is_fake_count(r["info"])]
     with_rules = [r for r in alive if "rules" in r]
 
     empty_mod = {"alive": 0, "players": 0, "bots": 0, "with_rules": 0, "max_players": 0}
@@ -72,6 +81,7 @@ def build(results, master, mods, tracked, per_mod_master, truncated_mods,
             "fake_dropped": farm_info["fake_dropped"],
             "probed": len(results),
             "alive": len(alive),
+            "fake_a2s_dropped": len(fakes),
             "players": total_players,
             "max_players": total_capacity,
             "with_rules": len(with_rules),
