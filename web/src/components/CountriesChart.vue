@@ -47,11 +47,11 @@ function draw() {
     tooltip: { trigger: 'axis' },
     textStyle: baseText(),
     xAxis: { type: 'value' },
-    yAxis: { type: 'category', data: names.reverse() },
+    yAxis: { type: 'category', data: names, inverse: true },
     series: [
       {
         type: 'bar',
-        data: data.reverse(),
+        data,
         label: { show: true, position: 'right', color: '#94a3b8' },
       },
     ],
