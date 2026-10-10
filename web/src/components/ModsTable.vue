@@ -13,9 +13,9 @@
     <tbody>
       <tr v-for="m in sorted" :key="modKey(m)" class="link" @click="open(modKey(m))">
         <td>
-          <span class="flex items-center gap-2">
-            <CapsuleImg :appid="m.appid" />
-            <a :href="'#/mod/' + modKey(m)" @click.stop>{{ m.name }}</a>
+          <span class="flex items-center gap-2 min-w-0">
+            <span class="hidden sm:inline shrink-0"><CapsuleImg :appid="m.appid" /></span>
+            <a class="truncate max-w-[9rem] sm:max-w-none" :href="'#/mod/' + modKey(m)" @click.stop>{{ m.name }}</a>
           </span>
         </td>
         <td>{{ fmt(m.alive) }}</td>
