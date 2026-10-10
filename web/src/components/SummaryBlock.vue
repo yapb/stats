@@ -3,7 +3,8 @@
     <dl class="summary grid grid-cols-2 md:grid-cols-4 gap-4">
       <div>
         <dt>Date</dt>
-        <dd class="num text-xl">{{ date }}</dd>
+        <dd class="num text-xl">{{ parts[0] }}</dd>
+        <div class="text-slate-400 text-xs font-normal">{{ parts[1] }} · All times are UTC</div>
       </div>
       <div>
         <dt>Total servers</dt>
@@ -27,13 +28,18 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import { capacity, fmt, ratio } from '../lib/data.js';
 
-defineProps({
+const props = defineProps({
   date: { type: String, required: true },
   servers: { type: Number, required: true },
   maxPlayers: { type: Number, required: true },
   players: { type: Number, required: true },
   bots: { type: Number, required: true },
+});
+
+const parts = computed(function () {
+  return props.date.split(' ');
 });
 </script>
