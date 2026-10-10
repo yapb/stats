@@ -16,3 +16,11 @@ masters:
     name: Varq2
     url: https://varq.net/ru/master
     gamedirs: [cstrike]
+  - host: ms1.ds-servers.com
+    port: 27010
+    name: DSServers
+    url: https://ds-servers.com/servers/master.html
+  - host: ms2.ds-servers.com
+    port: 27010
+    name: DSServers2
+    url: https://ds-servers.com/servers/master.html
