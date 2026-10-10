@@ -9,14 +9,12 @@ from stats import geo as geo_mod
 
 
 def _guess_mod(result, entry, mods):
-    appid = entry.get("appid")
-    if any(m["appid"] == appid for m in mods):
-        return appid
-    gamedir = (result.get("info", {}).get("gamedir") or "").lower()
-    for m in mods:
-        if m.get("gamedir", "").lower() == gamedir:
-            return m["appid"]
-    return 0
+    gamedir = (result.get("info", {}).get("gamedir") or entry.get("gamedir") or "").lower()
+    if gamedir:
+        return gamedir
+    if entry.get("appid"):
+        return f"appid:{entry['appid']}"
+    return "unknown"
 
 
 def _is_fake_count(info):
@@ -28,7 +26,7 @@ def _is_fake_count(info):
     return players - capacity > 2 or capacity > 64 or players > 130
 
 
-def build(results, master, mods, tracked, per_mod_master, truncated_mods,
+def build(results, master, mods, tracked, truncated_mods,
           source_new, farm_info, sdr, geo_reader=None):
     """Fold results into (latest, history_row) dicts."""
     tracked_names = [v["name"] for v in tracked]
@@ -84,11 +82,13 @@ def build(results, master, mods, tracked, per_mod_master, truncated_mods,
     total_capacity = sum(row["max_players"] for row in by_mod.values())
 
     stamp = datetime.datetime.now(datetime.timezone.utc)
+    mod_master = farm_info.get("mod_master", {})
     latest = {
         "generated_at": stamp.isoformat(timespec="seconds"),
-        "mods": [{"appid": m["appid"], "name": m["name"], "url": m["url"],
-                  "master": per_mod_master.get(m["appid"], 0),
-                  **by_mod.get(m["appid"], dict(empty_mod))}
+        "mods": [{"appid": m["appid"], "gamedir": m.get("gamedir", ""), "name": m["name"],
+                  **({"url": m["url"]} if m.get("url") else {}),
+                  "master": mod_master.get((m.get("gamedir") or "").lower(), 0),
+                  **by_mod.get((m.get("gamedir") or "").lower(), dict(empty_mod))}
                  for m in mods],
         "totals": {
             "master": farm_info["master_raw"],
@@ -113,9 +113,9 @@ def build(results, master, mods, tracked, per_mod_master, truncated_mods,
                     "max_players": addon_capacity[v["name"]],
                     "bots": addon_bots[v["name"]],
                     "values": dict(values[v["name"]].most_common(50)),
-                    "by_mod": {str(m["appid"]): {
-                        "servers": sum(mod_addon[(m["appid"], v["name"])].values()),
-                        "values": dict(mod_addon[(m["appid"], v["name"])].most_common(20))}
+                    "by_mod": {m.get("gamedir", ""): {
+                        "servers": sum(mod_addon[(m.get("gamedir", ""), v["name"])].values()),
+                        "values": dict(mod_addon[(m.get("gamedir", ""), v["name"])].most_common(20))}
                         for m in mods}}
                    for v in tracked],
         "quality": {
@@ -132,9 +132,9 @@ def build(results, master, mods, tracked, per_mod_master, truncated_mods,
            "players": total_players, "max_players": total_capacity,
            **{f"addon:{n}": with_addon[n] for n in tracked_names},
            "versions": dict(values[tracked_names[0]].most_common(20)) if tracked_names else {},
-           "mods": {str(m["appid"]): {
-               "alive": by_mod.get(m["appid"], {}).get("alive", 0),
-               "rules": by_mod.get(m["appid"], {}).get("with_rules", 0)} for m in mods},
+           "mods": {m.get("gamedir", ""): {
+               "alive": by_mod.get(m.get("gamedir", ""), {}).get("alive", 0),
+               "rules": by_mod.get(m.get("gamedir", ""), {}).get("with_rules", 0)} for m in mods},
            "addon_versions": {n: dict(values[n].most_common(10)) for n in tracked_names}}
     return latest, row
 

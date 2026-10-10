@@ -1,8 +1,9 @@
 # Tracked game mods. Add new ones via PR:
-#   appid:   Valve app id used for the master-server filter (\appid\<id>)
-#   gamedir: mod directory reported by servers (informational, matched loosely)
+#   appid:   Valve app id used for the master-server filter (\appid\<id>).
+#            HL mods share appid 70; mod identity comes from gamedir.
+#   gamedir: mod directory reported by servers (the identity key).
 #   name:    display name for the dashboard
-#   url:     link shown next to the mod name
+#   url:     optional link shown next to the mod name
 mods:
   - appid: 10
     gamedir: cstrike
@@ -36,3 +37,78 @@ mods:
     gamedir: valve
     name: Half-Life Deathmatch
     url: https://store.steampowered.com/app/70/HalfLife/
+  - appid: 70
+    gamedir: ag
+    name: Adrenaline Gamer
+  - appid: 70
+    gamedir: brainbread
+    name: BrainBread
+  - appid: 70
+    gamedir: dcrisis
+    name: Desert Crisis
+  - appid: 70
+    gamedir: dpb
+    name: Digital Paintball
+  - appid: 70
+    gamedir: esf
+    name: Earth's Special Forces
+  - appid: 70
+    gamedir: fa
+    name: FireArms
+  - appid: 70
+    gamedir: flf
+    name: Front Line Force
+  - appid: 70
+    gamedir: gw
+    name: Global Warfare
+  - appid: 70
+    gamedir: hi
+    name: Hostile Intent
+  - appid: 70
+    gamedir: hlrally
+    name: HL Rally
+  - appid: 70
+    gamedir: ios
+    name: International Online Soccer
+  - appid: 70
+    gamedir: monkeystrike
+    name: Monkeystrike
+  - appid: 70
+    gamedir: msc
+    name: Master Sword Continued
+  - appid: 70
+    gamedir: ns
+    name: Natural Selection
+  - appid: 70
+    gamedir: opera
+    name: Opera
+  - appid: 70
+    gamedir: pvkii
+    name: Pirates Vikings and Knights II
+  - appid: 70
+    gamedir: si
+    name: Science and Industry
+  - appid: 70
+    gamedir: stargate
+    name: StargateTC
+  - appid: 70
+    gamedir: svencoop
+    name: SvenCoop
+  - appid: 70
+    gamedir: bg
+    name: The Battle Grounds
+  - appid: 70
+    gamedir: ts
+    name: The Specialists
+  - appid: 70
+    gamedir: trenches
+    name: The Trenches
+  - appid: 70
+    gamedir: wastes
+    name: The Wastes
+  - appid: 70
+    gamedir: vs
+    name: Vampire Slayer
+  - appid: 70
+    gamedir: zp
+    name: Zombie Panic

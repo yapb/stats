@@ -49,6 +49,16 @@ export function modById(mods, id) {
   return null;
 }
 
+export function modByGamedir(mods, gamedir) {
+  const want = String(gamedir || '').toLowerCase();
+  for (const m of mods) {
+    if (String(m.gamedir || '').toLowerCase() === want) {
+      return m;
+    }
+  }
+  return null;
+}
+
 export function capacity(players, max) {
   return max > 0 ? ((100 * players) / max).toFixed(2) + '%' : 'n/a';
 }
@@ -138,9 +148,14 @@ export function buildAddonSeries(addon, histRows, topN) {
   return series;
 }
 
-export function buildModSeries(histRows, appid) {
+export function buildModSeries(histRows, gamedir, appid) {
   const at = function (r, field) {
-    return (((r.mods || {})[String(appid)] || {})[field] || 0);
+    const byGamedir = (r.mods || {})[String(gamedir || '').toLowerCase()];
+    if (byGamedir) {
+      return byGamedir[field] || 0;
+    }
+    const legacy = (r.mods || {})[String(appid)];
+    return (legacy && legacy[field]) || 0;
   };
   return [
     {

@@ -61,7 +61,7 @@ def main():
         except Exception as e:
             print(f"geo database unavailable ({e}), skipping countries", flush=True)
     latest, row = aggregate.build(
-        results, master, mods, tracked, per_mod_master, truncated_mods,
+        results, master, mods, tracked, truncated_mods,
         source_new, farm_info, sdr, geo_reader)
     aggregate.write_output(args.out, latest, row)
     if geo_reader is not None:

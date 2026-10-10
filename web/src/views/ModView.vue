@@ -10,7 +10,7 @@
       <CapsuleImg :appid="mod.appid" />
       <div>
         <h2 class="text-2xl font-bold text-white">Statistics for mod: {{ mod.name }}</h2>
-        <div class="text-slate-400 text-sm">
+        <div v-if="mod.url" class="text-slate-400 text-sm">
           <a :href="mod.url">{{ mod.url }}</a>
         </div>
       </div>
@@ -74,7 +74,7 @@ import {
   buildModSeries,
   fmt,
   histDate,
-  modById,
+  modByGamedir,
   sortedAddons,
   sortedValues,
   stampToDate,
@@ -83,11 +83,11 @@ import {
 const props = defineProps({
   latest: { type: Object, required: true },
   histRows: { type: Array, required: true },
-  appid: { type: String, required: true },
+  gamedir: { type: String, required: true },
 });
 
 const mod = computed(function () {
-  return modById(props.latest.mods, props.appid);
+  return modByGamedir(props.latest.mods, props.gamedir);
 });
 
 const rows = computed(function () {
@@ -96,7 +96,7 @@ const rows = computed(function () {
   }
   const out = [];
   for (const a of sortedAddons(props.latest.addons)) {
-    const entry = ((a.by_mod || {})[String(mod.value.appid)] || { servers: 0, values: {} });
+    const entry = ((a.by_mod || {})[mod.value.gamedir] || { servers: 0, values: {} });
     if (!entry.servers) {
       continue;
     }
@@ -122,7 +122,7 @@ const dates = computed(function () {
 });
 
 const series = computed(function () {
-  return buildModSeries(props.histRows, props.appid);
+  return buildModSeries(props.histRows, mod.value ? mod.value.gamedir : '', mod.value ? mod.value.appid : 0);
 });
 
 function openAddon(name) {

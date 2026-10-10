@@ -19,3 +19,27 @@ vars:
   - name: bot_quota
     title: CZ Bot
     url: https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/
+  - name: sv_version
+    title: ReHLDS
+    url: https://github.com/dreamstalker/rehlds
+  - name: game_version
+    title: ReGameDLL
+    url: https://github.com/s1lentq/ReGameDLL_CS
+  - name: reu_version
+    title: ReUnion
+    url: https://github.com/s1lentq/reunion
+  - name: gal_version
+    title: Galileo
+    url: http://forums.alliedmods.net/showthread.php?t=77391
+  - name: amxbans_version
+    title: AMXBans
+    url: http://amxbans.net/
+  - name: sanksounds_version
+    title: Ultimate Sounds
+    url: http://forums.alliedmods.net/showthread.php?t=66006
+  - name: restnames_version
+    title: Restrict Names
+    url: http://forums.alliedmods.net/showthread.php?p=147257
+  - name: hlg_version
+    title: HLGuard
+    url: http://www.thezproject.org/

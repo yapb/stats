@@ -24,7 +24,7 @@
       v-else-if="latest && route.view === 'mod'"
       :latest="latest"
       :hist-rows="histRows"
-      :appid="route.param"
+      :gamedir="route.param"
     />
 
     <footer v-if="latest" class="text-sm text-slate-500 mt-6">

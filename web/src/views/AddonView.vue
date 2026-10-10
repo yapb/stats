@@ -88,7 +88,7 @@ import {
   buildAddonSeries,
   fmt,
   histDate,
-  modById,
+  modByGamedir,
   sortedValues,
   stampToDate,
 } from '../lib/data.js';
@@ -108,11 +108,11 @@ const modRows = computed(function () {
   return Object.keys(byMod)
     .map(function (id) {
       const entry = byMod[id] || { servers: 0 };
-      const m = modById(props.latest.mods, id);
+      const m = modByGamedir(props.latest.mods, id);
       return {
         id,
         servers: entry.servers || 0,
-        label: m ? m.name : 'appid ' + id,
+        label: m ? m.name : id,
         pct: m && m.alive ? ((100 * (entry.servers || 0)) / m.alive).toFixed(2) + '%' : 'n/a',
       };
     })

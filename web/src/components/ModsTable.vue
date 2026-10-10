@@ -11,16 +11,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="m in sorted" :key="m.appid" class="link" @click="open(m.appid)">
+      <tr v-for="m in sorted" :key="m.gamedir" class="link" @click="open(m.gamedir)">
         <td>
           <span class="flex items-center gap-2">
             <CapsuleImg :appid="m.appid" />
-            <a :href="'#/mod/' + m.appid" @click.stop>{{ m.name }}</a>
+            <a :href="'#/mod/' + m.gamedir" @click.stop>{{ m.name }}</a>
           </span>
         </td>
         <td>{{ fmt(m.alive) }}</td>
         <td class="hidden sm:table-cell">{{ fmt(m.with_rules) }}</td>
-        <td v-if="ver" class="hidden sm:table-cell">{{ fmt(verCount(m.appid)) }}</td>
+        <td v-if="ver" class="hidden sm:table-cell">{{ fmt(verCount(m.gamedir)) }}</td>
         <td>{{ fmt(m.players) }}</td>
         <td class="hidden md:table-cell">{{ fmt(m.bots) }}</td>
       </tr>
@@ -45,12 +45,12 @@ const sorted = computed(function () {
   });
 });
 
-function verCount(appid) {
-  const entry = props.verByMod[String(appid)] || { values: {} };
+function verCount(gamedir) {
+  const entry = props.verByMod[gamedir] || { values: {} };
   return (entry.values || {})[props.ver] || 0;
 }
 
-function open(appid) {
-  location.hash = '#/mod/' + appid;
+function open(gamedir) {
+  location.hash = '#/mod/' + gamedir;
 }
 </script>
