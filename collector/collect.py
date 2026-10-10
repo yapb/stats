@@ -117,8 +117,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", required=True, help="output dir for latest.json/history.json")
     ap.add_argument("--config-dir", default=os.path.join(os.path.dirname(__file__), "..", "config"))
-    ap.add_argument("--workers", type=int, default=100)
-    ap.add_argument("--timeout", type=float, default=2.5)
+    ap.add_argument("--workers", type=int, default=20)
+    ap.add_argument("--timeout", type=float, default=3.0)
     ap.add_argument("--appid", type=int, action="append", default=None,
                     help="only scan these appids (repeatable; default: all from mods.yml)")
     ap.add_argument("--max-addrs", type=int, default=0,
@@ -236,6 +236,9 @@ def main():
 
     per_ip = Counter(a.rpartition(":")[0] for a in master)
     farms = sum(1 for _, n in per_ip.items() if n > 100)
+    regular = lambda r: per_ip.get(r["addr"].rpartition(":")[0], 0) <= 100
+    regular_alive = sum(1 for r in alive if regular(r))
+    regular_rules = sum(1 for r in with_rules if regular(r))
     info_errs = Counter(r["info_err"] for r in results if "info_err" in r)
     rules_errs = Counter(r["rules_err"] for r in alive if "rules_err" in r)
     empty_mod = {"alive": 0, "players": 0, "bots": 0, "with_rules": 0, "max_players": 0}
@@ -260,6 +263,8 @@ def main():
             "rules_unknown": len(alive) - len(with_rules),
             "distinct_ips": len(per_ip),
             "ips_over_100_servers": farms,
+            "alive_regular": regular_alive,
+            "rules_regular": regular_rules,
         },
         "addons": [{"name": v["name"], "title": v["title"], "url": v["url"],
                     "servers": with_addon[v["name"]],
