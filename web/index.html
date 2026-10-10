@@ -249,7 +249,17 @@ function renderPie() {
     textStyle: { color: '#cbd5e1' },
     series: [{
       type: 'pie', radius: ['45%', '70%'],
-      label: { formatter: '{b}\n{d}%' },
+      label: {
+        formatter: '{b}  {d}%',
+        fontSize: 13,
+        fontWeight: 'bold',
+        color: '#fff',
+        textBorderColor: 'rgba(0,0,0,0.7)',
+        textBorderWidth: 3
+      },
+      labelLine: { show: true, length: 12, length2: 8 },
+      labelLayout: { hideOverlap: true },
+      minShowLabelAngle: 4,
       data: data
     }]
   }, true);

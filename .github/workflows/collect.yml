@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   collect:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, stats-pi]
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
@@ -38,18 +38,19 @@ jobs:
       - name: Restore master cache
         uses: actions/cache/restore@v4
         with:
-          path: /tmp/master-cache.json
+          path: ~/census-cache/master-cache.json
           key: master-${{ steps.today.outputs.date }}
 
       - name: Run census
         env:
           STEAM_WEBAPI_KEY: ${{ secrets.STEAM_WEBAPI_KEY }}
         run: |
+          mkdir -p ~/census-cache
           ARGS="--out web/data"
-          if [ -f /tmp/master-cache.json ]; then
-            ARGS="$ARGS --master-cache /tmp/master-cache.json"
+          if [ -f ~/census-cache/master-cache.json ]; then
+            ARGS="$ARGS --master-cache ~/census-cache/master-cache.json"
           else
-            ARGS="$ARGS --save-master /tmp/master-cache.json"
+            ARGS="$ARGS --save-master ~/census-cache/master-cache.json"
           fi
           python collector/collect.py $ARGS
 
@@ -57,7 +58,7 @@ jobs:
         if: always()
         uses: actions/cache/save@v4
         with:
-          path: /tmp/master-cache.json
+          path: ~/census-cache/master-cache.json
           key: master-${{ steps.today.outputs.date }}
 
       - name: Commit fresh data
