@@ -1,0 +1,11 @@
+# Community master servers (legacy UDP protocol) merged with the Steam list.
+# Add new ones via PR:
+#   host: master hostname
+#   port: master query port (UDP)
+#   name: short display name, used as the entry source tag
+#   url:  link shown on the dashboard
+masters:
+  - host: ms.playmon.ru
+    port: 27013
+    name: PlayMon
+    url: https://playmon.ru/

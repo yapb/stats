@@ -23,6 +23,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import yaml
 
 from a2s_rules import fetch_rules
+from legacy_master import query as legacy_query
 
 try:
     import a2s
@@ -178,6 +179,34 @@ def main():
                     if s.get("appid") == m["appid"]] for m in mods},
                     "truncated": truncated_mods}, f)
 
+    # --- community masters --------------------------------------------------
+    # Legacy UDP masters (non-Steam population) merged into the same addr
+    # set, so everything below (farm filter, A2S, aggregates) treats both
+    # sources uniformly. Counts below are addrs Steam did not report.
+    steam_total = sum(per_mod_master.values())
+    source_new = {"steam": steam_total}
+    custom_cfg = load_yaml(os.path.join(args.config_dir, "custom_masters.yml")).get("masters", [])
+    for entry in custom_cfg:
+        name = entry.get("name") or entry["host"]
+        new_here = 0
+        for mod in mods:
+            gamedir = mod.get("gamedir", "")
+            if not gamedir:
+                continue
+            try:
+                addrs = legacy_query(entry["host"], entry.get("port", 27010), gamedir)
+            except Exception as e:
+                print(f"custom master {name} gamedir={gamedir} failed ({e})", flush=True)
+                continue
+            for addr in addrs:
+                if addr not in master:
+                    master[addr] = {"addr": addr, "gamedir": gamedir, "appid": 0,
+                                    "source": name}
+                    per_mod_master[mod["appid"]] = per_mod_master.get(mod["appid"], 0) + 1
+                    new_here += 1
+        source_new[name] = new_here
+        print(f"custom master {name}: {new_here} new addrs", flush=True)
+
     # --- farm filter --------------------------------------------------------
     # Redirect farms stuff the master list with thousands of fake ports on a
     # few IPs. Drop whole hosts over the per-IP cap, plus lone servers with
@@ -278,6 +307,7 @@ def main():
                  for m in mods],
         "totals": {
             "master": master_raw,
+            "sources": source_new,
             "sdr_skipped": sdr,
             "farm_dropped": farm_dropped,
             "fake_dropped": fake_dropped,
