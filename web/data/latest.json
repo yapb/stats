@@ -1,213 +1,1464 @@
 {
- "generated_at": "2026-10-10T11:09:13+00:00",
+ "generated_at": "2026-10-10T12:12:21+00:00",
  "mods": [
   {
    "appid": 10,
+   "gamedir": "cstrike",
    "name": "Counter-Strike",
    "url": "https://store.steampowered.com/app/10/CounterStrike/",
-   "master": 59516,
-   "alive": 3266,
-   "players": 32538,
-   "bots": 3843,
-   "with_rules": 2495,
-   "max_players": 95989
+   "master": 17533,
+   "alive": 6139,
+   "players": 90966,
+   "bots": 5533,
+   "with_rules": 4174,
+   "max_players": 176640,
+   "maps": {
+    "de_dust2": 1096,
+    "de_dust2_2x2": 324,
+    "de_inferno": 137,
+    "$2000$": 93,
+    "de_dust": 83,
+    "de_aztec": 83,
+    "de_train": 77,
+    "de_nuke": 65,
+    "cs_mansion": 63,
+    "fy_snow": 61,
+    "cs_assault": 57,
+    "cs_office": 48,
+    "fy_pool_day": 43,
+    "de_airstrip": 40,
+    "aim_map": 39
+   }
   },
   {
    "appid": 80,
+   "gamedir": "czero",
    "name": "Condition Zero",
    "url": "https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/",
-   "master": 465,
-   "alive": 34,
-   "players": 83,
-   "bots": 80,
-   "with_rules": 6,
-   "max_players": 869
+   "master": 441,
+   "alive": 229,
+   "players": 777,
+   "bots": 523,
+   "with_rules": 218,
+   "max_players": 6308,
+   "maps": {
+    "de_dust2_cz": 101,
+    "de_inferno_cz": 7,
+    "de_cbble_cz": 5,
+    "de_train": 5,
+    "de_stadium_cz": 4,
+    "de_piranesi_cz": 3,
+    "cs_italy_cz": 3,
+    "cs_office_cz": 2,
+    "cs_militia_cz": 2,
+    "de_aztec_cz": 2,
+    "de_chateau_cz": 2,
+    "de_dust2": 2,
+    "awp_city": 2,
+    "cs_downed_cz": 2,
+    "de_airstrip_cz": 2
+   }
   },
   {
    "appid": 30,
+   "gamedir": "dod",
    "name": "Day of Defeat",
    "url": "https://store.steampowered.com/app/30/Day_of_Defeat/",
    "master": 153,
-   "alive": 26,
-   "players": 192,
-   "bots": 155,
-   "with_rules": 9,
-   "max_players": 636
+   "alive": 102,
+   "players": 626,
+   "bots": 497,
+   "with_rules": 100,
+   "max_players": 2322,
+   "maps": {
+    "dod_lennon5_b1": 24,
+    "dod_avalanche": 5,
+    "dod_charlie": 5,
+    "dod_merderet": 4,
+    "dod_anzio": 4,
+    "dod_caen": 4,
+    "dod_glider": 3,
+    "dod_flash": 3,
+    "dod_orange": 3,
+    "dod_flugplatz": 2,
+    "dod_pandemic_aim": 2,
+    "dod_forest": 1,
+    "dod_orange_snow": 1,
+    "dod_saints": 1,
+    "dod_mini_dust": 1
+   }
   },
   {
    "appid": 20,
+   "gamedir": "tfc",
    "name": "Team Fortress Classic",
    "url": "https://store.steampowered.com/app/20/Team_Fortress_Classic/",
-   "master": 145,
-   "alive": 25,
-   "players": 58,
-   "bots": 56,
-   "with_rules": 8,
-   "max_players": 615
+   "master": 147,
+   "alive": 110,
+   "players": 457,
+   "bots": 413,
+   "with_rules": 107,
+   "max_players": 2642,
+   "maps": {
+    "2fort": 18,
+    "well": 5,
+    "pushNN": 5,
+    "casbah": 4,
+    "dustbowl": 4,
+    "flagrun": 3,
+    "epicenter": 3,
+    "ravelin": 3,
+    "avanti": 3,
+    "crossover2": 3,
+    "badlands": 3,
+    "rock2": 3,
+    "sw_mapvote_b2c": 2,
+    "warpath": 2,
+    "midair16": 2
+   }
   },
   {
    "appid": 50,
+   "gamedir": "gearbox",
    "name": "Opposing Force",
    "url": "https://store.steampowered.com/app/50/HalfLife_Opposing_Force/",
-   "master": 41,
-   "alive": 5,
-   "players": 11,
-   "bots": 10,
-   "with_rules": 2,
-   "max_players": 102
+   "master": 42,
+   "alive": 35,
+   "players": 93,
+   "bots": 80,
+   "with_rules": 34,
+   "max_players": 711,
+   "maps": {
+    "op4_bootcamp": 4,
+    "op4_kbase": 3,
+    "op4_repent": 1,
+    "op4_snipertowers": 1,
+    "op4ctf_wonderland": 1,
+    "op4_crozfire": 1,
+    "subtransit": 1,
+    "op4_park": 1,
+    "op4_outpost": 1,
+    "op4_meanie": 1,
+    "op4_mortise": 1,
+    "op4_gasworks_top_v21": 1,
+    "snipe_new_age_12a": 1,
+    "op4_team9": 1,
+    "op4ctf_power": 1
+   }
   },
   {
    "appid": 40,
+   "gamedir": "dmc",
    "name": "Deathmatch Classic",
    "url": "https://store.steampowered.com/app/40/Deathmatch_Classic/",
-   "master": 24,
-   "alive": 6,
-   "players": 18,
-   "bots": 18,
-   "with_rules": 2,
-   "max_players": 150
+   "master": 23,
+   "alive": 18,
+   "players": 59,
+   "bots": 55,
+   "with_rules": 17,
+   "max_players": 466,
+   "maps": {
+    "dmc_dm3": 4,
+    "dmc_e1m2": 2,
+    "dmc_dm4": 1,
+    "dmc_zed2": 1,
+    "dmc_glupshitto": 1,
+    "dmc_dagon": 1,
+    "dmc_broken_factory": 1,
+    "dmc_guildhall": 1,
+    "dmc_crossfire": 1,
+    "p_se_3": 1,
+    "de_prodigy": 1,
+    "dmc_dmz1": 1,
+    "dmc_q2dm1_test4": 1,
+    "dmc_dm5": 1
+   }
   },
   {
    "appid": 60,
+   "gamedir": "ricochet",
    "name": "Ricochet",
    "url": "https://store.steampowered.com/app/60/Ricochet/",
-   "master": 17,
-   "alive": 2,
-   "players": 0,
-   "bots": 0,
-   "with_rules": 1,
-   "max_players": 28
+   "master": 15,
+   "alive": 13,
+   "players": 15,
+   "bots": 15,
+   "with_rules": 13,
+   "max_players": 272,
+   "maps": {
+    "rc_arena": 5,
+    "rc_deathmatch": 2,
+    "rc_deathmatch2": 2,
+    "rc_deathmatch_extended": 1,
+    "rc_crossfire": 1,
+    "rc_ricosurf": 1,
+    "rc_user2": 1
+   }
   },
   {
    "appid": 70,
+   "gamedir": "valve",
    "name": "Half-Life Deathmatch",
    "url": "https://store.steampowered.com/app/70/HalfLife/",
-   "master": 1485,
-   "alive": 533,
-   "players": 1199,
-   "bots": 694,
-   "with_rules": 489,
-   "max_players": 12591
+   "master": 1263,
+   "alive": 441,
+   "players": 1132,
+   "bots": 490,
+   "with_rules": 424,
+   "max_players": 10527,
+   "maps": {
+    "crossfire": 158,
+    "rapidcore": 31,
+    "gasworks": 10,
+    "boot_camp": 9,
+    "lambda_bunker": 9,
+    "snark_pit": 8,
+    "bounce": 8,
+    "subtransit": 7,
+    "stalkyard": 7,
+    "frenzy": 6,
+    "disposal": 5,
+    "stalkx": 5,
+    "rocket_frenzy": 4,
+    "datacore": 4,
+    "contamination": 4
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "ag",
+   "name": "Adrenaline Gamer",
+   "master": 70,
+   "alive": 58,
+   "players": 12,
+   "bots": 2,
+   "with_rules": 38,
+   "max_players": 1466,
+   "maps": {
+    "boot_camp": 7,
+    "no_remorse": 4,
+    "outcry": 4,
+    "crossfire": 3,
+    "rapidcore": 3,
+    "pool_party": 2,
+    "lost_village2": 2,
+    "bootbox": 2,
+    "dm_dust2": 2,
+    "datacore": 2,
+    "stalkyard": 2,
+    "crossfire_mirrored": 1,
+    "moss": 1,
+    "bhm_ramp": 1,
+    "speedrun_revived_v1": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "brainbread",
+   "name": "BrainBread",
+   "master": 5,
+   "alive": 4,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 4,
+   "max_players": 100,
+   "maps": {
+    "bb_chp2_carnage": 2,
+    "bb_uc1_chp4_cemeterytrouble": 1,
+    "bb_uc1_chp6_cemetary": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "dcrisis",
+   "name": "Desert Crisis",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "dpb",
+   "name": "Digital Paintball",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "esf",
+   "name": "Earth's Special Forces",
+   "master": 17,
+   "alive": 17,
+   "players": 27,
+   "bots": 27,
+   "with_rules": 17,
+   "max_players": 303,
+   "maps": {
+    "esf_cell_games_night": 6,
+    "esf_riverside": 2,
+    "esf_cell_games": 2,
+    "esf_city": 2,
+    "esf_cell_night": 1,
+    "esf_arrival": 1,
+    "esf_ToM": 1,
+    "esf_nameks_revival": 1,
+    "pkwlz_9": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "fa",
+   "name": "FireArms",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "flf",
+   "name": "Front Line Force",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "gw",
+   "name": "Global Warfare",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "hi",
+   "name": "Hostile Intent",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "hlrally",
+   "name": "HL Rally",
+   "master": 2,
+   "alive": 2,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 2,
+   "max_players": 24,
+   "maps": {
+    "rc_wintervalley": 1,
+    "rc_drift02": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "ios",
+   "name": "International Online Soccer",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "monkeystrike",
+   "name": "Monkeystrike",
+   "master": 1,
+   "alive": 1,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 1,
+   "max_players": 32,
+   "maps": {
+    "ms_amazonas": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "msc",
+   "name": "Master Sword Continued",
+   "master": 10,
+   "alive": 10,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 10,
+   "max_players": 96,
+   "maps": {
+    "edana": 10
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "ns",
+   "name": "Natural Selection",
+   "master": 22,
+   "alive": 18,
+   "players": 148,
+   "bots": 147,
+   "with_rules": 18,
+   "max_players": 496,
+   "maps": {
+    "co_daimos": 2,
+    "co_faceoff": 2,
+    "ns_caged": 2,
+    "ns_machina": 1,
+    "ns_eclipse": 1,
+    "co_dust": 1,
+    "co_rush2_final": 1,
+    "ns_tanith": 1,
+    "ns_bast": 1,
+    "co_ulysses": 1,
+    "ns_csiege_b7": 1,
+    "ze_marinebhop2_b02": 1,
+    "ns_metal": 1,
+    "ns_lost": 1,
+    "ns_eon": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "nsp",
+   "name": "Natural Selection 3.x",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "opera",
+   "name": "Opera",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "pvkii",
+   "name": "Pirates Vikings and Knights II",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "si",
+   "name": "Science and Industry",
+   "master": 4,
+   "alive": 4,
+   "players": 20,
+   "bots": 20,
+   "with_rules": 4,
+   "max_players": 65,
+   "maps": {
+    "si_hirise": 1,
+    "si_urban": 1,
+    "si_daybreak": 1,
+    "si_retrovirus": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "stargate",
+   "name": "StargateTC",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "svencoop",
+   "name": "SvenCoop",
+   "master": 18,
+   "alive": 17,
+   "players": 21,
+   "bots": 2,
+   "with_rules": 17,
+   "max_players": 349,
+   "maps": {
+    "battlefield": 1,
+    "sc_office": 1,
+    "rust_tycoon": 1,
+    "htc_1": 1,
+    "toadsnatch": 1,
+    "grunts": 1,
+    "back_whispers_1_v2": 1,
+    "megamonstermassacre": 1,
+    "crystal": 1,
+    "of2a1": 1,
+    "rust_mini": 1,
+    "etc2_1": 1,
+    "ba_elevator": 1,
+    "!dan!calzada": 1,
+    "ctf_warforts": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "bg",
+   "name": "The Battle Grounds",
+   "master": 1,
+   "alive": 1,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 1,
+   "max_players": 32,
+   "maps": {
+    "bg_bridge": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "ts",
+   "name": "The Specialists",
+   "master": 24,
+   "alive": 24,
+   "players": 38,
+   "bots": 38,
+   "with_rules": 24,
+   "max_players": 627,
+   "maps": {
+    "ts_trident": 2,
+    "db_duel": 2,
+    "ts_hammertime": 2,
+    "ahl_fmall": 1,
+    "ts_fall": 1,
+    "ahl_casagrande_d3": 1,
+    "ahl_bananamans_d2": 1,
+    "ts_rundown": 1,
+    "mecklenburgv5_a6": 1,
+    "ts_bothofus": 1,
+    "ts_central": 1,
+    "iburgcity_b3v5": 1,
+    "ts_lobby": 1,
+    "Mecklenburg_HLV_v1": 1,
+    "ts_heresy": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "trenches",
+   "name": "The Trenches",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "wastes",
+   "name": "The Wastes",
+   "master": 0,
+   "alive": 0,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 0,
+   "max_players": 0,
+   "maps": {}
+  },
+  {
+   "appid": 70,
+   "gamedir": "vs",
+   "name": "Vampire Slayer",
+   "master": 7,
+   "alive": 7,
+   "players": 24,
+   "bots": 24,
+   "with_rules": 7,
+   "max_players": 144,
+   "maps": {
+    "vs_feint": 2,
+    "vs_bike": 1,
+    "vs_carpark": 1,
+    "dm_quaint": 1,
+    "vs_blizzard": 1,
+    "vs_church": 1
+   }
+  },
+  {
+   "appid": 70,
+   "gamedir": "zp",
+   "name": "Zombie Panic",
+   "master": 1,
+   "alive": 1,
+   "players": 0,
+   "bots": 0,
+   "with_rules": 1,
+   "max_players": 32,
+   "maps": {
+    "zp_clubzombo": 1
+   }
   }
  ],
  "totals": {
-  "master": 61840,
+  "master": 19846,
   "sources": {
-   "steam": 56646,
-   "Varq": 2164,
-   "Varq2": 20,
+   "steam": 12240,
+   "Varq": 3304,
+   "Varq2": 25,
    "Tsarvar": 0,
-   "DSServers": 2296,
+   "CSDownload": 14,
+   "CS16": 74,
+   "DSServers": 3041,
    "DSServers2": 0,
-   "Elinsrc": 684,
+   "Elinsrc": 1112,
    "FWGS": 36
   },
-  "sdr_skipped": 167,
-  "farm_dropped": 50523,
+  "sdr_skipped": 101,
+  "farm_dropped": 10935,
   "fake_dropped": 0,
-  "probed": 11150,
-  "alive": 3897,
-  "fake_a2s_dropped": 816,
-  "players": 34099,
-  "max_players": 110980,
-  "with_rules": 3012,
-  "rules_unknown": 885,
-  "distinct_ips": 5332,
-  "ips_over_100_servers": 240
+  "probed": 8810,
+  "alive": 7292,
+  "fake_a2s_dropped": 446,
+  "players": 94482,
+  "max_players": 204593,
+  "with_rules": 5269,
+  "rules_unknown": 2023,
+  "distinct_ips": 3604,
+  "ips_over_100_servers": 54,
+  "mystery_servers": 596,
+  "mystery_bots": 3447
  },
+ "countries": [
+  {
+   "cc": "RU",
+   "name": "Russia",
+   "servers": 2336
+  },
+  {
+   "cc": "US",
+   "name": "United States",
+   "servers": 1028
+  },
+  {
+   "cc": "DE",
+   "name": "Germany",
+   "servers": 644
+  },
+  {
+   "cc": "MX",
+   "name": "Mexico",
+   "servers": 501
+  },
+  {
+   "cc": "AR",
+   "name": "Argentina",
+   "servers": 344
+  },
+  {
+   "cc": "PL",
+   "name": "Poland",
+   "servers": 242
+  },
+  {
+   "cc": "BR",
+   "name": "Brazil",
+   "servers": 216
+  },
+  {
+   "cc": "RO",
+   "name": "Romania",
+   "servers": 192
+  },
+  {
+   "cc": "FR",
+   "name": "France",
+   "servers": 184
+  },
+  {
+   "cc": "UA",
+   "name": "Ukraine",
+   "servers": 168
+  },
+  {
+   "cc": "BG",
+   "name": "Bulgaria",
+   "servers": 149
+  },
+  {
+   "cc": "CZ",
+   "name": "Czechia",
+   "servers": 148
+  },
+  {
+   "cc": "TR",
+   "name": "Turkey",
+   "servers": 102
+  },
+  {
+   "cc": "LT",
+   "name": "Lithuania",
+   "servers": 80
+  },
+  {
+   "cc": "NL",
+   "name": "The Netherlands",
+   "servers": 79
+  },
+  {
+   "cc": "CN",
+   "name": "China",
+   "servers": 78
+  },
+  {
+   "cc": "GB",
+   "name": "United Kingdom",
+   "servers": 71
+  },
+  {
+   "cc": "LU",
+   "name": "Luxembourg",
+   "servers": 53
+  },
+  {
+   "cc": "UZ",
+   "name": "Uzbekistan",
+   "servers": 52
+  },
+  {
+   "cc": "KZ",
+   "name": "Kazakhstan",
+   "servers": 43
+  },
+  {
+   "cc": "HU",
+   "name": "Hungary",
+   "servers": 42
+  },
+  {
+   "cc": "IR",
+   "name": "Iran",
+   "servers": 39
+  },
+  {
+   "cc": "RS",
+   "name": "Serbia",
+   "servers": 35
+  },
+  {
+   "cc": "CL",
+   "name": "Chile",
+   "servers": 32
+  },
+  {
+   "cc": "IL",
+   "name": "Israel",
+   "servers": 31
+  },
+  {
+   "cc": "FI",
+   "name": "Finland",
+   "servers": 30
+  },
+  {
+   "cc": "SE",
+   "name": "Sweden",
+   "servers": 27
+  },
+  {
+   "cc": "SK",
+   "name": "Slovakia",
+   "servers": 25
+  },
+  {
+   "cc": "KG",
+   "name": "Kyrgyzstan",
+   "servers": 24
+  },
+  {
+   "cc": "SG",
+   "name": "Singapore",
+   "servers": 18
+  },
+  {
+   "cc": "AU",
+   "name": "Australia",
+   "servers": 18
+  },
+  {
+   "cc": "IT",
+   "name": "Italy",
+   "servers": 16
+  },
+  {
+   "cc": "KR",
+   "name": "South Korea",
+   "servers": 16
+  },
+  {
+   "cc": "CA",
+   "name": "Canada",
+   "servers": 15
+  },
+  {
+   "cc": "MD",
+   "name": "Moldova",
+   "servers": 15
+  },
+  {
+   "cc": "ES",
+   "name": "Spain",
+   "servers": 14
+  },
+  {
+   "cc": "AE",
+   "name": "United Arab Emirates",
+   "servers": 14
+  },
+  {
+   "cc": "EE",
+   "name": "Estonia",
+   "servers": 13
+  },
+  {
+   "cc": "TW",
+   "name": "Taiwan",
+   "servers": 11
+  },
+  {
+   "cc": "LV",
+   "name": "Latvia",
+   "servers": 10
+  },
+  {
+   "cc": "NZ",
+   "name": "New Zealand",
+   "servers": 10
+  },
+  {
+   "cc": "ID",
+   "name": "Indonesia",
+   "servers": 10
+  },
+  {
+   "cc": "DK",
+   "name": "Denmark",
+   "servers": 9
+  },
+  {
+   "cc": "TJ",
+   "name": "Tajikistan",
+   "servers": 9
+  },
+  {
+   "cc": "CH",
+   "name": "Switzerland",
+   "servers": 8
+  },
+  {
+   "cc": "PT",
+   "name": "Portugal",
+   "servers": 8
+  },
+  {
+   "cc": "ZA",
+   "name": "South Africa",
+   "servers": 8
+  },
+  {
+   "cc": "BE",
+   "name": "Belgium",
+   "servers": 8
+  },
+  {
+   "cc": "MY",
+   "name": "Malaysia",
+   "servers": 8
+  },
+  {
+   "cc": "MN",
+   "name": "Mongolia",
+   "servers": 8
+  },
+  {
+   "cc": "PE",
+   "name": "Peru",
+   "servers": 7
+  },
+  {
+   "cc": "IN",
+   "name": "India",
+   "servers": 6
+  },
+  {
+   "cc": "TH",
+   "name": "Thailand",
+   "servers": 5
+  },
+  {
+   "cc": "JP",
+   "name": "Japan",
+   "servers": 4
+  },
+  {
+   "cc": "UY",
+   "name": "Uruguay",
+   "servers": 4
+  },
+  {
+   "cc": "HR",
+   "name": "Croatia",
+   "servers": 4
+  },
+  {
+   "cc": "VN",
+   "name": "Vietnam",
+   "servers": 4
+  },
+  {
+   "cc": "PK",
+   "name": "Pakistan",
+   "servers": 4
+  },
+  {
+   "cc": "BY",
+   "name": "Belarus",
+   "servers": 2
+  },
+  {
+   "cc": "GE",
+   "name": "Georgia",
+   "servers": 2
+  },
+  {
+   "cc": "AZ",
+   "name": "Azerbaijan",
+   "servers": 2
+  },
+  {
+   "cc": "LI",
+   "name": "Liechtenstein",
+   "servers": 1
+  },
+  {
+   "cc": "AT",
+   "name": "Austria",
+   "servers": 1
+  },
+  {
+   "cc": "IE",
+   "name": "Ireland",
+   "servers": 1
+  },
+  {
+   "cc": "VE",
+   "name": "Venezuela",
+   "servers": 1
+  },
+  {
+   "cc": "MK",
+   "name": "North Macedonia",
+   "servers": 1
+  },
+  {
+   "cc": "HK",
+   "name": "Hong Kong",
+   "servers": 1
+  }
+ ],
+ "unlisted_mods": [
+  {
+   "gamedir": "action",
+   "servers": 13
+  },
+  {
+   "gamedir": "csgo",
+   "servers": 3
+  },
+  {
+   "gamedir": "firearms",
+   "servers": 3
+  },
+  {
+   "gamedir": "nnk",
+   "servers": 3
+  },
+  {
+   "gamedir": "rewolf",
+   "servers": 3
+  },
+  {
+   "gamedir": "hl2jks",
+   "servers": 2
+  },
+  {
+   "gamedir": "firearms25",
+   "servers": 1
+  },
+  {
+   "gamedir": "tt",
+   "servers": 1
+  },
+  {
+   "gamedir": "bumpercars",
+   "servers": 1
+  },
+  {
+   "gamedir": "wantedsp",
+   "servers": 1
+  },
+  {
+   "gamedir": "dpbredux",
+   "servers": 1
+  },
+  {
+   "gamedir": "pvk",
+   "servers": 1
+  },
+  {
+   "gamedir": "ice_v1_1",
+   "servers": 1
+  },
+  {
+   "gamedir": "3wave",
+   "servers": 1
+  },
+  {
+   "gamedir": "snow",
+   "servers": 1
+  },
+  {
+   "gamedir": "dragonmodz",
+   "servers": 1
+  },
+  {
+   "gamedir": "gangwars",
+   "servers": 1
+  },
+  {
+   "gamedir": "syndicate",
+   "servers": 1
+  },
+  {
+   "gamedir": "turbo",
+   "servers": 1
+  },
+  {
+   "gamedir": "buzzybots",
+   "servers": 1
+  }
+ ],
+ "unlisted_vars": [
+  {
+   "var": "resemiclip_version",
+   "servers": 1405,
+   "example": "2.4.3"
+  },
+  {
+   "var": "whb_version",
+   "servers": 1081,
+   "example": "1.5.697"
+  },
+  {
+   "var": "reauthcheck_version",
+   "servers": 1032,
+   "example": "0.1.6"
+  },
+  {
+   "var": "SNAC_Version",
+   "servers": 1021,
+   "example": "1.2 Beta 3"
+  },
+  {
+   "var": "revoice_version",
+   "servers": 1006,
+   "example": "0.1.0.34"
+  },
+  {
+   "var": "reaimdetector_version",
+   "servers": 988,
+   "example": "0.2.2"
+  },
+  {
+   "var": "VTC_Version",
+   "servers": 862,
+   "example": "2017RC5"
+  },
+  {
+   "var": "aesp_version",
+   "servers": 734,
+   "example": "1.5b"
+  },
+  {
+   "var": "mapm_version",
+   "servers": 717,
+   "example": "3.2.1"
+  },
+  {
+   "var": "admanager_version",
+   "servers": 705,
+   "example": "0.5"
+  },
+  {
+   "var": "hackdetector_version",
+   "servers": 598,
+   "example": "0.15.328.lite"
+  },
+  {
+   "var": "mode2x2_version",
+   "servers": 485,
+   "example": "2.5_reapi"
+  },
+  {
+   "var": "resrdetector_version",
+   "servers": 463,
+   "example": "0.1.0"
+  },
+  {
+   "var": "ChatAdditions_version",
+   "servers": 295,
+   "example": "v1.9.4"
+  },
+  {
+   "var": "atb_advanced_version",
+   "servers": 243,
+   "example": "1.5.1"
+  },
+  {
+   "var": "admin_loader_version",
+   "servers": 217,
+   "example": "3.5"
+  },
+  {
+   "var": "aemu_version",
+   "servers": 201,
+   "example": "5.2.12.525"
+  },
+  {
+   "var": "dp_version",
+   "servers": 184,
+   "example": "0.9.582"
+  },
+  {
+   "var": "hlxce_plugin_version",
+   "servers": 184,
+   "example": "1.6.19 (HL1)"
+  },
+  {
+   "var": "amx_ptb_version",
+   "servers": 183,
+   "example": "1.8b3"
+  },
+  {
+   "var": "hlxce_version",
+   "servers": 182,
+   "example": ""
+  },
+  {
+   "var": "csdm_version",
+   "servers": 176,
+   "example": "2.1.3c-KWo"
+  },
+  {
+   "var": "zp_version",
+   "servers": 164,
+   "example": "plugin 4.3 Assembly 3.2"
+  },
+  {
+   "var": "nademodes_version",
+   "servers": 162,
+   "example": "11.2"
+  },
+  {
+   "var": "Team_Semiclip_version",
+   "servers": 161,
+   "example": "3.3.1"
+  },
+  {
+   "var": "afk_manager_version",
+   "servers": 161,
+   "example": "1.0.6 (amx 1.8.3)"
+  },
+  {
+   "var": "ezhttp_version",
+   "servers": 149,
+   "example": "1.5.0"
+  },
+  {
+   "var": "AWPLimiter_version",
+   "servers": 136,
+   "example": "1.4.0"
+  },
+  {
+   "var": "afk_version",
+   "servers": 133,
+   "example": "1.0a"
+  },
+  {
+   "var": "jk_botti_version",
+   "servers": 128,
+   "example": "1.43"
+  }
+ ],
  "addons": [
   {
    "name": "yb_version",
    "title": "YaPB",
    "url": "https://github.com/yapb/yapb",
-   "servers": 295,
-   "players": 3088,
-   "max_players": 8277,
-   "bots": 885,
+   "servers": 604,
+   "players": 7118,
+   "max_players": 17309,
+   "bots": 1770,
    "values": {
-    "4.4.957": 170,
-    "4.3.734": 24,
-    "4.2.671": 18,
-    "4.5.1224": 16,
-    "4.2.623": 12,
-    "4.5.1128": 6,
-    "4.2.598": 6,
-    "4.5.1113": 4,
+    "4.4.957": 310,
+    "4.3.734": 53,
+    "4.5.1224": 50,
+    "4.2.671": 36,
+    "4.2.623": 26,
+    "4.5.1040": 12,
+    "4.5.1113": 10,
+    "4.2.598": 10,
+    "4.3.729": 7,
+    "4.4.": 7,
+    "4.5.1199": 6,
+    "4.4.949": 6,
+    "4.5.1128": 5,
+    "4.5.1117": 5,
+    "4.5.1174": 4,
+    "4.5.1200": 3,
     "4.5.1211": 3,
-    "4.3.729": 3,
-    "4.5.1199": 3,
-    "4.5.1206": 3,
-    "4.5.1204": 2,
-    "4.5.0": 2,
-    "4.5.1040": 2,
-    "4.5.1174": 2,
-    "4.8.1282": 2,
-    "4.4.": 2,
-    "4.4.949": 2,
-    "4.5.1200": 2,
-    "4.5.980": 1,
-    "4.5.1117": 1,
-    "4.0.532": 1,
+    "4.8.1247": 3,
+    "4.5.1204": 3,
+    "4.0.532": 3,
+    "4.5.1156": 3,
+    "4.4.916": 2,
+    "4.5.1171": 2,
+    "4.8.1286": 2,
+    "2.9.5395": 2,
+    "4.5.1": 2,
+    "4.5.1198": 2,
+    "4.5.1213": 1,
+    "4.8.1251": 1,
     "4.2.637": 1,
-    "4.8.1247": 1,
+    "4.5.1153": 1,
+    "4.5.1039": 1,
+    "4.5.1120": 1,
+    "4.5.1223": 1,
+    "4.4.957-chelsyn": 1,
+    "2.10.5618": 1,
+    "4.5.1087": 1,
+    "4.4.1": 1,
+    "4.8.1266": 1,
+    "4.5.1225": 1,
+    "4.5.1173": 1,
+    "4.5.": 1,
+    "4.4.957-csc65": 1,
+    "4.5.0": 1,
+    "4.5.1206": 1,
+    "4.4.957-mode2-radio2-defuse1-fair1-nade1.0": 1,
+    "4.5.1095": 1,
+    "4.0.501": 1,
     "4.0.0": 1,
-    "4.5.1": 1,
-    "4.5.1171": 1,
-    "4.5.1169": 1,
-    "4.5.1156": 1,
-    "4.4.923": 1
+    "4.5.1169": 1
    },
    "by_mod": {
-    "10": {
-     "servers": 295,
+    "cstrike": {
+     "servers": 595,
      "values": {
-      "4.4.957": 170,
-      "4.3.734": 24,
-      "4.2.671": 18,
-      "4.5.1224": 16,
-      "4.2.623": 12,
-      "4.5.1128": 6,
-      "4.2.598": 6,
-      "4.5.1113": 4,
+      "4.4.957": 306,
+      "4.3.734": 53,
+      "4.5.1224": 50,
+      "4.2.671": 36,
+      "4.2.623": 23,
+      "4.5.1040": 12,
+      "4.5.1113": 10,
+      "4.2.598": 10,
+      "4.4.": 7,
+      "4.5.1199": 6,
+      "4.4.949": 6,
+      "4.3.729": 6,
+      "4.5.1128": 5,
+      "4.5.1117": 5,
+      "4.5.1174": 4,
+      "4.5.1200": 3,
       "4.5.1211": 3,
-      "4.3.729": 3,
-      "4.5.1199": 3,
-      "4.5.1206": 3,
-      "4.5.1204": 2,
-      "4.5.0": 2,
-      "4.5.1040": 2,
-      "4.5.1174": 2,
-      "4.8.1282": 2,
-      "4.4.": 2,
-      "4.4.949": 2,
-      "4.5.1200": 2
+      "4.8.1247": 3,
+      "4.5.1204": 3,
+      "4.0.532": 3
      }
     },
-    "80": {
+    "czero": {
+     "servers": 9,
+     "values": {
+      "4.4.957": 4,
+      "4.2.623": 3,
+      "4.4.916": 1,
+      "4.3.729": 1
+     }
+    },
+    "dod": {
      "servers": 0,
      "values": {}
     },
-    "30": {
+    "tfc": {
      "servers": 0,
      "values": {}
     },
-    "20": {
+    "gearbox": {
      "servers": 0,
      "values": {}
     },
-    "50": {
+    "dmc": {
      "servers": 0,
      "values": {}
     },
-    "40": {
+    "ricochet": {
      "servers": 0,
      "values": {}
     },
-    "60": {
+    "valve": {
      "servers": 0,
      "values": {}
     },
-    "70": {
+    "ag": {
+     "servers": 0,
+     "values": {}
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 0,
+     "values": {}
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
      "servers": 0,
      "values": {}
     }
@@ -217,152 +1468,380 @@
    "name": "amxmodx_version",
    "title": "AMX Mod X",
    "url": "https://www.amxmodx.org/",
-   "servers": 2595,
-   "players": 22642,
-   "max_players": 76459,
-   "bots": 3574,
+   "servers": 4261,
+   "players": 27391,
+   "max_players": 115002,
+   "bots": 7225,
    "values": {
-    "1.9.0.5294": 577,
-    "1.10.0.5467": 528,
-    "1.8.2": 221,
-    "1.10.0.5479": 156,
-    "1.8.3-dev+5134": 110,
-    "1.10.0.5481": 85,
-    "1.10.0.5474": 84,
-    "1.10.0.5476": 84,
-    "1.10.0.5486": 75,
-    "1.9.0.5271": 69,
-    "1.9.0.5303": 56,
-    "1.9.0.5263": 54,
-    "1.10.0.5416": 49,
-    "1.10.0.5468": 43,
-    "1.9.0-dev+5210": 40,
-    "1.10.0.5461": 33,
-    "1.9.0.5249": 25,
-    "1.8.3-dev+5201": 23,
-    "1.10.0.5478": 16,
-    "1.9.0.5241": 16,
-    "1.10.0.5465": 14,
-    "1.10.0.5475": 13,
-    "1.8.1.3746": 13,
-    "1.10.0.5412": 11,
-    "1.10.0.5473": 10,
+    "1.9.0.5294": 1224,
+    "1.10.0.5467": 621,
+    "1.8.2": 454,
+    "1.9.0.5271": 170,
+    "1.10.0.5416": 149,
+    "1.10.0.5474": 129,
+    "1.9.0.5263": 111,
+    "1.10.0.5461": 93,
+    "1.9.0.5303": 88,
+    "1.10.0.5476": 87,
+    "1.10.0.5479": 86,
+    "1.10.0.5486": 78,
+    "1.9.0-dev+5210": 75,
+    "1.10.0.5481": 70,
+    "1.10.0.5468": 51,
+    "1.9.0.5249": 50,
+    "1.10.0.5465": 45,
+    "1.9.0.5241": 39,
+    "1.10.0.5475": 36,
+    "1.10.0.5478": 35,
+    "1.8.1.3746": 33,
+    "1.8.3-dev+5201": 32,
+    "1.10.0.5473": 27,
+    "1.9.0.5302": 24,
+    "2.7.33.5934": 24,
+    "1.8.2-dev": 22,
+    "1.8.3-dev+5134": 18,
+    "1.8.3-Re": 18,
+    "1.8.3-dev+5151": 18,
+    "1.9.0.5262": 17,
+    "1.10.0.5406": 15,
+    "1.10.0.5412": 14,
+    "1.8.3-dev": 13,
+    "1.10.0.5435": 12,
+    "1.10.0.5217": 11,
+    "1.9.0.5247": 11,
+    "1.10.0.5471": 10,
+    "1.10.5-APG": 10,
+    "1.9.0.5281": 10,
     "1.8.3-dev+5090": 10,
-    "1.8.2-dev": 9,
-    "1.10.0.5484": 7,
-    "1.9.0.5302": 7,
-    "1.10.0.5217": 7,
-    "1.8.3-Re": 7,
-    "1.8.3-dev+5151": 6,
-    "1.9.0.5281": 6,
-    "1.10.5-APG": 6,
-    "1.9.0-dev+5215": 6,
-    "1.9.0.5293": 5,
-    "1.9.0.5262": 5,
-    "1.10.0.5406": 5,
-    "1.9.0.5234": 5,
-    "1.8.3-dev": 4,
-    "1.10.0.5435": 4,
-    "2.7.33.5934": 4,
-    "1.10.0.5401": 4,
-    "1.10.0.5477": 3,
-    "1.9.0-dev+5202": 3,
-    "1.8.3-dev+4745": 3,
-    "1.10.0.5402": 3,
-    "1.9.0.5270": 3,
-    "1.10.0.105": 3,
-    "1.10.0.5462": 3
+    "1.9.0.5234": 9,
+    "1.10.0.5402": 9,
+    "1.10.0.5484": 9,
+    "1.10.0-manual": 9,
+    "1.9.0.5293": 8,
+    "1.8.3-dev+5074": 8,
+    "1.9.0.5291": 7,
+    "1.10.0.5472": 7,
+    "1.8.3-dev+5154": 6,
+    "1.10.0.5462": 6
    },
    "by_mod": {
-    "10": {
-     "servers": 2202,
+    "cstrike": {
+     "servers": 3407,
      "values": {
-      "1.9.0.5294": 525,
-      "1.10.0.5467": 470,
-      "1.8.2": 140,
-      "1.10.0.5479": 140,
-      "1.8.3-dev+5134": 108,
-      "1.10.0.5481": 82,
-      "1.10.0.5476": 75,
-      "1.10.0.5474": 70,
-      "1.10.0.5486": 70,
-      "1.9.0.5271": 60,
-      "1.9.0.5303": 49,
-      "1.9.0-dev+5210": 40,
-      "1.9.0.5263": 39,
-      "1.10.0.5468": 39,
-      "1.10.0.5461": 31,
-      "1.9.0.5249": 22,
-      "1.10.0.5416": 21,
-      "1.8.3-dev+5201": 16,
-      "1.10.0.5465": 13,
-      "1.9.0.5241": 13
+      "1.9.0.5294": 1090,
+      "1.10.0.5467": 538,
+      "1.8.2": 296,
+      "1.9.0.5271": 149,
+      "1.10.0.5474": 90,
+      "1.10.0.5461": 89,
+      "1.9.0.5263": 88,
+      "1.9.0-dev+5210": 75,
+      "1.10.0.5476": 73,
+      "1.9.0.5303": 72,
+      "1.10.0.5481": 65,
+      "1.10.0.5486": 61,
+      "1.10.0.5479": 57,
+      "1.9.0.5249": 47,
+      "1.10.0.5468": 46,
+      "1.10.0.5465": 43,
+      "1.10.0.5416": 37,
+      "1.10.0.5475": 33,
+      "1.9.0.5241": 32,
+      "1.10.0.5473": 25
      }
     },
-    "80": {
-     "servers": 5,
+    "czero": {
+     "servers": 190,
      "values": {
-      "1.9.0.5294": 2,
+      "1.10.0.5416": 80,
+      "1.9.0.5294": 35,
+      "1.8.2": 14,
+      "1.10.0.5467": 11,
+      "1.9.0.5271": 7,
+      "1.10.0.5479": 5,
+      "1.10.0.5486": 4,
+      "1.9.0.5303": 4,
+      "1.10.0.5476": 4,
+      "1.9.0.5263": 4,
+      "1.10.0.5474": 3,
+      "1.9.0.5302": 3,
+      "1.10.0.5475": 3,
+      "1.9.0.5241": 2,
+      "1.8.3-dev+5134": 2,
+      "1.8.3-dev+5120": 1,
+      "1.10.0.5461": 1,
+      "1.10.0.5478": 1,
+      "1.10.0.5468": 1,
+      "1.10.0.5471": 1
+     }
+    },
+    "dod": {
+     "servers": 89,
+     "values": {
+      "2.7.33.5934": 24,
+      "1.8.2": 14,
+      "1.9.0.5294": 13,
+      "1.8.3-dev+5134": 7,
+      "1.10.0.5486": 4,
+      "1.8.1.3746": 4,
+      "1.10.0.5479": 3,
+      "1.8.3-dev+5201": 3,
+      "1.10.0.5474": 3,
+      "1.9.0.5271": 2,
+      "1.9.0.5303": 2,
+      "1.8.3-dev+19c8b00": 2,
+      "1.10.0.5478": 1,
+      "1.10.5-APG": 1,
       "1.10.0.5476": 1,
-      "1.8.3-dev+5134": 1,
-      "1.8.2": 1
+      "1.10.0.5467": 1,
+      "1.9.0.5293": 1,
+      "1.9.0.5281": 1,
+      "1.10.0.5466": 1,
+      "1.8.2-dev": 1
      }
     },
-    "30": {
-     "servers": 8,
+    "tfc": {
+     "servers": 81,
      "values": {
-      "2.7.33.5934": 4,
-      "1.8.2": 2,
-      "1.8.3-dev+19c8b00": 1,
+      "1.9.0.5294": 24,
+      "1.8.2": 12,
+      "1.10.0.5467": 7,
+      "1.10.0.5478": 7,
+      "1.10.0.5474": 7,
+      "1.9.0.5263": 3,
+      "1.10.0-manual": 3,
+      "1.10.0.5481": 3,
+      "1.9.0.5271": 2,
+      "1.10.3-APG": 2,
+      "1.8.3-dev+5134": 2,
+      "1.9.0.5241": 1,
+      "1.10.0.5476": 1,
+      "1.10.5-APG": 1,
+      "1.10.0.5479": 1,
+      "1.10.3.16-APG": 1,
+      "1.8.3-dev+5201": 1,
+      "1.10.0.5486": 1,
+      "1.10.0.5445": 1,
+      "1.8.1.3722": 1
+     }
+    },
+    "gearbox": {
+     "servers": 22,
+     "values": {
+      "1.8.2": 8,
+      "1.9.0.5294": 5,
+      "1.10.0.5467": 1,
+      "1.9.0.5241": 1,
+      "1.8.3-Re": 1,
+      "1.10.0.5461": 1,
+      "1.10.0.5445": 1,
+      "1.10.5-APG": 1,
+      "1.10.0.5462": 1,
+      "1.10.0.5474": 1,
+      "1.10.0.5486": 1
+     }
+    },
+    "dmc": {
+     "servers": 13,
+     "values": {
+      "1.8.2": 5,
+      "1.10.0.5467": 4,
+      "1.9.0.5241": 1,
+      "1.10.0-manual": 1,
+      "1.10.0.5474": 1,
       "1.8.1.3746": 1
      }
     },
-    "20": {
-     "servers": 3,
+    "ricochet": {
+     "servers": 7,
      "values": {
-      "1.8.2": 2,
-      "1.9.0.5241": 1
+      "1.9.0.5303": 1,
+      "1.9.0.5241": 1,
+      "1.10.5-APG": 1,
+      "1.8.2": 1,
+      "1.10.0.105": 1,
+      "1.10.0.5474": 1,
+      "1.10.0.5467": 1
      }
     },
-    "50": {
-     "servers": 0,
-     "values": {}
+    "valve": {
+     "servers": 323,
+     "values": {
+      "1.8.2": 64,
+      "1.9.0.5294": 51,
+      "1.10.0.5467": 48,
+      "1.10.0.5416": 32,
+      "1.10.0.5479": 17,
+      "1.10.0.5412": 10,
+      "1.9.0.5303": 9,
+      "1.10.0.5474": 8,
+      "1.10.0.5476": 7,
+      "1.9.0.5271": 7,
+      "1.8.3-dev+5201": 6,
+      "1.10.0.5486": 5,
+      "1.10.0.5478": 5,
+      "1.10.0.5472": 5,
+      "1.9.0-dev+5215": 5,
+      "1.8.3-Re": 4,
+      "1.9.0.5293": 4,
+      "1.8.3-dev+19c8b00": 4,
+      "1.8.1.3746": 3,
+      "1.9.0.5263": 3
+     }
     },
-    "40": {
+    "ag": {
+     "servers": 27,
+     "values": {
+      "1.9.0.5263": 11,
+      "1.9.0.5294": 6,
+      "1.10.0.5467": 4,
+      "1.8.2": 3,
+      "1.10.0.5468": 3
+     }
+    },
+    "brainbread": {
      "servers": 2,
      "values": {
       "1.8.2": 1,
-      "1.9.0.5241": 1
+      "1.9.0.5271": 1
      }
     },
-    "60": {
+    "dcrisis": {
      "servers": 0,
      "values": {}
     },
-    "70": {
-     "servers": 375,
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 16,
      "values": {
-      "1.8.2": 75,
-      "1.10.0.5467": 58,
-      "1.9.0.5294": 50,
-      "1.10.0.5416": 28,
-      "1.10.0.5479": 16,
-      "1.9.0.5263": 15,
-      "1.10.0.5474": 14,
-      "1.10.0.5412": 10,
-      "1.9.0.5271": 9,
-      "1.10.0.5476": 8,
-      "1.9.0.5303": 7,
-      "1.8.3-dev+5201": 7,
-      "1.8.1.3746": 6,
-      "1.10.5-APG": 6,
-      "1.10.0.5486": 5,
-      "1.9.0-dev+5215": 5,
-      "1.10.0.5468": 4,
-      "1.9.0.5293": 4,
-      "1.10.0.5478": 4,
-      "1.8.3-Re": 4
+      "1.10.0.5467": 5,
+      "1.10.0.5461": 2,
+      "1.9.0.5271": 2,
+      "1.8.2-dev": 1,
+      "1.76d": 1,
+      "1.10.0.105": 1,
+      "1.9.0.5249": 1,
+      "1.10.0.5465": 1,
+      "1.8.2": 1,
+      "1.00": 1
      }
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 1,
+     "values": {
+      "1.10.0.5467": 1
+     }
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 13,
+     "values": {
+      "1.8.2": 9,
+      "1.10.5-APG": 1,
+      "1.76c": 1,
+      "1.8.1.3746": 1,
+      "1.10.0.5474": 1
+     }
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 2,
+     "values": {
+      "1.10.5-APG": 1,
+      "1.10.0.5474": 1
+     }
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 8,
+     "values": {
+      "1.8.2": 3,
+      "1.8.3-dev+5134": 2,
+      "1.9.0.5263": 2,
+      "1.8.3-dev+5201": 1
+     }
+    },
+    "bg": {
+     "servers": 1,
+     "values": {
+      "1.10.0.5486": 1
+     }
+    },
+    "ts": {
+     "servers": 19,
+     "values": {
+      "1.8.2": 11,
+      "1.10.0.5401": 4,
+      "1.10.5-APG": 1,
+      "1.10.0.5481": 1,
+      "1.10.0.5479": 1,
+      "1.10.0.5476": 1
+     }
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 6,
+     "values": {
+      "1.60": 3,
+      "1.10.0.5479": 1,
+      "1.76d": 1,
+      "1.8.2": 1
+     }
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
     }
    }
   },
@@ -370,140 +1849,347 @@
    "name": "metamod_version",
    "title": "Metamod",
    "url": "http://www.metamod.org/",
-   "servers": 2495,
-   "players": 20887,
-   "max_players": 71617,
-   "bots": 3374,
+   "servers": 3950,
+   "players": 24608,
+   "max_players": 103776,
+   "bots": 6855,
    "values": {
-    "1.3.0.149": 1041,
-    "1.21p37": 291,
-    "1.21.1-am": 281,
-    "1.3.0.128": 167,
-    "1.3.0.138": 139,
-    "1.3.0.131": 117,
-    "1.3.0.127": 108,
-    "1.21p38": 84,
-    "1.20": 67,
-    "1.21p109": 45,
-    "1.21-am": 39,
-    "1.3.0.0": 29,
-    "1.21p39": 21,
-    "1.19p32": 11,
+    "1.3.0.149": 1603,
+    "1.21p37": 640,
+    "1.3.0.128": 386,
+    "1.21.1-am": 328,
+    "1.3.0.131": 272,
+    "1.21p38": 158,
+    "1.20": 110,
+    "1.21-am": 98,
+    "1.3.0.138": 98,
+    "1.21p109": 50,
+    "1.21p39": 31,
+    "1.19": 26,
+    "1.19p32": 22,
+    "1.3.0.0": 21,
     "1.3.0.116": 11,
-    "1.3.0.171": 9,
-    "1.19": 5,
-    "1.3.0.173": 4,
-    "1.21p40": 3,
+    "1.3.0.126": 9,
+    "1.3.0.173": 8,
+    "1.3.0.127": 7,
+    "1.21p40": 6,
+    "1.3.0.149+m": 6,
+    "1.3.0.171": 6,
+    "1.21p43": 5,
+    "1.3.0.150": 5,
+    "1.21p42": 3,
     "1.3.0.174": 3,
-    "**Secure**": 2,
-    "1.20-am": 2,
-    "1.21p42": 2,
+    "1.3.0.172+m": 3,
+    "1.3.0.86": 3,
+    "1.3.0.104": 3,
+    "1.3.0.182": 3,
+    "1.3.0.1": 3,
+    "1.3.0.166": 2,
     "1.21p44": 2,
-    "1.3.0.149+m": 2,
-    "1.3.0.158": 1,
-    "1.3.0.172+m": 1,
-    "1.3.0.150": 1,
-    "1.3.0.125": 1,
+    "1.20-am": 2,
+    "1.20p36": 2,
+    "**Secure**": 2,
+    "1.3.0.125": 2,
     "1.19p31": 1,
-    "1.21p43": 1,
-    "1.3.0.166": 1,
+    "1.6.3p64": 1,
+    "1.3.0.1+m": 1,
     "1.3.0.178+m": 1,
-    "1.3.0.126": 1,
-    "1.3.0.122": 1
+    "1.3.0.158": 1,
+    "1.3.0.122": 1,
+    "1.3.0.192": 1,
+    "1.3.0.164": 1,
+    "1.17.4": 1,
+    "1.0.0.214": 1,
+    "1.0.0.223": 1
    },
    "by_mod": {
-    "10": {
-     "servers": 2105,
+    "cstrike": {
+     "servers": 3180,
      "values": {
-      "1.3.0.149": 942,
-      "1.21p37": 254,
-      "1.21.1-am": 232,
-      "1.3.0.128": 145,
-      "1.3.0.138": 136,
-      "1.3.0.127": 108,
-      "1.3.0.131": 107,
-      "1.20": 48,
-      "1.21p38": 28,
-      "1.3.0.0": 26,
-      "1.21p109": 17,
-      "1.21-am": 16,
+      "1.3.0.149": 1439,
+      "1.21p37": 551,
+      "1.3.0.128": 346,
+      "1.3.0.131": 260,
+      "1.21.1-am": 198,
+      "1.3.0.138": 92,
+      "1.20": 74,
+      "1.21-am": 51,
+      "1.21p38": 36,
+      "1.3.0.0": 18,
+      "1.19": 16,
       "1.3.0.116": 11,
-      "1.3.0.171": 9,
+      "1.19p32": 10,
+      "1.3.0.126": 9,
+      "1.21p109": 8,
+      "1.3.0.173": 8,
+      "1.3.0.127": 7,
+      "1.3.0.149+m": 6,
+      "1.3.0.171": 6,
+      "1.3.0.150": 5
+     }
+    },
+    "czero": {
+     "servers": 117,
+     "values": {
+      "1.3.0.149": 33,
+      "1.21.1-am": 32,
+      "1.21p37": 19,
+      "1.3.0.128": 15,
+      "1.21p38": 11,
+      "1.21-am": 4,
+      "1.3.0.131": 2,
+      "1.20": 1
+     }
+    },
+    "dod": {
+     "servers": 66,
+     "values": {
+      "1.21.1-am": 12,
+      "1.21p38": 12,
+      "1.21-am": 12,
+      "1.3.0.149": 9,
+      "1.21p37": 7,
       "1.19p32": 5,
-      "1.3.0.173": 4,
+      "1.21p109": 4,
       "1.21p40": 2,
-      "**Secure**": 2,
-      "1.19": 2,
-      "1.3.0.149+m": 2
+      "1.3.0.128": 1,
+      "1.19": 1,
+      "1.3.0.138": 1
      }
     },
-    "80": {
-     "servers": 5,
+    "tfc": {
+     "servers": 86,
      "values": {
-      "1.21p38": 2,
-      "1.3.0.149": 2,
-      "1.21.1-am": 1
+      "1.21.1-am": 24,
+      "1.21p38": 15,
+      "1.21-am": 8,
+      "1.3.0.149": 7,
+      "1.21p39": 7,
+      "1.21p37": 6,
+      "1.21p109": 4,
+      "1.21p43": 4,
+      "1.21p40": 3,
+      "1.20": 3,
+      "1.19": 3,
+      "1.3.0.128": 1,
+      "1.3.0.131": 1
      }
     },
-    "30": {
-     "servers": 4,
+    "gearbox": {
+     "servers": 26,
      "values": {
+      "1.21.1-am": 7,
+      "1.21p38": 6,
+      "1.3.0.149": 5,
+      "1.20": 4,
       "1.21p37": 1,
-      "1.21p38": 1,
+      "1.21p109": 1,
+      "1.3.0.138": 1,
+      "1.19": 1
+     }
+    },
+    "dmc": {
+     "servers": 14,
+     "values": {
+      "1.21p38": 5,
+      "1.20": 3,
+      "1.3.0.149": 2,
+      "1.21p37": 1,
+      "1.21-am": 1,
       "1.21p109": 1,
       "1.19p32": 1
      }
     },
-    "20": {
-     "servers": 4,
+    "ricochet": {
+     "servers": 7,
      "values": {
+      "1.21p109": 2,
       "1.21.1-am": 2,
-      "1.21p38": 2
+      "1.21p38": 2,
+      "1.3.0.149": 1
      }
     },
-    "50": {
+    "valve": {
+     "servers": 320,
+     "values": {
+      "1.3.0.149": 90,
+      "1.21p37": 43,
+      "1.21p38": 36,
+      "1.21.1-am": 30,
+      "1.21p39": 22,
+      "1.3.0.128": 20,
+      "1.21-am": 17,
+      "1.21p109": 17,
+      "1.20": 17,
+      "1.3.0.131": 9,
+      "1.19": 5,
+      "1.3.0.138": 4,
+      "1.19p32": 3,
+      "1.3.0.172+m": 2,
+      "1.21p42": 1,
+      "1.3.0.166": 1,
+      "1.20-am": 1,
+      "1.3.0.1": 1,
+      "1.0.0.223": 1
+     }
+    },
+    "ag": {
+     "servers": 28,
+     "values": {
+      "1.3.0.149": 12,
+      "1.3.0.174": 3,
+      "1.20": 3,
+      "1.3.0.0": 3,
+      "1.21.1-am": 3,
+      "1.21p39": 2,
+      "1.21-am": 1,
+      "1.21p37": 1
+     }
+    },
+    "brainbread": {
+     "servers": 2,
+     "values": {
+      "1.21p38": 1,
+      "1.21.1-am": 1
+     }
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 16,
+     "values": {
+      "1.21p38": 9,
+      "1.21.1-am": 2,
+      "1.3.0.128": 2,
+      "1.19p31": 1,
+      "1.21p37": 1,
+      "1.17.4": 1
+     }
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 1,
+     "values": {
+      "1.21p109": 1
+     }
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 15,
+     "values": {
+      "1.21p37": 3,
+      "1.21-am": 3,
+      "1.21p44": 2,
+      "1.20": 2,
+      "1.21p109": 1,
+      "1.21p38": 1,
+      "1.21p42": 1,
+      "1.21p43": 1,
+      "1.21p40": 1
+     }
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 2,
+     "values": {
+      "1.21p109": 1,
+      "1.21.1-am": 1
+     }
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 9,
+     "values": {
+      "1.21p38": 6,
+      "1.21.1-am": 1,
+      "1.21p109": 1,
+      "1.21p37": 1
+     }
+    },
+    "bg": {
      "servers": 1,
      "values": {
       "1.21.1-am": 1
      }
     },
-    "40": {
-     "servers": 2,
+    "ts": {
+     "servers": 19,
      "values": {
-      "1.21-am": 1,
+      "1.3.0.149": 5,
+      "1.21p38": 5,
+      "1.21p37": 4,
+      "1.20": 2,
+      "1.3.0.128": 1,
+      "1.21p109": 1,
+      "1.21-am": 1
+     }
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 6,
+     "values": {
+      "1.21p109": 3,
+      "1.21.1-am": 1,
+      "1.20": 1,
       "1.21p37": 1
      }
     },
-    "60": {
-     "servers": 1,
-     "values": {
-      "1.3.0.131": 1
-     }
-    },
-    "70": {
-     "servers": 373,
-     "values": {
-      "1.3.0.149": 97,
-      "1.21p38": 51,
-      "1.21.1-am": 45,
-      "1.21p37": 35,
-      "1.21p109": 27,
-      "1.3.0.128": 22,
-      "1.21-am": 22,
-      "1.21p39": 21,
-      "1.20": 19,
-      "1.3.0.131": 9,
-      "1.19p32": 5,
-      "1.19": 3,
-      "1.3.0.138": 3,
-      "1.3.0.0": 3,
-      "1.3.0.174": 3,
-      "1.21p42": 2,
-      "1.21p44": 2,
-      "1.20-am": 1,
-      "1.19p31": 1,
-      "1.21p40": 1
-     }
+    "zp": {
+     "servers": 0,
+     "values": {}
     }
    }
   },
@@ -511,69 +2197,176 @@
    "name": "pb_version",
    "title": "POD-Bot",
    "url": "https://github.com/APGRoboCop/podbot_mm",
-   "servers": 91,
-   "players": 498,
-   "max_players": 2188,
-   "bots": 456,
+   "servers": 193,
+   "players": 1213,
+   "max_players": 4812,
+   "bots": 958,
    "values": {
-    "V3B22": 32,
+    "V3B22": 64,
+    "V3B23": 45,
+    "V3B21": 23,
     "V3B24": 17,
-    "V3B23": 12,
-    "V3B21": 10,
-    "3.0B20a": 6,
-    "V3B22c": 5,
-    "V3B23a": 5,
-    "V3B22b": 1,
-    "V3B21j": 1,
-    "3.0B20b": 1,
-    "3.0B18c": 1
+    "3.0B20a": 13,
+    "V3B23a": 8,
+    "V3B21j": 8,
+    "V3B22c": 6,
+    "3.0B18c": 4,
+    "3.0B19d": 2,
+    "3.0B20b": 2,
+    "V3B22b": 1
    },
    "by_mod": {
-    "10": {
-     "servers": 90,
+    "cstrike": {
+     "servers": 191,
      "values": {
-      "V3B22": 31,
+      "V3B22": 64,
+      "V3B23": 45,
+      "V3B21": 23,
       "V3B24": 17,
-      "V3B23": 12,
-      "V3B21": 10,
-      "3.0B20a": 6,
+      "3.0B20a": 12,
+      "V3B23a": 8,
+      "V3B21j": 8,
       "V3B22c": 5,
-      "V3B23a": 5,
-      "V3B22b": 1,
-      "V3B21j": 1,
-      "3.0B20b": 1,
-      "3.0B18c": 1
+      "3.0B18c": 4,
+      "3.0B19d": 2,
+      "3.0B20b": 2,
+      "V3B22b": 1
      }
     },
-    "80": {
-     "servers": 0,
-     "values": {}
-    },
-    "30": {
-     "servers": 0,
-     "values": {}
-    },
-    "20": {
-     "servers": 0,
-     "values": {}
-    },
-    "50": {
-     "servers": 0,
-     "values": {}
-    },
-    "40": {
-     "servers": 0,
-     "values": {}
-    },
-    "60": {
-     "servers": 0,
-     "values": {}
-    },
-    "70": {
-     "servers": 1,
+    "czero": {
+     "servers": 2,
      "values": {
-      "V3B22": 1
+      "3.0B20a": 1,
+      "V3B22c": 1
      }
+    },
+    "dod": {
+     "servers": 0,
+     "values": {}
+    },
+    "tfc": {
+     "servers": 0,
+     "values": {}
+    },
+    "gearbox": {
+     "servers": 0,
+     "values": {}
+    },
+    "dmc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ricochet": {
+     "servers": 0,
+     "values": {}
+    },
+    "valve": {
+     "servers": 0,
+     "values": {}
+    },
+    "ag": {
+     "servers": 0,
+     "values": {}
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 0,
+     "values": {}
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
     }
    }
   },
@@ -581,92 +2374,2167 @@
    "name": "bot_quota",
    "title": "CZ Bot",
    "url": "https://store.steampowered.com/app/80/CounterStrike_Condition_Zero/",
-   "servers": 157,
-   "players": 1409,
-   "max_players": 4391,
-   "bots": 658,
+   "servers": 477,
+   "players": 3406,
+   "max_players": 13300,
+   "bots": 1677,
    "values": {
-    "0": 75,
-    "10": 13,
-    "16": 8,
-    "8": 7,
-    "12": 6,
+    "0": 292,
+    "10": 28,
+    "12": 17,
+    "16": 16,
+    "20": 14,
+    "8": 12,
+    "32": 11,
+    "4": 8,
+    "14": 8,
+    "15": 7,
+    "18": 7,
+    "5": 7,
+    "2": 6,
     "3": 6,
-    "14": 5,
-    "20": 5,
-    "15": 5,
-    "2": 3,
-    "4": 3,
-    "21": 3,
-    "1": 2,
-    "22": 2,
-    "30": 2,
-    "18": 2,
-    "25": 1,
-    "5": 1,
-    "-13": 1,
-    "26": 1,
+    "26": 6,
+    "9": 5,
+    "6": 4,
+    "1": 4,
+    "11": 3,
+    "31": 3,
+    "30": 3,
+    "25": 2,
+    "24": 2,
+    "27": 2,
+    "21": 1,
+    "22": 1,
     "7": 1,
-    "9": 1,
-    "13": 1,
-    "31": 1,
-    "24": 1,
-    "27": 1
+    "23": 1
    },
    "by_mod": {
-    "10": {
-     "servers": 151,
+    "cstrike": {
+     "servers": 266,
      "values": {
-      "0": 71,
-      "10": 11,
-      "16": 8,
-      "8": 7,
-      "12": 6,
+      "0": 128,
+      "10": 17,
+      "16": 14,
+      "20": 13,
+      "12": 9,
+      "8": 8,
+      "15": 7,
       "3": 6,
-      "14": 5,
-      "20": 5,
-      "15": 5,
-      "2": 3,
-      "4": 3,
-      "21": 3,
-      "1": 2,
-      "22": 2,
-      "30": 2,
-      "18": 2,
-      "25": 1,
-      "5": 1,
-      "-13": 1,
-      "26": 1
+      "14": 6,
+      "18": 6,
+      "5": 6,
+      "26": 6,
+      "4": 5,
+      "2": 5,
+      "32": 5,
+      "1": 4,
+      "31": 3,
+      "9": 3,
+      "30": 3,
+      "25": 2
      }
     },
-    "80": {
+    "czero": {
+     "servers": 211,
+     "values": {
+      "0": 164,
+      "10": 11,
+      "12": 8,
+      "32": 6,
+      "8": 4,
+      "4": 3,
+      "14": 2,
+      "16": 2,
+      "11": 2,
+      "6": 2,
+      "9": 2,
+      "20": 1,
+      "2": 1,
+      "18": 1,
+      "22": 1,
+      "5": 1
+     }
+    },
+    "dod": {
+     "servers": 0,
+     "values": {}
+    },
+    "tfc": {
+     "servers": 0,
+     "values": {}
+    },
+    "gearbox": {
+     "servers": 0,
+     "values": {}
+    },
+    "dmc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ricochet": {
+     "servers": 0,
+     "values": {}
+    },
+    "valve": {
+     "servers": 0,
+     "values": {}
+    },
+    "ag": {
+     "servers": 0,
+     "values": {}
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 0,
+     "values": {}
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "sv_version",
+   "title": "ReHLDS",
+   "url": "https://github.com/dreamstalker/rehlds",
+   "servers": 2614,
+   "players": 15333,
+   "max_players": 68516,
+   "bots": 3561,
+   "values": {
+    "1.1.2.7/Stdio,48,4419": 585,
+    "1.1.2.7/Stdio,48,4002": 434,
+    "1.1.2.7/Stdio,48,3378": 357,
+    "1.1.2.2/Stdio,48,4002": 95,
+    "1.1.2.2/Stdio,48,4419": 76,
+    "1.1.2.7/Stdio,48,4426": 70,
+    "1.1.2.7/Stdio,48,3911": 61,
+    "1.1.2.7,48,3066": 54,
+    "1.1.2.7/Stdio,48,3082": 50,
+    "1.1.2.2/Stdio,48,3378": 37,
+    "1.1.2.7/Stdio,48,4042": 29,
+    "1.1.2.7/Stdio,48,2753": 29,
+    "1.1.2.7/Stdio,48,4560": 25,
+    "1.1.2.6/Stdio,48,4553": 24,
+    "1.1.2.7/Stdio,48,4306": 20,
+    "1.1.2.7/Stdio,48,2661": 17,
+    "1.1.2.7/Stdio,48,4328": 15,
+    "1.0.0.3/Stdio,48,4419": 13,
+    "1.1.2.7/Stdio,48,4540": 13,
+    "1.1.2.7/Stdio,48,4462": 13,
+    "1.1.2.7/Stdio,48,3761": 12,
+    "1.1.2.7/Stdio,48,3819": 12,
+    "1.1.2.7/Stdio,48,2735": 12,
+    "1.1.2.7/Stdio,48,4374": 12,
+    "1.1.2.7/Stdio,48,3390": 11,
+    "1.1.2.7/Stdio,48,4003": 11,
+    "1.1.2.7/Stdio,48,3056": 11,
+    "1.1.2.7/Stdio,48,1501": 11,
+    "1.1.2.2/Stdio,48,2117": 10,
+    "1.1.2.7/Stdio,48,3937": 9,
+    "1.1.2.7/Stdio,48,4265": 9,
+    "1.1.2.7/Stdio,48,4544": 9,
+    "1.1.2.7/Stdio,48,3948": 9,
+    "1.1.2.7/Stdio,48,2402": 9,
+    "1.1.2.7/Stdio,48,3428": 9,
+    "1.1.2.7/Stdio,48,3466": 8,
+    "1.1.2.6/Stdio,48,4419": 8,
+    "1.1.2.7/Stdio,48,3874": 8,
+    "1.1.2.7/Stdio,48,3000": 8,
+    "1.1.2.7/Stdio,48,3764": 7,
+    "1.1.2.7/Stdio,48,4031": 7,
+    "1.1.2.7/Stdio,48,4296": 7,
+    "1.1.2.7/Stdio,48,2930": 7,
+    "1.1.2.7/Stdio,48,4329": 7,
+    "1.1.2.7/Stdio,48,2492": 7,
+    "1.1.2.7/Stdio,48,1988": 6,
+    "1.1.2.6/Stdio,48,3378": 6,
+    "1.1.2.2/Stdio,48,3082": 6,
+    "1.1.2.2/Stdio,48,4487": 6,
+    "1.1.2.7/Stdio,48,4520": 6
+   },
+   "by_mod": {
+    "cstrike": {
+     "servers": 2212,
+     "values": {
+      "1.1.2.7/Stdio,48,4419": 581,
+      "1.1.2.7/Stdio,48,4002": 434,
+      "1.1.2.7/Stdio,48,3378": 357,
+      "1.1.2.7/Stdio,48,4426": 70,
+      "1.1.2.7/Stdio,48,3911": 61,
+      "1.1.2.7,48,3066": 54,
+      "1.1.2.7/Stdio,48,3082": 50,
+      "1.1.2.7/Stdio,48,4042": 29,
+      "1.1.2.7/Stdio,48,2753": 29,
+      "1.1.2.7/Stdio,48,4560": 25,
+      "1.1.2.7/Stdio,48,4306": 20,
+      "1.1.2.7/Stdio,48,2661": 17,
+      "1.1.2.7/Stdio,48,4328": 15,
+      "1.1.2.7/Stdio,48,4540": 13,
+      "1.1.2.7/Stdio,48,4462": 13,
+      "1.1.2.7/Stdio,48,3761": 12,
+      "1.1.2.7/Stdio,48,3819": 12,
+      "1.1.2.7/Stdio,48,2735": 12,
+      "1.1.2.7/Stdio,48,4374": 12,
+      "1.1.2.7/Stdio,48,3390": 11
+     }
+    },
+    "czero": {
+     "servers": 29,
+     "values": {
+      "1.0.0.3/Stdio,48,4419": 13,
+      "1.0.0.3/Stdio,48,2402": 4,
+      "1.0.0.3/Stdio,48,3378": 3,
+      "1.0.0.3/Stdio,48,4002": 3,
+      "1.0.0.3/Stdio,48,3082": 3,
+      "1.0.0.3/Stdio,48,3676": 1,
+      "1.0.0.3/Stdio,48,3874": 1,
+      "1.0.0.3/Stdio,48,2661": 1
+     }
+    },
+    "dod": {
+     "servers": 44,
+     "values": {
+      "1.1.2.6/Stdio,48,4553": 24,
+      "1.1.2.6/Stdio,48,4419": 8,
+      "1.1.2.6/Stdio,48,3378": 6,
+      "1.1.2.6/Stdio,48,4002": 4,
+      "1.1.2.6/Stdio,48,2402": 1,
+      "1.1.2.6,48,3066": 1
+     }
+    },
+    "tfc": {
+     "servers": 35,
+     "values": {
+      "1.1.2.2/Stdio,48,4419": 9,
+      "1.1.2.2/Stdio,48,3378": 9,
+      "1.1.2.2/Stdio,48,4002": 8,
+      "1.1.2.2/Stdio,48,3511": 2,
+      "1.1.2.2/Stdio,48,3818": 2,
+      "1.1.2.2/Stdio,48,2402": 1,
+      "1.1.2.2/Stdio,48,3227": 1,
+      "1.1.2.2/Stdio,48,4296": 1,
+      "1.1.2.2/Stdio,48,3770": 1,
+      "1.1.2.2/Stdio,48,4212": 1
+     }
+    },
+    "gearbox": {
+     "servers": 12,
+     "values": {
+      "1.1.2.2/Stdio,48,4419": 4,
+      "1.1.2.2/Stdio,48,4002": 2,
+      "1.1.2.2/Stdio,48,4130": 2,
+      "1.1.2.2/Stdio,48,3928": 1,
+      "1.1.2.2/Stdio,48,4212": 1,
+      "1.1.2.2/Stdio,48,3378": 1,
+      "1.1.2.2/Stdio,48,4544": 1
+     }
+    },
+    "dmc": {
+     "servers": 5,
+     "values": {
+      "1.1.2.3/Stdio,48,4130": 3,
+      "1.1.2.3/Stdio,48,3511": 1,
+      "1.1.2.3/Stdio,48,4419": 1
+     }
+    },
+    "ricochet": {
+     "servers": 5,
+     "values": {
+      "1.1.2.1/Stdio,48,4419": 2,
+      "1.1.2.1/Stdio,48,3378": 1,
+      "1.1.2.1/Stdio,48,4236": 1,
+      "1.1.2.1/Stdio,48,4002": 1
+     }
+    },
+    "valve": {
+     "servers": 203,
+     "values": {
+      "1.1.2.2/Stdio,48,4002": 72,
+      "1.1.2.2/Stdio,48,4419": 52,
+      "1.1.2.2/Stdio,48,3378": 18,
+      "1.1.2.2/Stdio,48,3082": 5,
+      "1.1.2.2/Stdio,48,909": 5,
+      "1.1.2.2/Stdio,48,2186": 4,
+      "1.1.2.2/Stdio,48,2427": 4,
+      "1.1.2.2/Stdio,48,4236": 4,
+      "1.1.2.2,48,3132": 3,
+      "1.1.2.2/Stdio,48,4487": 3,
+      "1.1.2.2/Stdio,48,7559": 2,
+      "1.1.2.2/Stdio,48,4387": 2,
+      "1.6.3.7/Stdio,48,2591": 2,
+      "1.1.2.2/Stdio,48,4328": 2,
+      "1.1.2.2/Stdio,48,3874": 1,
+      "1.1.2.2/Stdio,48,654": 1,
+      "1.1.2.2/Stdio,48,4265": 1,
+      "1.1.2.2/Stdio,48,4437": 1,
+      "1.1.2.2/Stdio,48,2661": 1,
+      "1.1.2.2,48,3378": 1
+     }
+    },
+    "ag": {
+     "servers": 29,
+     "values": {
+      "1.1.2.2/Stdio,48,2117": 10,
+      "1.1.2.2/Stdio,48,4002": 5,
+      "1.1.2.2/Stdio,48,4487": 3,
+      "1.1.2.2/Stdio,48,4562": 2,
+      "1.1.2.2/Stdio,48,3378": 2,
+      "1.1.2.2/Stdio,48,4518": 1,
+      "1.1.2.2/Stdio,48,4387": 1,
+      "1.1.2.2/Stdio,48,4563": 1,
+      "1.1.2.2/Stdio,48,4240": 1,
+      "1.1.2.2/Stdio,48,1565": 1,
+      "1.1.2.2/Stdio,48,3082": 1,
+      "1.1.2.2/Stdio,48,4419": 1
+     }
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 13,
+     "values": {
+      "1.1.2.7/Stdio,48,4419": 4,
+      "1.1.2.2/Stdio,48,3378": 3,
+      "1.1.2.2/Stdio,48,4419": 2,
+      "1.1.2.2/Stdio,48,3549": 1,
+      "1.1.2.2/Stdio,48,4387": 1,
+      "1.1.2.2/Stdio,48,2321": 1,
+      "1.1.2.2/Stdio,48,2537": 1
+     }
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 1,
+     "values": {
+      "1.1.2.2/Stdio,48,4544": 1
+     }
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 1,
+     "values": {
+      "1.1.2.2/Stdio,48,4002": 1
+     }
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 3,
+     "values": {
+      "1.1.2.2/Stdio,48,4419": 2,
+      "1.1.2.2/Stdio,48,4002": 1
+     }
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 13,
+     "values": {
+      "1.1.2.2/Stdio,48,4002": 5,
+      "1.1.2.2/Stdio,48,3378": 4,
+      "1.1.2.2/Stdio,48,4419": 3,
+      "1.1.2.2/Stdio,48,4471": 1
+     }
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "game_version",
+   "title": "ReGameDLL",
+   "url": "https://github.com/s1lentq/ReGameDLL_CS",
+   "servers": 2836,
+   "players": 22222,
+   "max_players": 77632,
+   "bots": 4132,
+   "values": {
+    "5.28.0.756-dev": 824,
+    "5.30.0.814-dev": 813,
+    "5.26.0.668-dev": 527,
+    "5.21.0.556-dev": 88,
+    "5.22.0.593-dev": 55,
+    "5.21.0.546-dev": 42,
+    "5.21.0.576-dev": 37,
+    "5.21.0.540-dev": 34,
+    "5.20.0.492-dev": 31,
+    "5.28.0.0-dev": 28,
+    "5.21.0.534-dev": 20,
+    "5.22.0.604-dev": 18,
+    "5.30.0.0-dev": 17,
+    "5.30.0.830-dev": 16,
+    "5.30.0.831-dev": 15,
+    "5.21.0.575-dev": 12,
+    "5.18.0.474-dev": 11,
+    "5.30.0.807-dev": 11,
+    "5.7.0.295-dev": 11,
+    "5.25.0.627-dev": 8,
+    "5.20.0.525-dev": 8,
+    "5.20.0.516-dev": 8,
+    "5.30.0.809-dev": 7,
+    "5.19.0.490-dev": 6,
+    "5.30.0.805-dev": 6,
+    "5.12.0.425-dev": 6,
+    "5.28.0.770-dev": 6,
+    "5.14.0.456-dev": 5,
+    "5.26.0.670 CS-DREAM.SU EDIT": 5,
+    "5.30.0.823-dev": 5,
+    "5.28.0.777-dev": 5,
+    "5.30.0.782-dev": 4,
+    "5.22.0.610-dev": 4,
+    "5.30.0.806-dev": 4,
+    "5.20.0.505-dev": 4,
+    "5.28.0.737-dev": 4,
+    "5.21.0.0-dev": 4,
+    "5.7.0.330-dev": 4,
+    "5.26.0.689-dev": 3,
+    "5.27.0.0-dev": 3,
+    "5.18.0.475-dev": 3,
+    "5.15.0.458-dev": 3,
+    "5.9.0.387-dev": 3,
+    "5.30.0.833-dev": 3,
+    "5.13.0.447-dev+m": 3,
+    "5.17.0.466-dev": 3,
+    "5.30.0.837-dev": 3,
+    "5.16.0.460-dev": 3,
+    "5.26.0.668-dev+m": 3,
+    "5.30.0.20-dev": 3
+   },
+   "by_mod": {
+    "cstrike": {
+     "servers": 2795,
+     "values": {
+      "5.28.0.756-dev": 816,
+      "5.30.0.814-dev": 800,
+      "5.26.0.668-dev": 521,
+      "5.21.0.556-dev": 88,
+      "5.22.0.593-dev": 55,
+      "5.21.0.546-dev": 42,
+      "5.21.0.576-dev": 37,
+      "5.21.0.540-dev": 33,
+      "5.20.0.492-dev": 30,
+      "5.28.0.0-dev": 28,
+      "5.21.0.534-dev": 19,
+      "5.22.0.604-dev": 18,
+      "5.30.0.0-dev": 17,
+      "5.30.0.830-dev": 16,
+      "5.30.0.831-dev": 15,
+      "5.21.0.575-dev": 12,
+      "5.18.0.474-dev": 11,
+      "5.30.0.807-dev": 11,
+      "5.7.0.295-dev": 11,
+      "5.25.0.627-dev": 8
+     }
+    },
+    "czero": {
+     "servers": 41,
+     "values": {
+      "5.30.0.814-dev": 13,
+      "5.28.0.756-dev": 8,
+      "5.26.0.668-dev": 6,
+      "5.22.0.610-dev": 4,
+      "5.20.0.492-dev": 1,
+      "5.21.0.540-dev": 1,
+      "5.30.0.808-dev+m": 1,
+      "5.22.0.1204-dev": 1,
+      "5.22.0.1197-dev": 1,
+      "5.30.0.782-dev": 1,
+      "5.22.0.1170-dev": 1,
+      "5.20.0.525-dev": 1,
+      "5.14.0.456-dev": 1,
+      "5.21.0.534-dev": 1
+     }
+    },
+    "dod": {
+     "servers": 0,
+     "values": {}
+    },
+    "tfc": {
+     "servers": 0,
+     "values": {}
+    },
+    "gearbox": {
+     "servers": 0,
+     "values": {}
+    },
+    "dmc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ricochet": {
+     "servers": 0,
+     "values": {}
+    },
+    "valve": {
+     "servers": 0,
+     "values": {}
+    },
+    "ag": {
+     "servers": 0,
+     "values": {}
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 0,
+     "values": {}
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "reu_version",
+   "title": "ReUnion",
+   "url": "https://github.com/s1lentq/reunion",
+   "servers": 2631,
+   "players": 17622,
+   "max_players": 71175,
+   "bots": 3571,
+   "values": {
+    "0.2.0.25": 609,
+    "0.1.0.95c": 469,
+    "0.2.0.34": 338,
+    "0.2.0.27": 312,
+    "0.1.0.137": 273,
+    "0.2.0.13": 140,
+    "0.1.0.92": 124,
+    "0.1.0.92c": 109,
+    "0.1.0.135": 88,
+    "0.1.75": 81,
+    "0.1.0.133": 30,
+    "0.1.0.89": 11,
+    "0.1.0.112": 9,
+    "0.2.0.36": 7,
+    "0.1.67": 5,
+    "0.2.0.0": 5,
+    "0.2.0.6": 5,
+    "0.2.0.22": 4,
+    "0.2.0.35": 3,
+    "0.2.0.34-bz1": 2,
+    "0.1.65": 1,
+    "0.2.0.34-nullguard1": 1,
+    "0.2.0.27-fix36": 1,
+    "0.1.0.130": 1,
+    "**Secure**": 1,
+    "0.2.0.1": 1,
+    "0.1.0.113": 1
+   },
+   "by_mod": {
+    "cstrike": {
+     "servers": 2399,
+     "values": {
+      "0.2.0.25": 512,
+      "0.1.0.95c": 438,
+      "0.2.0.34": 319,
+      "0.2.0.27": 303,
+      "0.1.0.137": 262,
+      "0.2.0.13": 126,
+      "0.1.0.92": 121,
+      "0.1.0.92c": 98,
+      "0.1.0.135": 76,
+      "0.1.75": 69,
+      "0.1.0.133": 30,
+      "0.1.0.89": 11,
+      "0.2.0.36": 6,
+      "0.2.0.0": 5,
+      "0.2.0.6": 5,
+      "0.1.0.112": 5,
+      "0.2.0.35": 3,
+      "0.2.0.22": 3,
+      "0.2.0.34-bz1": 2,
+      "0.2.0.27-fix36": 1
+     }
+    },
+    "czero": {
+     "servers": 30,
+     "values": {
+      "0.2.0.25": 9,
+      "0.1.0.95c": 7,
+      "0.1.0.137": 6,
+      "0.2.0.34": 3,
+      "0.1.75": 1,
+      "0.1.0.92c": 1,
+      "0.2.0.22": 1,
+      "0.2.0.13": 1,
+      "0.1.0.135": 1
+     }
+    },
+    "dod": {
+     "servers": 7,
+     "values": {
+      "0.2.0.25": 3,
+      "0.2.0.34": 2,
+      "0.1.0.92c": 1,
+      "0.2.0.27": 1
+     }
+    },
+    "tfc": {
+     "servers": 4,
+     "values": {
+      "0.1.0.112": 2,
+      "0.1.0.92c": 1,
+      "0.2.0.13": 1
+     }
+    },
+    "gearbox": {
+     "servers": 3,
+     "values": {
+      "0.2.0.13": 3
+     }
+    },
+    "dmc": {
+     "servers": 3,
+     "values": {
+      "0.2.0.13": 3
+     }
+    },
+    "ricochet": {
+     "servers": 0,
+     "values": {}
+    },
+    "valve": {
+     "servers": 168,
+     "values": {
+      "0.2.0.25": 79,
+      "0.1.0.95c": 18,
+      "0.2.0.34": 14,
+      "0.1.75": 11,
+      "0.1.0.135": 11,
+      "0.2.0.27": 8,
+      "0.2.0.13": 5,
+      "0.1.0.92c": 5,
+      "0.1.0.137": 5,
+      "0.1.67": 5,
+      "0.1.0.92": 3,
+      "0.1.65": 1,
+      "0.2.0.34-nullguard1": 1,
+      "0.2.0.36": 1,
+      "0.1.0.112": 1
+     }
+    },
+    "ag": {
+     "servers": 3,
+     "values": {
+      "0.1.0.95c": 3
+     }
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 10,
+     "values": {
+      "0.2.0.25": 6,
+      "0.1.0.95c": 3,
+      "0.2.0.13": 1
+     }
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 3,
+     "values": {
+      "0.1.0.92c": 3
+     }
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "gal_version",
+   "title": "Galileo",
+   "url": "http://forums.alliedmods.net/showthread.php?t=77391",
+   "servers": 373,
+   "players": 2290,
+   "max_players": 10186,
+   "bots": 963,
+   "values": {
+    "v5.9.1-926": 173,
+    "1.1.290": 131,
+    "1.2.": 15,
+    "1.1.290_HL": 12,
+    "v5.9.1-932": 12,
+    "1.1.290-v0.5.0": 4,
+    "3.1.1": 2,
+    "1.2.2.": 2,
+    "1.2.4.": 2,
+    "v5.4.0-803": 2,
+    "v5.9.1-926 PDK": 2,
+    "v5.7.2-885": 2,
+    "1.0.255": 2,
+    "3.2.0": 1,
+    "v3.2.6-275": 1,
+    "v5.9.1-931": 1,
+    "2.0.1.": 1,
+    "v5.9.1-926-webvote21av-file-state-hud-nextmap-vote5-classic-respawn-strip": 1,
+    "v5.9.2-000": 1,
+    "3.0.0": 1,
+    "ZM-AMXX MapManager 1.0": 1,
+    "0515-fix4": 1,
+    "v3.2.3-261": 1,
+    "v5.7.2-890": 1,
+    "2.0.3.": 1
+   },
+   "by_mod": {
+    "cstrike": {
+     "servers": 268,
+     "values": {
+      "v5.9.1-926": 114,
+      "1.1.290": 114,
+      "1.2.": 15,
+      "v5.9.1-932": 8,
+      "v5.4.0-803": 2,
+      "v5.9.1-926 PDK": 2,
+      "v5.7.2-885": 2,
+      "2.0.1.": 1,
+      "v5.9.1-926-webvote21av-file-state-hud-nextmap-vote5-classic-respawn-strip": 1,
+      "v5.9.2-000": 1,
+      "3.0.0": 1,
+      "ZM-AMXX MapManager 1.0": 1,
+      "1.1.290-v0.5.0": 1,
+      "1.0.255": 1,
+      "0515-fix4": 1,
+      "v3.2.3-261": 1,
+      "v5.7.2-890": 1,
+      "2.0.3.": 1
+     }
+    },
+    "czero": {
+     "servers": 7,
+     "values": {
+      "v5.9.1-926": 5,
+      "1.1.290": 1,
+      "1.1.290-v0.5.0": 1
+     }
+    },
+    "dod": {
+     "servers": 14,
+     "values": {
+      "v5.9.1-926": 6,
+      "1.1.290": 4,
+      "3.1.1": 2,
+      "3.2.0": 1,
+      "1.0.255": 1
+     }
+    },
+    "tfc": {
+     "servers": 14,
+     "values": {
+      "v5.9.1-926": 7,
+      "1.2.2.": 2,
+      "1.2.4.": 2,
+      "1.1.290": 2,
+      "v3.2.6-275": 1
+     }
+    },
+    "gearbox": {
+     "servers": 5,
+     "values": {
+      "v5.9.1-926": 3,
+      "v5.9.1-931": 1,
+      "1.1.290": 1
+     }
+    },
+    "dmc": {
+     "servers": 2,
+     "values": {
+      "v5.9.1-926": 1,
+      "1.1.290": 1
+     }
+    },
+    "ricochet": {
+     "servers": 1,
+     "values": {
+      "v5.9.1-926": 1
+     }
+    },
+    "valve": {
+     "servers": 39,
+     "values": {
+      "v5.9.1-926": 19,
+      "1.1.290_HL": 11,
+      "v5.9.1-932": 4,
+      "1.1.290": 3,
+      "1.1.290-v0.5.0": 2
+     }
+    },
+    "ag": {
+     "servers": 0,
+     "values": {}
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 2,
+     "values": {
+      "v5.9.1-926": 2
+     }
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 1,
+     "values": {
+      "1.1.290": 1
+     }
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 7,
+     "values": {
+      "v5.9.1-926": 5,
+      "1.1.290": 2
+     }
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 1,
+     "values": {
+      "1.1.290_HL": 1
+     }
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "amxbans_version",
+   "title": "AMXBans",
+   "url": "http://amxbans.net/",
+   "servers": 474,
+   "players": 2403,
+   "max_players": 11828,
+   "bots": 933,
+   "values": {
+    "6.13": 190,
+    "5.0": 95,
+    "Gm 1.6": 47,
+    "6.0.3": 44,
+    "Gm 1.5.1": 44,
+    "MA: 1.6.14": 17,
+    "1.4": 6,
+    "6.0.0": 5,
+    "MA 1.6.9": 5,
+    "MA: 1.6.12": 3,
+    "Gm 1.5": 3,
+    "5.1rc": 2,
+    "6.13.1": 2,
+    "MA 1.6.7": 2,
+    "6.dev": 2,
+    "6.0.2": 2,
+    "6.14.5": 1,
+    "MA 1.6.1": 1,
+    "6.14": 1,
+    "6.15.0": 1,
+    "6.13-lk5": 1
+   },
+   "by_mod": {
+    "cstrike": {
+     "servers": 389,
+     "values": {
+      "6.13": 136,
+      "5.0": 91,
+      "Gm 1.5.1": 42,
+      "Gm 1.6": 40,
+      "6.0.3": 35,
+      "MA: 1.6.14": 17,
+      "6.0.0": 5,
+      "MA 1.6.9": 5,
+      "MA: 1.6.12": 3,
+      "Gm 1.5": 3,
+      "6.13.1": 2,
+      "MA 1.6.7": 2,
+      "6.dev": 2,
+      "1.4": 2,
+      "6.14.5": 1,
+      "6.15.0": 1,
+      "5.1rc": 1,
+      "6.13-lk5": 1
+     }
+    },
+    "czero": {
+     "servers": 19,
+     "values": {
+      "6.13": 15,
+      "Gm 1.5.1": 2,
+      "MA 1.6.1": 1,
+      "5.1rc": 1
+     }
+    },
+    "dod": {
+     "servers": 12,
+     "values": {
+      "6.13": 6,
+      "5.0": 3,
+      "6.0.2": 2,
+      "6.14": 1
+     }
+    },
+    "tfc": {
+     "servers": 0,
+     "values": {}
+    },
+    "gearbox": {
+     "servers": 2,
+     "values": {
+      "6.0.3": 1,
+      "1.4": 1
+     }
+    },
+    "dmc": {
+     "servers": 1,
+     "values": {
+      "6.13": 1
+     }
+    },
+    "ricochet": {
+     "servers": 1,
+     "values": {
+      "6.13": 1
+     }
+    },
+    "valve": {
+     "servers": 34,
+     "values": {
+      "6.13": 16,
+      "6.0.3": 8,
+      "Gm 1.6": 7,
+      "1.4": 2,
+      "5.0": 1
+     }
+    },
+    "ag": {
+     "servers": 11,
+     "values": {
+      "6.13": 11
+     }
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 1,
+     "values": {
+      "6.13": 1
+     }
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 2,
+     "values": {
+      "1.4": 1,
+      "6.13": 1
+     }
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "sanksounds_version",
+   "title": "Ultimate Sounds",
+   "url": "http://forums.alliedmods.net/showthread.php?t=66006",
+   "servers": 78,
+   "players": 475,
+   "max_players": 1887,
+   "bots": 351,
+   "values": {
+    "1.9.2": 27,
+    "1.8.4": 15,
+    "1.7.1": 9,
+    "1.8.9": 6,
+    "1.6.3": 4,
+    "1.9.0": 3,
+    "1.6.6d": 2,
+    "1.9.1": 2,
+    "1.8.6": 2,
+    "1.6.0": 2,
+    "1.5.5": 2,
+    "1.4.5": 1,
+    "1.6.6d-sql": 1,
+    "1.6.6": 1,
+    "1.8.7": 1
+   },
+   "by_mod": {
+    "cstrike": {
+     "servers": 33,
+     "values": {
+      "1.8.4": 9,
+      "1.9.2": 8,
+      "1.9.1": 2,
+      "1.8.9": 2,
+      "1.6.0": 2,
+      "1.5.5": 2,
+      "1.9.0": 2,
+      "1.8.6": 1,
+      "1.6.6d-sql": 1,
+      "1.6.6d": 1,
+      "1.6.6": 1,
+      "1.6.3": 1,
+      "1.8.7": 1
+     }
+    },
+    "czero": {
+     "servers": 2,
+     "values": {
+      "1.7.1": 1,
+      "1.9.2": 1
+     }
+    },
+    "dod": {
+     "servers": 2,
+     "values": {
+      "1.8.4": 1,
+      "1.9.2": 1
+     }
+    },
+    "tfc": {
+     "servers": 13,
+     "values": {
+      "1.9.2": 8,
+      "1.8.9": 3,
+      "1.6.6d": 1,
+      "1.8.4": 1
+     }
+    },
+    "gearbox": {
+     "servers": 1,
+     "values": {
+      "1.8.4": 1
+     }
+    },
+    "dmc": {
+     "servers": 2,
+     "values": {
+      "1.6.3": 1,
+      "1.9.2": 1
+     }
+    },
+    "ricochet": {
+     "servers": 0,
+     "values": {}
+    },
+    "valve": {
+     "servers": 24,
+     "values": {
+      "1.9.2": 8,
+      "1.7.1": 8,
+      "1.8.4": 3,
+      "1.6.3": 2,
+      "1.9.0": 1,
+      "1.8.9": 1,
+      "1.8.6": 1
+     }
+    },
+    "ag": {
+     "servers": 0,
+     "values": {}
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 0,
+     "values": {}
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 1,
+     "values": {
+      "1.4.5": 1
+     }
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "restnames_version",
+   "title": "Restrict Names",
+   "url": "http://forums.alliedmods.net/showthread.php?p=147257",
+   "servers": 43,
+   "players": 172,
+   "max_players": 1155,
+   "bots": 128,
+   "values": {
+    "1.2a": 35,
+    "1.0.0": 4,
+    "1.4": 2,
+    "1.2c": 2
+   },
+   "by_mod": {
+    "cstrike": {
+     "servers": 27,
+     "values": {
+      "1.2a": 25,
+      "1.2c": 2
+     }
+    },
+    "czero": {
+     "servers": 1,
+     "values": {
+      "1.2a": 1
+     }
+    },
+    "dod": {
+     "servers": 0,
+     "values": {}
+    },
+    "tfc": {
+     "servers": 2,
+     "values": {
+      "1.2a": 2
+     }
+    },
+    "gearbox": {
+     "servers": 2,
+     "values": {
+      "1.2a": 2
+     }
+    },
+    "dmc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ricochet": {
+     "servers": 0,
+     "values": {}
+    },
+    "valve": {
+     "servers": 11,
+     "values": {
+      "1.2a": 5,
+      "1.0.0": 4,
+      "1.4": 2
+     }
+    },
+    "ag": {
+     "servers": 0,
+     "values": {}
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 0,
+     "values": {}
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "hlg_version",
+   "title": "HLGuard",
+   "url": "http://www.thezproject.org/",
+   "servers": 33,
+   "players": 141,
+   "max_players": 952,
+   "bots": 75,
+   "values": {
+    "1.8": 15,
+    "1.9.n10": 14,
+    "1.9.t20": 4
+   },
+   "by_mod": {
+    "cstrike": {
+     "servers": 20,
+     "values": {
+      "1.8": 12,
+      "1.9.n10": 5,
+      "1.9.t20": 3
+     }
+    },
+    "czero": {
+     "servers": 2,
+     "values": {
+      "1.8": 2
+     }
+    },
+    "dod": {
+     "servers": 1,
+     "values": {
+      "1.8": 1
+     }
+    },
+    "tfc": {
+     "servers": 0,
+     "values": {}
+    },
+    "gearbox": {
+     "servers": 0,
+     "values": {}
+    },
+    "dmc": {
+     "servers": 1,
+     "values": {
+      "1.9.n10": 1
+     }
+    },
+    "ricochet": {
+     "servers": 0,
+     "values": {}
+    },
+    "valve": {
+     "servers": 8,
+     "values": {
+      "1.9.n10": 8
+     }
+    },
+    "ag": {
+     "servers": 0,
+     "values": {}
+    },
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 0,
+     "values": {}
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 1,
+     "values": {
+      "1.9.t20": 1
+     }
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
+     "servers": 0,
+     "values": {}
+    }
+   }
+  },
+  {
+   "name": "amx_version",
+   "title": "AMX Mod",
+   "url": "http://www.amxmod.net/",
+   "servers": 21,
+   "players": 131,
+   "max_players": 547,
+   "bots": 73,
+   "values": {
+    "2010.1-fix4": 9,
+    "2010.1-fix3": 5,
+    "2010.2": 3,
+    "0.9.3": 1,
+    "[AMXX.XA-CS] Compiled: 02/08/2026 15:21:35 by FEDERICOMB see XA-CS.com.ar": 1,
+    "2010.1-fix5": 1,
+    "2010-evo1": 1
+   },
+   "by_mod": {
+    "cstrike": {
      "servers": 6,
      "values": {
-      "0": 4,
-      "10": 2
+      "2010.1-fix4": 2,
+      "[AMXX.XA-CS] Compiled: 02/08/2026 15:21:35 by FEDERICOMB see XA-CS.com.ar": 1,
+      "2010.2": 1,
+      "2010.1-fix5": 1,
+      "2010-evo1": 1
      }
     },
-    "30": {
+    "czero": {
+     "servers": 9,
+     "values": {
+      "2010.1-fix4": 6,
+      "2010.2": 2,
+      "0.9.3": 1
+     }
+    },
+    "dod": {
      "servers": 0,
      "values": {}
     },
-    "20": {
+    "tfc": {
      "servers": 0,
      "values": {}
     },
-    "50": {
+    "gearbox": {
+     "servers": 3,
+     "values": {
+      "2010.1-fix3": 3
+     }
+    },
+    "dmc": {
      "servers": 0,
      "values": {}
     },
-    "40": {
+    "ricochet": {
      "servers": 0,
      "values": {}
     },
-    "60": {
+    "valve": {
+     "servers": 2,
+     "values": {
+      "2010.1-fix3": 2
+     }
+    },
+    "ag": {
      "servers": 0,
      "values": {}
     },
-    "70": {
+    "brainbread": {
+     "servers": 0,
+     "values": {}
+    },
+    "dcrisis": {
+     "servers": 0,
+     "values": {}
+    },
+    "dpb": {
+     "servers": 0,
+     "values": {}
+    },
+    "esf": {
+     "servers": 0,
+     "values": {}
+    },
+    "fa": {
+     "servers": 0,
+     "values": {}
+    },
+    "flf": {
+     "servers": 0,
+     "values": {}
+    },
+    "gw": {
+     "servers": 0,
+     "values": {}
+    },
+    "hi": {
+     "servers": 0,
+     "values": {}
+    },
+    "hlrally": {
+     "servers": 0,
+     "values": {}
+    },
+    "ios": {
+     "servers": 0,
+     "values": {}
+    },
+    "monkeystrike": {
+     "servers": 0,
+     "values": {}
+    },
+    "msc": {
+     "servers": 0,
+     "values": {}
+    },
+    "ns": {
+     "servers": 0,
+     "values": {}
+    },
+    "nsp": {
+     "servers": 0,
+     "values": {}
+    },
+    "opera": {
+     "servers": 0,
+     "values": {}
+    },
+    "pvkii": {
+     "servers": 0,
+     "values": {}
+    },
+    "si": {
+     "servers": 0,
+     "values": {}
+    },
+    "stargate": {
+     "servers": 0,
+     "values": {}
+    },
+    "svencoop": {
+     "servers": 0,
+     "values": {}
+    },
+    "bg": {
+     "servers": 0,
+     "values": {}
+    },
+    "ts": {
+     "servers": 0,
+     "values": {}
+    },
+    "trenches": {
+     "servers": 0,
+     "values": {}
+    },
+    "wastes": {
+     "servers": 0,
+     "values": {}
+    },
+    "vs": {
+     "servers": 0,
+     "values": {}
+    },
+    "zp": {
      "servers": 0,
      "values": {}
     }
@@ -674,18 +4542,116 @@
   }
  ],
  "quality": {
-  "truncated_appids": [
-   10
-  ],
+  "truncated_appids": [],
   "info_errors": {
-   "TimeoutError": 6405,
-   "BufferExhaustedError": 21,
-   "BrokenMessageError": 11
+   "TimeoutError": 1002,
+   "BufferExhaustedError": 67,
+   "BrokenMessageError": 3
   },
   "rules_errors": {
-   "TimeoutError": 815,
-   "RulesError": 70
+   "TimeoutError": 2004,
+   "RulesError": 19
   },
   "note": "Servers that ignore A2S_RULES are counted in rules_unknown, not silently dropped."
+ },
+ "fresh": {
+  "amxmodx_version": [
+   "1.9.0.5303"
+  ],
+  "bot_quota": [
+   "4"
+  ],
+  "sv_version": [
+   "1.1.2.7/Stdio,48,4419",
+   "1.1.2.7/Stdio,48,4002",
+   "1.1.2.7/Stdio,48,3378",
+   "1.1.2.2/Stdio,48,4002",
+   "1.1.2.2/Stdio,48,4419",
+   "1.1.2.7/Stdio,48,4426",
+   "1.1.2.7/Stdio,48,3911",
+   "1.1.2.7,48,3066",
+   "1.1.2.7/Stdio,48,3082",
+   "1.1.2.2/Stdio,48,3378"
+  ],
+  "game_version": [
+   "5.28.0.756-dev",
+   "5.30.0.814-dev",
+   "5.26.0.668-dev",
+   "5.21.0.556-dev",
+   "5.22.0.593-dev",
+   "5.21.0.546-dev",
+   "5.21.0.576-dev",
+   "5.21.0.540-dev",
+   "5.20.0.492-dev",
+   "5.28.0.0-dev"
+  ],
+  "reu_version": [
+   "0.2.0.25",
+   "0.1.0.95c",
+   "0.2.0.34",
+   "0.2.0.27",
+   "0.1.0.137",
+   "0.2.0.13",
+   "0.1.0.92",
+   "0.1.0.92c",
+   "0.1.0.135",
+   "0.1.75"
+  ],
+  "gal_version": [
+   "v5.9.1-926",
+   "1.1.290",
+   "1.2.",
+   "1.1.290_HL",
+   "v5.9.1-932",
+   "1.1.290-v0.5.0",
+   "3.1.1",
+   "1.2.2.",
+   "1.2.4.",
+   "v5.4.0-803"
+  ],
+  "amxbans_version": [
+   "6.13",
+   "5.0",
+   "Gm 1.6",
+   "6.0.3",
+   "Gm 1.5.1",
+   "MA: 1.6.14",
+   "1.4",
+   "6.0.0",
+   "MA 1.6.9",
+   "MA: 1.6.12"
+  ],
+  "sanksounds_version": [
+   "1.9.2",
+   "1.8.4",
+   "1.7.1",
+   "1.8.9",
+   "1.6.3",
+   "1.9.0",
+   "1.6.6d",
+   "1.9.1",
+   "1.8.6",
+   "1.6.0"
+  ],
+  "restnames_version": [
+   "1.2a",
+   "1.0.0",
+   "1.4",
+   "1.2c"
+  ],
+  "hlg_version": [
+   "1.8",
+   "1.9.n10",
+   "1.9.t20"
+  ],
+  "amx_version": [
+   "2010.1-fix4",
+   "2010.1-fix3",
+   "2010.2",
+   "0.9.3",
+   "[AMXX.XA-CS] Compiled: 02/08/2026 15:21:35 by FEDERICOMB see XA-CS.com.ar",
+   "2010.1-fix5",
+   "2010-evo1"
+  ]
  }
 }
