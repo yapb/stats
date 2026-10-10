@@ -78,15 +78,19 @@
         <table class="stats w-full text-sm num">
           <thead>
             <tr>
-              <th>Directory</th>
-              <th>Servers</th>
+              <th @click="sortUnlisted('gamedir')" class="cursor-pointer select-none">
+                Directory{{ unlistedArrow('gamedir') }}
+              </th>
+              <th @click="sortUnlisted('servers')" class="cursor-pointer select-none">
+                Servers{{ unlistedArrow('servers') }}
+              </th>
             </tr>
           </thead>
           <tbody>
-            <tr v-if="!unlisted.length">
+            <tr v-if="!sortedUnlisted.length">
               <td colspan="2" class="text-slate-500">None seen.</td>
             </tr>
-            <tr v-for="row in unlisted" :key="row.gamedir">
+            <tr v-for="row in sortedUnlisted" :key="row.gamedir">
               <td>{{ row.gamedir }}</td>
               <td>{{ fmt(row.servers) }}</td>
             </tr>
@@ -100,16 +104,20 @@
         <table class="stats w-full text-sm num">
           <thead>
             <tr>
-              <th>Cvar</th>
-              <th>Servers</th>
+              <th @click="sortUnlistedVars('var')" class="cursor-pointer select-none">
+                Cvar{{ unlistedVarsArrow('var') }}
+              </th>
+              <th @click="sortUnlistedVars('servers')" class="cursor-pointer select-none">
+                Servers{{ unlistedVarsArrow('servers') }}
+              </th>
               <th>Example</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-if="!unlistedVars.length">
+            <tr v-if="!sortedUnlistedVars.length">
               <td colspan="3" class="text-slate-500">None seen.</td>
             </tr>
-            <tr v-for="row in unlistedVars" :key="row.var">
+            <tr v-for="row in sortedUnlistedVars" :key="row.var">
               <td>{{ row.var }}</td>
               <td>{{ fmt(row.servers) }}</td>
               <td class="text-slate-400">{{ row.example }}</td>
@@ -139,6 +147,7 @@ import {
   histDate,
   stampToDate,
 } from '../lib/data.js';
+import { useSort } from '../lib/useSort.js';
 
 const props = defineProps({
   latest: { type: Object, required: true },
@@ -170,12 +179,43 @@ const prevRow = computed(function () {
   return props.histRows.length >= 2 ? props.histRows[props.histRows.length - 2] : null;
 });
 
+const unlistedSort = useSort('servers');
+const unlistedVarsSort = useSort('servers');
+
+function sortUnlisted(k) {
+  unlistedSort.toggle(k);
+}
+
+function unlistedArrow(k) {
+  return unlistedSort.arrow(k);
+}
+
+function sortUnlistedVars(k) {
+  unlistedVarsSort.toggle(k);
+}
+
+function unlistedVarsArrow(k) {
+  return unlistedVarsSort.arrow(k);
+}
+
 const unlisted = computed(function () {
   return props.latest.unlisted_mods || [];
 });
 
+const sortedUnlisted = computed(function () {
+  return unlistedSort.apply(unlisted.value, function (r, k) {
+    return r[k];
+  });
+});
+
 const unlistedVars = computed(function () {
   return props.latest.unlisted_vars || [];
+});
+
+const sortedUnlistedVars = computed(function () {
+  return unlistedVarsSort.apply(unlistedVars.value, function (r, k) {
+    return r[k];
+  });
 });
 
 const addon = computed(function () {

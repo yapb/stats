@@ -2,14 +2,14 @@
   <table class="stats w-full text-sm num">
     <thead>
       <tr>
-        <th>Addon</th>
-        <th>Servers</th>
+        <th @click="toggle('title')" class="cursor-pointer select-none">Addon{{ arrow('title') }}</th>
+        <th @click="toggle('servers')" class="cursor-pointer select-none">Servers{{ arrow('servers') }}</th>
         <th class="hidden sm:table-cell">Top values</th>
       </tr>
     </thead>
     <tbody>
       <tr
-        v-for="a in byCount"
+        v-for="a in rows"
         :key="a.name"
         :class="a.name === active ? 'active link' : 'link'"
         @click="inspect(a, $event)"
@@ -35,6 +35,7 @@
 import { computed } from 'vue';
 import Avatar from './Avatar.vue';
 import { addonPath, fmt, sortedValues } from '../lib/data.js';
+import { useSort } from '../lib/useSort.js';
 
 const props = defineProps({
   addons: { type: Array, required: true },
@@ -43,9 +44,11 @@ const props = defineProps({
 
 const emit = defineEmits(['inspect']);
 
-const byCount = computed(function () {
-  return props.addons.slice().sort(function (a, b) {
-    return b.servers - a.servers || (a.title < b.title ? -1 : 1);
+const { arrow, toggle, apply } = useSort('servers');
+
+const rows = computed(function () {
+  return apply(props.addons, function (a, k) {
+    return k === 'title' ? a.title : a.servers;
   });
 });
 

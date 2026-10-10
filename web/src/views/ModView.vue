@@ -27,19 +27,23 @@
     <div class="card p-4 mb-4 overflow-x-auto">
       <h3 class="font-semibold text-white mb-2">Addons on this mod</h3>
       <table class="stats w-full text-sm num">
-        <thead>
-          <tr>
-            <th>Addon</th>
-            <th>Servers</th>
-            <th>% of mod</th>
-            <th class="hidden sm:table-cell">Top values</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-if="!rows.length">
-            <td colspan="4" class="text-slate-500">Nothing seen yet.</td>
-          </tr>
-          <tr v-for="row in rows" :key="row.name" class="link" @click="openAddon(row.name)">
+      <thead>
+        <tr>
+          <th @click="sortRows('title')" class="cursor-pointer select-none">
+            Addon{{ rowArrow('title') }}
+          </th>
+          <th @click="sortRows('servers')" class="cursor-pointer select-none">
+            Servers{{ rowArrow('servers') }}
+          </th>
+          <th>% of mod</th>
+          <th class="hidden sm:table-cell">Top values</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-if="!sortedRows.length">
+          <td colspan="4" class="text-slate-500">Nothing seen yet.</td>
+        </tr>
+        <tr v-for="row in sortedRows" :key="row.name" class="link" @click="openAddon(row.name)">
             <td>
               <span class="flex items-center gap-2">
                 <Avatar :title="row.title" />
@@ -59,15 +63,19 @@
     <table class="stats w-full text-sm num">
       <thead>
         <tr>
-          <th>Map</th>
-          <th>Servers</th>
+          <th @click="sortMaps('map')" class="cursor-pointer select-none">
+            Map{{ mapArrow('map') }}
+          </th>
+          <th @click="sortMaps('count')" class="cursor-pointer select-none">
+            Servers{{ mapArrow('count') }}
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr v-if="!mapRows.length">
+        <tr v-if="!sortedMapRows.length">
           <td colspan="2" class="text-slate-500">Nothing seen yet.</td>
         </tr>
-        <tr v-for="row in mapRows" :key="row.map">
+        <tr v-for="row in sortedMapRows" :key="row.map">
           <td>{{ row.map }}</td>
           <td>{{ fmt(row.count) }}</td>
         </tr>
@@ -103,6 +111,7 @@ import {
   sortedValues,
   stampToDate,
 } from '../lib/data.js';
+import { useSort } from '../lib/useSort.js';
 
 const props = defineProps({
   latest: { type: Object, required: true },
@@ -114,19 +123,39 @@ const mod = computed(function () {
   return modByGamedir(props.latest.mods, props.gamedir) || modById(props.latest.mods, props.gamedir);
 });
 
+const rowsSort = useSort('servers');
+const mapsSort = useSort('count');
+
+function sortRows(k) {
+  rowsSort.toggle(k);
+}
+
+function rowArrow(k) {
+  return rowsSort.arrow(k);
+}
+
+function sortMaps(k) {
+  mapsSort.toggle(k);
+}
+
+function mapArrow(k) {
+  return mapsSort.arrow(k);
+}
+
 const mapRows = computed(function () {
   if (!mod.value) {
     return [];
   }
   const maps = mod.value.maps || {};
-  return Object.keys(maps)
-    .map(function (k) {
-      return { map: k, count: maps[k] };
-    })
-    .sort(function (a, b) {
-      return b.count - a.count;
-    })
-    .slice(0, 15);
+  return Object.keys(maps).map(function (k) {
+    return { map: k, count: maps[k] };
+  });
+});
+
+const sortedMapRows = computed(function () {
+  return mapsSort.apply(mapRows.value.slice(0, 30), function (r, k) {
+    return r[k];
+  });
 });
 
 const rows = computed(function () {
@@ -155,6 +184,12 @@ const rows = computed(function () {
     });
   }
   return out;
+});
+
+const sortedRows = computed(function () {
+  return rowsSort.apply(rows.value, function (r, k) {
+    return r[k];
+  });
 });
 
 const dates = computed(function () {

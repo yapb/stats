@@ -26,16 +26,20 @@
       <thead>
         <tr>
           <th>Addon</th>
-          <th>Game mod</th>
-          <th>Servers</th>
+          <th @click="sortMods('label')" class="cursor-pointer select-none">
+            Game mod{{ modArrow('label') }}
+          </th>
+          <th @click="sortMods('servers')" class="cursor-pointer select-none">
+            Servers{{ modArrow('servers') }}
+          </th>
           <th>% of mod</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-if="!modRows.length">
+        <tr v-if="!sortedModRows.length">
           <td colspan="4" class="text-slate-500">Nothing seen yet.</td>
         </tr>
-        <tr v-for="row in modRows" :key="row.id" class="link" @click="openMod(row.id)">
+        <tr v-for="row in sortedModRows" :key="row.id" class="link" @click="openMod(row.id)">
           <td>{{ addon.title }}</td>
           <td>
             <a :href="modPath(row.id)" @click.stop>{{ row.label }}</a>
@@ -56,15 +60,19 @@
       <thead>
         <tr>
           <th class="hidden sm:table-cell">Variable</th>
-          <th>Value</th>
-          <th>Servers</th>
+          <th @click="sortVals('value')" class="cursor-pointer select-none">
+            Value{{ valArrow('value') }}
+          </th>
+          <th @click="sortVals('count')" class="cursor-pointer select-none">
+            Servers{{ valArrow('count') }}
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr v-if="!valRows.length">
+        <tr v-if="!sortedValRows.length">
           <td colspan="3" class="text-slate-500">Nothing seen yet.</td>
         </tr>
-        <tr v-for="row in valRows" :key="row.value">
+        <tr v-for="row in sortedValRows" :key="row.value">
           <td class="hidden sm:table-cell">{{ addon.name }}</td>
           <td>
             {{ row.value }}
@@ -105,6 +113,7 @@ import {
   sortedValues,
   stampToDate,
 } from '../lib/data.js';
+import { useSort } from '../lib/useSort.js';
 
 const props = defineProps({
   latest: { type: Object, required: true },
@@ -115,6 +124,25 @@ const props = defineProps({
 const addon = computed(function () {
   return addonByName(props.latest.addons, props.name);
 });
+
+const modsSort = useSort('servers');
+const valsSort = useSort('count');
+
+function sortMods(k) {
+  modsSort.toggle(k);
+}
+
+function modArrow(k) {
+  return modsSort.arrow(k);
+}
+
+function sortVals(k) {
+  valsSort.toggle(k);
+}
+
+function valArrow(k) {
+  return valsSort.arrow(k);
+}
 
 const modRows = computed(function () {
   const byMod = addon.value.by_mod || {};
@@ -131,19 +159,28 @@ const modRows = computed(function () {
     })
     .filter(function (row) {
       return row.servers > 0;
-    })
-    .sort(function (a, b) {
-      return b.servers - a.servers;
     });
 });
 
-  const valRows = computed(function () {
-    return sortedValues(addon.value.values)
-      .slice(0, 30)
-      .map(function (kv) {
-        return { value: kv[0], count: kv[1] };
-      });
+const sortedModRows = computed(function () {
+  return modsSort.apply(modRows.value, function (r, k) {
+    return r[k];
   });
+});
+
+const valRows = computed(function () {
+  return sortedValues(addon.value.values)
+    .slice(0, 30)
+    .map(function (kv) {
+      return { value: kv[0], count: kv[1] };
+    });
+});
+
+const sortedValRows = computed(function () {
+  return valsSort.apply(valRows.value, function (r, k) {
+    return r[k];
+  });
+});
 
   const fresh = computed(function () {
     return ((props.latest.fresh || {})[addon.value.name] || []);
